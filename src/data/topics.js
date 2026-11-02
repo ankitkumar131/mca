@@ -778,6 +778,402 @@ export const units = {
             },
           ],
         },
+
+        // ========================================================
+        // TOPIC 6 — Applications of BI in business domains
+        // ========================================================
+        {
+          id: 'applications-bi',
+          number: '1.6',
+          title: 'Applications of BI in Business Domains',
+          subtitle: 'BI ka use finance, healthcare, retail aur education mein',
+          icon: 'ai',
+          accent: '#0047ff',
+          englishDefinition:
+            'Business Intelligence is applied across diverse business domains. In **finance**, BI supports fraud detection, risk management, portfolio optimization and regulatory compliance. In **healthcare**, BI enables patient outcome analysis, resource planning, clinical operations and population health management. In **retail**, BI drives sales forecasting, inventory optimization, customer segmentation and omnichannel analytics. In **education**, BI helps student performance monitoring, enrollment analytics, institutional planning and resource allocation.',
+          intro: 'Socha hai ki ek bank, ek hospital, ek shop ya ek school — sab apne tarah se data ka use karte hain? Ek hi BI technology ke different domains mein different applications hain. Is topic mein ham dekhnge ki finance, healthcare, retail aur education — 4 major domains mein BI ka kya use hota hai. Ye bahut important hai kyunki exam mein domain-based applications ka sawal aa sakta hai.',
+          sections: [
+            {
+              type: 'definition',
+              title: 'BI Domains kya hain?',
+              kicker: 'Overview',
+              body: 'BI ek universal technology hai — ye kisi ek field se simit nahi hai. Har business domain apne data ko analyze karke better decisions leta hai. Finance, healthcare, retail aur education — ye 4 domains sabse important hain.',
+              body2: 'Aasan sabd mein: BI ka use karke har field apne problems ko data se solve karta hai — finance mein risk, healthcare mein patient care, retail mein sales, education mein student performance.',
+              chips: ['Finance', 'Healthcare', 'Retail', 'Education'],
+            },
+            {
+              type: 'cards',
+              title: 'BI Applications by Domain',
+              kicker: 'Domain-wise Uses',
+              cards: [
+                {
+                  icon: 'chart',
+                  title: 'Finance',
+                  body: 'BI finance mein fraud detection, risk management, portfolio optimization aur regulatory compliance ke liye use hota hai. Banks real-time transaction monitoring karti hain, risk models chalti hain, aur compliance reports auto-generate hoti hain.',
+                },
+                {
+                  icon: 'warehouse',
+                  title: 'Healthcare',
+                  body: 'BI healthcare mein patient outcomes ka analysis, resource planning (beds, staff), clinical operations aur population health management ke liye use hota hai. Hospitals patient data, treatment outcomes aur resource utilization ko analyze karti hain.',
+                },
+                {
+                  icon: 'dashboard',
+                  title: 'Retail',
+                  body: 'BI retail mein sales forecasting, inventory optimization, customer segmentation aur omnichannel analytics ke liye use hota hai. Stores ek saath online aur offline sales dekhte hain, stock levels manage karte hain, aur customers ko segment karte hain.',
+                },
+                {
+                  icon: 'book',
+                  title: 'Education',
+                  body: 'BI education mein student performance monitoring, enrollment analytics, institutional planning aur resource allocation ke liye use hota hai. Schools/universities attendance, grades, completion rates aur resource usage ko track karti hain.',
+                },
+              ],
+            },
+            {
+              type: 'image',
+              title: 'BI in Healthcare (Reference Image)',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/bi-healthcare.png', caption: 'BI Applications in Healthcare — leveraging data for operational and financial success' },
+              ],
+            },
+            {
+              type: 'cards',
+              title: 'Common BI Applications (All Domains)',
+              kicker: 'General Applications',
+              cards: [
+                {
+                  icon: 'search',
+                  title: 'Customer Insights',
+                  body: 'Har domain mein customer/patient/student ka data analyze hota hai. Retail mein customers, healthcare mein patients, education mein students — sabka behavior, preferences aur needs data se pata chalta hai.',
+                },
+                {
+                  icon: 'clock',
+                  title: 'Operational Efficiency',
+                  body: 'Resources ka best use karna. Finance mein capital allocation, healthcare mein beds/staff, retail mein inventory, education mein classrooms/teachers — sab optimize hota hai.',
+                },
+                {
+                  icon: 'forecast',
+                  title: 'Future Planning',
+                  body: 'Forecasting aur planning har domain mein important hai. Finance mein market trends, healthcare mein patient demand, retail mein sales seasonality, education mein enrollment trends — sab predict kiye jaate hain.',
+                },
+              ],
+            },
+            {
+              type: 'example',
+              title: 'Real-World Example',
+              kicker: 'Example',
+              body: 'Ek retail chain (jaise Walmart) BI use karti hai — stores mein cameras aur POS systems se data collect karti hai. BI analyze karta hai: kaunsa product kahan bik raha hai, kaunsa season mein kya chalega, inventory ka status kaisa hai. Phir supply chain optimize karta hai — kaun si store mein kaun sa product bhejo. Yehi BI ka retail domain application hai. Healthcare mein ek hospital BI use karta hai patient wait times, bed utilization aur treatment outcomes ka analysis karne ke liye.',
+            },
+            {
+              type: 'points',
+              title: 'Exam-Focused Points',
+              kicker: 'Important For Exam',
+              points: [
+                'BI applications domain-wise classify hoti hain — finance, healthcare, retail, education.',
+                'Finance: fraud detection, risk management, portfolio optimization, compliance.',
+                'Healthcare: patient outcomes, resource planning, clinical operations.',
+                'Retail: sales forecasting, inventory optimization, customer segmentation.',
+                'Education: student performance, enrollment analytics, resource allocation.',
+                'Common applications: customer insights, operational efficiency, future planning.',
+                'BI har domain mein data-driven decisions leti hai.',
+              ],
+            },
+            {
+              type: 'recap',
+              title: 'Quick Recap',
+              kicker: '5 Seconds Mein Yaad Karo',
+              points: [
+                'Finance: fraud, risk, portfolio, compliance.',
+                'Healthcare: patient outcomes, resources, clinical ops.',
+                'Retail: sales forecast, inventory, customer segments.',
+                'Education: student performance, enrollment, planning.',
+                'BI har domain mein data se better decisions deti hai.',
+              ],
+            },
+          ],
+          examQuestions: [
+            {
+              question: 'Explain the applications of Business Intelligence in any two business domains with examples.',
+              answer:
+                '**BI Applications in Different Domains:**\n\n**1. Finance:**\n- **Fraud detection** — real-time transaction monitoring, anomaly detection\n- **Risk management** — credit risk, market risk analysis\n- **Portfolio optimization** — investment decisions\n- **Regulatory compliance** — automatic report generation\n\n**2. Healthcare:**\n- **Patient outcome analysis** — treatment effectiveness, recovery rates\n- **Resource planning** — beds, staff, equipment utilization\n- **Clinical operations** — workflow optimization\n- **Population health** — disease patterns, preventive care\n\n**3. Retail:**\n- **Sales forecasting** — seasonal trends, demand prediction\n- **Inventory optimization** — stock levels, replenishment\n- **Customer segmentation** — behavior, preferences, lifetime value\n- **Omnichannel analytics** — online + offline sales\n\n**4. Education:**\n- **Student performance** — grades, attendance, completion rates\n- **Enrollment analytics** — admission trends, retention\n- **Institutional planning** — resource allocation\n\n**Diagram:** Refer to BI applications by domain structure in this topic.',
+            },
+            {
+              question: 'What are the common applications of BI across all business domains?',
+              answer:
+                '**Common BI Applications Across Domains:**\n\n1. **Customer Insights** — har domain mein customer/patient/student ka behavior aur preferences analyze kiye jaate hain.\n\n2. **Operational Efficiency** — resources ka best use. Finance mein capital, healthcare mein beds/staff, retail mein inventory, education mein classrooms.\n\n3. **Future Planning** — forecasting aur strategic planning. Market trends, demand prediction, seasonal patterns, enrollment trends.\n\n4. **Performance Monitoring** — KPIs track karna. Sales, patient satisfaction, student grades, financial ratios.\n\n5. **Decision Support** — data-driven decisions har level par. Strategic, tactical, operational.\n\n**Aasan sabd mein:** BI har domain mein "data se better decisions" ka kaam karta hai — chahe finance ho, healthcare, retail ya education.',
+            },
+          ],
+        },
+
+        // ========================================================
+        // TOPIC 7 — Benefits and Challenges of BI
+        // ========================================================
+        {
+          id: 'benefits-challenges-bi',
+          number: '1.7',
+          title: 'Benefits & Challenges of BI Systems',
+          subtitle: 'BI implement karna — faayde aur challenges',
+          icon: 'warn',
+          accent: '#0047ff',
+          englishDefinition:
+            'Business Intelligence systems offer significant **benefits** including improved decision-making, increased operational efficiency, enhanced customer satisfaction, competitive advantage, cost reduction and revenue growth. However, implementing BI also involves **challenges** such as data quality issues, high costs of implementation, data security and privacy concerns, resistance to change, technical complexity, and the need for skilled personnel. Understanding both benefits and challenges helps organizations plan successful BI implementations.',
+          intro: 'Har technology ka dukh aur sukh hota hai. BI bhi exception nahi hai — ye bade faayde deti hai, lekin implementation mein challenges bhi hai. Aaj ke time mein companies BI implement karna chahti hain, lekin kuch problems ka samna bhi hota hai. Is topic mein ham dono dekhnge — faayde (benefits) aur challenges — aur samjhnge ki successful BI implementation ka kya tarika hai.',
+          sections: [
+            {
+              type: 'definition',
+              title: 'Benefits vs Challenges — Ek Jhatka Mein',
+              kicker: 'Overview',
+              body: 'BI ka main goal hai better decisions dena. Iske faayde clear hain — fast decisions, accuracy, efficiency, competitive advantage. Lekin implementation ke raaste mein kuch challenges bhi hain — data quality, cost, security, aur change management.',
+              body2: 'Aasan sabd mein: BI acha hai — lekin iske liye acha data, achi technology aur logon ka support chahiye. "Garbage in, garbage out" ka principle yaad rakhna.',
+              chips: ['Benefits = Faayde', 'Challenges = Mushkilein', 'Both important'],
+            },
+            {
+              type: 'cards',
+              title: 'BI ke Benefits (Faayde)',
+              kicker: 'Why implement BI?',
+              cards: [
+                {
+                  icon: 'bulb',
+                  title: 'Better Decision Making',
+                  body: 'BI data-driven decisions deti hai — gut feeling pe nahi. Managers real-time data dekh kar decisions lete hain, jo accurate aur fast hoti hain. Ye BI ka sabse bada benefit hai.',
+                },
+                {
+                  icon: 'clock',
+                  title: 'Increased Efficiency',
+                  body: 'Operations fast aur efficient hote hain. Manual reporting automatize hota hai, data analysis fast hota hai, aur processes smooth chalte hain. Time aur cost dono bachte hain.',
+                },
+                {
+                  icon: 'chart',
+                  title: 'Competitive Advantage',
+                  body: 'Data-driven companies market mein aage rehti hain. Wo customers ko behtar samajhti hain, market trends ko pehle pakadti hain, aur competitors se aage nikalti hain.',
+                },
+                {
+                  icon: 'check',
+                  title: 'Cost Reduction',
+                  body: 'BI waste identify karti hai — extra inventory, underperforming campaigns, inefficient processes. Isse costs kam hote hain aur ROI (Return on Investment) badhta hai.',
+                },
+              ],
+            },
+            {
+              type: 'cards',
+              title: 'BI ke Challenges (Mushkilein)',
+              kicker: 'What can go wrong?',
+              cards: [
+                {
+                  icon: 'database',
+                  title: 'Data Quality',
+                  body: 'Sabse bada challenge — "garbage in, garbage out". Kharab, incomplete ya outdated data se kharab decisions nikalti hain. Data ko clean aur maintain karna mushkil hai.',
+                },
+                {
+                  icon: 'ai',
+                  title: 'Cost & Complexity',
+                  body: 'BI implement karne mein cost high hai — technology, infrastructure, tools, aur skilled people. Small organizations ke liye ye challenge ho sakta hai.',
+                },
+                {
+                  icon: 'warn',
+                  title: 'Security & Privacy',
+                  body: 'Sensitive business data ka security aur privacy ka sawal hai. Data breaches, compliance (GDPR etc.), aur unauthorized access — sabse risk hai.',
+                },
+                {
+                  icon: 'executive',
+                  title: 'Resistance to Change',
+                  body: 'Employees naye tools aur processes mein changes nahi chahte. Training aur change management chahiye. "People" ka factor sabse important hai.',
+                },
+              ],
+            },
+            {
+              type: 'diagram',
+              title: 'BI Benefits vs Challenges',
+              kicker: 'Diagram (Exam Demonstrate Karne Lagaat)',
+              diagram: 'benefits-challenges',
+              caption:
+                'BI implementation ke faayde (better decisions, efficiency, competitive advantage, cost reduction) aur challenges (data quality, cost, security, resistance to change) dono sides dekhna important hai. Successful implementation ke liye benefits ko maximize aur challenges ko minimize karna part of planning hai.',
+            },
+            {
+              type: 'example',
+              title: 'Real-World Example',
+              kicker: 'Example',
+              body: 'Ek mid-size company ne BI implement kiya. Pehle faayde mila — managers dashboards dekh kar fast decisions le rahe the, sales improve ho rahi thi. Lekin 6 months baad ek problem hui — data quality issue (kharab data) se kuch dashboards wrong information dikha rahe the. Phir company ne data clean karna, staff ko train karna aur security measures lagaye. Final mein BI successful ho gayi. Ye example batata hai — benefits to aayengi, lekin challenges ko address karna important hai.',
+            },
+            {
+              type: 'points',
+              title: 'Exam-Focused Points',
+              kicker: 'Important For Exam',
+              points: [
+                'Benefits: better decisions, increased efficiency, competitive advantage, cost reduction, revenue growth, customer satisfaction.',
+                'Challenges: data quality, cost, complexity, security/privacy, resistance to change, skilled personnel.',
+                '"Garbage in, garbage out" — data quality sabse important challenge hai.',
+                'Change management — employees ko train karna aur support dena important hai.',
+                'Successful BI = benefits maximize karna + challenges minimize karna.',
+              ],
+            },
+            {
+              type: 'recap',
+              title: 'Quick Recap',
+              kicker: '5 Seconds Mein Yaad Karo',
+              points: [
+                'Benefits: better decisions, efficiency, competitive advantage, cost reduction.',
+                'Challenges: data quality, cost, security, resistance to change.',
+                'Garbage in, garbage out — kharab data se kharab decisions.',
+                'Change management important hai.',
+                'Successful BI = benefits maximize + challenges minimize.',
+              ],
+            },
+          ],
+          examQuestions: [
+            {
+              question: 'Discuss the benefits and challenges of implementing a Business Intelligence system in an organization.',
+              answer:
+                '**Benefits of BI:**\n\n1. **Better Decision Making** — Data-driven decisions, real-time insights, accuracy.\n2. **Increased Efficiency** — Automated reporting, faster processes, less manual work.\n3. **Competitive Advantage** — Market trends early detection, customer understanding.\n4. **Cost Reduction** — Waste identification, inventory optimization.\n5. **Revenue Growth** — Better marketing, customer retention.\n6. **Customer Satisfaction** — Personalized experiences, better service.\n\n**Challenges of BI:**\n\n1. **Data Quality** — "Garbage in, garbage out". Incomplete, inconsistent, or outdated data.\n2. **Cost & Complexity** — High implementation cost, infrastructure, tools.\n3. **Security & Privacy** — Data breaches, compliance (GDPR), unauthorized access.\n4. **Resistance to Change** — Employees resist new tools and processes.\n5. **Technical Complexity** — Integration with existing systems, maintenance.\n6. **Skilled Personnel** — Need for data analysts, data scientists.\n\n**Conclusion:** BI benefits aur challenges dono hain — successful implementation ke liye challenges ko address karna (data quality, training, security) important hai.',
+            },
+            {
+              question: 'What is "garbage in, garbage out" in the context of BI? Explain with an example.',
+              answer:
+                '**"Garbage in, garbage out" (GIGO)** — kharab (garbage) data se kharab (garbage) results nikalte hain. Ye BI ka sabse important principle hai.\n\n**Explanation:**\n- BI system sirf data ko process aur present karti hai — data ka quality BI ke results pe directly impact dalta hai.\n- Agar data kharab hai (incomplete, duplicate, outdated, incorrect), toh analysis bhi kharab hogi.\n- Kharab analysis se kharab decisions nikalti hain.\n\n**Example:**\n- Ek retail company mein inventory data mein duplicate entries hain.\n- BI dashboard batata hai "stock 100 units hai" — lekin actually stock 100 nahi hai.\n- Manager decision leta hai "order kam karo" — lekin actual stock kam hai.\n- Result: stock-out ho jata hai, sales loss hota hai.\n\n**Lesson:** Data quality sabse pehla priority hai — data ko clean, accurate aur up-to-date rakhna important hai.',
+            },
+          ],
+        },
+
+        // ========================================================
+        // TOPIC 8 — Generative AI and LLMs in BI
+        // ========================================================
+        {
+          id: 'genai-llm-bi',
+          number: '1.8',
+          title: 'Generative AI & LLMs in Business Intelligence',
+          subtitle: 'GenAI aur LLMs ka BI mein use',
+          icon: 'ai',
+          accent: '#0047ff',
+          englishDefinition:
+            'Generative AI (GenAI) refers to artificial intelligence capable of generating text, images, code or other content. Large Language Models (LLMs) such as GPT-4 are a type of GenAI trained on vast amounts of text. In Business Intelligence, GenAI and LLMs are transforming how users interact with data — enabling natural language queries ("ask your data"), automated insight generation, report writing, anomaly explanations, and conversational analytics dashboards. They bridge the gap between data analysts and non-technical business users.',
+          intro: 'Aapne ChatGPT use kiya hai? Ya aapne Google se normal language mein question pucha hai? Wo Generative AI hai. Ab imaginary karo ki aap apne business data se normal Hindi/English mein puch sakte ho — "Pichhle month ka sales kaisa raha?" aur system aapko answer degi. Ye GenAI aur LLMs ka BI mein use hai. Is topic mein ham dekhnge ki GenAI/LLMs kya hain, aur ye BI ko kaisa transform kar rahi hain. Ye aaj ke zamana ka sabse trending topic hai.',
+          sections: [
+            {
+              type: 'definition',
+              title: 'GenAI aur LLM kya hain?',
+              kicker: 'Definition',
+              body: 'Generative AI (GenAI) ek AI ka type hai jo content generate kar sakti hai — text, images, code, aur baki media. LLMs (Large Language Models) GenAI ka ek subtype hain jo text ko process aur generate karti hain.',
+              body2: 'Aasan sabd mein: GenAI = "bana do" (content generate karna). LLM = "samajh lo aur likh do" (language ko samajh kar text generate karna). ChatGPT ek LLM hai.',
+              chips: ['GenAI = Generate content', 'LLM = Language models', 'ChatGPT example hai', 'BI mein transform kar rahe hain'],
+            },
+            {
+              type: 'cards',
+              title: 'GenAI/LLMs ke Key Concepts',
+              kicker: 'Important Terms',
+              cards: [
+                {
+                  icon: 'ai',
+                  title: 'Generative AI (GenAI)',
+                  body: 'AI ka wo type jo naye content generate karti hai — text, images, code, audio, video. "Generative" ka matlab hai "banana". Ye previous patterns se naya output banati hai.',
+                },
+                {
+                  icon: 'book',
+                  title: 'Large Language Models (LLMs)',
+                  body: 'GenAI ka ek subtype jo language ko samajh aur generate karti hai. LLMs par bade datasets par train kiye hote hain — text, code, aur baki content. Examples: GPT-4, Claude, Gemini, LLaMA.',
+                },
+                {
+                  icon: 'search',
+                  title: 'Natural Language Query',
+                  body: '"Ask your data" — users normal language mein data se puch sakte hain. "Pichhle month ka sales?" ya "Kaunsa product top mein hai?" — ek normal conversation jaise. Ye non-technical users ke liye BI accessible banati hai.',
+                },
+                {
+                  icon: 'bulb',
+                  title: 'AI-Powered Insights',
+                  body: 'BI + GenAI mil kar automatic insights generate karti hain. System data ko analyze karke automatically batati hai "kuch kya hua, kyun hua, aur kya karna hai". Ye traditional BI se aage hai.',
+                },
+              ],
+            },
+            {
+              type: 'cards',
+              title: 'GenAI/LLMs in BI — Applications',
+              kicker: 'Use in BI',
+              cards: [
+                {
+                  icon: 'chart',
+                  title: 'Conversational Analytics',
+                  body: 'Chatbots aur voice assistants data se conversation karti hain. "Show me last quarter sales" ya "Why did sales drop?" — aap normal language mein puch sakte hain, system answer degi. Ye BI ko non-technical users ke liye accessible banati hai.',
+                },
+                {
+                  icon: 'dashboard',
+                  title: 'Automated Report Generation',
+                  body: 'LLMs automatic reports likh sakti hain — data ka summary automatically prepare karti hain. Excel/Power BI se ek click mein report generate ho sakti hai. Ye time bachata hai aur efficiency badhata hai.',
+                },
+                {
+                  icon: 'forecast',
+                  title: 'Anomaly Detection & Explanation',
+                  body: 'GenAI data ke anomalies (unusual patterns) detect aur explain kar sakti hai. "Sales kam hui kyun?" — system batati hai possible reasons. Ye diagnostic analytics ko aur powerful banati hai.',
+                },
+                {
+                  icon: 'prescriptive',
+                  title: 'Predictive Recommendations',
+                  body: 'LLMs historical data aur patterns dekh kar recommendations generate karti hain. "Kaunsa product stock karna hai?" ya "Kaunsa campaign chalana hai?" — prescriptive analytics ka advanced version.',
+                },
+              ],
+            },
+            {
+              type: 'diagram',
+              title: 'GenAI + BI Integration',
+              kicker: 'Diagram (Exam Demonstrate Karne Lagaat)',
+              diagram: 'genai',
+              caption:
+                'GenAI/LLMs BI ke saath integration kar rahi hain: Data → BI system → GenAI/LLM → Natural language output. Users normal language mein puchte hain, LLM data ko samajh kar answer generate karti hai. Ye BI ko accessible, automatic aur conversational banati hai.',
+            },
+            {
+              type: 'image',
+              title: 'GenAI in Analytics (Reference Images)',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/genai-bi.jpg', caption: 'Generative AI Analytics — Transforming Business Intelligence' },
+                { src: '/images/genai-analytics.jpg', caption: 'AI Analytics Myths Demystified — GenAI and BI integration' },
+              ],
+            },
+            {
+              type: 'example',
+              title: 'Real-World Example',
+              kicker: 'Example',
+              body: 'Imagine ek sales manager hai. Pehle wo reports ke liye IT team ko mail karta tha, 2 days wait karta tha. Ab wo ek GenAI-powered BI dashboard use karta hai — normal language mein puchta hai: "Pichhle quarter ka sales report dikhao" ya "Kaunsa product sabse jada bik raha hai?" — system instant answer deti hai. Wo aage puchta hai: "Sales kam hui kyun?" — GenAI diagnostic analysis karke batati hai possible reasons. Ye conversational analytics hai — BI + LLM ka mishran.',
+            },
+            {
+              type: 'points',
+              title: 'Exam-Focused Points',
+              kicker: 'Important For Exam',
+              points: [
+                'GenAI = Generative AI — content generate karna (text, images, code).',
+                'LLM = Large Language Model — language ko samajh aur generate karna. Examples: GPT-4, Claude, Gemini.',
+                'BI mein GenAI/LLMs ka use: conversational analytics, automated reports, anomaly explanation, recommendations.',
+                '"Ask your data" — natural language query karna ek important application hai.',
+                'GenAI BI ko non-technical users ke liye accessible banati hai.',
+                'Conversational analytics — chatbots aur voice assistants data se conversation karti hain.',
+                'AI-powered insights — automatic analysis aur recommendations.',
+                'ChatGPT ek LLM hai — GenAI ka sabse famous example.',
+              ],
+            },
+            {
+              type: 'recap',
+              title: 'Quick Recap',
+              kicker: '5 Seconds Mein Yaad Karo',
+              points: [
+                'GenAI = content generate karna (text, images, code).',
+                'LLM = language model — ChatGPT/GPT-4 examples.',
+                'BI mein: ask your data, auto reports, anomaly explanation.',
+                'Conversational analytics — normal language mein data se pucho.',
+                'GenAI BI ko accessible aur automatic banati hai.',
+              ],
+            },
+          ],
+          examQuestions: [
+            {
+              question: 'Define Generative AI (GenAI) and Large Language Models (LLMs). Explain their applications in Business Intelligence.',
+              answer:
+                '**Generative AI (GenAI):**\nGenAI ek AI ka type hai jo naye content generate karti hai — text, images, code, audio. Ye previous patterns se naya output banati hai.\n\n**Large Language Models (LLMs):**\nLLMs GenAI ka subtype hai jo language ko samajh aur generate karti hai. Ye bade datasets par train kiye hoti hain. Examples: GPT-4, Claude, Gemini, LLaMA.\n\n**Applications in BI:**\n\n1. **Conversational Analytics** — "Ask your data" — users normal language mein data se puchte hain, system answer deti hai.\n\n2. **Automated Report Generation** — reports automatic generate hoti hain, time bachta hai.\n\n3. **Anomaly Detection & Explanation** — unusual patterns detect aur explain karti hai.\n\n4. **Predictive Recommendations** — historical data se recommendations generate karti hai.\n\n**Impact:** GenAI BI ko accessible, automatic aur conversational banati hai — non-technical users bhi data se directly interact kar sakte hain.\n\n**Diagram:** Refer to GenAI + BI Integration diagram in this topic.',
+            },
+            {
+              question: 'What is "Conversational Analytics"? How does it benefit non-technical business users?',
+              answer:
+                '**Conversational Analytics:**\nConversational analytics ka matlab hai data se normal language (Hinglish/English) mein conversation karna. Users complex queries likhne ya dashboards interact karne ke  instead normal language mein puchte hain.\n\n**Example:**\n- "Pichhle month ka sales kaisa raha?"\n- "Kaunsa product sabse jada bik raha hai?"\n- "Sales kam hui kyun?"\n\n**Benefits for Non-Technical Users:**\n\n1. **No technical knowledge needed** — users SQL, dashboards ya complex tools jaanne ki zaroorat nahi hai.\n\n2. **Faster decisions** — data tak direct access, reports ke liye IT team ka wait nahi karna.\n\n3. **Self-service** — non-technical users khud apna analysis kar sakte hain.\n\n4. **Accessibility** — BI har employee ke liye accessible ho jati hai — chahe wo finance ho, marketing, HR, ya operations.\n\n**Impact:** Ye BI ka reach badhati hai — ek sales manager, HR person ya marketing executive sab data se directly interact kar sakte hain. Ye "democratization of data" kehlaata hai.',
+            },
+          ],
+        },
       ],
     },
   ],

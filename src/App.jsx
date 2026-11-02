@@ -1,12 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { subjects, units } from './data/topics';
 import TopicPage from './components/TopicPage';
 import { Icon } from './components/Icons';
 import { getCompletedTopics } from './utils/progress';
 import './App.css';
 
+// ---------- Hash router helpers ----------
+function parseRoute() {
+  const hash = window.location.hash.replace(/^#/, '') || '/';
+  const parts = hash.split('/').filter(Boolean);
+  if (parts.length === 0) return { level: 'home' };
+  if (parts[0] === 'subject' && parts[1]) {
+    if (parts[2] === 'topic' && parts[3]) {
+      return { level: 'topic', subjectId: parts[1], topicId: parts[3] };
+    }
+    return { level: 'units', subjectId: parts[1] };
+  }
+  return { level: 'home' };
+}
+
+function buildRoute(level, extra = {}) {
+  if (level === 'home') return '#/';
+  if (level === 'units') return `#/subject/${extra.subjectId}`;
+  if (level === 'topic') return `#/subject/${extra.subjectId}/topic/${extra.topicId}`;
+  return '#/';
+}
+
 // ---------- Subject card ----------
-function SubjectCard({ subject, onOpen }) {
+function SubjectCard({ subject }) {
   if (!subject.available) {
     return (
       <article className="subject-card coming-soon" style={{ '--accent': subject.color }}>
@@ -40,7 +61,7 @@ function SubjectCard({ subject, onOpen }) {
       )}
       <button
         className="subject-card-cta"
-        onClick={() => window.dispatchEvent(new CustomEvent('open-subject', { detail: subject.id }))}
+        onClick={() => (window.location.hash = `#/subject/${subject.id}`)}
       >
         Explore Units <Icon name="arrow" size={16} color="#c4ff00" />
       </button>
@@ -53,6 +74,9 @@ function UnitPage({ subject, onBack }) {
   const subjectUnits = units[subject.id] || [];
   const biTopics = units['business-intelligence'][0].topics;
   const completed = getCompletedTopics();
+  const openTopic = (topicId) => {
+    window.location.hash = `#/subject/${subject.id}/topic/${topicId}`;
+  };
   return (
     <>
       <header className="page-hero">
@@ -90,7 +114,7 @@ function UnitPage({ subject, onBack }) {
                     <button
                       key={t.id}
                       className={`unit-topic-mini ${isDone ? 'done' : ''}`}
-                      onClick={() => window.dispatchEvent(new CustomEvent('open-topic', { detail: t.id }))}
+                      onClick={() => openTopic(t.id)}
                     >
                       <span className="utm-num">{t.number}</span>
                       <span className="utm-title">{t.title}</span>
@@ -134,8 +158,8 @@ function Home() {
           </p>
           <div className="hero-meta">
             <span>📚 5 Subjects</span>
-            <span>📖 Unit 1 · 5 Topics</span>
-            <span>🖼️ 9 Animated Diagrams</span>
+            <span>📖 Unit 1 · 8 Topics</span>
+            <span>🖼️ 11 Animated Diagrams</span>
             <span>✓ {doneCount} of {biTopics.length} completed</span>
           </div>
         </div>
@@ -155,30 +179,32 @@ function Home() {
 }
 
 export default function App() {
-  const [view, setView] = useState({ level: 'home' });
+  const [route, setRoute] = useState(parseRoute);
 
+  // Listen for hash changes
   useEffect(() => {
-    const handler = (e) => setView({ level: 'units', subjectId: e.detail });
-    window.addEventListener('open-subject', handler);
-    return () => window.removeEventListener('open-subject', handler);
+    const onHash = () => {
+      setRoute(parseRoute());
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
   }, []);
 
-  useEffect(() => {
-    const handler = (e) => setView({ level: 'topic', topicId: e.detail });
-    window.addEventListener('open-topic', handler);
-    return () => window.removeEventListener('open-topic', handler);
-  }, []);
-
-  const subject = view.level === 'units' ? subjects.find((s) => s.id === view.subjectId) : null;
   const goHome = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setView({ level: 'home' });
+    window.location.hash = '#/';
+  };
+
+  const openSubject = (subjectId) => {
+    window.location.hash = `#/subject/${subjectId}`;
   };
 
   const openTopic = (topicId) => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-    setView({ level: 'topic', topicId });
+    const subjectId = route.subjectId || 'business-intelligence';
+    window.location.hash = `#/subject/${subjectId}/topic/${topicId}`;
   };
+
+  const subject = route.level === 'units' ? subjects.find((s) => s.id === route.subjectId) : null;
 
   return (
     <div className="app">
@@ -191,13 +217,14 @@ export default function App() {
         </div>
       </nav>
 
-      {view.level === 'topic' ? (
+      {route.level === 'topic' ? (
         <TopicPage
-          topicId={view.topicId}
-          onBack={() => setView({ level: 'units', subjectId: 'business-intelligence' })}
+          topicId={route.topicId}
+          subjectId={route.subjectId}
+          onBack={() => openSubject(route.subjectId || 'business-intelligence')}
           onOpenTopic={openTopic}
         />
-      ) : view.level === 'units' && subject ? (
+      ) : route.level === 'units' && subject ? (
         <UnitPage subject={subject} onBack={goHome} />
       ) : (
         <Home />

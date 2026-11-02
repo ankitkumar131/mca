@@ -370,6 +370,111 @@ export function DbVsDwDiagram() {
 }
 
 // ============================================================
+// Diagram 10 — Benefits vs Challenges
+// ============================================================
+export function BenefitsChallengesDiagram() {
+  return (
+    <svg viewBox="0 0 900 320" className="diagram-svg" role="img" aria-label="BI benefits vs challenges diagram">
+      <defs>
+        <marker id="arrowBC" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
+        </marker>
+      </defs>
+      {/* Benefits */}
+      <g style={{ animationDelay: '80ms' }} className="diagram-pop">
+        <rect x="30" y="40" width="380" height="250" rx="16" fill="rgba(0,71,255,0.1)" stroke="#0047ff" strokeWidth="2.5" />
+        <text x="220" y="78" textAnchor="middle" fill="#fff" fontSize="18" fontWeight="800" fontFamily={FONT}>✓ BENEFITS</text>
+        {[
+          'Better decision making',
+          'Increased efficiency',
+          'Competitive advantage',
+          'Cost reduction',
+          'Revenue growth',
+          'Customer satisfaction',
+        ].map((p, i) => (
+          <text key={p} x="50" y={118 + i * 32} fill="#eef2ff" fontSize="14" fontFamily={FONT}>• {p}</text>
+        ))}
+      </g>
+      {/* arrow */}
+      <g className="diagram-pop" style={{ animationDelay: '300ms' }}>
+        <line x1="410" y1="165" x2="490" y2="165" stroke="#c4ff00" strokeWidth="3.5" markerEnd="url(#arrowBC)" className="arrow-pulse" />
+        <text x="450" y="150" textAnchor="middle" fill="#c4ff00" fontSize="11" fontWeight="700" fontFamily={FONT}>IMPLEMENTATION</text>
+      </g>
+      {/* Challenges */}
+      <g style={{ animationDelay: '450ms' }} className="diagram-pop">
+        <rect x="510" y="40" width="360" height="250" rx="16" fill="rgba(196,255,0,0.06)" stroke="#c4ff00" strokeWidth="2.5" />
+        <text x="690" y="78" textAnchor="middle" fill="#fff" fontSize="18" fontWeight="800" fontFamily={FONT}>⚠ CHALLENGES</text>
+        {[
+          'Data quality (GIGO)',
+          'High implementation cost',
+          'Security & privacy',
+          'Resistance to change',
+          'Technical complexity',
+          'Skilled personnel needed',
+        ].map((p, i) => (
+          <text key={p} x="530" y={118 + i * 32} fill="#eef2ff" fontSize="14" fontFamily={FONT}>• {p}</text>
+        ))}
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// Diagram 11 — GenAI + BI Integration
+// ============================================================
+export function GenAIDiagram() {
+  return (
+    <svg viewBox="0 0 1000 340" className="diagram-svg" role="img" aria-label="GenAI and BI integration diagram">
+      <defs>
+        <marker id="arrowG" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
+        </marker>
+      </defs>
+      {/* Data sources */}
+      <g style={{ animationDelay: '80ms' }} className="diagram-pop">
+        <rect x="20" y="80" width="180" height="130" rx="14" fill="rgba(255,255,255,0.04)" stroke="#0047ff" strokeWidth="2.5" />
+        <text x="110" y="120" textAnchor="middle" fill="#fff" fontSize="15" fontWeight="800" fontFamily={FONT}>BUSINESS DATA</text>
+        {['Sales · CRM · ERP', 'Databases', 'Dashboards'].map((p, i) => (
+          <text key={p} x="110" y={145 + i * 26} textAnchor="middle" fill="#9ab0e0" fontSize="11" fontFamily={FONT}>{p}</text>
+        ))}
+      </g>
+      {/* arrow */}
+      <line x1="200" y1="145" x2="260" y2="145" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowG)" className="arrow-pulse" />
+      {/* BI system */}
+      <g style={{ animationDelay: '200ms' }} className="diagram-pop">
+        <rect x="260" y="80" width="200" height="130" rx="14" fill="rgba(0,71,255,0.12)" stroke="#0047ff" strokeWidth="2.5" />
+        <text x="360" y="120" textAnchor="middle" fill="#fff" fontSize="15" fontWeight="800" fontFamily={FONT}>BI SYSTEM</text>
+        {['Data warehouse', 'OLAP analysis', 'Dashboards'].map((p, i) => (
+          <text key={p} x="360" y={145 + i * 26} textAnchor="middle" fill="#9ab0e0" fontSize="11" fontFamily={FONT}>{p}</text>
+        ))}
+      </g>
+      {/* arrow */}
+      <line x1="460" y1="145" x2="520" y2="145" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowG)" className="arrow-pulse" />
+      {/* GenAI/LLM */}
+      <g style={{ animationDelay: '320ms' }} className="diagram-pop">
+        <rect x="520" y="80" width="200" height="130" rx="14" fill="rgba(196,255,0,0.08)" stroke="#c4ff00" strokeWidth="2.5" />
+        <text x="620" y="120" textAnchor="middle" fill="#fff" fontSize="15" fontWeight="800" fontFamily={FONT}>GENAI / LLM</text>
+        {['GPT-4 · Claude', 'Natural language', 'Insight generation'].map((p, i) => (
+          <text key={p} x="620" y={145 + i * 26} textAnchor="middle" fill="#9ab0e0" fontSize="11" fontFamily={FONT}>{p}</text>
+        ))}
+      </g>
+      {/* arrow */}
+      <line x1="720" y1="145" x2="780" y2="145" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowG)" className="arrow-pulse" />
+      {/* Output */}
+      <g style={{ animationDelay: '440ms' }} className="diagram-pop">
+        <rect x="780" y="80" width="200" height="130" rx="14" fill="rgba(255,255,255,0.04)" stroke="#00c8ff" strokeWidth="2.5" />
+        <text x="880" y="120" textAnchor="middle" fill="#fff" fontSize="15" fontWeight="800" fontFamily={FONT}>OUTPUTS</text>
+        {['"Ask your data"', 'Auto-generated reports', 'Insights in natural language'].map((p, i) => (
+          <text key={p} x="880" y={145 + i * 26} textAnchor="middle" fill="#9ab0e0" fontSize="11" fontFamily={FONT}>{p}</text>
+        ))}
+      </g>
+      <text x="500" y="280" textAnchor="middle" fill="#9ab0e0" fontSize="12" fontFamily={FONT}>User asks in natural language → BI data → LLM processes → Answer in natural language</text>
+      <text x="500" y="310" textAnchor="middle" fill="#c4ff00" fontSize="12" fontWeight="700" fontFamily={FONT}>Conversational Analytics — BI accessible to non-technical users</text>
+    </svg>
+  );
+}
+
+// ============================================================
 // Diagram selector
 // ============================================================
 export function Diagram({ type }) {
@@ -392,6 +497,10 @@ export function Diagram({ type }) {
       return <ETLDiagram />;
     case 'db-vs-dw':
       return <DbVsDwDiagram />;
+    case 'benefits-challenges':
+      return <BenefitsChallengesDiagram />;
+    case 'genai':
+      return <GenAIDiagram />;
     default:
       return null;
   }

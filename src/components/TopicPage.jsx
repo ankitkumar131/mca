@@ -8,6 +8,11 @@ import { getCompletedTopics, toggleCompletedTopic } from '../utils/progress';
 function TopicMenu({ currentTopicId, onOpenTopic, onOpenSubject, onBack, mobileOpen, setMobileOpen }) {
   const [collapsed, setCollapsed] = useState(false);
   const allTopics = units['business-intelligence'][0].topics;
+  // Add Unit 2 as coming soon
+  const allUnits = [
+    ...units['business-intelligence'],
+    { id: 'unit-2', number: '2', name: 'Unit 2 — Coming Soon', topics: [], available: false },
+  ];
 
   return (
     <aside className={`topic-menu ${collapsed ? 'collapsed' : ''} ${mobileOpen ? 'mobile-open' : ''}`}>
@@ -43,26 +48,37 @@ function TopicMenu({ currentTopicId, onOpenTopic, onOpenSubject, onBack, mobileO
 
               {subject.available && subject.id === 'business-intelligence' && (
                 <div className="menu-units">
-                  {units['business-intelligence'].map((unit) => (
+                  {allUnits.map((unit) => (
                     <div key={unit.id} className="menu-unit">
-                      <span className="menu-unit-name">Unit {unit.number} — {unit.name}</span>
-                      {unit.topics.map((t) => {
-                        const completed = getCompletedTopics().includes(t.id);
-                        return (
-                          <button
-                            key={t.id}
-                            className={`menu-topic ${t.id === currentTopicId ? 'active' : ''}`}
-                            onClick={() => {
-                              onOpenTopic(t.id);
-                              setMobileOpen(false);
-                            }}
-                          >
-                            <span className="menu-topic-num">{t.number}</span>
-                            <span className="menu-topic-title">{t.title}</span>
-                            {completed && <span className="menu-check">✓</span>}
-                          </button>
-                        );
-                      })}
+                      <span className="menu-unit-name">
+                        Unit {unit.number} — {unit.name}
+                      </span>
+                      {unit.available === false ? (
+                        <button
+                          className="menu-topic coming"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          <span className="menu-topic-title">Coming Soon 🔜</span>
+                        </button>
+                      ) : (
+                        unit.topics.map((t) => {
+                          const completed = getCompletedTopics().includes(t.id);
+                          return (
+                            <button
+                              key={t.id}
+                              className={`menu-topic ${t.id === currentTopicId ? 'active' : ''}`}
+                              onClick={() => {
+                                onOpenTopic(t.id);
+                                setMobileOpen(false);
+                              }}
+                            >
+                              <span className="menu-topic-num">{t.number}</span>
+                              <span className="menu-topic-title">{t.title}</span>
+                              {completed && <span className="menu-check">✓</span>}
+                            </button>
+                          );
+                        })
+                      )}
                     </div>
                   ))}
                 </div>
