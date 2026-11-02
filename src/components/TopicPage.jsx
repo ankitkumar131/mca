@@ -1,97 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { subjects, units } from '../data/topics';
+import { units } from '../data/topics';
+import { AppSidebar } from './Sidebar';
 import { Diagram } from './Diagrams';
 import { Icon } from './Icons';
 import { getCompletedTopics, toggleCompletedTopic } from '../utils/progress';
-
-// ---------- Sidebar with dropdown hierarchy ----------
-function Sidebar({ currentTopicId, onOpenTopic, completed }) {
-  const [subjectId, setSubjectId] = useState('business-intelligence');
-  const [unitId, setUnitId] = useState('unit-1');
-
-  const subjectUnits = units[subjectId] || [];
-  const topics = subjectUnits.find((u) => u.id === unitId)?.topics || [];
-
-  function handleSubjectChange(e) {
-    const newSubject = e.target.value;
-    setSubjectId(newSubject);
-    const firstUnit = units[newSubject]?.[0];
-    if (firstUnit) setUnitId(firstUnit.id);
-  }
-
-  return (
-    <aside className="topic-sidebar">
-      <div className="sidebar-header">
-        <h2 className="sidebar-title"><Icon name="menu" size={18} /> Contents</h2>
-      </div>
-
-      <div className="dropdown-nav">
-        {/* Subject dropdown */}
-        <label className="dropdown-label">
-          <span><Icon name="folder" size={14} /> Subject</span>
-          <select className="dropdown-select" value={subjectId} onChange={handleSubjectChange}>
-            {subjects.map((s) => (
-              <option key={s.id} value={s.id} disabled={!s.available}>
-                {s.name} {!s.available ? '(Baad Mein)' : ''}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        {/* Unit dropdown */}
-        <label className="dropdown-label">
-          <span><Icon name="layers" size={14} /> Unit</span>
-          <select
-            className="dropdown-select"
-            value={unitId}
-            onChange={(e) => setUnitId(e.target.value)}
-          >
-            {subjectUnits.map((u) => (
-              <option key={u.id} value={u.id}>{u.number} · {u.name}</option>
-            ))}
-          </select>
-        </label>
-
-        {/* Topic list */}
-        <div className="dropdown-topics">
-          {topics.map((t) => (
-            <button
-              key={t.id}
-              className={`menu-topic ${t.id === currentTopicId ? 'active' : ''}`}
-              onClick={() => onOpenTopic(t.id)}
-            >
-              <span className="menu-topic-num">{t.number}</span>
-              <span className="menu-topic-title">{t.title}</span>
-              {completed.has(t.id) && <span className="menu-check">✓</span>}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Progress */}
-      <div className="sidebar-progress">
-        <div className="progress-label">
-          <span>Unit 1 Progress</span>
-          <span>{completed.size} / {units['business-intelligence'][0].topics.length}</span>
-        </div>
-        <div className="progress-bar">
-          <div
-            className="progress-fill"
-            style={{ width: `${(completed.size / units['business-intelligence'][0].topics.length) * 100}%` }}
-          />
-        </div>
-      </div>
-
-      {/* Important exam questions link */}
-      <button
-        className="sidebar-exam-btn"
-        onClick={() => window.location.hash = '#/subject/business-intelligence/exam'}
-      >
-        <Icon name="quiz" size={18} /> Important Exam Qs →
-      </button>
-    </aside>
-  );
-}
 
 // ---------- Section renderer ----------
 function SectionRenderer({ section, index }) {
@@ -288,14 +200,15 @@ export default function TopicPage({ topicId, subjectId, onBack, onOpenTopic }) {
 
   return (
     <div className="topic-page">
-      {/* Sidebar */}
-      <Sidebar
+      {/* Sidebar (shadcn-style) */}
+      <AppSidebar
         currentTopicId={topicId}
         onOpenTopic={(tid) => {
           onOpenTopic(tid);
           setMobileOpen(false);
         }}
         completed={completed}
+        mobileOpen={mobileOpen}
       />
 
       {/* Mobile overlay */}

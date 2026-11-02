@@ -26,6 +26,16 @@ export function Icon({ name, size = 28, color = '#c4ff00' }) {
     arrow: 'M5 12h14m-6-6l6 6-6 6',
     quiz: 'M12 17v5m-4-14h8v8h-8zm-5 6l5-6 5 6',
     book: 'M4 4h7v16H4zM13 4h7v16h-7zM4 8h7M13 8h7',
+    menu: 'M3 6h18M3 12h18M3 18h18',
+    'chevron-down': 'M6 9l6 6 6-6',
+    'chevron-right': 'M9 6l6 6-6 6',
+    'chevron-left': 'M15 6l-6 6 6 6',
+    home: 'M3 12l9-9 9 9M5 10v10h14V10',
+    file: 'M6 2h8l4 4v16H6zM14 2v4h4',
+    layers: 'M12 2l9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 17l9 5 9-5',
+    folder: 'M3 6h6l2 2h10v12H3z',
+    star: 'M12 2l2.4 5.4L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-1.6L12 2z',
+    zap: 'M13 2L3 14h8l-2 8 10-12h-8l2-8z',
   };
   return (
     <svg
