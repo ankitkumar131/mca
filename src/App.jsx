@@ -76,7 +76,7 @@ function SubjectCard({ subject }) {
 // ---------- Unit page ----------
 function UnitPage({ subject, onBack }) {
   const subjectUnits = units[subject.id] || [];
-  const biTopics = units['business-intelligence'][0].topics;
+  const subjectTopics = subjectUnits[0]?.topics || [];
   const completed = getCompletedTopics();
   const openTopic = (topicId) => {
     window.location.hash = `#/subject/${subject.id}/topic/${topicId}`;
@@ -96,7 +96,7 @@ function UnitPage({ subject, onBack }) {
           <h1 className="topic-hero-title">Units & Topics</h1>
           <p className="topic-hero-sub">{subject.description}</p>
           <div className="topic-hero-stats">
-            <span>📊 {completed.filter((id) => biTopics.some((t) => t.id === id)).length} of {biTopics.length} completed</span>
+            <span>📊 {completed.filter((id) => subjectTopics.some((t) => t.id === id)).length} of {subjectTopics.length} completed</span>
           </div>
         </div>
       </header>
@@ -129,6 +129,17 @@ function UnitPage({ subject, onBack }) {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Important Questions Link */}
+        <div style={{ marginTop: '32px', textAlign: 'center' }}>
+          <button
+            className="btn primary exam-cta"
+            onClick={() => window.location.hash = `#/subject/${subject.id}/exam`}
+          >
+            <Icon name="quiz" size={20} color="#0a0e1a" />
+            🔥 Unit 1 — Important 6-Mark Exam Questions
+          </button>
         </div>
       </main>
     </>

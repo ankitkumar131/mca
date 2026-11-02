@@ -19,7 +19,12 @@ function ExamAnswer({ text }) {
   );
 }
 
-export default function ImportantExamQuestions({ onBack }) {
+export default function ImportantExamQuestions({ onBack, subjectId = 'business-intelligence' }) {
+  const isCyber = subjectId === 'cyber-security';
+  const subjectLabel = isCyber ? 'Cyber Security' : 'Business Intelligence';
+  const questions = importantQuestions.filter((q) => q.subjectId === subjectId || (subjectId === 'business-intelligence' && !q.subjectId));
+  const count = questions.length;
+  const diagramCount = questions.filter((q) => q.diagram).length;
   return (
     <div className="important-exam-page">
       {/* Sticky header */}
@@ -31,13 +36,13 @@ export default function ImportantExamQuestions({ onBack }) {
           </button>
           <div className="topic-hero-badge">
             <span className="topic-hero-num">★</span>
-            <span>Business Intelligence · Unit 1 · Important</span>
+            <span>{subjectLabel} · Unit 1 · Important</span>
           </div>
           <h1 className="topic-hero-title">Important 6-Mark Exam Questions</h1>
-          <p className="topic-hero-sub">Unit 1 — 10 most important questions with answers + diagrams</p>
+          <p className="topic-hero-sub">Unit 1 — {count} most important questions with answers + diagrams</p>
           <div className="topic-hero-stats">
-            <span>🔥 {importantQuestions.length} questions</span>
-            <span>🖼️ {importantQuestions.filter((q) => q.diagram).length} diagrams</span>
+            <span>🔥 {count} questions</span>
+            <span>🖼️ {diagramCount} diagrams</span>
             <span>⭐ All marked important</span>
           </div>
         </div>
@@ -46,13 +51,13 @@ export default function ImportantExamQuestions({ onBack }) {
       <main className="container">
         <section className="section">
           <div className="section-kicker"><Icon name="quiz" size={16} /> Exam Focus — Most Important</div>
-          <h3>Unit 1 — 10 Most Important 6-Mark Questions 🔥</h3>
+          <h3>Unit 1 — {count} Most Important 6-Mark Questions 🔥</h3>
           <p className="section-note">
             Ye questions Unit 1 ke sabse important hain — exam mein aa sakte hain. Har question ka complete answer diya gaya hai — definition, explanation aur diagram reference ke saath. Diagrams bhi embed kiye gaye hain.
           </p>
 
           <div className="exam-list">
-            {importantQuestions.map((q, i) => (
+            {questions.map((q, i) => (
               <div key={q.id} className="exam-item" style={{ '--d': `${i * 80}ms` }}>
                 <div className="exam-question">
                   <span className="exam-q-num">Q{i + 1}</span>

@@ -1,4 +1,22 @@
 import React from 'react';
+import {
+  CyberFrameworkDiagram,
+  CyberspaceLayersDiagram,
+  CyberThreatsDiagram,
+  CyberWarfareDiagram,
+  CIATriadDiagram,
+  CyberTerrorismDiagram,
+  CriticalInfraDiagram,
+  OrgSecurityDiagram,
+  PolicyFrameworkDiagram,
+  NodalAuthorityDiagram,
+  InternationalCyberDiagram,
+  CyberLawsDiagram,
+  LawPrinciplesDiagram,
+  ItAct2000Diagram,
+  ItActProvisionsDiagram,
+  ItActAmendmentsDiagram,
+} from './CyberDiagrams';
 
 // ============================================================
 // Improved, properly-labelled SVG diagrams
@@ -501,6 +519,38 @@ export function Diagram({ type }) {
       return <BenefitsChallengesDiagram />;
     case 'genai':
       return <GenAIDiagram />;
+    case 'cyber-framework':
+      return <CyberFrameworkDiagram />;
+    case 'cyberspace-layers':
+      return <CyberspaceLayersDiagram />;
+    case 'cyber-threats':
+      return <CyberThreatsDiagram />;
+    case 'cyber-warfare':
+      return <CyberWarfareDiagram />;
+    case 'cia-triad':
+      return <CIATriadDiagram />;
+    case 'cyber-terrorism':
+      return <CyberTerrorismDiagram />;
+    case 'critical-infra':
+      return <CriticalInfraDiagram />;
+    case 'org-security':
+      return <OrgSecurityDiagram />;
+    case 'policy-framework':
+      return <PolicyFrameworkDiagram />;
+    case 'nodal-authority':
+      return <NodalAuthorityDiagram />;
+    case 'international-cyber':
+      return <InternationalCyberDiagram />;
+    case 'cyber-laws':
+      return <CyberLawsDiagram />;
+    case 'law-principles':
+      return <LawPrinciplesDiagram />;
+    case 'it-act-2000':
+      return <ItAct2000Diagram />;
+    case 'it-act-provisions':
+      return <ItActProvisionsDiagram />;
+    case 'it-act-amendments':
+      return <ItActAmendmentsDiagram />;
     default:
       return null;
   }

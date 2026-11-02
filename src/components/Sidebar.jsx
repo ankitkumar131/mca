@@ -310,7 +310,7 @@ export function AppSidebar({ currentTopicId, onOpenTopic, completed, mobileOpen 
                   <SidebarMenuButton
                     icon="quiz"
                     active
-                    onClick={() => window.location.hash = '#/subject/business-intelligence/exam'}
+                    onClick={() => window.location.hash = `#/subject/${subjectId}/exam`}
                     badge="★"
                   >
                     Important Exam Qs
@@ -339,7 +339,7 @@ export function AppSidebar({ currentTopicId, onOpenTopic, completed, mobileOpen 
               )}
               <button
                 className="sidebar-exam-link"
-                onClick={() => window.location.hash = '#/subject/business-intelligence/exam'}
+                onClick={() => window.location.hash = `#/subject/${subjectId}/exam`}
               >
                 <Icon name="quiz" size={14} color="#c4ff00" />
                 {!collapsed && <span>Important Exam Qs</span>}
