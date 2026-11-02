@@ -238,13 +238,6 @@ export default function App() {
       ) : (
         <Home />
       )}
-
-      <footer className="footer">
-        <div className="container">
-          <p>MCA Study Companion — Hinglish Study Material 🎓</p>
-          <p className="footer-note">Simple explanations · Official definitions · Exam diagrams · 6-mark questions</p>
-        </div>
-      </footer>
     </div>
   );
 }
