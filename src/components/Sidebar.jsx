@@ -185,7 +185,7 @@ export function AppSidebar({ currentTopicId, onOpenTopic, completed, mobileOpen 
   const [subjectId, setSubjectId] = useState('business-intelligence');
   const [unitId, setUnitId] = useState('unit-1');
 
-  const { collapsed } = useSidebar();
+  const { collapsed, toggleCollapsed } = useSidebar();
   const subjectUnits = units[subjectId] || [];
   const topics = subjectUnits.find((u) => u.id === unitId)?.topics || [];
   const biTopics = units['business-intelligence'][0].topics;
