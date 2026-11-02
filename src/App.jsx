@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { subjects, units } from './data/topics';
 import TopicPage from './components/TopicPage';
 import { Icon } from './components/Icons';
+import { getCompletedTopics } from './utils/progress';
 import './App.css';
 
 // ---------- Subject card ----------
@@ -20,6 +21,8 @@ function SubjectCard({ subject, onOpen }) {
       </article>
     );
   }
+  const biTopics = units['business-intelligence'][0].topics;
+  const doneCount = getCompletedTopics().filter((id) => biTopics.some((t) => t.id === id)).length;
   return (
     <article className="subject-card" style={{ '--accent': subject.color }}>
       <div className="subject-card-head">
@@ -30,6 +33,11 @@ function SubjectCard({ subject, onOpen }) {
       </div>
       <h2 className="subject-card-title">{subject.name}</h2>
       <p className="subject-card-desc">{subject.description}</p>
+      {doneCount > 0 && (
+        <p className="subject-progress">
+          ✓ {doneCount} of {biTopics.length} topics completed
+        </p>
+      )}
       <button
         className="subject-card-cta"
         onClick={() => window.dispatchEvent(new CustomEvent('open-subject', { detail: subject.id }))}
@@ -40,9 +48,11 @@ function SubjectCard({ subject, onOpen }) {
   );
 }
 
-// ---------- Unit list page (for a subject) ----------
+// ---------- Unit page ----------
 function UnitPage({ subject, onBack }) {
   const subjectUnits = units[subject.id] || [];
+  const biTopics = units['business-intelligence'][0].topics;
+  const completed = getCompletedTopics();
   return (
     <>
       <header className="page-hero">
@@ -57,6 +67,9 @@ function UnitPage({ subject, onBack }) {
           </div>
           <h1 className="topic-hero-title">Units & Topics</h1>
           <p className="topic-hero-sub">{subject.description}</p>
+          <div className="topic-hero-stats">
+            <span>📊 {completed.filter((id) => biTopics.some((t) => t.id === id)).length} of {biTopics.length} completed</span>
+          </div>
         </div>
       </header>
 
@@ -71,16 +84,20 @@ function UnitPage({ subject, onBack }) {
               <h2 className="unit-card-title">{unit.name}</h2>
               <p className="unit-card-count">{unit.topics.length} topics</p>
               <div className="unit-topics-preview">
-                {unit.topics.map((t) => (
-                  <button
-                    key={t.id}
-                    className="unit-topic-mini"
-                    onClick={() => window.dispatchEvent(new CustomEvent('open-topic', { detail: t.id }))}
-                  >
-                    <span className="utm-num">{t.number}</span>
-                    <span className="utm-title">{t.title}</span>
-                  </button>
-                ))}
+                {unit.topics.map((t) => {
+                  const isDone = completed.includes(t.id);
+                  return (
+                    <button
+                      key={t.id}
+                      className={`unit-topic-mini ${isDone ? 'done' : ''}`}
+                      onClick={() => window.dispatchEvent(new CustomEvent('open-topic', { detail: t.id }))}
+                    >
+                      <span className="utm-num">{t.number}</span>
+                      <span className="utm-title">{t.title}</span>
+                      {isDone && <span className="utm-check">✓</span>}
+                    </button>
+                  );
+                })}
               </div>
             </article>
           ))}
@@ -90,8 +107,10 @@ function UnitPage({ subject, onBack }) {
   );
 }
 
-// ---------- Home (Subjects) ----------
+// ---------- Home ----------
 function Home() {
+  const biTopics = units['business-intelligence'][0].topics;
+  const doneCount = getCompletedTopics().filter((id) => biTopics.some((t) => t.id === id)).length;
   return (
     <div className="home">
       <div className="bg-orbs">
@@ -117,7 +136,7 @@ function Home() {
             <span>📚 5 Subjects</span>
             <span>📖 Unit 1 · 5 Topics</span>
             <span>🖼️ 9 Animated Diagrams</span>
-            <span>🎯 10 Exam Questions</span>
+            <span>✓ {doneCount} of {biTopics.length} completed</span>
           </div>
         </div>
       </header>
@@ -138,14 +157,12 @@ function Home() {
 export default function App() {
   const [view, setView] = useState({ level: 'home' });
 
-  // Open subject → unit list
   useEffect(() => {
     const handler = (e) => setView({ level: 'units', subjectId: e.detail });
     window.addEventListener('open-subject', handler);
     return () => window.removeEventListener('open-subject', handler);
   }, []);
 
-  // Open topic directly
   useEffect(() => {
     const handler = (e) => setView({ level: 'topic', topicId: e.detail });
     window.addEventListener('open-topic', handler);
@@ -156,6 +173,11 @@ export default function App() {
   const goHome = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setView({ level: 'home' });
+  };
+
+  const openTopic = (topicId) => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    setView({ level: 'topic', topicId });
   };
 
   return (
@@ -170,7 +192,11 @@ export default function App() {
       </nav>
 
       {view.level === 'topic' ? (
-        <TopicPage topicId={view.topicId} onBack={() => setView({ level: 'units', subjectId: 'business-intelligence' })} />
+        <TopicPage
+          topicId={view.topicId}
+          onBack={() => setView({ level: 'units', subjectId: 'business-intelligence' })}
+          onOpenTopic={openTopic}
+        />
       ) : view.level === 'units' && subject ? (
         <UnitPage subject={subject} onBack={goHome} />
       ) : (

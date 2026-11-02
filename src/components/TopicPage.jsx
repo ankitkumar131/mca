@@ -2,7 +2,80 @@ import React, { useEffect, useState } from 'react';
 import { subjects, units } from '../data/topics';
 import { Diagram } from './Diagrams';
 import { Icon } from './Icons';
+import { getCompletedTopics, toggleCompletedTopic } from '../utils/progress';
 
+// ---------- Sidebar menu ----------
+function TopicMenu({ currentTopicId, onOpenTopic, onOpenSubject, onBack, mobileOpen, setMobileOpen }) {
+  const [collapsed, setCollapsed] = useState(false);
+  const allTopics = units['business-intelligence'][0].topics;
+
+  return (
+    <aside className={`topic-menu ${collapsed ? 'collapsed' : ''} ${mobileOpen ? 'mobile-open' : ''}`}>
+      <div className="topic-menu-head">
+        <button className="menu-back" onClick={onBack}>
+          <Icon name="arrow" size={18} color="#fff" />
+        </button>
+        <span className="menu-title">Menu</span>
+        <button
+          className="menu-collapse"
+          onClick={() => {
+            setCollapsed((c) => !c);
+            setMobileOpen(false);
+          }}
+        >
+          {collapsed ? '→' : '✕'}
+        </button>
+      </div>
+
+      {!collapsed && (
+        <nav className="menu-nav">
+          <p className="menu-section-label">Subjects</p>
+          {subjects.map((subject) => (
+            <div key={subject.id} className="menu-subject">
+              <button
+                className={`menu-subject-btn ${subject.id === 'business-intelligence' ? 'active' : ''}`}
+                onClick={() => !subject.available && null}
+              >
+                <Icon name="book" size={16} color={subject.available ? '#c4ff00' : '#5a6a9e'} />
+                <span>{subject.name}</span>
+                {!subject.available && <span className="menu-coming">Soon</span>}
+              </button>
+
+              {subject.available && subject.id === 'business-intelligence' && (
+                <div className="menu-units">
+                  {units['business-intelligence'].map((unit) => (
+                    <div key={unit.id} className="menu-unit">
+                      <span className="menu-unit-name">Unit {unit.number} — {unit.name}</span>
+                      {unit.topics.map((t) => {
+                        const completed = getCompletedTopics().includes(t.id);
+                        return (
+                          <button
+                            key={t.id}
+                            className={`menu-topic ${t.id === currentTopicId ? 'active' : ''}`}
+                            onClick={() => {
+                              onOpenTopic(t.id);
+                              setMobileOpen(false);
+                            }}
+                          >
+                            <span className="menu-topic-num">{t.number}</span>
+                            <span className="menu-topic-title">{t.title}</span>
+                            {completed && <span className="menu-check">✓</span>}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+      )}
+    </aside>
+  );
+}
+
+// ---------- Section renderer ----------
 function SectionRenderer({ section, index }) {
   const icons = {
     definition: 'book',
@@ -151,28 +224,15 @@ function ExamAnswer({ text }) {
   );
 }
 
-function TopicCard({ topic, onOpen }) {
-  return (
-    <article className="topic-card" style={{ '--accent': topic.accent }}>
-      <div className="topic-card-head">
-        <span className="topic-card-num">{topic.number}</span>
-        <span className="topic-card-icon">
-          <Icon name={topic.icon} size={34} />
-        </span>
-      </div>
-      <h2 className="topic-card-title">{topic.title}</h2>
-      <p className="topic-card-sub">{topic.subtitle}</p>
-      <p className="topic-card-intro">{topic.intro}</p>
-      <button className="topic-card-cta-btn" onClick={() => onOpen(topic.id)}>
-        Read Topic <Icon name="arrow" size={16} color="#c4ff00" />
-      </button>
-    </article>
-  );
-}
-
-export default function TopicPage({ topicId, onBack }) {
+export default function TopicPage({ topicId, onBack, onOpenTopic }) {
   const topic = units['business-intelligence'][0].topics.find((t) => t.id === topicId);
   const [progress, setProgress] = useState(0);
+  const [completed, setCompleted] = useState(() => getCompletedTopics().includes(topicId));
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    setCompleted(getCompletedTopics().includes(topicId));
+  }, [topicId]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -185,6 +245,11 @@ export default function TopicPage({ topicId, onBack }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, [topicId]);
 
+  const handleComplete = () => {
+    toggleCompletedTopic(topicId);
+    setCompleted(!completed);
+  };
+
   if (!topic) {
     return (
       <div className="container">
@@ -194,90 +259,121 @@ export default function TopicPage({ topicId, onBack }) {
     );
   }
 
+  // Prev/next topic
+  const allTopics = units['business-intelligence'][0].topics;
+  const idx = allTopics.findIndex((t) => t.id === topicId);
+  const prevTopic = idx > 0 ? allTopics[idx - 1] : null;
+  const nextTopic = idx < allTopics.length - 1 ? allTopics[idx + 1] : null;
+
   return (
-    <>
-      <header className="topic-hero" style={{ '--accent': topic.accent }}>
-        <div className="topic-hero-bg" />
-        <div className="container">
-          <button className="back-btn" onClick={onBack}>
-            <Icon name="arrow" size={18} color="#fff" /> Wapas Ghar
-          </button>
-          <div className="topic-hero-badge">
-            <span className="topic-hero-num">{topic.number}</span>
-            <span>Business Intelligence · Unit 1</span>
+    <div className="topic-page">
+      {/* Sidebar menu */}
+      <TopicMenu
+        currentTopicId={topicId}
+        onOpenTopic={onOpenTopic}
+        onOpenSubject={() => onBack()}
+        onBack={onBack}
+        mobileOpen={mobileOpen}
+        setMobileOpen={setMobileOpen}
+      />
+
+      <div className="topic-main">
+        <header className="topic-hero" style={{ '--accent': topic.accent }}>
+          <div className="topic-hero-bg" />
+          <div className="container">
+            <button className="menu-toggle-mobile" onClick={() => { setMobileOpen(true); }}>
+              <Icon name="book" size={16} color="#c4ff00" /> Topics Menu
+            </button>
+            <div className="topic-hero-badge">
+              <span className="topic-hero-num">{topic.number}</span>
+              <span>Business Intelligence · Unit 1</span>
+            </div>
+            <h1 className="topic-hero-title">{topic.title}</h1>
+            <p className="topic-hero-sub">{topic.subtitle}</p>
+            <div className="topic-hero-stats">
+              <span>📖 {topic.sections.length} sections</span>
+              <span>🖼️ {topic.sections.filter((s) => s.type === 'diagram').length} diagrams</span>
+              <span>🎯 {topic.examQuestions.length} 6-mark exam questions</span>
+            </div>
           </div>
-          <h1 className="topic-hero-title">{topic.title}</h1>
-          <p className="topic-hero-sub">{topic.subtitle}</p>
-          <div className="topic-hero-stats">
-            <span>📖 {topic.sections.length} sections</span>
-            <span>🖼️ {topic.sections.filter((s) => s.type === 'diagram').length} diagrams</span>
-            <span>🎯 {topic.examQuestions.length} 6-mark exam questions</span>
-          </div>
+        </header>
+
+        <div className="progress-bar">
+          <div className="progress-fill" style={{ width: `${progress}%` }} />
         </div>
-      </header>
 
-      <div className="progress-bar">
-        <div className="progress-fill" style={{ width: `${progress}%` }} />
+        <main className="container">
+          {/* English Definition Box */}
+          <section className="section english-def-section">
+            <div className="section-kicker"><Icon name="book" size={16} /> English Definition</div>
+            <div className="english-def-card">
+              <span className="english-def-label">OFFICIAL DEFINITION</span>
+              <p>{topic.englishDefinition}</p>
+            </div>
+          </section>
+
+          {/* Hinglish intro */}
+          <section className="section intro-section">
+            <div className="intro-card">
+              <span className="intro-emoji">🎓</span>
+              <p>{topic.intro}</p>
+            </div>
+          </section>
+
+          {topic.sections.map((section, i) => (
+            <SectionRenderer key={i} section={section} index={i} />
+          ))}
+
+          {/* 6-mark exam questions */}
+          <section className="section exam-section">
+            <div className="section-kicker"><Icon name="quiz" size={16} /> Exam Focus — 6 Marks Questions</div>
+            <h3>6 Marks Exam Questions & Answers 🔥</h3>
+            <p className="section-note">
+              Important questions jo exam mein aa sakte hain — aur unke complete answers bhi diye gaye hain. Answer mein definition, explanation aur diagram reference diya gaya hai.
+            </p>
+            <div className="exam-list">
+              {topic.examQuestions.map((q, i) => (
+                <div key={i} className="exam-item" style={{ '--d': `${i * 80}ms` }}>
+                  <div className="exam-question">
+                    <span className="exam-q-num">Q{i + 1}</span>
+                    <span className="exam-q-text">{q.question}</span>
+                  </div>
+                  <div className="exam-answer-block">
+                    <span className="exam-answer-label">ANSWER</span>
+                    <ExamAnswer text={q.answer} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Bottom nav: prev/next + mark complete */}
+          <nav className="topic-bottom-nav">
+            <div className="tbn-row">
+              <button
+                className="btn ghost"
+                disabled={!prevTopic}
+                onClick={() => prevTopic && onOpenTopic(prevTopic.id)}
+              >
+                ← Pehla Topic
+              </button>
+              <button
+                className={`btn ${completed ? 'btn-done' : 'btn-mark'}`}
+                onClick={handleComplete}
+              >
+                {completed ? '✓ Topic Completed' : 'Mark as Completed'}
+              </button>
+              <button
+                className="btn primary"
+                disabled={!nextTopic}
+                onClick={() => nextTopic && onOpenTopic(nextTopic.id)}
+              >
+                Agla Topic →
+              </button>
+            </div>
+          </nav>
+        </main>
       </div>
-
-      <main className="container">
-        {/* English Definition Box */}
-        <section className="section english-def-section">
-          <div className="section-kicker"><Icon name="book" size={16} /> English Definition</div>
-          <div className="english-def-card">
-            <span className="english-def-label">OFFICIAL DEFINITION</span>
-            <p>{topic.englishDefinition}</p>
-          </div>
-        </section>
-
-        {/* Hinglish intro */}
-        <section className="section intro-section">
-          <div className="intro-card">
-            <span className="intro-emoji">🎓</span>
-            <p>{topic.intro}</p>
-          </div>
-        </section>
-
-        {topic.sections.map((section, i) => (
-          <SectionRenderer key={i} section={section} index={i} />
-        ))}
-
-        {/* 6-mark exam questions */}
-        <section className="section exam-section">
-          <div className="section-kicker"><Icon name="quiz" size={16} /> Exam Focus — 6 Marks Questions</div>
-          <h3>6 Marks Exam Questions & Answers 🔥</h3>
-          <p className="section-note">
-            Important questions jo exam mein aa sakte hain — aur unke complete answers bhi diye gaye hain. Answer mein definition, explanation aur diagram reference diya gaya hai.
-          </p>
-          <div className="exam-list">
-            {topic.examQuestions.map((q, i) => (
-              <div key={i} className="exam-item" style={{ '--d': `${i * 80}ms` }}>
-                <div className="exam-question">
-                  <span className="exam-q-num">Q{i + 1}</span>
-                  <span className="exam-q-text">{q.question}</span>
-                </div>
-                <div className="exam-answer-block">
-                  <span className="exam-answer-label">ANSWER</span>
-                  <ExamAnswer text={q.answer} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Navigation between topics */}
-        <nav className="topic-nav">
-          <TopicCardMini topic={topic} onBack={onBack} />
-        </nav>
-      </main>
-    </>
-  );
-}
-
-function TopicCardMini({ topic, onBack }) {
-  return (
-    <div className="topic-mini-nav">
-      <button className="btn ghost" onClick={onBack}>← Pehle wale topics ke liye</button>
     </div>
   );
 }
