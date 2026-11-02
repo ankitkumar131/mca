@@ -1233,6 +1233,14 @@ export const units = {
               ],
             },
             {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-intro-shield.jpg', caption: 'Cyber Security - Shielding digital systems from online threats' },
+              ],
+            },
+            {
               type: 'recap',
               title: 'Quick Recap',
               kicker: '5 Seconds Mein Yaad Karo',
@@ -1296,6 +1304,14 @@ export const units = {
                 'Economic stability — cyber attacks economic growth ko slow kar sakte hain.',
                 'National security — government data, defense systems cyber attacks ke target ho sakte hain.',
                 'Individual privacy — personal information, messages, photos sab protect karna zaroori hai.',
+              ],
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-framework-shield.jpg', caption: 'Cyber Security Framework - 4 key areas of protection' },
               ],
             },
             {
@@ -1372,6 +1388,15 @@ export const units = {
               ],
             },
             {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyberspace-layers.png', caption: 'Cyberspace Layers - Physical, Logical, Social, Security' },
+                { src: '/images/cyberspace-layers-logical.png', caption: 'Logical Network Diagram - Protocols, Software and Applications' },
+              ],
+            },
+            {
               type: 'recap',
               title: 'Quick Recap',
               kicker: '5 Seconds Mein Yaad Karo',
@@ -1437,6 +1462,15 @@ export const units = {
                 'Insider Threats — organisation ke own employees intentionally ya accidentally data leak karte hain.',
                 'Zero-Day Exploits — security vulnerability jinka software maker ko bhi pata nahi — hackers exploit kar dete hain.',
                 'SQL Injection — hackers SQL queries ko manipulate kar database se sensitive data chura lete hain.',
+              ],
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-threats-overview.webp', caption: 'Cyber Threat Environment - INTERPOL reports surge in attacks' },
+                { src: '/images/cyber-threats-types.jpg', caption: 'Common Types of Cyber Threats - Phishing, Malware, Ransomware' },
               ],
             },
             {
@@ -1508,6 +1542,14 @@ export const units = {
               ],
             },
             {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-warfare-state.png', caption: 'State-Sponsored Cyber Warfare - Nation-state digital attacks' },
+              ],
+            },
+            {
               type: 'recap',
               title: 'Quick Recap',
               kicker: '5 Seconds Mein Yaad Karo',
@@ -1568,6 +1610,15 @@ export const units = {
               title: 'CIA Triad ka Real-World Example',
               kicker: 'Example',
               body: 'Ek bank ka online system le lo. Confidentiality: aapke account details sirf aap aur bank ke authorized employees ko dekhne milna chahiye. Integrity: aapke transaction details correct hone chahiye — kisi na kisi change nahi karna chahiye. Availability: bank ka website 24/7 available hona chahiye — DDoS attack se down nahi hona chahiye. Ye 3 principles milkar ek secure banking system banate hain.',
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cia-triad.jpg', caption: 'CIA Triad - Confidentiality, Integrity, Availability' },
+                { src: '/images/cia-triad-detail.jpg', caption: 'CIA Security Triad Explained' },
+              ],
             },
             {
               type: 'recap',
@@ -1635,6 +1686,15 @@ export const units = {
                 'Infrastructure disruption — power, water, transport sab affect ho sakte hain.',
                 'Economic damage — attacks ka financial loss hota hai.',
                 'Social unrest — propaganda aur fake news social stability ko affect karte hain.',
+              ],
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-terrorism-infra.webp', caption: 'Cyber Terrorism Targeting Critical Infrastructure' },
+                { src: '/images/cyber-terrorism-govt.jpg', caption: 'Cybersecurity of Critical Infrastructure and Government Systems' },
               ],
             },
             {
@@ -1706,6 +1766,14 @@ export const units = {
               ],
             },
             {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-terrorism-infra.webp', caption: 'Critical Infrastructure Under Cyber Attack' },
+              ],
+            },
+            {
               type: 'recap',
               title: 'Quick Recap',
               kicker: '5 Seconds Mein Yaad Karo',
@@ -1771,6 +1839,14 @@ export const units = {
                 'Policy enforcement — security policies ko strict implement karna.',
                 'Incident response team — attack ho toh fast response dena.',
                 'Continuous monitoring — security incidents continuous monitor karna.',
+              ],
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-framework-shield.jpg', caption: 'Organizational Security - Framework for Business Protection' },
               ],
             },
             {
@@ -1842,6 +1918,14 @@ export const units = {
               ],
             },
             {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-intro-shield.jpg', caption: 'Policy and Governance - Cyber Security Framework' },
+              ],
+            },
+            {
               type: 'recap',
               title: 'Quick Recap',
               kicker: '5 Seconds Mein Yaad Karo',
@@ -1907,6 +1991,14 @@ export const units = {
                 'Cyber incidents report karna, alerts issue karna.',
                 'Government, banks, critical infrastructure — sabke saath coordination.',
                 'International cooperation — other countries ke CERTs ke saath.',
+              ],
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-warfare-state.png', caption: 'Nodal Authority - Central coordination for cyber incidents' },
               ],
             },
             {
@@ -1978,6 +2070,14 @@ export const units = {
               ],
             },
             {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyberspace-layers.png', caption: 'International Cyberspace Governance - Global cooperation' },
+              ],
+            },
+            {
               type: 'recap',
               title: 'Quick Recap',
               kicker: '5 Seconds Mein Yaad Karo',
@@ -2045,6 +2145,14 @@ export const units = {
               ],
             },
             {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-threats-types.jpg', caption: 'Cyber Laws - Legal framework for digital world' },
+              ],
+            },
+            {
               type: 'recap',
               title: 'Quick Recap',
               kicker: '5 Seconds Mein Yaad Karo',
@@ -2109,6 +2217,14 @@ export const units = {
                 'Cross-border liability — attackers cross borders, liability complex.',
                 'Security-freedom balance — security aur individual freedom dono protect.',
                 'Technology neutrality — laws technology pe based nahi, behavior pe.',
+              ],
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cia-triad.jpg', caption: 'Key Principles of Cyber Law - Foundation of digital governance' },
               ],
             },
             {
@@ -2180,6 +2296,14 @@ export const units = {
               ],
             },
             {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-threats-overview.webp', caption: 'IT Act 2000 - India first cyber law' },
+              ],
+            },
+            {
               type: 'recap',
               title: 'Quick Recap',
               kicker: '5 Seconds Mein Yaad Karo',
@@ -2244,6 +2368,14 @@ export const units = {
                 'Imprisonment — jail terms vary.',
                 'Both — fine aur jail dono ho sakte hain.',
                 'Severity — serious offenses heavy penalties.',
+              ],
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-threats-types.jpg', caption: 'IT Act Provisions - Penalties for cybercrimes' },
               ],
             },
             {
@@ -2312,6 +2444,14 @@ export const units = {
                 'Section 66B — impugning meaning of images.',
                 'Section 66C — identity theft penalty.',
                 'Section 66D — cheating by impersonation.',
+              ],
+            },
+            {
+              type: 'image',
+              title: 'Reference Image',
+              kicker: 'Image from the Internet',
+              images: [
+                { src: '/images/cyber-terrorism-govt.jpg', caption: 'IT Act 2008 Amendments - Updated cyber law provisions' },
               ],
             },
             {
