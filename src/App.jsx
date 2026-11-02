@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { subjects, units } from './data/topics';
 import TopicPage from './components/TopicPage';
+import ImportantExamQuestions from './components/ImportantExamQuestions';
 import { Icon } from './components/Icons';
 import { getCompletedTopics } from './utils/progress';
 import './App.css';
@@ -13,6 +14,9 @@ function parseRoute() {
   if (parts[0] === 'subject' && parts[1]) {
     if (parts[2] === 'topic' && parts[3]) {
       return { level: 'topic', subjectId: parts[1], topicId: parts[3] };
+    }
+    if (parts[2] === 'exam') {
+      return { level: 'exam', subjectId: parts[1] };
     }
     return { level: 'units', subjectId: parts[1] };
   }
@@ -217,7 +221,12 @@ export default function App() {
         </div>
       </nav>
 
-      {route.level === 'topic' ? (
+      {route.level === 'exam' ? (
+        <ImportantExamQuestions
+          subjectId={route.subjectId}
+          onBack={() => openSubject(route.subjectId || 'business-intelligence')}
+        />
+      ) : route.level === 'topic' ? (
         <TopicPage
           topicId={route.topicId}
           subjectId={route.subjectId}

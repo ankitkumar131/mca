@@ -4,89 +4,91 @@ import { Diagram } from './Diagrams';
 import { Icon } from './Icons';
 import { getCompletedTopics, toggleCompletedTopic } from '../utils/progress';
 
-// ---------- Sidebar menu ----------
-function TopicMenu({ currentTopicId, onOpenTopic, onOpenSubject, onBack, mobileOpen, setMobileOpen }) {
-  const [collapsed, setCollapsed] = useState(false);
-  const allTopics = units['business-intelligence'][0].topics;
-  // Add Unit 2 as coming soon
-  const allUnits = [
-    ...units['business-intelligence'],
-    { id: 'unit-2', number: '2', name: 'Unit 2 — Coming Soon', topics: [], available: false },
-  ];
+// ---------- Sidebar with dropdown hierarchy ----------
+function Sidebar({ currentTopicId, onOpenTopic, completed }) {
+  const [subjectId, setSubjectId] = useState('business-intelligence');
+  const [unitId, setUnitId] = useState('unit-1');
+
+  const subjectUnits = units[subjectId] || [];
+  const topics = subjectUnits.find((u) => u.id === unitId)?.topics || [];
+
+  function handleSubjectChange(e) {
+    const newSubject = e.target.value;
+    setSubjectId(newSubject);
+    const firstUnit = units[newSubject]?.[0];
+    if (firstUnit) setUnitId(firstUnit.id);
+  }
 
   return (
-    <aside className={`topic-menu ${collapsed ? 'collapsed' : ''} ${mobileOpen ? 'mobile-open' : ''}`}>
-      <div className="topic-menu-head">
-        <button className="menu-back" onClick={onBack}>
-          <Icon name="arrow" size={18} color="#fff" />
-        </button>
-        <span className="menu-title">Menu</span>
-        <button
-          className="menu-collapse"
-          onClick={() => {
-            setCollapsed((c) => !c);
-            setMobileOpen(false);
-          }}
-        >
-          {collapsed ? '→' : '✕'}
-        </button>
+    <aside className="topic-sidebar">
+      <div className="sidebar-header">
+        <h2 className="sidebar-title"><Icon name="menu" size={18} /> Contents</h2>
       </div>
 
-      {!collapsed && (
-        <nav className="menu-nav">
-          <p className="menu-section-label">Subjects</p>
-          {subjects.map((subject) => (
-            <div key={subject.id} className="menu-subject">
-              <button
-                className={`menu-subject-btn ${subject.id === 'business-intelligence' ? 'active' : ''}`}
-                onClick={() => !subject.available && null}
-              >
-                <Icon name="book" size={16} color={subject.available ? '#c4ff00' : '#5a6a9e'} />
-                <span>{subject.name}</span>
-                {!subject.available && <span className="menu-coming">Soon</span>}
-              </button>
+      <div className="dropdown-nav">
+        {/* Subject dropdown */}
+        <label className="dropdown-label">
+          <span><Icon name="folder" size={14} /> Subject</span>
+          <select className="dropdown-select" value={subjectId} onChange={handleSubjectChange}>
+            {subjects.map((s) => (
+              <option key={s.id} value={s.id} disabled={!s.available}>
+                {s.name} {!s.available ? '(Baad Mein)' : ''}
+              </option>
+            ))}
+          </select>
+        </label>
 
-              {subject.available && subject.id === 'business-intelligence' && (
-                <div className="menu-units">
-                  {allUnits.map((unit) => (
-                    <div key={unit.id} className="menu-unit">
-                      <span className="menu-unit-name">
-                        Unit {unit.number} — {unit.name}
-                      </span>
-                      {unit.available === false ? (
-                        <button
-                          className="menu-topic coming"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          <span className="menu-topic-title">Coming Soon 🔜</span>
-                        </button>
-                      ) : (
-                        unit.topics.map((t) => {
-                          const completed = getCompletedTopics().includes(t.id);
-                          return (
-                            <button
-                              key={t.id}
-                              className={`menu-topic ${t.id === currentTopicId ? 'active' : ''}`}
-                              onClick={() => {
-                                onOpenTopic(t.id);
-                                setMobileOpen(false);
-                              }}
-                            >
-                              <span className="menu-topic-num">{t.number}</span>
-                              <span className="menu-topic-title">{t.title}</span>
-                              {completed && <span className="menu-check">✓</span>}
-                            </button>
-                          );
-                        })
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+        {/* Unit dropdown */}
+        <label className="dropdown-label">
+          <span><Icon name="layers" size={14} /> Unit</span>
+          <select
+            className="dropdown-select"
+            value={unitId}
+            onChange={(e) => setUnitId(e.target.value)}
+          >
+            {subjectUnits.map((u) => (
+              <option key={u.id} value={u.id}>{u.number} · {u.name}</option>
+            ))}
+          </select>
+        </label>
+
+        {/* Topic list */}
+        <div className="dropdown-topics">
+          {topics.map((t) => (
+            <button
+              key={t.id}
+              className={`menu-topic ${t.id === currentTopicId ? 'active' : ''}`}
+              onClick={() => onOpenTopic(t.id)}
+            >
+              <span className="menu-topic-num">{t.number}</span>
+              <span className="menu-topic-title">{t.title}</span>
+              {completed.has(t.id) && <span className="menu-check">✓</span>}
+            </button>
           ))}
-        </nav>
-      )}
+        </div>
+      </div>
+
+      {/* Progress */}
+      <div className="sidebar-progress">
+        <div className="progress-label">
+          <span>Unit 1 Progress</span>
+          <span>{completed.size} / {units['business-intelligence'][0].topics.length}</span>
+        </div>
+        <div className="progress-bar">
+          <div
+            className="progress-fill"
+            style={{ width: `${(completed.size / units['business-intelligence'][0].topics.length) * 100}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Important exam questions link */}
+      <button
+        className="sidebar-exam-btn"
+        onClick={() => window.location.hash = '#/subject/business-intelligence/exam'}
+      >
+        <Icon name="quiz" size={18} /> Important Exam Qs →
+      </button>
     </aside>
   );
 }
@@ -240,31 +242,27 @@ function ExamAnswer({ text }) {
   );
 }
 
-export default function TopicPage({ topicId, onBack, onOpenTopic }) {
+// ---------- Main TopicPage component ----------
+export default function TopicPage({ topicId, subjectId, onBack, onOpenTopic }) {
   const topic = units['business-intelligence'][0].topics.find((t) => t.id === topicId);
-  const [progress, setProgress] = useState(0);
-  const [completed, setCompleted] = useState(() => getCompletedTopics().includes(topicId));
+  const [completed, setCompleted] = useState(() => new Set(getCompletedTopics()));
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    setCompleted(getCompletedTopics().includes(topicId));
+    setCompleted(new Set(getCompletedTopics()));
+    window.scrollTo(0, 0);
   }, [topicId]);
 
   useEffect(() => {
     const onScroll = () => {
       const h = document.documentElement;
       const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-      setProgress(Math.min(100, Math.max(0, scrolled)));
+      setScrollProgress(Math.min(100, Math.max(0, scrolled)));
     };
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.scrollTo(0, 0);
     return () => window.removeEventListener('scroll', onScroll);
   }, [topicId]);
-
-  const handleComplete = () => {
-    toggleCompletedTopic(topicId);
-    setCompleted(!completed);
-  };
 
   if (!topic) {
     return (
@@ -281,25 +279,71 @@ export default function TopicPage({ topicId, onBack, onOpenTopic }) {
   const prevTopic = idx > 0 ? allTopics[idx - 1] : null;
   const nextTopic = idx < allTopics.length - 1 ? allTopics[idx + 1] : null;
 
+  const isCompleted = completed.has(topicId);
+
+  const handleComplete = () => {
+    const newCompleted = toggleCompletedTopic(topicId);
+    setCompleted(new Set(newCompleted));
+  };
+
   return (
     <div className="topic-page">
-      {/* Sidebar menu */}
-      <TopicMenu
+      {/* Sidebar */}
+      <Sidebar
         currentTopicId={topicId}
-        onOpenTopic={onOpenTopic}
-        onOpenSubject={() => onBack()}
-        onBack={onBack}
-        mobileOpen={mobileOpen}
-        setMobileOpen={setMobileOpen}
+        onOpenTopic={(tid) => {
+          onOpenTopic(tid);
+          setMobileOpen(false);
+        }}
+        completed={completed}
       />
 
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <div className="sidebar-overlay" onClick={() => setMobileOpen(false)} />
+      )}
+
       <div className="topic-main">
+        {/* Sticky header with prev/next/mark */}
+        <header className="topic-header-sticky">
+          <div className="topic-header-inner">
+            <button
+              className="menu-toggle-mobile"
+              onClick={() => setMobileOpen(true)}
+            >
+              <Icon name="menu" size={18} color="#c4ff00" /> Menu
+            </button>
+            <button
+              className="header-btn"
+              disabled={!prevTopic}
+              onClick={() => prevTopic && onOpenTopic(prevTopic.id)}
+            >
+              <Icon name="arrow" size={16} color="#c4ff00" /> Purana
+            </button>
+            <button
+              className={`header-btn ${isCompleted ? 'header-done' : 'header-mark'}`}
+              onClick={handleComplete}
+            >
+              <Icon name={isCompleted ? 'check' : 'bookmark'} size={16} color={isCompleted ? '#0047ff' : '#c4ff00'} />
+              {isCompleted ? 'Unmark' : 'Khatam Karo'}
+            </button>
+            <button
+              className="header-btn"
+              disabled={!nextTopic}
+              onClick={() => nextTopic && onOpenTopic(nextTopic.id)}
+            >
+              Agla <Icon name="arrow" size={16} color="#c4ff00" />
+            </button>
+          </div>
+          <div className="progress-bar">
+            <div className="progress-fill" style={{ width: `${scrollProgress}%` }} />
+          </div>
+        </header>
+
+        {/* Hero section */}
         <header className="topic-hero" style={{ '--accent': topic.accent }}>
           <div className="topic-hero-bg" />
           <div className="container">
-            <button className="menu-toggle-mobile" onClick={() => { setMobileOpen(true); }}>
-              <Icon name="book" size={16} color="#c4ff00" /> Topics Menu
-            </button>
             <div className="topic-hero-badge">
               <span className="topic-hero-num">{topic.number}</span>
               <span>Business Intelligence · Unit 1</span>
@@ -310,14 +354,12 @@ export default function TopicPage({ topicId, onBack, onOpenTopic }) {
               <span>📖 {topic.sections.length} sections</span>
               <span>🖼️ {topic.sections.filter((s) => s.type === 'diagram').length} diagrams</span>
               <span>🎯 {topic.examQuestions.length} 6-mark exam questions</span>
+              {isCompleted && <span className="completed-badge">✓ khatam</span>}
             </div>
           </div>
         </header>
 
-        <div className="progress-bar">
-          <div className="progress-fill" style={{ width: `${progress}%` }} />
-        </div>
-
+        {/* Content */}
         <main className="container">
           {/* English Definition Box */}
           <section className="section english-def-section">
@@ -336,6 +378,7 @@ export default function TopicPage({ topicId, onBack, onOpenTopic }) {
             </div>
           </section>
 
+          {/* Topic sections */}
           {topic.sections.map((section, i) => (
             <SectionRenderer key={i} section={section} index={i} />
           ))}
@@ -363,6 +406,23 @@ export default function TopicPage({ topicId, onBack, onOpenTopic }) {
             </div>
           </section>
 
+          {/* Important exam questions link at end of unit */}
+          <section className="section important-exam-link-section">
+            <div className="important-exam-link-card">
+              <div className="iel-icon"><Icon name="quiz" size={32} /></div>
+              <div className="iel-text">
+                <h3>⭐ Important 6-Mark Exam Questions — Unit 1</h3>
+                <p>Unit 1 ke sabhi important topics ke 10 most-important 6-mark questions ek jagah par — ek dusre topic mein nahi dhundhna padega.</p>
+              </div>
+              <button
+                className="btn primary"
+                onClick={() => window.location.hash = '#/subject/business-intelligence/exam'}
+              >
+                Important Qs Dekho <Icon name="arrow" size={16} color="#c4ff00" />
+              </button>
+            </div>
+          </section>
+
           {/* Bottom nav: prev/next + mark complete */}
           <nav className="topic-bottom-nav">
             <div className="tbn-row">
@@ -374,10 +434,10 @@ export default function TopicPage({ topicId, onBack, onOpenTopic }) {
                 ← Pehla Topic
               </button>
               <button
-                className={`btn ${completed ? 'btn-done' : 'btn-mark'}`}
+                className={`btn ${isCompleted ? 'btn-done' : 'btn-mark'}`}
                 onClick={handleComplete}
               >
-                {completed ? '✓ Topic Completed' : 'Mark as Completed'}
+                {isCompleted ? '✓ Topic Khatam — Unmark' : 'Mark as Completed'}
               </button>
               <button
                 className="btn primary"
