@@ -1,79 +1,48 @@
 import React from 'react';
 
 // ============================================================
-// Shared animation helper — fade-in on view
+// Improved, properly-labelled SVG diagrams
+// All labels in English (exam style) with Hinglish captions in UI
+// Theme: midnight black bg, cobalt blue accents, acid lime highlights
 // ============================================================
-function Reveal({ children, delay = 0, className = '' }) {
-  return (
-    <div
-      className={`reveal ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-}
+
+const FONT = "'Segoe UI', system-ui, sans-serif";
 
 // ============================================================
-// Diagram 1 — BI Architecture: Data ka Safar
-// Sources → ETL → Data Warehouse → OLAP → Dashboards → Decisions
+// Diagram 1 — BI Architecture Flow (Full Components)
 // ============================================================
 export function BIFlowDiagram() {
   const steps = [
-    { label: 'Data Sources', sub: 'DB · Excel · ERP · CRM', icon: 'M12 3C7 3 3 6.5 3 11s4 8 9 8 9-3.5 9-8-4-8-9-8zm0 15c-4 0-7-2.5-7-6s3-5.5 7-5.5S19 8 19 11s-3 5.5-7 5.5z' },
+    { label: 'DATA SOURCES', sub: 'ERP · CRM · DB · Excel', icon: 'M12 3C7 3 3 6.5 3 11s4 8 9 8 9-3.5 9-8-4-8-9-8zm0 15c-4 0-7-2.5-7-6s3-5.5 7-5.5S19 8 19 11s-3 5.5-7 5.5z' },
     { label: 'ETL', sub: 'Extract · Transform · Load', icon: 'M12 4v4m0 12v4M4 12h4m12 0h4M6.3 6.3l2.8 2.8m5.8 5.8l2.8 2.8M6.3 17.7l2.8-2.8m5.8-5.8l2.8-2.8' },
-    { label: 'Data Warehouse', sub: 'Central store', icon: 'M3 7h18v4H3zM5 11v8M19 11v8M3 7V5m18 2V5M9 7v12m6-12v12' },
+    { label: 'DATA WAREHOUSE', sub: 'Central historical store', icon: 'M3 7h18v4H3zM5 11v8M19 11v8M3 7V5m18 2V5M9 7v12m6-12v12' },
     { label: 'OLAP', sub: 'Multi-dimensional analysis', icon: 'M3 3v18h18M7 14l3-3 3 3 5-6' },
-    { label: 'Dashboards', sub: 'Reports · Charts · KPIs', icon: 'M4 4h7v9H4zM13 4h7v5h-7zM13 12h7v8h-7zM4 16h7v4H4z' },
-    { label: 'Decisions', sub: 'Better business decisions', icon: 'M12 2l2.4 5.4L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-1.6L12 2z' },
+    { label: 'DASHBOARDS', sub: 'Reports · Charts · KPIs', icon: 'M4 4h7v9H4zM13 4h7v5h-7zM13 12h7v8h-7zM4 16h7v4H4z' },
+    { label: 'DECISIONS', sub: 'Better business decisions', icon: 'M12 2l2.4 5.4L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-1.6L12 2z' },
   ];
 
   return (
-    <svg
-      viewBox="0 0 1000 420"
-      className="diagram-svg"
-      role="img"
-      aria-label="BI architecture flow diagram"
-    >
-      {/* Flow line */}
+    <svg viewBox="0 0 1020 250" className="diagram-svg" role="img" aria-label="BI architecture flow diagram">
       <defs>
-        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <marker id="arrowB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
           <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
         </marker>
       </defs>
-      <line x1="120" y1="150" x2="880" y2="150" stroke="rgba(255,255,255,0.15)" strokeWidth="3" strokeDasharray="6 6" />
-
-      {/* Steps */}
+      <line x1="80" y1="125" x2="940" y2="125" stroke="rgba(255,255,255,0.12)" strokeWidth="3" strokeDasharray="6 6" />
       {steps.map((s, i) => {
-        const x = 70 + i * 160;
+        const x = 40 + i * 160;
         return (
           <g key={s.label} style={{ animationDelay: `${200 + i * 150}ms` }} className="diagram-pop">
-            {/* glow */}
-            <rect x={x} y={80} width="140" height="110" rx="14" fill="rgba(0,71,255,0.08)" stroke="rgba(255,255,255,0.18)" />
-            <rect x={x} y={80} width="140" height="110" rx="14" fill="url(#stepGrad)" opacity="0.35" />
-            <rect x={x} y={80} width="140" height="110" rx="14" fill="none" stroke="#0047ff" strokeWidth="2" />
-            {/* icon */}
-            <g transform={`translate(${x + 70}, 112)`}>
-              <path
-                d={s.icon}
-                fill="none"
-                stroke="#c4ff00"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+            <rect x={x} y={30} width="150" height="120" rx="14" fill="rgba(0,71,255,0.08)" stroke="rgba(255,255,255,0.18)" />
+            <rect x={x} y={30} width="150" height="120" rx="14" fill="url(#stepGrad)" opacity="0.4" />
+            <rect x={x} y={30} width="150" height="120" rx="14" fill="none" stroke="#0047ff" strokeWidth="2" />
+            <g transform={`translate(${x + 75}, 62)`}>
+              <path d={s.icon} fill="none" stroke="#c4ff00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
             </g>
-            <text x={x + 70} y={160} textAnchor="middle" fill="#fff" fontSize="15" fontWeight="700">
-              {s.label}
-            </text>
-            <text x={x + 70} y={178} textAnchor="middle" fill="#9ab0e0" fontSize="11">
-              {s.sub}
-            </text>
-            {/* arrow to next */}
+            <text x={x + 75} y={112} textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily={FONT}>{s.label}</text>
+            <text x={x + 75} y={132} textAnchor="middle" fill="#9ab0e0" fontSize="10.5" fontFamily={FONT}>{s.sub}</text>
             {i < steps.length - 1 && (
-              <g className="arrow-pulse">
-                <line x1={x + 140} y1="135" x2={x + 160} y2="135" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrow)" />
-              </g>
+              <line x1={x + 150} y1="90" x2={x + 160} y2="90" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowB)" className="arrow-pulse" />
             )}
           </g>
         );
@@ -93,35 +62,26 @@ export function BIFlowDiagram() {
 // ============================================================
 export function TimelineDiagram() {
   const items = [
-    { decade: '1950s–60s', name: 'MIS', desc: 'Structured reports\nRoutine decisions' },
-    { decade: '1970s', name: 'DSS', desc: 'Data + models\nSemi-structured' },
-    { decade: '1980s', name: 'EIS', desc: 'Executives\nExternal + internal data' },
-    { decade: '1990s', name: 'DW / OLAP', desc: 'Data warehouse\nBI term popularised' },
+    { decade: '1950s–60s', name: 'MIS', desc: 'Management Info Systems\nStructured reports' },
+    { decade: '1970s', name: 'DSS', desc: 'Decision Support\nData + models' },
+    { decade: '1980s', name: 'EIS', desc: 'Executive Info Systems\nExecutives' },
+    { decade: '1990s', name: 'DW / OLAP', desc: 'Data Warehouse\nBI term popularised' },
     { decade: '2000s', name: 'Self-Service BI', desc: 'Tableau · Power BI\nUsers self-serve' },
     { decade: '2010s+', name: 'Modern BI', desc: 'Cloud · AI/ML\nReal-time insights' },
   ];
   return (
-    <svg viewBox="0 0 1000 360" className="diagram-svg" role="img" aria-label="Evolution timeline of BI">
-      <line x1="60" y1="190" x2="940" y2="190" stroke="rgba(255,255,255,0.2)" strokeWidth="4" />
+    <svg viewBox="0 0 1000 340" className="diagram-svg" role="img" aria-label="Evolution timeline of BI">
+      <line x1="60" y1="170" x2="940" y2="170" stroke="rgba(255,255,255,0.2)" strokeWidth="4" />
       {items.map((it, i) => {
         const x = 60 + i * 160;
         return (
           <g key={it.name} style={{ animationDelay: `${i * 130}ms` }} className="diagram-pop">
-            {/* node */}
-            <circle cx={x} cy={190} r="13" fill="#0a0e1a" stroke="#c4ff00" strokeWidth="3" />
-            <circle cx={x} cy={190} r="6" fill="#c4ff00" className="node-pulse" />
-            {/* decade */}
-            <text x={x} y={152} textAnchor="middle" fill="#c4ff00" fontSize="14" fontWeight="800">
-              {it.decade}
-            </text>
-            {/* name */}
-            <text x={x} y={232} textAnchor="middle" fill="#fff" fontSize="15" fontWeight="700">
-              {it.name}
-            </text>
+            <line x1={x - 8} y1="170" x2={x + 8} y2="170" stroke="#c4ff00" strokeWidth="4" />
+            <circle cx={x} cy={170} r="11" fill="#0a0e1a" stroke="#c4ff00" strokeWidth="3" />
+            <text x={x} y={140} textAnchor="middle" fill="#c4ff00" fontSize="14" fontWeight="800" fontFamily={FONT}>{it.decade}</text>
+            <text x={x} y={195} textAnchor="middle" fill="#fff" fontSize="14.5" fontWeight="800" fontFamily={FONT}>{it.name}</text>
             {it.desc.split('\n').map((d, j) => (
-              <text key={j} x={x} y={252 + j * 16} textAnchor="middle" fill="#9ab0e0" fontSize="11">
-                {d}
-              </text>
+              <text key={j} x={x} y={218 + j * 18} textAnchor="middle" fill="#9ab0e0" fontSize="11" fontFamily={FONT}>{d}</text>
             ))}
           </g>
         );
@@ -135,7 +95,7 @@ export function TimelineDiagram() {
 // ============================================================
 export function DSSDiagram() {
   return (
-    <svg viewBox="0 0 640 420" className="diagram-svg" role="img" aria-label="DSS components diagram">
+    <svg viewBox="0 0 640 380" className="diagram-svg" role="img" aria-label="DSS components diagram">
       <defs>
         <marker id="arrowD" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
           <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
@@ -143,37 +103,29 @@ export function DSSDiagram() {
       </defs>
       {/* center */}
       <g style={{ animationDelay: '100ms' }} className="diagram-pop">
-        <rect x="230" y="150" width="180" height="120" rx="16" fill="rgba(0,71,255,0.12)" stroke="#0047ff" strokeWidth="2.5" />
-        <text x="320" y="200" textAnchor="middle" fill="#fff" fontSize="20" fontWeight="800">DECISION</text>
-        <text x="320" y="226" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="700">SUPPORT SYSTEM</text>
+        <rect x="220" y="130" width="200" height="100" rx="16" fill="rgba(0,71,255,0.12)" stroke="#0047ff" strokeWidth="2.5" />
+        <text x="320" y="178" textAnchor="middle" fill="#fff" fontSize="18" fontWeight="800" fontFamily={FONT}>DECISION SUPPORT</text>
+        <text x="320" y="202" textAnchor="middle" fill="#c4ff00" fontSize="15" fontWeight="700" fontFamily={FONT}>SYSTEM (DSS)</text>
       </g>
       {/* three components */}
       {[
-        { x: 40, y: 40, name: 'DATABASE', sub: 'Management System', desc: 'Store · manage · retrieve data', icon: 'M12 3C7 3 3 6.5 3 11s4 8 9 8 9-3.5 9-8-4-8-9-8z' },
-        { x: 400, y: 40, name: 'MODEL', sub: 'Management System', desc: 'Analysis models · forecasting', icon: 'M12 2l2.4 5.4L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-1.6L12 2z' },
-        { x: 400, y: 280, name: 'USER', sub: 'Interface', desc: 'Dialogue · query · interaction', icon: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-7 9a7 7 0 0 1 14 0' },
+        { x: 30, y: 25, name: 'DATABASE', sub: 'Management System', desc: 'Store · manage · retrieve data', icon: 'M12 3C7 3 3 6.5 3 11s4 8 9 8 9-3.5 9-8-4-8-9-8z', toX: 220, toY: 140 },
+        { x: 400, y: 25, name: 'MODEL', sub: 'Management System', desc: 'Analysis models · forecasting', icon: 'M12 2l2.4 5.4L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-1.6L12 2z', toX: 420, toY: 140 },
+        { x: 400, y: 240, name: 'USER', sub: 'Interface / Dialogue', desc: 'Query · interaction · reports', icon: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-7 9a7 7 0 0 1 14 0', toX: 420, toY: 230 },
       ].map((c, i) => (
         <g key={c.name} style={{ animationDelay: `${250 + i * 140}ms` }} className="diagram-pop">
           <rect x={c.x} y={c.y} width="190" height="110" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" />
           <rect x={c.x} y={c.y} width="190" height="110" rx="14" fill="none" stroke="#0047ff" strokeWidth="2" opacity="0.6" />
-          <g transform={`translate(${c.x + 34}, ${c.y + 34})`}>
+          <g transform={`translate(${c.x + 34}, ${c.y + 32})`}>
             <path d={c.icon} fill="none" stroke="#c4ff00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
           </g>
-          <text x={c.x + 30} y={c.y + 66} fill="#fff" fontSize="16" fontWeight="700">{c.name}</text>
-          <text x={c.x + 30} y={c.y + 86} fill="#c4ff00" fontSize="12" fontWeight="600">{c.sub}</text>
-          <text x={c.x + 30} y={c.y + 102} fill="#9ab0e0" fontSize="10">{c.desc}</text>
-          {/* arrow to center */}
-          <line
-            x1={c.x + 190} y1={c.y + 55}
-            x2={230} y2={190 + (c.y < 200 ? 0 : 40)}
-            stroke="#c4ff00" strokeWidth="2.5" strokeDasharray="5 5" markerEnd="url(#arrowD)" className="arrow-pulse"
-          />
+          <text x={c.x + 30} y={c.y + 64} fill="#fff" fontSize="15" fontWeight="800" fontFamily={FONT}>{c.name}</text>
+          <text x={c.x + 30} y={c.y + 84} fill="#c4ff00" fontSize="11.5" fontWeight="600" fontFamily={FONT}>{c.sub}</text>
+          <text x={c.x + 30} y={c.y + 100} fill="#9ab0e0" fontSize="10" fontFamily={FONT}>{c.desc}</text>
+          <line x1={c.x + 190} y1={c.y + 55} x2={c.toX} y2={c.toY} stroke="#c4ff00" strokeWidth="2.5" strokeDasharray="5 5" markerEnd="url(#arrowD)" className="arrow-pulse" />
         </g>
       ))}
-      {/* data label */}
-      <text x="320" y="395" textAnchor="middle" fill="#9ab0e0" fontSize="12">
-        Three components combine to support decision makers
-      </text>
+      <text x="320" y="360" textAnchor="middle" fill="#9ab0e0" fontSize="12" fontFamily={FONT}>Three components combine to support decision makers</text>
     </svg>
   );
 }
@@ -183,31 +135,29 @@ export function DSSDiagram() {
 // ============================================================
 export function DIKWDiagram() {
   const levels = [
-    { label: 'WISDOM', sub: 'Right decisions', color: '#c4ff00', width: 0.22, y: 40 },
-    { label: 'KNOWLEDGE', sub: 'Patterns · experience', color: '#00c8ff', width: 0.38, y: 110 },
-    { label: 'INFORMATION', sub: 'Data + context', color: '#0047ff', width: 0.56, y: 180 },
-    { label: 'DATA', sub: 'Raw facts & figures', color: '#7a8ab5', width: 0.76, y: 250 },
+    { label: 'WISDOM', sub: 'Right decisions', color: '#c4ff00', width: 0.30, y: 30 },
+    { label: 'KNOWLEDGE', sub: 'Patterns · experience', color: '#00c8ff', width: 0.48, y: 95 },
+    { label: 'INFORMATION', sub: 'Data + context', color: '#0047ff', width: 0.66, y: 160 },
+    { label: 'DATA', sub: 'Raw facts & figures', color: '#7a8ab5', width: 0.86, y: 225 },
   ];
-  const cx = 250;
+  const cx = 260;
   return (
-    <svg viewBox="0 0 500 400" className="diagram-svg" role="img" aria-label="DIKW pyramid diagram">
-      {/* left labels (for wide screens) */}
+    <svg viewBox="0 0 560 340" className="diagram-svg" role="img" aria-label="DIKW pyramid diagram">
       {levels.map((lv, i) => {
-        const w = lv.width * 300;
+        const w = lv.width * 340;
         const x = cx - w / 2;
         return (
-          <g key={lv.label} style={{ animationDelay: `${300 - i * 90}ms` }} className="diagram-pop">
+          <g key={lv.label} style={{ animationDelay: `${350 - i * 100}ms` }} className="diagram-pop">
             <polygon
-              points={`${x},${lv.y} ${x + w},${lv.y} ${x + w + 40},${lv.y + 60} ${x + 40},${lv.y + 60}`}
+              points={`${x},${lv.y} ${x + w},${lv.y} ${x + w + 35},${lv.y + 60} ${x + 35},${lv.y + 60}`}
               fill={lv.color}
               opacity="0.22"
               stroke={lv.color}
               strokeWidth="2.5"
             />
-            <text x={cx + w / 2 + 50} y={lv.y + 28} fill="#fff" fontSize="15" fontWeight="800">{lv.label}</text>
-            <text x={cx + w / 2 + 50} y={lv.y + 48} fill="#9ab0e0" fontSize="11">{lv.sub}</text>
-            {/* arrow */}
-            <line x1={cx + w / 2 + 12} y1={lv.y + 30} x2={cx + w / 2 + 38} y2={lv.y + 30} stroke={lv.color} strokeWidth="2" markerEnd="url(#arrow)" />
+            <text x={cx + w / 2 + 45} y={lv.y + 28} fill="#fff" fontSize="15" fontWeight="800" fontFamily={FONT}>{lv.label}</text>
+            <text x={cx + w / 2 + 45} y={lv.y + 48} fill="#9ab0e0" fontSize="11" fontFamily={FONT}>{lv.sub}</text>
+            <line x1={cx + w / 2 + 14} y1={lv.y + 30} x2={cx + w / 2 + 42} y2={lv.y + 30} stroke={lv.color} strokeWidth="2" markerEnd="url(#arrow)" />
           </g>
         );
       })}
@@ -231,26 +181,26 @@ export function AnalyticsDiagram() {
     { q: 'What should we do?', name: 'PRESCRIPTIVE', desc: 'Recommendations · optimize', color: '#c4ff00', icon: 'M12 2l2.4 5.4L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-1.6L12 2z' },
   ];
   return (
-    <svg viewBox="0 0 1000 320" className="diagram-svg" role="img" aria-label="Analytics stages diagram">
+    <svg viewBox="0 0 1000 300" className="diagram-svg" role="img" aria-label="Analytics stages diagram">
       <defs>
         <marker id="arrowA" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
           <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
         </marker>
       </defs>
-      <line x1="110" y1="160" x2="890" y2="160" stroke="rgba(255,255,255,0.15)" strokeWidth="3" strokeDasharray="6 6" />
+      <line x1="110" y1="150" x2="890" y2="150" stroke="rgba(255,255,255,0.15)" strokeWidth="3" strokeDasharray="6 6" />
       {stages.map((s, i) => {
         const x = 60 + i * 235;
         return (
           <g key={s.name} style={{ animationDelay: `${i * 150}ms` }} className="diagram-pop">
-            <rect x={x} y={90} width="180" height="140" rx="16" fill="rgba(255,255,255,0.04)" stroke={s.color} strokeWidth="2.5" />
-            <g transform={`translate(${x + 90}, 120)`}>
+            <rect x={x} y={80} width="180" height="140" rx="16" fill="rgba(255,255,255,0.04)" stroke={s.color} strokeWidth="2.5" />
+            <g transform={`translate(${x + 90}, 108)`}>
               <path d={s.icon} fill="none" stroke={s.color} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
             </g>
-            <text x={x + 90} y={162} textAnchor="middle" fill="#fff" fontSize="15" fontWeight="800">{s.name}</text>
-            <text x={x + 90} y={182} textAnchor="middle" fill={s.color} fontSize="13" fontWeight="700">"{s.q}"</text>
-            <text x={x + 90} y={202} textAnchor="middle" fill="#9ab0e0" fontSize="11">{s.desc}</text>
+            <text x={x + 90} y={155} textAnchor="middle" fill="#fff" fontSize="14.5" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x + 90} y={176} textAnchor="middle" fill={s.color} fontSize="12.5" fontWeight="700" fontFamily={FONT}>"{s.q}"</text>
+            <text x={x + 90} y={196} textAnchor="middle" fill="#9ab0e0" fontSize="10.5" fontFamily={FONT}>{s.desc}</text>
             {i < 3 && (
-              <line x1={x + 180} y1="160" x2={x + 235} y2="160" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowA)" className="arrow-pulse" />
+              <line x1={x + 180} y1="150" x2={x + 235} y2="150" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowA)" className="arrow-pulse" />
             )}
           </g>
         );
@@ -263,16 +213,8 @@ export function AnalyticsDiagram() {
 // Diagram 6 — Decision cycle
 // ============================================================
 export function CycleDiagram() {
-  const steps = [
-    '1 · Identify Problem',
-    '2 · Collect Data',
-    '3 · Clean & Process',
-    '4 · Analyze',
-    '5 · Interpret',
-    '6 · Decide',
-    '7 · Implement & Monitor',
-  ];
-  const cx = 250, cy = 215, r = 130;
+  const steps = ['1 · Identify Problem', '2 · Collect Data', '3 · Clean & Process', '4 · Analyze', '5 · Interpret', '6 · Decide', '7 · Implement & Monitor'];
+  const cx = 250, cy = 215, r = 135;
   return (
     <svg viewBox="0 0 500 430" className="diagram-svg" role="img" aria-label="Data-driven decision cycle">
       <defs>
@@ -280,27 +222,149 @@ export function CycleDiagram() {
           <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
         </marker>
       </defs>
-      {/* ring */}
       <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="3" strokeDasharray="8 8" />
-      {/* center */}
       <g style={{ animationDelay: '80ms' }} className="diagram-pop">
-        <circle cx={cx} cy={cy} r="55" fill="rgba(0,71,255,0.12)" stroke="#0047ff" strokeWidth="2.5" />
-        <text x={cx} y={cy - 6} textAnchor="middle" fill="#fff" fontSize="14" fontWeight="700">DATA-DRIVEN</text>
-        <text x={cx} y={cy + 16} textAnchor="middle" fill="#c4ff00" fontSize="13" fontWeight="700">CYCLE</text>
+        <circle cx={cx} cy={cy} r="58" fill="rgba(0,71,255,0.12)" stroke="#0047ff" strokeWidth="2.5" />
+        <text x={cx} y={cy - 6} textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily={FONT}>DATA-DRIVEN</text>
+        <text x={cx} y={cy + 16} textAnchor="middle" fill="#c4ff00" fontSize="13" fontWeight="700" fontFamily={FONT}>CYCLE</text>
       </g>
-      {/* steps around */}
       {steps.map((s, i) => {
         const ang = -Math.PI / 2 + (i * 2 * Math.PI) / steps.length;
-        const x = cx + r * Math.cos(ang) - 80;
-        const y = cy + r * Math.sin(ang) - 16;
+        const x = cx + r * Math.cos(ang) - 78;
+        const y = cy + r * Math.sin(ang) - 15;
         return (
           <g key={s} style={{ animationDelay: `${150 + i * 110}ms` }} className="diagram-pop">
-            <rect x={x} y={y} width="160" height="32" rx="16" fill="rgba(255,255,255,0.05)" stroke={i === steps.length - 1 ? '#c4ff00' : 'rgba(0,71,255,0.7)'} strokeWidth="1.8" />
-            <text x={x + 80} y={y + 20} textAnchor="middle" fill="#fff" fontSize="11" fontWeight="600">{s}</text>
+            <rect x={x} y={y} width="156" height="30" rx="15" fill="rgba(255,255,255,0.05)" stroke={i === steps.length - 1 ? '#c4ff00' : 'rgba(0,71,255,0.7)'} strokeWidth="1.8" />
+            <text x={x + 78} y={y + 19} textAnchor="middle" fill="#fff" fontSize="10.5" fontWeight="600" fontFamily={FONT}>{s}</text>
           </g>
         );
       })}
-      <text x={cx} y={405} textAnchor="middle" fill="#9ab0e0" fontSize="12">Circular process — ek baar decision lene se kaam nahi khatam hota</text>
+      <text x={cx} y={405} textAnchor="middle" fill="#9ab0e0" fontSize="12" fontFamily={FONT}>Circular process — decisions monitor kiye jaate hain aur cycle repeat hoti hai</text>
+    </svg>
+  );
+}
+
+// ============================================================
+// Diagram 7 — Full BI Architecture (6 layers)
+// ============================================================
+export function ArchDiagram() {
+  const layers = [
+    { label: 'DATA SOURCES', sub: 'ERP · CRM · Operational DB · Excel · External', color: '#0047ff' },
+    { label: 'ETL', sub: 'Extract → Transform → Load', color: '#0050e8' },
+    { label: 'DATA WAREHOUSE', sub: 'Subject-oriented · Integrated · Historical', color: '#0060ff' },
+    { label: 'OLAP SERVER', sub: 'Data Cubes · Drill-down · Slice · Dice', color: '#0080ff' },
+    { label: 'BI APPLICATIONS', sub: 'Dashboards · Reports · Scorecards', color: '#00a8ff' },
+    { label: 'USERS', sub: 'Analysts · Managers · Executives', color: '#c4ff00' },
+  ];
+  return (
+    <svg viewBox="0 0 640 460" className="diagram-svg" role="img" aria-label="Full BI architecture components diagram">
+      <defs>
+        <marker id="arrowAr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
+        </marker>
+      </defs>
+      {layers.map((l, i) => {
+        const y = 30 + i * 68;
+        return (
+          <g key={l.label} style={{ animationDelay: `${i * 120}ms` }} className="diagram-pop">
+            <rect x="20" y={y} width="600" height="56" rx="12" fill="rgba(255,255,255,0.03)" stroke={l.color} strokeWidth="2" opacity="0.9" />
+            <rect x="20" y={y} width="6" height="56" rx="3" fill={l.color} />
+            <text x="40" y={y + 25} fill="#fff" fontSize="15" fontWeight="800" fontFamily={FONT}>{l.label}</text>
+            <text x="40" y={y + 45} fill="#9ab0e0" fontSize="11" fontFamily={FONT}>{l.sub}</text>
+            {i < layers.length - 1 && (
+              <line x1="320" y1={y + 56} x2="320" y2={y + 68} stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowAr)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="320" y="440" textAnchor="middle" fill="#9ab0e0" fontSize="12" fontFamily={FONT}>Data flows top to bottom: Sources → ETL → Warehouse → OLAP → Applications → Users</text>
+    </svg>
+  );
+}
+
+// ============================================================
+// Diagram 8 — ETL Process (Extract → Transform → Load)
+// ============================================================
+export function ETLDiagram() {
+  return (
+    <svg viewBox="0 0 1000 280" className="diagram-svg" role="img" aria-label="ETL process diagram">
+      <defs>
+        <marker id="arrowE" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
+        </marker>
+      </defs>
+      {[
+        { x: 30, name: 'EXTRACT', desc: 'Data ko sources se nikalna\nERP · CRM · DB · Excel', icon: 'M12 3C7 3 3 6.5 3 11s4 8 9 8 9-3.5 9-8-4-8-9-8z' },
+        { x: 370, name: 'TRANSFORM', desc: 'Clean karna · format karna\nDuplicate hatana · rules apply', icon: 'M12 4v4m0 12v4M4 12h4m12 0h4M6.3 6.3l2.8 2.8m5.8 5.8l2.8 2.8M6.3 17.7l2.8-2.8m5.8-5.8l2.8-2.8' },
+        { x: 710, name: 'LOAD', desc: 'Data warehouse mein daalna\nAnalysis-ready data', icon: 'M3 7h18v4H3zM5 11v8M19 11v8' },
+      ].map((s, i) => (
+        <g key={s.name} style={{ animationDelay: `${i * 150}ms` }} className="diagram-pop">
+          <rect x={s.x} y={40} width="220" height="170" rx="16" fill="rgba(255,255,255,0.04)" stroke="#0047ff" strokeWidth="2.5" />
+          <g transform={`translate(${s.x + 110}, 70)`}>
+            <path d={s.icon} fill="none" stroke="#c4ff00" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+          </g>
+          <text x={s.x + 110} y={140} textAnchor="middle" fill="#fff" fontSize="17" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+          {s.desc.split('\n').map((d, j) => (
+            <text key={j} x={s.x + 110} y={164 + j * 20} textAnchor="middle" fill="#9ab0e0" fontSize="11" fontFamily={FONT}>{d}</text>
+          ))}
+          {i < 2 && (
+            <line x1={s.x + 220} y1="125" x2={s.x + 270} y2="125" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowE)" className="arrow-pulse" />
+          )}
+        </g>
+      ))}
+      <text x="500" y="250" textAnchor="middle" fill="#9ab0e0" fontSize="12" fontFamily={FONT}>ETL process data ko analysis-ready banata hai</text>
+    </svg>
+  );
+}
+
+// ============================================================
+// Diagram 9 — Database vs Data Warehouse (OLTP vs OLAP)
+// ============================================================
+export function DbVsDwDiagram() {
+  return (
+    <svg viewBox="0 0 900 420" className="diagram-svg" role="img" aria-label="OLTP database vs OLAP data warehouse comparison">
+      <defs>
+        <marker id="arrowV" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6 Z" fill="#c4ff00" />
+        </marker>
+      </defs>
+      {/* OLTP box */}
+      <g style={{ animationDelay: '80ms' }} className="diagram-pop">
+        <rect x="30" y="30" width="380" height="330" rx="18" fill="rgba(0,71,255,0.08)" stroke="#0047ff" strokeWidth="2.5" />
+        <text x="220" y="65" textAnchor="middle" fill="#fff" fontSize="18" fontWeight="800" fontFamily={FONT}>DATABASE (OLTP)</text>
+        <text x="220" y="85" textAnchor="middle" fill="#9ab0e0" fontSize="12" fontFamily={FONT}>Online Transaction Processing</text>
+        {[
+          'Purpose: Daily transactions',
+          'Data: Current / operational',
+          'Structure: Row-based, normalized',
+          'Operations: Fast inserts & updates',
+          'Users: Operational staff',
+          'Example: ATM transactions',
+        ].map((p, i) => (
+          <text key={p} x="50" y={120 + i * 36} fill="#eef2ff" fontSize="12.5" fontFamily={FONT}>• {p}</text>
+        ))}
+      </g>
+      {/* arrow */}
+      <g className="diagram-pop" style={{ animationDelay: '400ms' }}>
+        <line x1="410" y1="200" x2="490" y2="200" stroke="#c4ff00" strokeWidth="3.5" markerEnd="url(#arrowV)" className="arrow-pulse" />
+        <text x="450" y="185" textAnchor="middle" fill="#c4ff00" fontSize="11" fontWeight="700" fontFamily={FONT}>ETL</text>
+      </g>
+      {/* OLAP box */}
+      <g style={{ animationDelay: '550ms' }} className="diagram-pop">
+        <rect x="510" y="30" width="360" height="330" rx="18" fill="rgba(196,255,0,0.06)" stroke="#c4ff00" strokeWidth="2.5" />
+        <text x="690" y="65" textAnchor="middle" fill="#fff" fontSize="18" fontWeight="800" fontFamily={FONT}>DATA WAREHOUSE (OLAP)</text>
+        <text x="690" y="85" textAnchor="middle" fill="#9ab0e0" fontSize="12" fontFamily={FONT}>Online Analytical Processing</text>
+        {[
+          'Purpose: Historical analysis',
+          'Data: Integrated, historical',
+          'Structure: Multi-dimensional cubes',
+          'Operations: Drill-down · slice · dice',
+          'Users: Analysts · managers',
+          'Features: Subject-oriented · time-variant',
+        ].map((p, i) => (
+          <text key={p} x="530" y={120 + i * 36} fill="#eef2ff" fontSize="12.5" fontFamily={FONT}>• {p}</text>
+        ))}
+      </g>
     </svg>
   );
 }
@@ -322,6 +386,12 @@ export function Diagram({ type }) {
       return <AnalyticsDiagram />;
     case 'cycle':
       return <CycleDiagram />;
+    case 'arch':
+      return <ArchDiagram />;
+    case 'etl':
+      return <ETLDiagram />;
+    case 'db-vs-dw':
+      return <DbVsDwDiagram />;
     default:
       return null;
   }

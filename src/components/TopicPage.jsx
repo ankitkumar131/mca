@@ -1,24 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { topics } from '../data/topics';
+import { subjects, units } from '../data/topics';
 import { Diagram } from './Diagrams';
-import Quiz from './Quiz';
 import { Icon } from './Icons';
-
-function TopicCard({ topic }) {
-  return (
-    <article className="topic-card" style={{ '--accent': topic.accent }}>
-      <div className="topic-card-head">
-        <span className="topic-card-num">{topic.number}</span>
-        <span className="topic-card-icon">
-          <Icon name={topic.icon} size={34} />
-        </span>
-      </div>
-      <h2 className="topic-card-title">{topic.title}</h2>
-      <p className="topic-card-sub">{topic.subtitle}</p>
-      <p className="topic-card-intro">{topic.intro}</p>
-    </article>
-  );
-}
 
 function SectionRenderer({ section, index }) {
   const icons = {
@@ -28,6 +11,7 @@ function SectionRenderer({ section, index }) {
     example: 'bulb',
     points: 'check',
     recap: 'quiz',
+    image: 'chart',
   };
   const kickerIcon = icons[section.type] || 'chart';
 
@@ -84,6 +68,23 @@ function SectionRenderer({ section, index }) {
     );
   }
 
+  if (section.type === 'image') {
+    return (
+      <section className="section" style={{ '--i': index }}>
+        <div className="section-kicker"><Icon name={kickerIcon} size={16} /> {section.kicker}</div>
+        <h3>{section.title}</h3>
+        <div className="image-card">
+          {section.images.map((img, i) => (
+            <figure key={i} className="image-figure" style={{ '--d': `${i * 100}ms` }}>
+              <img src={img.src} alt={img.caption} loading="lazy" />
+              <figcaption>{img.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
   if (section.type === 'example') {
     return (
       <section className="section" style={{ '--i': index }}>
@@ -134,8 +135,43 @@ function SectionRenderer({ section, index }) {
   return null;
 }
 
+// Renders formatted exam answer text (supports **bold** markers)
+function ExamAnswer({ text }) {
+  const parts = text.split('**').filter(Boolean);
+  return (
+    <div className="exam-answer">
+      {parts.map((part, i) =>
+        i % 2 === 0 ? (
+          <span key={i}>{part}</span>
+        ) : (
+          <strong key={i}>{part}</strong>
+        )
+      )}
+    </div>
+  );
+}
+
+function TopicCard({ topic, onOpen }) {
+  return (
+    <article className="topic-card" style={{ '--accent': topic.accent }}>
+      <div className="topic-card-head">
+        <span className="topic-card-num">{topic.number}</span>
+        <span className="topic-card-icon">
+          <Icon name={topic.icon} size={34} />
+        </span>
+      </div>
+      <h2 className="topic-card-title">{topic.title}</h2>
+      <p className="topic-card-sub">{topic.subtitle}</p>
+      <p className="topic-card-intro">{topic.intro}</p>
+      <button className="topic-card-cta-btn" onClick={() => onOpen(topic.id)}>
+        Read Topic <Icon name="arrow" size={16} color="#c4ff00" />
+      </button>
+    </article>
+  );
+}
+
 export default function TopicPage({ topicId, onBack }) {
-  const topic = topics.find((t) => t.id === topicId);
+  const topic = units['business-intelligence'][0].topics.find((t) => t.id === topicId);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -158,8 +194,6 @@ export default function TopicPage({ topicId, onBack }) {
     );
   }
 
-  const topicsList = topics;
-
   return (
     <>
       <header className="topic-hero" style={{ '--accent': topic.accent }}>
@@ -177,7 +211,7 @@ export default function TopicPage({ topicId, onBack }) {
           <div className="topic-hero-stats">
             <span>📖 {topic.sections.length} sections</span>
             <span>🖼️ {topic.sections.filter((s) => s.type === 'diagram').length} diagrams</span>
-            <span>🎯 {topic.quiz.length} quiz questions</span>
+            <span>🎯 {topic.examQuestions.length} 6-mark exam questions</span>
           </div>
         </div>
       </header>
@@ -187,21 +221,63 @@ export default function TopicPage({ topicId, onBack }) {
       </div>
 
       <main className="container">
+        {/* English Definition Box */}
+        <section className="section english-def-section">
+          <div className="section-kicker"><Icon name="book" size={16} /> English Definition</div>
+          <div className="english-def-card">
+            <span className="english-def-label">OFFICIAL DEFINITION</span>
+            <p>{topic.englishDefinition}</p>
+          </div>
+        </section>
+
+        {/* Hinglish intro */}
+        <section className="section intro-section">
+          <div className="intro-card">
+            <span className="intro-emoji">🎓</span>
+            <p>{topic.intro}</p>
+          </div>
+        </section>
+
         {topic.sections.map((section, i) => (
           <SectionRenderer key={i} section={section} index={i} />
         ))}
 
-        <section className="section quiz-section">
-          <div className="section-kicker"><Icon name="quiz" size={16} /> Interactive Quiz</div>
-          <h3>Ab Apna Gyaan Test Karo 🔥</h3>
-          <p className="section-note">Har question ke answer dekhne se pehle sochna — phir reveal karo. Score check karo!</p>
-          <Quiz questions={topic.quiz} />
+        {/* 6-mark exam questions */}
+        <section className="section exam-section">
+          <div className="section-kicker"><Icon name="quiz" size={16} /> Exam Focus — 6 Marks Questions</div>
+          <h3>6 Marks Exam Questions & Answers 🔥</h3>
+          <p className="section-note">
+            Important questions jo exam mein aa sakte hain — aur unke complete answers bhi diye gaye hain. Answer mein definition, explanation aur diagram reference diya gaya hai.
+          </p>
+          <div className="exam-list">
+            {topic.examQuestions.map((q, i) => (
+              <div key={i} className="exam-item" style={{ '--d': `${i * 80}ms` }}>
+                <div className="exam-question">
+                  <span className="exam-q-num">Q{i + 1}</span>
+                  <span className="exam-q-text">{q.question}</span>
+                </div>
+                <div className="exam-answer-block">
+                  <span className="exam-answer-label">ANSWER</span>
+                  <ExamAnswer text={q.answer} />
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
+        {/* Navigation between topics */}
         <nav className="topic-nav">
-          <button className="btn ghost" onClick={onBack}>← Pehle wale topics ke liye</button>
+          <TopicCardMini topic={topic} onBack={onBack} />
         </nav>
       </main>
     </>
+  );
+}
+
+function TopicCardMini({ topic, onBack }) {
+  return (
+    <div className="topic-mini-nav">
+      <button className="btn ghost" onClick={onBack}>← Pehle wale topics ke liye</button>
+    </div>
   );
 }
