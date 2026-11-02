@@ -496,9 +496,8 @@
 
 /* ---------- Sidebar wrapper & container ---------- */
 .sidebar-wrapper {
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  position: relative;
+  height: 100%;
   z-index: 40;
   flex-shrink: 0;
 }
@@ -840,22 +839,38 @@
   color: #000;
 }
 
-/* ---------- Topic page layout ---------- */
+/* ---------- Topic page layout (fixed sidebar + header, scrollable content) ---------- */
 .topic-page {
   display: flex;
   position: relative;
   z-index: 1;
+  height: calc(100vh - 60px);
+  overflow: hidden;
 }
 
-/* ---------- Topic main content ---------- */
+/* ---------- Topic main content (only this scrolls) ---------- */
 .topic-main {
   flex: 1;
   min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.topic-main::-webkit-scrollbar {
+  width: 6px;
+}
+.topic-main::-webkit-scrollbar-track {
+  background: transparent;
+}
+.topic-main::-webkit-scrollbar-thumb {
+  background: rgba(0, 71, 255, 0.3);
+  border-radius: 4px;
 }
 
 .topic-hero {
   position: relative;
-  padding: 140px 0 60px;
+  padding: 20px 0 50px;
   overflow: hidden;
 }
 
@@ -1539,10 +1554,10 @@ main.container {
   font-size: 12px;
 }
 
-/* ---------- Sticky topic header ---------- */
+/* ---------- Sticky topic header (sticks to top of scrollable content area) ---------- */
 .topic-header-sticky {
   position: sticky;
-  top: 60px;
+  top: 0;
   z-index: 50;
   background: rgba(10, 14, 26, 0.95);
   backdrop-filter: blur(20px);
@@ -1669,10 +1684,12 @@ main.container {
    Responsive
    ============================================================ */
 
-/* Tablet & mobile: sidebar becomes overlay drawer */
+/* Tablet & mobile: sidebar becomes overlay drawer, page scrolls normally */
 @media (max-width: 900px) {
   .topic-page {
     display: block;
+    height: auto;
+    overflow: visible;
   }
 
   .sidebar-wrapper {
@@ -1695,6 +1712,20 @@ main.container {
 
   .sidebar-overlay {
     display: block;
+  }
+
+  .topic-main {
+    height: auto;
+    overflow: visible;
+  }
+
+  .topic-header-sticky {
+    position: sticky;
+    top: 60px;
+  }
+
+  .topic-hero {
+    padding: 140px 0 60px;
   }
 
   /* Mobile menu toggle button */
