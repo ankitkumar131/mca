@@ -641,3 +641,321 @@ export function ItActAmendmentsDiagram() {
     </svg>
   );
 }
+
+// ========================================================
+// UNIT 2 — Cybercrimes and Hacking Diagrams
+// ========================================================
+
+// 1. Cyber Attacks Overview — Attack Lifecycle
+export function CyberAttacksOverviewDiagram() {
+  const phases = [
+    { name: 'Reconnaissance', desc: 'Target info gather', color: '#0047ff' },
+    { name: 'Weaponization', desc: 'Malicious code prepare', color: '#0066ff' },
+    { name: 'Delivery', desc: 'Attack tool deliver', color: '#0088ff' },
+    { name: 'Exploitation', desc: 'Vulnerability exploit', color: '#00aaff' },
+    { name: 'Installation', desc: 'Malware install', color: '#00ccff' },
+    { name: 'C2', desc: 'Remote access', color: '#00eeff' },
+    { name: 'Actions', desc: 'Data theft, damage', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 400" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      <defs>
+        <marker id="arrowCyberA" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#c4ff00" />
+        </marker>
+      </defs>
+      {phases.map((p, i) => {
+        const x = 70 + i * 100;
+        return (
+          <g key={i}>
+            <rect x={x - 45} y={50} width="90" height="70" rx="10" fill={p.color} opacity="0.15" stroke={p.color} strokeWidth="2" />
+            <text x={x} y={75} textAnchor="middle" fill={p.color} fontSize="13" fontWeight="800" fontFamily={FONT}>{p.name}</text>
+            <text x={x} y={95} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{p.desc}</text>
+            {i < phases.length - 1 && (
+              <line x1={x + 45} y1={85} x2={x + 100 - 45} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="170" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>ATTACK LIFECYCLE — 7 Phases</text>
+      <text x="400" y="195" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Cyber attack stages from reconnaissance to damage</text>
+    </svg>
+  );
+}
+
+// 2. Threats — Malware, Spyware, Sniffing Comparison
+export function ThreatsMalwareSpywareDiagram() {
+  const threats = [
+    { name: 'Malware', desc: 'Virus, worm, Trojan, ransomware', color: '#ff0040', x: 150 },
+    { name: 'Spyware', desc: 'Monitor activity, steal data', color: '#0047ff', x: 400 },
+    { name: 'Sniffing', desc: 'Capture network traffic', color: '#ff8800', x: 650 },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {threats.map((t, i) => (
+        <g key={i}>
+          <rect x={t.x - 110} y={60} width="220" height="80" rx="10" fill={t.color} opacity="0.15" stroke={t.color} strokeWidth="2" />
+          <text x={t.x} y={90} textAnchor="middle" fill={t.color} fontSize="16" fontWeight="800" fontFamily={FONT}>{t.name}</text>
+          <text x={t.x} y={115} textAnchor="middle" fill="#fff" fontSize="11" fontFamily={FONT}>{t.desc}</text>
+        </g>
+      ))}
+      <line x1="270" y1="100" x2="280" y2="100" stroke="#c4ff00" strokeWidth="2" className="arrow-pulse" />
+      <line x1="520" y1="100" x2="530" y2="100" stroke="#c4ff00" strokeWidth="2" className="arrow-pulse" />
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>3 TYPES OF THREATS</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Malware — Spyware — Sniffing</text>
+    </svg>
+  );
+}
+
+// 3. Gaining Access — Attack Methods
+export function GainingAccessDiagram() {
+  const methods = [
+    { name: 'Password Cracking', desc: 'Brute force, dictionary', color: '#ff0040' },
+    { name: 'Software Exploits', desc: 'Known vulnerabilities', color: '#0047ff' },
+    { name: 'Social Engineering', desc: 'Phishing, pretexting', color: '#ff8800' },
+    { name: 'Credential Theft', desc: 'Stolen credentials', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      <rect x="250" y="30" width="300" height="50" rx="10" fill="#0047ff" opacity="0.15" stroke="#0047ff" strokeWidth="2" />
+      <text x="400" y="62" textAnchor="middle" fill="#0047ff" fontSize="14" fontWeight="800" fontFamily={FONT}>System Access</text>
+      {methods.map((m, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={120} width="140" height="70" rx="10" fill={m.color} opacity="0.15" stroke={m.color} strokeWidth="2" />
+            <text x={x} y={145} textAnchor="middle" fill={m.color} fontSize="12" fontWeight="800" fontFamily={FONT}>{m.name}</text>
+            <text x={x} y={165} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{m.desc}</text>
+            <line x1={x} y1={90} x2={x} y2={120} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+          </g>
+        );
+      })}
+      <text x="400" y="250" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>GAINING ACCESS — 4 Methods</text>
+      <text x="400" y="275" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Password cracking → Software exploits → Social engineering → Credential theft</text>
+    </svg>
+  );
+}
+
+// 4. Escalating Privileges — Vertical vs Horizontal
+export function EscalatingPrivilegesDiagram() {
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      <text x="200" y="50" textAnchor="middle" fill="#0047ff" fontSize="14" fontWeight="800" fontFamily={FONT}>VERTICAL</text>
+      <text x="600" y="50" textAnchor="middle" fill="#ff8800" fontSize="14" fontWeight="800" fontFamily={FONT}>HORIZONTAL</text>
+      <rect x="100" y="70" width="200" height="40" rx="8" fill="#0047ff" opacity="0.15" stroke="#0047ff" strokeWidth="2" />
+      <text x="200" y="95" textAnchor="middle" fill="#0047ff" fontSize="12" fontWeight="800" fontFamily={FONT}>User</text>
+      <rect x="100" y="130" width="200" height="40" rx="8" fill="#0066ff" opacity="0.15" stroke="#0066ff" strokeWidth="2" />
+      <text x="200" y="155" textAnchor="middle" fill="#0066ff" fontSize="12" fontWeight="800" fontFamily={FONT}>Admin</text>
+      <rect x="100" y="190" width="200" height="40" rx="8" fill="#ff0040" opacity="0.15" stroke="#ff0040" strokeWidth="2" />
+      <text x="200" y="215" textAnchor="middle" fill="#ff0040" fontSize="12" fontWeight="800" fontFamily={FONT}>Root</text>
+      <line x1="200" y1="110" x2="200" y2="130" stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+      <line x1="200" y1="170" x2="200" y2="190" stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+      <rect x="500" y="70" width="200" height="40" rx="8" fill="#0047ff" opacity="0.15" stroke="#0047ff" strokeWidth="2" />
+      <text x="600" y="95" textAnchor="middle" fill="#0047ff" fontSize="12" fontWeight="800" fontFamily={FONT}>User A</text>
+      <rect x="500" y="130" width="200" height="40" rx="8" fill="#0047ff" opacity="0.15" stroke="#0047ff" strokeWidth="2" />
+      <text x="600" y="155" textAnchor="middle" fill="#0047ff" fontSize="12" fontWeight="800" fontFamily={FONT}>User B (Same Level)</text>
+      <line x1="600" y1="110" x2="600" y2="130" stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+      <text x="400" y="280" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>PRIVILEGE ESCALATION</text>
+      <text x="400" y="305" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Vertical = higher level. Horizontal = same level different account.</text>
+    </svg>
+  );
+}
+
+// 5. Executing Applications — Execution Techniques
+export function ExecutingApplicationsDiagram() {
+  const techs = [
+    { name: 'Binary Execution', desc: 'Download + run', color: '#ff0040' },
+    { name: 'Script Execution', desc: 'PowerShell, Python', color: '#0047ff' },
+    { name: 'Code Injection', desc: 'DLL injection', color: '#ff8800' },
+    { name: 'LOLBins', desc: 'System tools misuse', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      <rect x="250" y="30" width="300" height="50" rx="10" fill="#0047ff" opacity="0.15" stroke="#0047ff" strokeWidth="2" />
+      <text x="400" y="62" textAnchor="middle" fill="#0047ff" fontSize="14" fontWeight="800" fontFamily={FONT}>Compromised System</text>
+      {techs.map((t, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={120} width="140" height="70" rx="10" fill={t.color} opacity="0.15" stroke={t.color} strokeWidth="2" />
+            <text x={x} y={145} textAnchor="middle" fill={t.color} fontSize="12" fontWeight="800" fontFamily={FONT}>{t.name}</text>
+            <text x={x} y={165} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{t.desc}</text>
+            <line x1={x} y1={90} x2={x} y2={120} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+          </g>
+        );
+      })}
+      <text x="400" y="250" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>EXECUTION TECHNIQUES</text>
+      <text x="400" y="275" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Binary → Script → Code Injection → LOLBins</text>
+    </svg>
+  );
+}
+
+// 6. Hiding Files — Techniques & Persistence
+export function HidingFilesDiagram() {
+  const techniques = [
+    { name: 'Encryption', desc: 'Files encrypt', color: '#ff0040' },
+    { name: 'Disguising', desc: 'Legit names', color: '#0047ff' },
+    { name: 'Rootkit', desc: 'Kernel stealth', color: '#ff8800' },
+    { name: 'Steganography', desc: 'Hidden in media', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {techniques.map((t, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="60" rx="10" fill={t.color} opacity="0.15" stroke={t.color} strokeWidth="2" />
+            <text x={x} y={75} textAnchor="middle" fill={t.color} fontSize="12" fontWeight="800" fontFamily={FONT}>{t.name}</text>
+            <text x={x} y={95} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{t.desc}</text>
+          </g>
+        );
+      })}
+      <rect x="250" y="160" width="300" height="50" rx="10" fill="#00ff88" opacity="0.15" stroke="#00ff88" strokeWidth="2" />
+      <text x="400" y="192" textAnchor="middle" fill="#00ff88" fontSize="14" fontWeight="800" fontFamily={FONT}>PERSISTENCE</text>
+      <text x="400" y="250" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>HIDING FILES</text>
+      <text x="400" y="275" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Encryption → Disguising → Rootkit → Steganography → Persistence</text>
+    </svg>
+  );
+}
+
+// 7. Covering Tracks — Anti-Forensics
+export function CoveringTracksDiagram() {
+  const techniques = [
+    { name: 'Log Deletion', desc: 'Clear logs', color: '#ff0040' },
+    { name: 'Timestomping', desc: 'Modify timestamps', color: '#0047ff' },
+    { name: 'Shadow Copy', desc: 'Delete VSS', color: '#ff8800' },
+    { name: 'Anti-Forensics', desc: 'Wipe tools', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {techniques.map((t, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="60" rx="10" fill={t.color} opacity="0.15" stroke={t.color} strokeWidth="2" />
+            <text x={x} y={75} textAnchor="middle" fill={t.color} fontSize="12" fontWeight="800" fontFamily={FONT}>{t.name}</text>
+            <text x={x} y={95} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{t.desc}</text>
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>COVERING TRACKS</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Log deletion → Timestomping → Shadow copy → Anti-forensics</text>
+    </svg>
+  );
+}
+
+// 8. Worms — Replication Cycle
+export function WormsDiagram() {
+  const steps = [
+    { name: 'Infect', desc: 'System compromised', color: '#ff0040' },
+    { name: 'Copy', desc: 'Self-replicate', color: '#ff8800' },
+    { name: 'Search', desc: 'Find vulnerable', color: '#0047ff' },
+    { name: 'Exploit', desc: 'Spread to others', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>WORM REPLICATION CYCLE</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Infect → Copy → Search → Exploit → Spread</text>
+    </svg>
+  );
+}
+
+// 9. Trojans — Installation Flow
+export function TrojansDiagram() {
+  const steps = [
+    { name: 'Disguise', desc: 'Legit software look', color: '#0047ff' },
+    { name: 'Download', desc: 'User download', color: '#0066ff' },
+    { name: 'Install', desc: 'Malicious install', color: '#0088ff' },
+    { name: 'Backdoor', desc: 'Remote access', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>TROJAN INSTALLATION FLOW</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Disguise → Download → Install → Backdoor → Remote control</text>
+    </svg>
+  );
+}
+
+// 10. Viruses — Lifecycle
+export function VirusesDiagram() {
+  const stages = [
+    { name: 'Create', desc: 'Write code', color: '#ff0040' },
+    { name: 'Replicate', desc: 'Attach + copy', color: '#ff8800' },
+    { name: 'Install', desc: 'System install', color: '#0047ff' },
+    { name: 'Evade', desc: 'Avoid detection', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {stages.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < stages.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>VIRUS LIFECYCLE</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Create → Replicate → Install → Evade → Payload → Spread</text>
+    </svg>
+  );
+}
+
+// 11. Backdoors — Attack Flow
+export function BackdoorsDiagram() {
+  const steps = [
+    { name: 'Exploit', desc: 'Vulnerability use', color: '#0047ff' },
+    { name: 'Install', desc: 'Backdoor install', color: '#0066ff' },
+    { name: 'Hidden', desc: 'Auth bypass', color: '#0088ff' },
+    { name: 'Remote', desc: 'Control access', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>BACKDOOR ATTACK FLOW</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Exploit → Install → Hidden access → Remote control</text>
+    </svg>
+  );
+}

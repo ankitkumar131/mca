@@ -16,6 +16,17 @@ import {
   ItAct2000Diagram,
   ItActProvisionsDiagram,
   ItActAmendmentsDiagram,
+  CyberAttacksOverviewDiagram,
+  ThreatsMalwareSpywareDiagram,
+  GainingAccessDiagram,
+  EscalatingPrivilegesDiagram,
+  ExecutingApplicationsDiagram,
+  HidingFilesDiagram,
+  CoveringTracksDiagram,
+  WormsDiagram,
+  TrojansDiagram,
+  VirusesDiagram,
+  BackdoorsDiagram,
 } from './CyberDiagrams';
 
 // ============================================================
@@ -551,6 +562,28 @@ export function Diagram({ type }) {
       return <ItActProvisionsDiagram />;
     case 'it-act-amendments':
       return <ItActAmendmentsDiagram />;
+    case 'cyber-attacks-overview':
+      return <CyberAttacksOverviewDiagram />;
+    case 'threats-malware-spyware-sniffing':
+      return <ThreatsMalwareSpywareDiagram />;
+    case 'gaining-access':
+      return <GainingAccessDiagram />;
+    case 'escalating-privileges':
+      return <EscalatingPrivilegesDiagram />;
+    case 'executing-applications':
+      return <ExecutingApplicationsDiagram />;
+    case 'hiding-files':
+      return <HidingFilesDiagram />;
+    case 'covering-tracks':
+      return <CoveringTracksDiagram />;
+    case 'worms':
+      return <WormsDiagram />;
+    case 'trojans':
+      return <TrojansDiagram />;
+    case 'viruses':
+      return <VirusesDiagram />;
+    case 'backdoors':
+      return <BackdoorsDiagram />;
     default:
       return null;
   }
