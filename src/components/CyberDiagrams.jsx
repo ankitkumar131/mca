@@ -959,3 +959,547 @@ export function BackdoorsDiagram() {
     </svg>
   );
 }
+
+// ========================================================
+// UNIT 2 — Cyber Crime Diagrams (Topics 12-26)
+// ========================================================
+
+// 12. Cyber Stalking
+export function CyberStalkingDiagram() {
+  const steps = [
+    { name: 'Contact', desc: 'Initial message', color: '#ff0040' },
+    { name: 'Monitor', desc: 'Track activity', color: '#0047ff' },
+    { name: 'Threat', desc: 'Harassment', color: '#ff8800' },
+    { name: 'Harass', desc: 'Repeat attack', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>CYBER STALKING</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Contact → Monitor → Threat → Harass → Repeat</text>
+    </svg>
+  );
+}
+
+// 13. Software Piracy
+export function SoftwarePiracyDiagram() {
+  const steps = [
+    { name: 'Crack', desc: 'License bypass', color: '#ff0040' },
+    { name: 'Share', desc: 'Distribute', color: '#0047ff' },
+    { name: 'Download', desc: 'Illegal copy', color: '#ff8800' },
+    { name: 'Use', desc: 'No license', color: '#aa00ff' },
+    { name: 'Loss', desc: 'Company loss', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 90 + i * 140;
+        return (
+          <g key={i}>
+            <rect x={x - 60} y={50} width="120" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 60} y1={85} x2={x + 140 - 60} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>SOFTWARE PIRACY</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Crack → Share → Download → Use → Loss</text>
+    </svg>
+  );
+}
+
+
+// 15. Phishing
+export function PhishingDiagram() {
+  const steps = [
+    { name: 'Fake Email', desc: 'Impersonate', color: '#ff0040' },
+    { name: 'Click', desc: 'User clicks', color: '#0047ff' },
+    { name: 'Fake Site', desc: 'Enter info', color: '#ff8800' },
+    { name: 'Theft', desc: 'Credentials', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>PHISHING ATTACK</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Fake Email → Click → Fake Site → Theft</text>
+    </svg>
+  );
+}
+
+// 16. Computer Hacking
+export function ComputerHackingDiagram() {
+  const steps = [
+    { name: 'Recon', desc: 'Info gather', color: '#ff0040' },
+    { name: 'Scan', desc: 'Find vulns', color: '#0047ff' },
+    { name: 'Exploit', desc: 'Use weakness', color: '#ff8800' },
+    { name: 'Access', desc: 'Entry gained', color: '#aa00ff' },
+    { name: 'Damage', desc: 'Cause harm', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 90 + i * 140;
+        return (
+          <g key={i}>
+            <rect x={x - 60} y={50} width="120" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 60} y1={85} x2={x + 140 - 60} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>COMPUTER HACKING</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Recon → Scan → Exploit → Access → Damage</text>
+    </svg>
+  );
+}
+
+// 17. Spamming
+export function SpammingDiagram() {
+  const steps = [
+    { name: 'Email List', desc: 'Buy addresses', color: '#ff0040' },
+    { name: 'Bulk Send', desc: '1000+ emails', color: '#0047ff' },
+    { name: 'User Clicks', desc: 'Open email', color: '#ff8800' },
+    { name: 'Malware', desc: 'Infect system', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>SPAMMING</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Email List → Bulk Send → User Clicks → Malware</text>
+    </svg>
+  );
+}
+
+// 18. XSS
+export function XssDiagram() {
+  const steps = [
+    { name: 'Inject', desc: 'Malicious code', color: '#ff0040' },
+    { name: 'Store/Reflect', desc: 'Website stores', color: '#0047ff' },
+    { name: 'User Visits', desc: 'Browser loads', color: '#ff8800' },
+    { name: 'Script Runs', desc: 'Attack executes', color: '#aa00ff' },
+    { name: 'Theft', desc: 'Cookies stolen', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 90 + i * 140;
+        return (
+          <g key={i}>
+            <rect x={x - 60} y={50} width="120" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 60} y1={85} x2={x + 140 - 60} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>CROSS SITE SCRIPTING (XSS)</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Inject → Store → Visit → Script Runs → Theft</text>
+    </svg>
+  );
+}
+
+// 19. Online Auction Fraud
+export function OnlineAuctionFraudDiagram() {
+  const steps = [
+    { name: 'Fake Listing', desc: 'Original photos', color: '#ff0040' },
+    { name: 'Payment', desc: 'Money sent', color: '#0047ff' },
+    { name: 'No Delivery', desc: 'Product missing', color: '#ff8800' },
+    { name: 'Buyer Loss', desc: 'Money lost', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>ONLINE AUCTION FRAUD</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Fake Listing → Payment → No Delivery → Loss</text>
+    </svg>
+  );
+}
+
+// 20. Logic Bombs
+export function LogicBombsDiagram() {
+  const steps = [
+    { name: 'Embed', desc: 'Hide in code', color: '#ff0040' },
+    { name: 'Wait', desc: 'Condition check', color: '#0047ff' },
+    { name: 'Trigger', desc: 'Date/Event', color: '#ff8800' },
+    { name: 'Damage', desc: 'Execute harm', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>LOGIC BOMB</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Embed → Wait → Trigger → Damage</text>
+    </svg>
+  );
+}
+
+// 21. Web Jacking
+export function WebJackingDiagram() {
+  const steps = [
+    { name: 'Hack', desc: 'Access gained', color: '#ff0040' },
+    { name: 'Control', desc: 'Website taken', color: '#0047ff' },
+    { name: 'Modify', desc: 'False info', color: '#ff8800' },
+    { name: 'Damage', desc: 'Reputation loss', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>WEB JACKING</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Hack → Control → Modify → Damage</text>
+    </svg>
+  );
+}
+
+// 22. Internet Time Theft
+export function InternetTimeTheftDiagram() {
+  const steps = [
+    { name: 'Work Time', desc: 'Office hours', color: '#ff0040' },
+    { name: 'Personal Use', desc: 'Social media', color: '#0047ff' },
+    { name: 'Resource Waste', desc: 'Bandwidth', color: '#ff8800' },
+    { name: 'Productivity', desc: 'Loss', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>INTERNET TIME THEFT</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Work Time → Personal Use → Waste → Loss</text>
+    </svg>
+  );
+}
+
+// 23. DoS Attack
+export function DosAttackDiagram() {
+  const steps = [
+    { name: 'Flood', desc: 'Requests sent', color: '#ff0040' },
+    { name: 'Overwhelm', desc: 'Server load', color: '#0047ff' },
+    { name: 'Crash/Slow', desc: 'System fail', color: '#ff8800' },
+    { name: 'Blocked', desc: 'Users blocked', color: '#aa00ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 120 + i * 180;
+        return (
+          <g key={i}>
+            <rect x={x - 70} y={50} width="140" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 70} y1={85} x2={x + 180 - 70} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>DOS ATTACK</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Flood → Overwhelm → Crash → Users Blocked</text>
+    </svg>
+  );
+}
+
+// 24. Salami Attack
+export function SalamiAttackDiagram() {
+  const steps = [
+    { name: 'Steal Small', desc: '1 rupee', color: '#ff0040' },
+    { name: 'Many Times', desc: '1000+ times', color: '#0047ff' },
+    { name: 'Unnoticed', desc: 'Small amounts', color: '#ff8800' },
+    { name: 'Total Large', desc: 'Millions', color: '#aa00ff' },
+    { name: 'Fraud', desc: 'Detected late', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 90 + i * 140;
+        return (
+          <g key={i}>
+            <rect x={x - 60} y={50} width="120" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 60} y1={85} x2={x + 140 - 60} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>SALAMI ATTACK</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Steal Small → Many Times → Unnoticed → Total Large → Fraud</text>
+    </svg>
+  );
+}
+
+// 25. Data Diddling
+export function DataDiddlingDiagram() {
+  const steps = [
+    { name: 'Data', desc: 'Original info', color: '#ff0040' },
+    { name: 'Modify', desc: 'Change values', color: '#0047ff' },
+    { name: 'Process', desc: 'System runs', color: '#ff8800' },
+    { name: 'Wrong Result', desc: 'Incorrect output', color: '#aa00ff' },
+    { name: 'Decision', desc: 'Bad decisions', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 90 + i * 140;
+        return (
+          <g key={i}>
+            <rect x={x - 60} y={50} width="120" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 60} y1={85} x2={x + 140 - 60} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>DATA DIDDLING</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Data → Modify → Process → Wrong Result → Decision</text>
+    </svg>
+  );
+}
+
+// 26. Email Spoofing
+export function EmailSpoofingDiagram() {
+  const steps = [
+    { name: 'Forge', desc: 'Sender address', color: '#ff0040' },
+    { name: 'Send', desc: 'Email sent', color: '#0047ff' },
+    { name: 'Trust', desc: 'User trusts', color: '#ff8800' },
+    { name: 'Click/Respond', desc: 'User acts', color: '#aa00ff' },
+    { name: 'Fraud', desc: 'Phishing', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 90 + i * 140;
+        return (
+          <g key={i}>
+            <rect x={x - 60} y={50} width="120" height="70" rx="10" fill={s.color} opacity="0.15" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={80} textAnchor="middle" fill={s.color} fontSize="14" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={100} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{s.desc}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 60} y1={85} x2={x + 140 - 60} y2={85} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>EMAIL SPOOFING</text>
+      <text x="400" y="225" textAnchor="middle" fill="#888" fontSize="12" fontFamily={FONT}>Forge → Send → Trust → Click/Respond → Fraud</text>
+    </svg>
+  );
+}
+
+// 27. Types of Hackers
+export function TypesOfHackersDiagram() {
+  const hackers = [
+    { name: 'White Hat', desc: 'Ethical', color: '#00ff88' },
+    { name: 'Black Hat', desc: 'Malicious', color: '#ff0040' },
+    { name: 'Grey Hat', desc: 'Mixed', color: '#ff8800' },
+    { name: 'Script Kiddie', desc: 'Inexperienced', color: '#aa00ff' },
+    { name: 'Hacktivist', desc: 'Political', color: '#0047ff' },
+  ];
+  return (
+    <svg viewBox="0 0 800 400" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {hackers.map((h, i) => {
+        const x = 100 + i * 140;
+        return (
+          <g key={i}>
+            <circle cx={x} cy={100} r="50" fill={h.color} opacity="0.2" stroke={h.color} strokeWidth="3" />
+            <text x={x} y={105} textAnchor="middle" fill={h.color} fontSize="16" fontWeight="800" fontFamily={FONT}>{h.name}</text>
+            <rect x={x - 60} y={160} width="120" height="40" rx="8" fill={h.color} opacity="0.15" stroke={h.color} strokeWidth="2" />
+            <text x={x} y={185} textAnchor="middle" fill="#fff" fontSize="11" fontFamily={FONT}>{h.desc}</text>
+          </g>
+        );
+      })}
+      <text x="400" y="250" textAnchor="middle" fill="#c4ff00" fontSize="18" fontWeight="800" fontFamily={FONT}>TYPES OF HACKERS</text>
+      <text x="400" y="280" textAnchor="middle" fill="#888" fontSize="13" fontFamily={FONT}>White Hat = Ethical | Black Hat = Malicious | Grey Hat = Mixed</text>
+      <text x="400" y="310" textAnchor="middle" fill="#888" fontSize="13" fontFamily={FONT}>Script Kiddie = Inexperienced | Hacktivist = Political</text>
+    </svg>
+  );
+}
+
+// 28. Hacking and Cracking
+export function HackingCrackingDiagram() {
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {/* Hacking side */}
+      <rect x="50" y="60" width="300" height="200" rx="15" fill="#0047ff" opacity="0.15" stroke="#0047ff" strokeWidth="3" />
+      <text x="200" y="95" textAnchor="middle" fill="#0047ff" fontSize="18" fontWeight="800" fontFamily={FONT}>HACKING</text>
+      <text x="200" y="120" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Find weaknesses</text>
+      <text x="200" y="145" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Understand system</text>
+      <text x="200" y="170" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>With permission</text>
+      <text x="200" y="195" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Can be legal</text>
+      <text x="200" y="220" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Penetration testing</text>
+      
+      {/* Arrow */}
+      <line x1="370" y1="160" x2="430" y2="160" stroke="#c4ff00" strokeWidth="3" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+      
+      {/* Cracking side */}
+      <rect x="450" y="60" width="300" height="200" rx="15" fill="#ff0040" opacity="0.15" stroke="#ff0040" strokeWidth="3" />
+      <text x="600" y="95" textAnchor="middle" fill="#ff0040" fontSize="18" fontWeight="800" fontFamily={FONT}>CRACKING</text>
+      <text x="600" y="120" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Exploit weaknesses</text>
+      <text x="600" y="145" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Gain access</text>
+      <text x="600" y="170" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Without permission</text>
+      <text x="600" y="195" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Usually illegal</text>
+      <text x="600" y="220" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Password cracking</text>
+      
+      <text x="400" y="310" textAnchor="middle" fill="#c4ff00" fontSize="16" fontWeight="800" fontFamily={FONT}>HACKING VS CRACKING</text>
+    </svg>
+  );
+}
+
+// 29. Hacking: Ethical Issues
+export function EthicalIssuesDiagram() {
+  const issues = [
+    { name: 'Privacy Violation', desc: 'Data access', color: '#ff0040' },
+    { name: 'Unauthorized Access', desc: 'No permission', color: '#ff0040' },
+    { name: 'Data Theft', desc: 'Steal info', color: '#ff0040' },
+    { name: 'System Damage', desc: 'Harm systems', color: '#ff0040' },
+    { name: 'Legal Consequences', desc: 'Jail, fines', color: '#ff0040' },
+  ];
+  return (
+    <svg viewBox="0 0 800 350" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {issues.map((issue, i) => {
+        const x = 90 + i * 140;
+        return (
+          <g key={i}>
+            <rect x={x - 60} y={50} width="120" height="80" rx="10" fill={issue.color} opacity="0.15" stroke={issue.color} strokeWidth="2" />
+            <text x={x} y={75} textAnchor="middle" fill={issue.color} fontSize="13" fontWeight="800" fontFamily={FONT}>{issue.name}</text>
+            <text x={x} y={95} textAnchor="middle" fill="#fff" fontSize="10" fontFamily={FONT}>{issue.desc}</text>
+            <text x={x} y={115} textAnchor="middle" fill="#ff0040" fontSize="20" fontWeight="800" fontFamily={FONT}>⚠</text>
+          </g>
+        );
+      })}
+      <text x="400" y="200" textAnchor="middle" fill="#c4ff00" fontSize="18" fontWeight="800" fontFamily={FONT}>ETHICAL ISSUES IN HACKING</text>
+      <text x="400" y="230" textAnchor="middle" fill="#888" fontSize="13" fontFamily={FONT}>Privacy violation | Unauthorized access | Data theft</text>
+      <text x="400" y="255" textAnchor="middle" fill="#888" fontSize="13" fontFamily={FONT}>System damage | Legal consequences | Business impact</text>
+      <text x="400" y="290" textAnchor="middle" fill="#ff0040" fontSize="14" fontWeight="800" fontFamily={FONT}>⚠ Ethical hacking = Permission + Reporting + Consent</text>
+    </svg>
+  );
+}
+
+// 30. Ethical Hacking
+export function EthicalHackingDiagram() {
+  const steps = [
+    { name: 'Planning', desc: 'Scope define', color: '#0047ff' },
+    { name: 'Scanning', desc: 'Find vulnerabilities', color: '#0047ff' },
+    { name: 'Gaining Access', desc: 'Exploit weaknesses', color: '#0047ff' },
+    { name: 'Maintaining Access', desc: 'Test persistence', color: '#0047ff' },
+    { name: 'Analysis', desc: 'Assess impact', color: '#0047ff' },
+    { name: 'Reporting', desc: 'Fix vulnerabilities', color: '#00ff88' },
+  ];
+  return (
+    <svg viewBox="0 0 800 400" className="diagram-pop" style={{ maxWidth: '100%', height: 'auto' }}>
+      {steps.map((s, i) => {
+        const x = 100 + i * 110;
+        return (
+          <g key={i}>
+            <rect x={x - 50} y={60} width="100" height="80" rx="10" fill={s.color} opacity="0.2" stroke={s.color} strokeWidth="2" />
+            <text x={x} y={85} textAnchor="middle" fill={s.color} fontSize="11" fontWeight="800" fontFamily={FONT}>{s.name}</text>
+            <text x={x} y={105} textAnchor="middle" fill="#fff" fontSize="9" fontFamily={FONT}>{s.desc}</text>
+            <text x={x} y={125} textAnchor="middle" fill={s.color} fontSize="20" fontWeight="800" fontFamily={FONT}>{i + 1}</text>
+            {i < steps.length - 1 && (
+              <line x1={x + 50} y1={100} x2={x + 110 - 50} y2={100} stroke="#c4ff00" strokeWidth="2" markerEnd="url(#arrowCyberA)" className="arrow-pulse" />
+            )}
+          </g>
+        );
+      })}
+      <text x="400" y="220" textAnchor="middle" fill="#c4ff00" fontSize="18" fontWeight="800" fontFamily={FONT}>ETHICAL HACKING PROCESS</text>
+      <text x="400" y="250" textAnchor="middle" fill="#888" fontSize="13" fontFamily={FONT}>Permission se security testing karna</text>
+      
+      {/* Benefits */}
+      <rect x="100" y="280" width="600" height="100" rx="15" fill="#00ff88" opacity="0.1" stroke="#00ff88" strokeWidth="2" />
+      <text x="400" y="305" textAnchor="middle" fill="#00ff88" fontSize="14" fontWeight="800" fontFamily={FONT}>BENEFITS</text>
+      <text x="400" y="330" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Security improvement | Attack prevention | Risk assessment</text>
+      <text x="400" y="355" textAnchor="middle" fill="#fff" fontSize="12" fontFamily={FONT}>Vulnerability discovery | Compliance | Customer trust</text>
+    </svg>
+  );
+}

@@ -27,6 +27,24 @@ import {
   TrojansDiagram,
   VirusesDiagram,
   BackdoorsDiagram,
+  CyberStalkingDiagram,
+  SoftwarePiracyDiagram,
+  PhishingDiagram,
+  ComputerHackingDiagram,
+  SpammingDiagram,
+  XssDiagram,
+  OnlineAuctionFraudDiagram,
+  LogicBombsDiagram,
+  WebJackingDiagram,
+  InternetTimeTheftDiagram,
+  DosAttackDiagram,
+  SalamiAttackDiagram,
+  DataDiddlingDiagram,
+  EmailSpoofingDiagram,
+  TypesOfHackersDiagram,
+  HackingCrackingDiagram,
+  EthicalIssuesDiagram,
+  EthicalHackingDiagram,
 } from './CyberDiagrams';
 
 // ============================================================
@@ -584,6 +602,44 @@ export function Diagram({ type }) {
       return <VirusesDiagram />;
     case 'backdoors':
       return <BackdoorsDiagram />;
+    case 'cyber-stalking':
+      return <CyberStalkingDiagram />;
+    case 'software-piracy':
+      return <SoftwarePiracyDiagram />;
+    case 'cyber-terrorism':
+      return <CyberTerrorismDiagram />;
+    case 'phishing':
+      return <PhishingDiagram />;
+    case 'computer-hacking':
+      return <ComputerHackingDiagram />;
+    case 'spamming':
+      return <SpammingDiagram />;
+    case 'xss':
+      return <XssDiagram />;
+    case 'online-auction-fraud':
+      return <OnlineAuctionFraudDiagram />;
+    case 'logic-bombs':
+      return <LogicBombsDiagram />;
+    case 'web-jacking':
+      return <WebJackingDiagram />;
+    case 'internet-time-theft':
+      return <InternetTimeTheftDiagram />;
+    case 'dos-attack':
+      return <DosAttackDiagram />;
+    case 'salami-attack':
+      return <SalamiAttackDiagram />;
+    case 'data-diddling':
+      return <DataDiddlingDiagram />;
+    case 'email-spoofing':
+      return <EmailSpoofingDiagram />;
+    case 'types-of-hackers':
+      return <TypesOfHackersDiagram />;
+    case 'hacking-and-cracking':
+      return <HackingCrackingDiagram />;
+    case 'ethical-issues-hacking':
+      return <EthicalIssuesDiagram />;
+    case 'ethical-hacking':
+      return <EthicalHackingDiagram />;
     default:
       return null;
   }

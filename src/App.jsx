@@ -78,9 +78,16 @@ function UnitPage({ subject, onBack }) {
   const subjectUnits = units[subject.id] || [];
   const subjectTopics = subjectUnits[0]?.topics || [];
   const completed = getCompletedTopics();
+  const [selectedUnit, setSelectedUnit] = useState(subjectUnits[0]?.id || '');
+  const [showDropdown, setShowDropdown] = useState(false);
+  
   const openTopic = (topicId) => {
     window.location.hash = `#/subject/${subject.id}/topic/${topicId}`;
   };
+
+  const currentUnit = subjectUnits.find((u) => u.id === selectedUnit) || subjectUnits[0];
+  const unitTopics = currentUnit?.topics || [];
+
   return (
     <>
       <header className="page-hero">
@@ -102,7 +109,72 @@ function UnitPage({ subject, onBack }) {
       </header>
 
       <main className="container">
-        <div className="units-grid">
+        {/* Unit Dropdown */}
+        <div className="unit-dropdown-wrapper" style={{ marginBottom: '32px' }}>
+          <div className="unit-dropdown-header" onClick={() => setShowDropdown(!showDropdown)}>
+            <Icon name="layers" size={20} color="#c4ff00" />
+            <span className="unit-dropdown-label">Select Unit:</span>
+            <select
+              className="unit-dropdown-select"
+              value={selectedUnit}
+              onChange={(e) => setSelectedUnit(e.target.value)}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {subjectUnits.map((unit) => (
+                <option key={unit.id} value={unit.id}>
+                  Unit {unit.number} · {unit.name} ({unit.topics.length} topics)
+                </option>
+              ))}
+            </select>
+          </div>
+          {showDropdown && (
+            <div className="unit-dropdown-menu">
+              {subjectUnits.map((unit) => (
+                <button
+                  key={unit.id}
+                  className={`unit-dropdown-item ${unit.id === selectedUnit ? 'active' : ''}`}
+                  onClick={() => {
+                    setSelectedUnit(unit.id);
+                    setShowDropdown(false);
+                  }}
+                >
+                  <span className="unit-dropdown-num">Unit {unit.number}</span>
+                  <span className="unit-dropdown-name">{unit.name}</span>
+                  <span className="unit-dropdown-count">{unit.topics.length} topics</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Current Unit Topics */}
+        <div className="unit-card full-width" style={{ '--i': currentUnit?.number }}>
+          <div className="unit-card-head">
+            <span className="unit-card-num">Unit {currentUnit?.number}</span>
+            <span className="unit-card-icon"><Icon name="book" size={26} /></span>
+          </div>
+          <h2 className="unit-card-title">{currentUnit?.name}</h2>
+          <p className="unit-card-count">{unitTopics.length} topics</p>
+          <div className="unit-topics-preview">
+            {unitTopics.map((t) => {
+              const isDone = completed.includes(t.id);
+              return (
+                <button
+                  key={t.id}
+                  className={`unit-topic-mini ${isDone ? 'done' : ''}`}
+                  onClick={() => openTopic(t.id)}
+                >
+                  <span className="utm-num">{t.number}</span>
+                  <span className="utm-title">{t.title}</span>
+                  {isDone && <span className="utm-check">✓</span>}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* All Units List */}
+        <div className="units-grid" style={{ marginTop: '32px' }}>
           {subjectUnits.map((unit) => (
             <article key={unit.id} className="unit-card" style={{ '--i': unit.number }}>
               <div className="unit-card-head">
@@ -112,7 +184,7 @@ function UnitPage({ subject, onBack }) {
               <h2 className="unit-card-title">{unit.name}</h2>
               <p className="unit-card-count">{unit.topics.length} topics</p>
               <div className="unit-topics-preview">
-                {unit.topics.map((t) => {
+                {unit.topics.slice(0, 5).map((t) => {
                   const isDone = completed.includes(t.id);
                   return (
                     <button
@@ -126,7 +198,18 @@ function UnitPage({ subject, onBack }) {
                     </button>
                   );
                 })}
+                {unit.topics.length > 5 && (
+                  <div className="unit-topics-more">
+                    + {unit.topics.length - 5} more topics...
+                  </div>
+                )}
               </div>
+              <button
+                className="btn primary unit-card-cta"
+                onClick={() => setSelectedUnit(unit.id)}
+              >
+                View All Topics
+              </button>
             </article>
           ))}
         </div>
@@ -138,7 +221,7 @@ function UnitPage({ subject, onBack }) {
             onClick={() => window.location.hash = `#/subject/${subject.id}/exam`}
           >
             <Icon name="quiz" size={20} color="#0a0e1a" />
-            🔥 Unit 1 — Important 6-Mark Exam Questions
+            🔥 Important 6-Mark Exam Questions
           </button>
         </div>
       </main>

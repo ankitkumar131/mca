@@ -775,6 +775,252 @@ export const cyberSecurityUnits2 = [
           },
         ],
       },
+
+
+  {
+    id: 'types-of-hackers',
+    number: '2.27',
+    title: 'Types of Hackers',
+    subtitle: 'Different categories of hackers',
+    icon: 'users',
+    accent: '#ff0040',
+    englishDefinition: 'Types of hackers include white hat hackers (ethical), black hat hackers (malicious), grey hat hackers (mixed), script kiddies (inexperienced), and hacktivists (political motivations).',
+    intro: 'Hackers alag-alag categories mein bante hain. White hat hackers ethical hackers hain — vulnerabilities find karte hain with permission. Black hat hackers malicious hain — illegal access lena chahte hain. Grey hat hackers mixed approach follow karte hain. Script kiddies inexperienced hain — tools use karte hain without understanding. Hacktivists political motivations ke saath hack karte hain.',
+    sections: [
+      {
+        type: 'definition',
+        title: 'Types of Hackers',
+        content: 'White hat — ethical hackers. Black hat — malicious hackers. Grey hat — mixed approach. Script kiddies — inexperienced. Hacktivists — political motivations.',
+      },
+      {
+        type: 'cards',
+        title: 'Hacker Categories',
+        cards: [
+          { icon: 'shield', title: 'White Hat', desc: 'Ethical hackers. Permission se vulnerabilities find karte hain. Security improve karna chahte hain.', color: '#00ff88' },
+          { icon: 'warn', title: 'Black Hat', desc: 'Malicious hackers. Illegal access lena chahte hain. Data churana, damage karna.', color: '#ff0040' },
+          { icon: 'globe', title: 'Grey Hat', desc: 'Mixed approach. Permission nahi lena but vulnerabilities report karte hain.', color: '#ff8800' },
+          { icon: 'code', title: 'Script Kiddie', desc: 'Inexperienced hackers. Tools use karte hain without understanding. Limited skills.', color: '#aa00ff' },
+          { icon: 'flag', title: 'Hacktivist', desc: 'Political motivations. Government, corporations hack karte hain. Anonymous group.', color: '#0047ff' },
+          { icon: 'eye', title: 'State-Sponsored', desc: 'Government sponsored hackers. National security targets. Cyber warfare.', color: '#00ffff' },
+        ],
+      },
+      {
+        type: 'comparison',
+        title: 'White Hat vs Black Hat',
+        rows: [
+          { label: 'Permission', values: ['Permission required', 'No permission'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Intent', values: ['Help organizations', 'Harm organizations'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Legality', values: ['Legal', 'Illegal'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Goal', values: ['Security improvement', 'Personal gain'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Tools', values: ['Same tools', 'Same tools'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Result', values: ['Vulnerabilities fixed', 'Systems damaged'], colors: ['#00ff88', '#ff0040'] },
+        ],
+      },
+      {
+        type: 'recap',
+        title: 'Recap',
+        content: 'Types of hackers = White hat (ethical), Black hat (malicious), Grey hat (mixed), Script kiddies (inexperienced), Hacktivists (political), State-sponsored (government).',
+      },
+    ],
+    examQuestions: [
+      {
+        question: 'Explain different types of hackers.',
+        answer: 'Types of Hackers:\n1. White Hat — Ethical hackers. Permission se vulnerabilities find karte hain. Security improve karna chahte hain.\n2. Black Hat — Malicious hackers. Illegal access lena chahte hain. Data churana, damage karna.\n3. Grey Hat — Mixed approach. Permission nahi lena but vulnerabilities report karte hain.\n4. Script Kiddies — Inexperienced hackers. Tools use karte hain without understanding.\n5. Hacktivists — Political motivations. Government, corporations hack karte hain.\n6. State-Sponsored — Government sponsored hackers. National security targets.',
+      },
+      {
+        question: 'Differentiate between white hat and black hat hackers.',
+        answer: 'White Hat vs Black Hat:\n1. Permission — White hat permission required, black hat no permission\n2. Intent — White hat help organizations, black hat harm organizations\n3. Legality — White hat legal, black hat illegal\n4. Goal — White hat security improvement, black hat personal gain\n5. Tools — Same tools dono use karte hain\n6. Result — White hat vulnerabilities fix, black hat systems damage\nWhite hat ethical hai, black hat malicious hai.',
+      },
+    ],
+  },
+  {
+    id: 'hacking-and-cracking',
+    number: '2.28',
+    title: 'Hacking and Cracking',
+    subtitle: 'Difference between hacking and cracking',
+    icon: 'code',
+    accent: '#00ff88',
+    englishDefinition: 'Hacking is the act of finding weaknesses in a computer system or network, while cracking is the act of exploiting those weaknesses to gain unauthorized access.',
+    intro: 'Hacking aur cracking main difference intent mein hai. Hacking = vulnerabilities find karna, system understanding karna. Cracking = unauthorized access lena, passwords break karna, systems exploit karna. Hacking ethical ya unethical ho sakta hai. Cracking mostly unethical hai.',
+    sections: [
+      {
+        type: 'definition',
+        title: 'Hacking vs Cracking',
+        content: 'Hacking = vulnerabilities find karna, system understanding karna. Cracking = unauthorized access lena, passwords break karna, systems exploit karna.',
+      },
+      {
+        type: 'comparison',
+        title: 'Hacking vs Cracking',
+        rows: [
+          { label: 'Definition', values: ['Finding weaknesses', 'Exploiting weaknesses'], colors: ['#0047ff', '#ff0040'] },
+          { label: 'Goal', values: ['Understand system', 'Gain access'], colors: ['#0047ff', '#ff0040'] },
+          { label: 'Permission', values: ['With permission', 'Without permission'], colors: ['#0047ff', '#ff0040'] },
+          { label: 'Skill Level', values: ['High skill needed', 'High skill needed'], colors: ['#0047ff', '#ff0040'] },
+          { label: 'Legality', values: ['Can be legal', 'Usually illegal'], colors: ['#0047ff', '#ff0040'] },
+          { label: 'Examples', values: ['Penetration testing', 'Password cracking, jailbreaking'], colors: ['#0047ff', '#ff0040'] },
+        ],
+      },
+      {
+        type: 'cards',
+        title: 'Hacking Activities',
+        cards: [
+          { icon: 'shield', title: 'Penetration Testing', desc: 'Authorized security testing. Vulnerabilities find karna. Security improve karna.', color: '#00ff88' },
+          { icon: 'globe', title: 'Security Research', desc: 'System research karna. Vulnerabilities discover karna. Understanding develop karna.', color: '#0047ff' },
+          { icon: 'code', title: 'Code Review', desc: 'Source code analysis. Security issues find karna. Best practices implement karna.', color: '#ff8800' },
+          { icon: 'eye', title: 'Surveillance', desc: 'Network monitoring. System observation karna. Behavior analysis karna.', color: '#aa00ff' },
+        ],
+      },
+      {
+        type: 'cards',
+        title: 'Cracking Activities',
+        cards: [
+          { icon: 'warn', title: 'Password Cracking', desc: 'Passwords break karna. Brute force, dictionary attacks. Unauthorized access.', color: '#ff0040' },
+          { icon: 'lock', title: 'Software Cracking', desc: 'Software licensing bypass karna. Piracy karna. Protection remove karna.', color: '#ff0040' },
+          { icon: 'globe', title: 'Jailbreaking', desc: 'Device restrictions remove karna. Root access lena. System modify karna.', color: '#ff0040' },
+          { icon: 'code', title: 'Exploit Development', desc: 'Vulnerabilities exploit karna. Malware create karna. System compromise karna.', color: '#ff0040' },
+        ],
+      },
+      {
+        type: 'recap',
+        title: 'Recap',
+        content: 'Hacking = vulnerabilities find karna, system understanding karna. Cracking = unauthorized access lena, passwords break karna. Hacking can be ethical, cracking mostly unethical.',
+      },
+    ],
+    examQuestions: [
+      {
+        question: 'Differentiate between hacking and cracking.',
+        answer: 'Hacking vs Cracking:\n1. Definition — Hacking finding weaknesses, cracking exploiting weaknesses\n2. Goal — Hacking understand system, cracking gain access\n3. Permission — Hacking with permission, cracking without permission\n4. Legality — Hacking can be legal, cracking usually illegal\n5. Examples — Hacking penetration testing, cracking password cracking\nHacking ethical security testing hai, cracking unauthorized access hai.',
+      },
+      {
+        question: 'What are the different types of cracking activities?',
+        answer: 'Cracking Activities:\n1. Password Cracking — Passwords break karna. Brute force, dictionary attacks.\n2. Software Cracking — Software licensing bypass karna. Piracy karna.\n3. Jailbreaking — Device restrictions remove karna. Root access lena.\n4. Exploit Development — Vulnerabilities exploit karna. Malware create karna.\n5. DRM Bypass — Digital rights management bypass karna.\n6. Serial Key Generation — Software keys generate karna.\nCracking mostly illegal hai.',
+      },
+    ],
+  },
+  {
+    id: 'ethical-issues-hacking',
+    number: '2.29',
+    title: 'Hacking: Ethical Issues',
+    subtitle: 'Moral and legal considerations',
+    icon: 'flag',
+    accent: '#ff8800',
+    englishDefinition: 'Ethical issues in hacking include privacy violations, unauthorized access, data theft, damage to systems, and legal consequences. Hackers must consider consent, intent, and impact.',
+    intro: 'Hacking ethical issues bahut important hai. Privacy violation — personal data access without consent. Unauthorized access — system access without permission. Data theft — sensitive information steal karna. Damage to systems — intentional system harm. Legal consequences — jail time, fines, criminal records.',
+    sections: [
+      {
+        type: 'definition',
+        title: 'Ethical Issues in Hacking',
+        content: 'Privacy violation — personal data access without consent. Unauthorized access — system access without permission. Data theft — sensitive information steal karna. Damage to systems — intentional system harm.',
+      },
+      {
+        type: 'cards',
+        title: 'Ethical Issues',
+        cards: [
+          { icon: 'eye', title: 'Privacy Violation', desc: 'Personal data access without consent. Private information exposure. Privacy rights violation.', color: '#ff0040' },
+          { icon: 'lock', title: 'Unauthorized Access', desc: 'System access without permission. Breaking security barriers. Trust violation.', color: '#ff0040' },
+          { icon: 'warn', title: 'Data Theft', desc: 'Sensitive information steal karna. Financial data, personal info. Identity theft risk.', color: '#ff0040' },
+          { icon: 'code', title: 'System Damage', desc: 'Intentional system harm. Data destruction, service disruption. Financial impact.', color: '#ff0040' },
+          { icon: 'flag', title: 'Legal Consequences', desc: 'Jail time, fines, criminal records. Legal action against hackers. Career destruction.', color: '#ff0040' },
+          { icon: 'globe', title: 'Business Impact', desc: 'Company reputation damage. Financial losses. Customer trust loss.', color: '#ff0040' },
+        ],
+      },
+      {
+        type: 'comparison',
+        title: 'Ethical vs Unethical Hacking',
+        rows: [
+          { label: 'Permission', values: ['With permission', 'Without permission'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Intent', values: ['Help organization', 'Harm organization'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Data Access', values: ['Authorized only', 'Unauthorized'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Reporting', values: ['Vulnerabilities reported', 'Vulnerabilities hidden'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Consent', values: ['Consent obtained', 'No consent'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Legality', values: ['Legal', 'Illegal'], colors: ['#00ff88', '#ff0040'] },
+        ],
+      },
+      {
+        type: 'recap',
+        title: 'Recap',
+        content: 'Ethical issues = privacy violation, unauthorized access, data theft, system damage, legal consequences. Ethical hacking permission se, reporting karna, consent lena. Unethical hacking permission bina, damage karna, data steal karna.',
+      },
+    ],
+    examQuestions: [
+      {
+        question: 'What are the ethical issues in hacking?',
+        answer: 'Ethical Issues in Hacking:\n1. Privacy Violation — Personal data access without consent\n2. Unauthorized Access — System access without permission\n3. Data Theft — Sensitive information steal karna\n4. System Damage — Intentional system harm\n5. Legal Consequences — Jail time, fines, criminal records\n6. Business Impact — Reputation damage, financial losses\n7. Trust Violation — Breaking security barriers\nEthical hacking permission se, reporting karna, consent lena chahiye.',
+      },
+      {
+        question: 'How does ethical hacking differ from unethical hacking?',
+        answer: 'Ethical vs Unethical Hacking:\n1. Permission — Ethical with permission, unethical without permission\n2. Intent — Ethical help organization, unethical harm organization\n3. Data Access — Ethical authorized only, unethical unauthorized\n4. Reporting — Ethical vulnerabilities report karna, unethical hidden rakhna\n5. Consent — Ethical consent obtain karna, unethical no consent\n6. Legality — Ethical legal, unethical illegal\nEthical hacking security improve karna hai, unethical hacking personal gain ke liye hack karna hai.',
+      },
+    ],
+  },
+  {
+    id: 'ethical-hacking',
+    number: '2.30',
+    title: 'Ethical Hacking',
+    subtitle: 'Security testing with permission',
+    icon: 'shield',
+    accent: '#00ff88',
+    englishDefinition: 'Ethical hacking is the practice of testing computer systems and networks for vulnerabilities with the permission of the owner, to help improve security before malicious hackers can exploit them.',
+    intro: 'Ethical hacking = permission se security testing karna. Company allow karti hai — vulnerabilities find karo, report karo. Goal = security improve karna, systems protect karna. White hat hackers ethical hacking karte hain. Process = planning, scanning, gaining access, maintaining access, analysis, reporting.',
+    sections: [
+      {
+        type: 'definition',
+        title: 'Ethical Hacking',
+        content: 'Permission se security testing karna. Vulnerabilities find karna, report karna. Security improve karna. White hat hackers ethical hacking karte hain.',
+      },
+      {
+        type: 'cards',
+        title: 'Ethical Hacking Process',
+        cards: [
+          { icon: 'flag', title: 'Planning', desc: 'Scope define karna. Rules of engagement set karna. Permission obtain karna.', color: '#0047ff' },
+          { icon: 'eye', title: 'Scanning', desc: 'Network scan karna. Vulnerabilities identify karna. Information gather karna.', color: '#0047ff' },
+          { icon: 'lock', title: 'Gaining Access', desc: 'Vulnerabilities exploit karna. Access gain karna. Security test karna.', color: '#0047ff' },
+          { icon: 'code', title: 'Maintaining Access', desc: 'Access maintain karna. Persistence test karna. Depth testing karna.', color: '#0047ff' },
+          { icon: 'chart', title: 'Analysis', desc: 'Vulnerabilities analyze karna. Impact assess karna. Risk evaluation karna.', color: '#0047ff' },
+          { icon: 'doc', title: 'Reporting', desc: 'Findings report karna. Recommendations provide karna. Remediation support karna.', color: '#0047ff' },
+        ],
+      },
+      {
+        type: 'cards',
+        title: 'Ethical Hacking Benefits',
+        cards: [
+          { icon: 'shield', title: 'Security Improvement', desc: 'Vulnerabilities identify karna. Security weaknesses fix karna. System protection improve karna.', color: '#00ff88' },
+          { icon: 'globe', title: 'Attack Prevention', desc: 'Attacks prevent karna. Security breaches avoid karna. Data protection ensure karna.', color: '#00ff88' },
+          { icon: 'chart', title: 'Risk Assessment', desc: 'Risks assess karna. Security posture evaluate karna. Compliance ensure karna.', color: '#00ff88' },
+          { icon: 'eye', title: 'Vulnerability Discovery', desc: 'New vulnerabilities find karna. Zero-days discover karna. Security research support karna.', color: '#00ff88' },
+          { icon: 'users', title: 'Security Awareness', desc: 'Security awareness build karna. Best practices promote karna. Culture improve karna.', color: '#00ff88' },
+          { icon: 'lock', title: 'Compliance', desc: 'Regulatory requirements meet karna. Security standards follow karna. Audits pass karna.', color: '#00ff88' },
+        ],
+      },
+      {
+        type: 'comparison',
+        title: 'Ethical vs Malicious Hacking',
+        rows: [
+          { label: 'Permission', values: ['Permission required', 'No permission'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Intent', values: ['Help organization', 'Harm organization'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Reporting', values: ['Vulnerabilities reported', 'Vulnerabilities hidden'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Data Handling', values: ['Authorized only', 'Unauthorized access'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Legality', values: ['Legal', 'Illegal'], colors: ['#00ff88', '#ff0040'] },
+          { label: 'Goal', values: ['Security improvement', 'Personal gain'], colors: ['#00ff88', '#ff0040'] },
+        ],
+      },
+      {
+        type: 'recap',
+        title: 'Recap',
+        content: 'Ethical hacking = permission se security testing karna. Process = planning, scanning, gaining access, maintaining access, analysis, reporting. Benefits = security improvement, attack prevention, risk assessment, vulnerability discovery, compliance.',
+      },
+    ],
+    examQuestions: [
+      {
+        question: 'What is ethical hacking? Explain the process.',
+        answer: 'Ethical Hacking: Permission se security testing karna. Vulnerabilities find karna, report karna. Security improve karna.\n\nProcess:\n1. Planning — Scope define karna, rules set karna, permission obtain karna\n2. Scanning — Network scan karna, vulnerabilities identify karna\n3. Gaining Access — Vulnerabilities exploit karna, access gain karna\n4. Maintaining Access — Access maintain karna, persistence test karna\n5. Analysis — Vulnerabilities analyze karna, impact assess karna\n6. Reporting — Findings report karna, recommendations provide karna\n\nGoal = security improvement, systems protect karna.',
+      },
+      {
+        question: 'What are the benefits of ethical hacking?',
+        answer: 'Benefits of Ethical Hacking:\n1. Security Improvement — Vulnerabilities identify karna, weaknesses fix karna\n2. Attack Prevention — Attacks prevent karna, breaches avoid karna\n3. Risk Assessment — Risks assess karna, posture evaluate karna\n4. Vulnerability Discovery — New vulnerabilities find karna, zero-days discover karna\n5. Security Awareness — Awareness build karna, best practices promote karna\n6. Compliance — Regulatory requirements meet karna, standards follow karna\n7. Cost Saving — Future breaches avoid karna, financial loss reduce karna\n8. Customer Trust — Security ensure karna, trust build karna\nEthical hacking proactive security approach hai.',
+      },
+    ],
+  },
     ],
   },
 ];

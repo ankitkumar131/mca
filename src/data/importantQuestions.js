@@ -868,4 +868,49 @@ Cyber laws wo laws hain jo cyberspace, internet, aur digital technology se relat
     image: null,
     importance: '⭐⭐⭐',
   },
+
+  {
+    id: 'cq29',
+    unit: '2',
+    subjectId: 'cyber-security',
+    question: 'Explain different types of hackers. Differentiate between white hat and black hat hackers.',
+    answer:
+      '**Types of Hackers:**\n\n1. **White Hat Hackers (Ethical Hackers)**\n- Permission se vulnerabilities find karte hain.\n- Security improve karna chahte hain.\n- Companies ke liye security testing karte hain.\n- Legal aur ethical hai.\n- Example: Penetration testers, security researchers.\n\n2. **Black Hat Hackers (Malicious Hackers)**\n- Illegal access lena chahte hain.\n- Data churana, damage karna.\n- Personal gain, financial benefit ke liye hack karte hain.\n- Illegal hai — jail time, fines.\n- Example: Cybercriminals, attackers.\n\n3. **Grey Hat Hackers**\n- Mixed approach follow karte hain.\n- Permission nahi leta but vulnerabilities report karta hai.\n- Kya legal hai — depends on situation.\n- Example: Hackers who find bugs without permission.\n\n4. **Script Kiddies**\n- Inexperienced hackers.\n- Tools use karte hain without understanding.\n- Limited skills — hacking tools chalate hain.\n- Damage kar sakte hain but expert nahi hote.\n\n5. **Hacktivists**\n- Political motivations ke saath hack karte hain.\n- Government, corporations hack karte hain.\n- Anonymous group, political causes.\n- Example: Anonymous.\n\n6. **State-Sponsored Hackers**\n- Government sponsored hackers.\n- National security targets.\n- Cyber warfare — country-level attacks.\n- Example: APT groups.\n\n**White Hat vs Black Hat:**\n\n| Aspect | White Hat | Black Hat |\n|--------|-----------|----------|\n| Permission | Permission required | No permission |\n| Intent | Help organizations | Harm organizations |\n| Legality | Legal | Illegal |\n| Goal | Security improvement | Personal gain |\n| Tools | Same tools | Same tools |\n| Result | Vulnerabilities fixed | Systems damaged |\n\n**Diagram:** Refer to the Types of Hackers diagram — 6 categories with colors.',
+    diagram: 'types-of-hackers',
+    image: null,
+    importance: '⭐⭐⭐',
+  },
+  {
+    id: 'cq30',
+    unit: '2',
+    subjectId: 'cyber-security',
+    question: 'Differentiate between hacking and cracking. What are the different types of cracking activities?',
+    answer:
+      '**Hacking vs Cracking:**\n\n| Aspect | Hacking | Cracking |\n|--------|---------|----------|\n| Definition | Finding weaknesses | Exploiting weaknesses |\n| Goal | Understand system | Gain access |\n| Permission | With permission | Without permission |\n| Legality | Can be legal | Usually illegal |\n| Examples | Penetration testing | Password cracking |\n\n**Hacking Activities:**\n1. **Penetration Testing** — Authorized security testing.\n2. **Security Research** — System research, vulnerability discovery.\n3. **Code Review** — Source code analysis.\n4. **Surveillance** — Network monitoring.\n\n**Cracking Activities:**\n\n1. **Password Cracking**\n- Passwords break karna.\n- Brute force, dictionary attacks.\n- Unauthorized access.\n- Tools: John the Ripper, Hashcat.\n\n2. **Software Cracking**\n- Software licensing bypass karna.\n- Piracy karna.\n- Protection remove karna.\n- Example: Cracked software.\n\n3. **Jailbreaking**\n- Device restrictions remove karna.\n- Root access lena.\n- System modify karna.\n- Example: iOS jailbreaking.\n\n4. **Exploit Development**\n- Vulnerabilities exploit karna.\n- Malware create karna.\n- System compromise karna.\n\n5. **DRM Bypass**\n- Digital rights management bypass karna.\n- Media protection remove karna.\n\n6. **Serial Key Generation**\n- Software keys generate karna.\n- License bypass karna.\n\n**Key Difference:**\nHacking = vulnerabilities find karna, system understanding karna.\nCracking = unauthorized access lena, passwords break karna, systems exploit karna.\nHacking can be ethical, cracking mostly unethical hai.\n\n**Diagram:** Refer to the Hacking and Cracking diagram — comparison, activities.',
+    diagram: 'hacking-and-cracking',
+    image: null,
+    importance: '⭐⭐⭐',
+  },
+  {
+    id: 'cq31',
+    unit: '2',
+    subjectId: 'cyber-security',
+    question: 'What are the ethical issues in hacking? How does ethical hacking differ from unethical hacking?',
+    answer:
+      '**Ethical Issues in Hacking:**\n\n1. **Privacy Violation**\n- Personal data access without consent.\n- Private information exposure.\n- Privacy rights violation.\n\n2. **Unauthorized Access**\n- System access without permission.\n- Breaking security barriers.\n- Trust violation.\n\n3. **Data Theft**\n- Sensitive information steal karna.\n- Financial data, personal info.\n- Identity theft risk.\n\n4. **System Damage**\n- Intentional system harm.\n- Data destruction, service disruption.\n- Financial impact.\n\n5. **Legal Consequences**\n- Jail time, fines, criminal records.\n- Legal action against hackers.\n- Career destruction.\n\n6. **Business Impact**\n- Company reputation damage.\n- Financial losses.\n- Customer trust loss.\n\n**Ethical vs Unethical Hacking:**\n\n| Aspect | Ethical | Unethical |\n|--------|---------|-----------|\n| Permission | With permission | Without permission |\n| Intent | Help organization | Harm organization |\n| Data Access | Authorized only | Unauthorized |\n| Reporting | Vulnerabilities reported | Vulnerabilities hidden |\n| Consent | Consent obtained | No consent |\n| Legality | Legal | Illegal |\n\n**Key Points:**\n- Ethical hacking permission se, reporting karna, consent lena.\n- Unethical hacking permission bina, damage karna, data steal karna.\n- Ethical hacking security improve karta hai.\n- Unethical hacking personal gain karta hai.\n\n**Diagram:** Refer to the Ethical Issues diagram — 5 issues, warning signs.',
+    diagram: 'ethical-issues-hacking',
+    image: null,
+    importance: '⭐⭐⭐',
+  },
+  {
+    id: 'cq32',
+    unit: '2',
+    subjectId: 'cyber-security',
+    question: 'What is ethical hacking? Explain the process and benefits of ethical hacking.',
+    answer:
+      '**Ethical Hacking Definition:**\nPermission se security testing karna. Vulnerabilities find karna, report karna. Security improve karna. White hat hackers ethical hacking karte hain.\n\n**Ethical Hacking Process:**\n\n1. **Planning**\n- Scope define karna.\n- Rules of engagement set karna.\n- Permission obtain karna.\n\n2. **Scanning**\n- Network scan karna.\n- Vulnerabilities identify karna.\n- Information gather karna.\n\n3. **Gaining Access**\n- Vulnerabilities exploit karna.\n- Access gain karna.\n- Security test karna.\n\n4. **Maintaining Access**\n- Access maintain karna.\n- Persistence test karna.\n- Depth testing karna.\n\n5. **Analysis**\n- Vulnerabilities analyze karna.\n- Impact assess karna.\n- Risk evaluation karna.\n\n6. **Reporting**\n- Findings report karna.\n- Recommendations provide karna.\n- Remediation support karna.\n\n**Benefits of Ethical Hacking:**\n\n1. **Security Improvement**\n- Vulnerabilities identify karna.\n- Security weaknesses fix karna.\n- System protection improve karna.\n\n2. **Attack Prevention**\n- Attacks prevent karna.\n- Security breaches avoid karna.\n- Data protection ensure karna.\n\n3. **Risk Assessment**\n- Risks assess karna.\n- Security posture evaluate karna.\n- Compliance ensure karna.\n\n4. **Vulnerability Discovery**\n- New vulnerabilities find karna.\n- Zero-days discover karna.\n- Security research support karna.\n\n5. **Security Awareness**\n- Security awareness build karna.\n- Best practices promote karna.\n- Culture improve karna.\n\n6. **Compliance**\n- Regulatory requirements meet karna.\n- Security standards follow karna.\n- Audits pass karna.\n\n7. **Cost Saving**\n- Future breaches avoid karna.\n- Financial loss reduce karna.\n\n8. **Customer Trust**\n- Security ensure karna.\n- Trust build karna.\n\n**Ethical vs Malicious Hacking:**\n\n| Aspect | Ethical | Malicious |\n|--------|---------|-----------|\n| Permission | Permission required | No permission |\n| Intent | Help organization | Harm organization |\n| Reporting | Vulnerabilities reported | Vulnerabilities hidden |\n| Data Handling | Authorized only | Unauthorized access |\n| Legality | Legal | Illegal |\n| Goal | Security improvement | Personal gain |\n\n**Diagram:** Refer to the Ethical Hacking diagram — 6-step process, benefits.',
+    diagram: 'ethical-hacking',
+    image: null,
+    importance: '⭐⭐⭐',
+  },
 ];
