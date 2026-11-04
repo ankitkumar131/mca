@@ -1340,3 +1340,392 @@ export function COQOverviewDiagram() {
     </svg>
   );
 }
+
+export function SoftwareTestingBasicsOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 800 620" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="620" fill="#1a1a2e" />
+      <defs>
+        <linearGradient id="stb-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#0047ff' }} />
+          <stop offset="100%" style={{ stopColor: '#0047ff66' }} />
+        </linearGradient>
+      </defs>
+      {/* Title */}
+      <text x="400" y="35" textAnchor="middle" fill="#0047ff" fontSize="16" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Software Testing Basics</text>
+      
+      {/* Definition Card */}
+      <g transform="translate(30, 55)">
+        <rect width="740" height="55" rx="8" fill="#0a0a1a" stroke="#0047ff" strokeWidth="1" />
+        <text x="370" y="25" textAnchor="middle" fill="#0047ff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Software Testing: Process of evaluating and verifying software meets its intended requirements</text>
+        <text x="370" y="45" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Identifying defects, verifying requirements, ensuring quality, reducing risks</text>
+      </g>
+      
+      {/* Testing Objectives */}
+      <g transform="translate(30, 120)">
+        <text x="370" y="20" textAnchor="middle" fill="#0047ff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Testing Objectives</text>
+        <g transform="translate(20, 30)">
+          <rect width="140" height="70" rx="4" fill="#1a1a2e" stroke="#0047ff" strokeWidth="1" />
+          <text x="70" y="25" textAnchor="middle" fill="#0047ff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Defects Detection</text>
+          <text x="70" y="42" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Bugs identify karna</text>
+          <text x="70" y="55" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Quality improve</text>
+        </g>
+        <g transform="translate(180, 30)">
+          <rect width="140" height="70" rx="4" fill="#1a1a2e" stroke="#0047ff" strokeWidth="1" />
+          <text x="70" y="25" textAnchor="middle" fill="#0047ff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Requirements Verification</text>
+          <text x="70" y="42" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Requirements check</text>
+          <text x="70" y="55" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">All met</text>
+        </g>
+        <g transform="translate(340, 30)">
+          <rect width="140" height="70" rx="4" fill="#1a1a2e" stroke="#0047ff" strokeWidth="1" />
+          <text x="70" y="25" textAnchor="middle" fill="#0047ff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Quality Assurance</text>
+          <text x="70" y="42" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Quality ensure</text>
+          <text x="70" y="55" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Standards meet</text>
+        </g>
+        <g transform="translate(500, 30)">
+          <rect width="140" height="70" rx="4" fill="#1a1a2e" stroke="#0047ff" strokeWidth="1" />
+          <text x="70" y="25" textAnchor="middle" fill="#0047ff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Risk Mitigation</text>
+          <text x="70" y="42" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Risks reduce</text>
+          <text x="70" y="55" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Reliability</text>
+        </g>
+      </g>
+      
+      {/* Testing Life Cycle - Flow */}
+      <g transform="translate(30, 210)">
+        <text x="370" y="20" textAnchor="middle" fill="#0047ff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Testing Life Cycle</text>
+        <g transform="translate(0, 30)">
+          <rect width="90" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="45" y="22" textAnchor="middle" fill="#0047ff" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Planning</text>
+          <text x="45" y="38" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Scope, strategy</text>
+          
+          <line x1="90" y1="25" x2="115" y2="25" stroke="#0047ff" strokeWidth="1.5" />
+          <polygon points="115,20 115,30 125,25" fill="#0047ff" />
+          
+          <rect x="125" width="90" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="170" y="22" textAnchor="middle" fill="#0047ff" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Analysis</text>
+          <text x="170" y="38" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Requirements</text>
+          
+          <line x1="215" y1="25" x2="240" y2="25" stroke="#0047ff" strokeWidth="1.5" />
+          <polygon points="240,20 240,30 250,25" fill="#0047ff" />
+          
+          <rect x="250" width="90" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="295" y="22" textAnchor="middle" fill="#0047ff" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Design</text>
+          <text x="295" y="38" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Cases, data</text>
+          
+          <line x1="340" y1="25" x2="365" y2="25" stroke="#0047ff" strokeWidth="1.5" />
+          <polygon points="365,20 365,30 375,25" fill="#0047ff" />
+          
+          <rect x="375" width="90" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="420" y="22" textAnchor="middle" fill="#0047ff" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Environment</text>
+          <text x="420" y="38" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Setup, config</text>
+          
+          <line x1="465" y1="25" x2="490" y2="25" stroke="#0047ff" strokeWidth="1.5" />
+          <polygon points="490,20 490,30 500,25" fill="#0047ff" />
+          
+          <rect x="500" width="90" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="545" y="22" textAnchor="middle" fill="#0047ff" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Execution</text>
+          <text x="545" y="38" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Run, log</text>
+          
+          <line x1="590" y1="25" x2="615" y2="25" stroke="#0047ff" strokeWidth="1.5" />
+          <polygon points="615,20 615,30 625,25" fill="#0047ff" />
+          
+          <rect x="625" width="90" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="670" y="22" textAnchor="middle" fill="#0047ff" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Evaluation</text>
+          <text x="670" y="38" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Report, close</text>
+        </g>
+      </g>
+      
+      {/* Testing Principles */}
+      <g transform="translate(30, 320)">
+        <text x="370" y="20" textAnchor="middle" fill="#0047ff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Testing Principles</text>
+        <g transform="translate(20, 30)">
+          <rect width="340" height="35" rx="4" fill="#1a1a2e" stroke="#0047ff66" strokeWidth="1" />
+          <text x="170" y="17" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Testing shows presence of defects, not absence</text>
+          <text x="170" y="30" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Testing proves defects exist, not that software is perfect</text>
+        </g>
+        <g transform="translate(20, 70)">
+          <rect width="340" height="35" rx="4" fill="#1a1a2e" stroke="#0047ff66" strokeWidth="1" />
+          <text x="170" y="17" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Exhaustive testing is impossible</text>
+          <text x="170" y="30" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Use risk-based testing and prioritize</text>
+        </g>
+        <g transform="translate(380, 30)">
+          <rect width="340" height="35" rx="4" fill="#1a1a2e" stroke="#0047ff66" strokeWidth="1" />
+          <text x="550" y="17" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Early testing saves time and cost</text>
+          <text x="550" y="30" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Start testing early in SDLC</text>
+        </g>
+        <g transform="translate(380, 70)">
+          <rect width="340" height="35" rx="4" fill="#1a1a2e" stroke="#0047ff66" strokeWidth="1" />
+          <text x="550" y="17" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Defect clustering - few modules have most defects</text>
+          <text x="550" y="30" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Pareto principle applies</text>
+        </g>
+      </g>
+      
+      {/* Tester Role */}
+      <g transform="translate(30, 460)">
+        <text x="370" y="20" textAnchor="middle" fill="#0047ff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Tester Role in Software Development</text>
+        <g transform="translate(20, 30)">
+          <rect width="140" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="70" y="22" textAnchor="middle" fill="#0047ff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Quality Advocate</text>
+          <text x="70" y="38" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Quality focus</text>
+        </g>
+        <g transform="translate(180, 30)">
+          <rect width="140" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="70" y="22" textAnchor="middle" fill="#0047ff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Lead</text>
+          <text x="70" y="38" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Team leadership</text>
+        </g>
+        <g transform="translate(340, 30)">
+          <rect width="140" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="70" y="22" textAnchor="middle" fill="#0047ff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Reviewer</text>
+          <text x="70" y="38" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Reviews code</text>
+        </g>
+        <g transform="translate(500, 30)">
+          <rect width="140" height="50" rx="4" fill="#0047ff22" stroke="#0047ff" strokeWidth="1" />
+          <text x="70" y="22" textAnchor="middle" fill="#0047ff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Risk Analyst</text>
+          <text x="70" y="38" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Risks identify</text>
+        </g>
+      </g>
+      
+      {/* Bottom note */}
+      <g transform="translate(30, 555)">
+        <text x="370" y="20" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Testing ensures software quality through systematic evaluation</text>
+      </g>
+    </svg>
+  );
+}
+
+export function TestPlanAndTestCasesOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 800 620" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="620" fill="#1a1a2e" />
+      <defs>
+        <linearGradient id="tpt-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#00aaff' }} />
+          <stop offset="100%" style={{ stopColor: '#00aaff66' }} />
+        </linearGradient>
+      </defs>
+      {/* Title */}
+      <text x="400" y="35" textAnchor="middle" fill="#00aaff" fontSize="16" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Plan and Test Cases</text>
+      
+      {/* Test Plan Section */}
+      <g transform="translate(30, 55)">
+        <rect width="740" height="120" rx="8" fill="#0a0a1a" stroke="#00aaff" strokeWidth="1" />
+        <text x="370" y="25" textAnchor="middle" fill="#00aaff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Plan - Formal Document</text>
+        <text x="370" y="42" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Strategy, scope, approach, resources, schedule, risks</text>
+        
+        {/* Test Plan Elements */}
+        <g transform="translate(20, 50)">
+          <rect width="170" height="55" rx="4" fill="#00aaff22" stroke="#00aaff" strokeWidth="1" />
+          <text x="85" y="22" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Scope</text>
+          <text x="85" y="38" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">What to test</text>
+          <text x="85" y="50" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Requirements</text>
+        </g>
+        <g transform="translate(200, 50)">
+          <rect width="170" height="55" rx="4" fill="#00aaff22" stroke="#00aaff" strokeWidth="1" />
+          <text x="85" y="22" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Approach</text>
+          <text x="85" y="38" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">How to test</text>
+          <text x="85" y="50" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Strategy</text>
+        </g>
+        <g transform="translate(380, 50)">
+          <rect width="170" height="55" rx="4" fill="#00aaff22" stroke="#00aaff" strokeWidth="1" />
+          <text x="85" y="22" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Resources</text>
+          <text x="85" y="38" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Who, tools</text>
+          <text x="85" y="50" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Budget</text>
+        </g>
+        <g transform="translate(560, 50)">
+          <rect width="160" height="55" rx="4" fill="#00aaff22" stroke="#00aaff" strokeWidth="1" />
+          <text x="80" y="22" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Schedule &amp; Risks</text>
+          <text x="80" y="38" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Timeline</text>
+          <text x="80" y="50" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Mitigation</text>
+        </g>
+      </g>
+      
+      {/* Test Case Design Section */}
+      <g transform="translate(30, 195)">
+        <rect width="740" height="180" rx="8" fill="#0a0a1a" stroke="#00aaff" strokeWidth="1" />
+        <text x="370" y="25" textAnchor="middle" fill="#00aaff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Case Design</text>
+        
+        {/* Test Case Structure */}
+        <g transform="translate(20, 35)">
+          <rect width="220" height="70" rx="4" fill="#00aaff22" stroke="#00aaff" strokeWidth="1" />
+          <text x="110" y="20" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Case</text>
+          <text x="110" y="35" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Input, Expected, Actual, Status</text>
+          <text x="110" y="50" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Scenario, Conditions, Pass/Fail</text>
+        </g>
+        
+        {/* Design Techniques */}
+        <g transform="translate(260, 35)">
+          <rect width="460" height="70" rx="4" fill="#0a0a1a" stroke="#00aaff66" strokeWidth="1" />
+          <text x="490" y="20" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Case Design Techniques</text>
+          <text x="490" y="35" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Equivalence Partitioning, Boundary Value Analysis, Decision Table</text>
+          <text x="490" y="50" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">State Transition, Use Case, Error Guessing</text>
+        </g>
+        
+        {/* Test Reports */}
+        <g transform="translate(20, 115)">
+          <rect width="700" height="55" rx="4" fill="#00aaff15" stroke="#00aaff66" strokeWidth="1" />
+          <text x="350" y="22" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Test Reporting</text>
+          <text x="350" y="38" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Progress Report, Defect Report, Coverage Report, Quality Report, Metrics, Dashboard</text>
+        </g>
+      </g>
+      
+      {/* Bottom note */}
+      <g transform="translate(30, 400)">
+        <text x="370" y="20" textAnchor="middle" fill="#666" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Test Plan ensures systematic testing; Test Cases ensure thorough coverage</text>
+        
+        {/* Key Insight */}
+        <g transform="translate(20, 40)">
+          <rect width="700" height="70" rx="8" fill="#00aaff10" stroke="#00aaff44" strokeWidth="1" />
+          <text x="350" y="25" textAnchor="middle" fill="#00aaff" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Key Insight: Test Plan is the roadmap, Test Cases are the execution steps</text>
+          <text x="350" y="45" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Well-designed test cases catch more defects with less effort</text>
+          <text x="350" y="60" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Good reporting enables informed quality decisions</text>
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+export function DefectManagementOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 800 620" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="620" fill="#1a1a2e" />
+      <defs>
+        <linearGradient id="dm-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#ff0080' }} />
+          <stop offset="100%" style={{ stopColor: '#ff008066' }} />
+        </linearGradient>
+      </defs>
+      {/* Title */}
+      <text x="400" y="35" textAnchor="middle" fill="#ff0080" fontSize="16" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Defect Management</text>
+      
+      {/* Definition */}
+      <g transform="translate(30, 55)">
+        <rect width="740" height="45" rx="8" fill="#0a0a1a" stroke="#ff0080" strokeWidth="1" />
+        <text x="370" y="22" textAnchor="middle" fill="#ff0080" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Process of identifying, tracking, and resolving defects in software</text>
+      </g>
+      
+      {/* Defect Origins */}
+      <g transform="translate(30, 110)">
+        <text x="370" y="20" textAnchor="middle" fill="#ff0080" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Defect Origins</text>
+        <g transform="translate(20, 30)">
+          <rect width="130" height="50" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="65" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Requirements</text>
+          <text x="65" y="35" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Ambiguous</text>
+        </g>
+        <g transform="translate(170, 30)">
+          <rect width="130" height="50" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="65" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Design</text>
+          <text x="65" y="35" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Logic errors</text>
+        </g>
+        <g transform="translate(320, 30)">
+          <rect width="130" height="50" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="65" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Coding</text>
+          <text x="65" y="35" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Implementation</text>
+        </g>
+        <g transform="translate(470, 30)">
+          <rect width="130" height="50" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="65" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Config/Env</text>
+          <text x="65" y="35" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Deployment</text>
+        </g>
+        <g transform="translate(620, 30)">
+          <rect width="100" height="50" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="50" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Integration</text>
+          <text x="50" y="35" textAnchor="middle" fill="#ccc" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Interface</text>
+        </g>
+      </g>
+      
+      {/* Defect Classes */}
+      <g transform="translate(30, 210)">
+        <text x="370" y="20" textAnchor="middle" fill="#ff0080" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Defect Classes</text>
+        <g transform="translate(20, 30)">
+          <rect width="170" height="45" rx="4" fill="#ff008015" stroke="#ff008066" strokeWidth="1" />
+          <text x="85" y="20" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Functional</text>
+          <text x="85" y="35" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Doesn't work as expected</text>
+        </g>
+        <g transform="translate(200, 30)">
+          <rect width="170" height="45" rx="4" fill="#ff008015" stroke="#ff008066" strokeWidth="1" />
+          <text x="85" y="20" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Performance</text>
+          <text x="85" y="35" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Slow, resource-heavy</text>
+        </g>
+        <g transform="translate(380, 30)">
+          <rect width="170" height="45" rx="4" fill="#ff008015" stroke="#ff008066" strokeWidth="1" />
+          <text x="85" y="20" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Security</text>
+          <text x="85" y="35" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Vulnerabilities</text>
+        </g>
+        <g transform="translate(560, 30)">
+          <rect width="160" height="45" rx="4" fill="#ff008015" stroke="#ff008066" strokeWidth="1" />
+          <text x="80" y="20" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Usability &amp; Compat</text>
+          <text x="80" y="35" textAnchor="middle" fill="#888" fontSize="8" fontFamily="'Segoe UI', system-ui, sans-serif">Hard to use, not compatible</text>
+        </g>
+      </g>
+      
+      {/* Defect Life Cycle Flow */}
+      <g transform="translate(30, 310)">
+        <text x="370" y="20" textAnchor="middle" fill="#ff0080" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Defect Life Cycle</text>
+        <g transform="translate(0, 30)">
+          <rect width="100" height="40" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="50" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">New</text>
+          <text x="50" y="33" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Reported</text>
+          
+          <line x1="100" y1="20" x2="120" y2="20" stroke="#ff0080" strokeWidth="1.5" />
+          <polygon points="120,15 120,25 130,20" fill="#ff0080" />
+          
+          <rect x="130" width="100" height="40" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="180" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Assigned</text>
+          <text x="180" y="33" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">To developer</text>
+          
+          <line x1="230" y1="20" x2="250" y2="20" stroke="#ff0080" strokeWidth="1.5" />
+          <polygon points="250,15 250,25 260,20" fill="#ff0080" />
+          
+          <rect x="260" width="100" height="40" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="310" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Fixed</text>
+          <text x="310" y="33" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Resolved</text>
+          
+          <line x1="360" y1="20" x2="380" y2="20" stroke="#ff0080" strokeWidth="1.5" />
+          <polygon points="380,15 380,25 390,20" fill="#ff0080" />
+          
+          <rect x="390" width="100" height="40" rx="4" fill="#ff008022" stroke="#ff0080" strokeWidth="1" />
+          <text x="440" y="20" textAnchor="middle" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Retest</text>
+          <text x="440" y="33" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Verified</text>
+          
+          <line x1="490" y1="20" x2="510" y2="20" stroke="#ff0080" strokeWidth="1.5" />
+          <polygon points="510,15 510,25 520,20" fill="#ff0080" />
+          
+          <rect x="520" width="100" height="40" rx="4" fill="#00ff8822" stroke="#00ff88" strokeWidth="1" />
+          <text x="570" y="20" textAnchor="middle" fill="#00ff88" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Closed</text>
+          <text x="570" y="33" textAnchor="middle" fill="#ccc" fontSize="7" fontFamily="'Segoe UI', system-ui, sans-serif">Confirmed fix</text>
+        </g>
+      </g>
+      
+      {/* Severity and Priority */}
+      <g transform="translate(30, 420)">
+        <text x="370" y="20" textAnchor="middle" fill="#ff0080" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Severity vs Priority</text>
+        
+        {/* Severity */}
+        <g transform="translate(20, 30)">
+          <text x="170" y="15" textAnchor="middle" fill="#ff0080" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Severity (Impact)</text>
+          <rect width="300" height="25" rx="3" fill="#ff008033" stroke="#ff008066" strokeWidth="1" />
+          <text x="30" y="32" textAnchor="start" fill="#00ff88" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Critical</text>
+          <text x="80" y="32" textAnchor="start" fill="#00ff88" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">High</text>
+          <text x="130" y="32" textAnchor="start" fill="#ffaa00" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Medium</text>
+          <text x="185" y="32" textAnchor="start" fill="#aaa" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Low</text>
+        </g>
+        
+        {/* Priority */}
+        <g transform="translate(400, 30)">
+          <text x="170" y="15" textAnchor="middle" fill="#ff0080" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Priority (Urgency)</text>
+          <rect width="300" height="25" rx="3" fill="#ff008033" stroke="#ff008066" strokeWidth="1" />
+          <text x="30" y="32" textAnchor="start" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">P1 - Immediate</text>
+          <text x="110" y="32" textAnchor="start" fill="#ff0080" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">P2 - Next</text>
+          <text x="180" y="32" textAnchor="start" fill="#ffaa00" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">P3 - Later</text>
+          <text x="250" y="32" textAnchor="start" fill="#aaa" fontSize="9" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">P4 - Optional</text>
+        </g>
+      </g>
+      
+      {/* Bottom note */}
+      <g transform="translate(30, 510)">
+        <text x="370" y="20" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Defect Management ensures systematic tracking and resolution of quality issues</text>
+        <text x="370" y="38" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Repository tracks all defects through their life cycle</text>
+      </g>
+    </svg>
+  );
+}

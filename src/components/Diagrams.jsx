@@ -66,6 +66,9 @@ import {
   QFDOverviewDiagram,
   TaguchiLossOverviewDiagram,
   COQOverviewDiagram,
+  SoftwareTestingBasicsOverviewDiagram,
+  TestPlanAndTestCasesOverviewDiagram,
+  DefectManagementOverviewDiagram,
 } from './SoftwareTestingDiagrams';
 
 // ============================================================
@@ -697,6 +700,12 @@ export function Diagram({ type }) {
       return <TaguchiLossOverviewDiagram />;
     case 'coq-overview':
       return <COQOverviewDiagram />;
+    case 'software-testing-basics-overview':
+      return <SoftwareTestingBasicsOverviewDiagram />;
+    case 'test-plan-test-cases-overview':
+      return <TestPlanAndTestCasesOverviewDiagram />;
+    case 'defect-management-overview':
+      return <DefectManagementOverviewDiagram />;
     default:
       return null;
   }

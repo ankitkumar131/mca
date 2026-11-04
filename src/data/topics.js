@@ -7522,6 +7522,327 @@ export const units = {
           ]
         }
       ]
+    },
+    {
+      "id": "unit-2",
+      "number": "2",
+      "name": "Essentials of Software Testing",
+      "topics": [
+        {
+          "id": "software-testing-basics",
+          "number": "2.1",
+          "title": "Software Testing Basics",
+          "subtitle": "Testing definitions, life cycle, principles aur tester role",
+          "icon": "flask",
+          "accent": "#0047ff",
+          "englishDefinition": "Software testing is the process of evaluating and verifying that a software system meets its intended requirements and works as expected. It involves executing a system to identify bugs, errors, or defects.",
+          "intro": "Software testing software system ke quality aur correctness check karne ka process hai.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Software Testing",
+              "body": "Testing kya hai: Software testing process hai jisme software systems evaluate aur verify karte hain. Objectives: Defects identify karna, Requirements verify karna, Quality ensure karna, Risks reduce karna.",
+              "chips": [
+                "Testing",
+                "Quality",
+                "Defects"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Testing Objectives",
+              "points": [
+                "Defects Detection — Bugs identify karna.",
+                "Requirements Verification — Requirements check karna.",
+                "Quality Assurance — Quality ensure karna.",
+                "Risk Mitigation — Risks reduce karna.",
+                "Reliability — Reliability improve karna.",
+                "Performance — Performance verify karna."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Testing Life Cycle",
+              "points": [
+                "Test Planning.",
+                "Test Analysis.",
+                "Test Design.",
+                "Test Environment Setup.",
+                "Test Execution.",
+                "Test Evaluation.",
+                "Test Closure."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Testing Principles",
+              "points": [
+                "Testing shows presence of defects.",
+                "Exhaustive testing impossible.",
+                "Early testing.",
+                "Defect clustering.",
+                "Testing is context-dependent.",
+                "Absence-of-errors fallacy.",
+                "Test cases must be traceable."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Tester Role",
+              "points": [
+                "Quality Advocate.",
+                "Test Lead.",
+                "Tester.",
+                "Reviewer.",
+                "Quality Engineer.",
+                "Team Collaborator.",
+                "Risk Analyst."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Software Testing Basics Overview",
+              "diagram": "software-testing-basics-overview",
+              "caption": "Software Testing Basics — Definitions, Life Cycle, Principles, Tester Role"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "Testing: Defects detect, Requirements verify, Quality ensure. Life Cycle: Plan → Analyze → Design → Execute → Evaluate → Close. Principles: Testing shows defects, Exhaustive testing impossible, Early testing, Defect clustering."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Define software testing and its objectives.",
+              "answer": "Testing: Process jisme software evaluate karke defects identify karte hain. Objectives: Defects detect, requirements verify, quality ensure."
+            },
+            {
+              "question": "Explain the testing life cycle.",
+              "answer": "Testing Life Cycle: Test Planning, Test Analysis, Test Design, Environment Setup, Test Execution, Test Evaluation, Test Closure."
+            },
+            {
+              "question": "List the key testing principles.",
+              "answer": "Testing shows defects, Exhaustive testing impossible, Early testing, Defect clustering, Testing is context-dependent, Absence-of-errors fallacy."
+            }
+          ]
+        },
+        {
+          "id": "test-plan-and-test-cases",
+          "number": "2.2",
+          "title": "Test Plan and Test Cases",
+          "subtitle": "Test planning, test case design aur test reports",
+          "icon": "clipboard",
+          "accent": "#00aaff",
+          "englishDefinition": "A Test Plan is a formal document describing the test strategy, scope, approach, resources, schedule and risks. Test cases are specific test scenarios with expected and actual results.",
+          "intro": "Test Plan aur Test Cases testing process ka backbone hai.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Test Plan",
+              "body": "Test Plan formal document hai jo test strategy, scope, approach, resources, schedule, risks document karta hai.",
+              "chips": [
+                "Strategy",
+                "Scope",
+                "Approach",
+                "Schedule"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Test Plan Elements",
+              "points": [
+                "Scope.",
+                "Approach.",
+                "Resources.",
+                "Schedule.",
+                "Risks.",
+                "Test Items.",
+                "Test Environment.",
+                "Entry/Exit Criteria."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Test Case Design",
+              "points": [
+                "Test Case Definition.",
+                "Input Data.",
+                "Expected Results.",
+                "Actual Results.",
+                "Status.",
+                "Test Scenario.",
+                "Conditions.",
+                "Pass/Fail."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Test Case Design Techniques",
+              "points": [
+                "Equivalence Partitioning.",
+                "Boundary Value Analysis.",
+                "Decision Table Testing.",
+                "State Transition Testing.",
+                "Use Case Testing.",
+                "Cause-Effect Graphing.",
+                "Error Guessing."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Test Reporting",
+              "points": [
+                "Progress Reporting.",
+                "Defect Reporting.",
+                "Coverage Reporting.",
+                "Summary Reporting.",
+                "Quality Reporting.",
+                "Metrics.",
+                "Dashboard."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Test Plan and Test Cases Overview",
+              "diagram": "test-plan-test-cases-overview",
+              "caption": "Test Plan and Test Cases — Planning, Design, Reports"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "Test Plan: Scope, approach, resources, schedule, risks. Test Cases: Input, expected, actual, status. Design: Equivalence partitioning, BVA, decision table. Reporting: Progress, defects, coverage."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "What is a Test Plan? Explain its key elements.",
+              "answer": "Test Plan: Formal document with test strategy, scope, approach, resources, schedule, risks. Elements: Scope, approach, resources, schedule, risks, entry/exit criteria."
+            },
+            {
+              "question": "Explain Test Case design techniques.",
+              "answer": "Test Case Design: Equivalence partitioning, BVA, decision table, state transition, use case testing, error guessing."
+            },
+            {
+              "question": "Describe test reporting.",
+              "answer": "Test Reporting: Progress reports, defect reports, coverage reports, quality metrics."
+            }
+          ]
+        },
+        {
+          "id": "defect-management",
+          "number": "2.3",
+          "title": "Defect Management",
+          "subtitle": "Defect origins, classes, repository aur management",
+          "icon": "bug",
+          "accent": "#ff0080",
+          "englishDefinition": "Defect Management is the process of identifying, tracking, and resolving defects in software. It involves defect origins, defect classes, and a defect repository.",
+          "intro": "Defect Management defects ko identify, track aur resolve karne ka process hai.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Defect Management",
+              "body": "Defect Management defects ko identify, track, aur resolve karne ka process hai.",
+              "chips": [
+                "Defects",
+                "Management",
+                "Process"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Defect Origins",
+              "points": [
+                "Requirements Defects.",
+                "Design Defects.",
+                "Coding Defects.",
+                "Configuration Defects.",
+                "Environment Defects.",
+                "Integration Defects."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Defect Classes",
+              "points": [
+                "Functional Defects.",
+                "Performance Defects.",
+                "Security Defects.",
+                "Usability Defects.",
+                "Compatibility Defects.",
+                "Usability Defects.",
+                "Documentation Defects."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Defect Repository",
+              "points": [
+                "Defect Tracking.",
+                "Defect Life Cycle.",
+                "Defect Severity.",
+                "Defect Priority.",
+                "Defect Status.",
+                "Developer/Tester Support.",
+                "Defect Analysis."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Defect Life Cycle",
+              "points": [
+                "New.",
+                "Assigned.",
+                "In Progress.",
+                "Fixed.",
+                "Retest.",
+                "Closed.",
+                "Reopened.",
+                "Deferred."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Defect Severity and Priority",
+              "points": [
+                "Severity: Impact.",
+                "Critical — Major impact.",
+                "High — Significant impact.",
+                "Medium — Moderate impact.",
+                "Low — Minor impact.",
+                "Priority: Fix urgency.",
+                "High — Fix immediately.",
+                "Medium — Fix soon.",
+                "Low — Fix when possible."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Defect Management Overview",
+              "diagram": "defect-management-overview",
+              "caption": "Defect Management — Origins, Classes, Repository, Life Cycle"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "Defect Management: Defect origins (requirements, design, coding, config), defect classes (functional, performance, security), defect repository (tracking, life cycle, severity, priority). Life Cycle: New → Assigned → Fixed → Retest → Closed."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "What is defect management? List defect origins.",
+              "answer": "Defect Management: Defects identify, track, resolve process. Origins: Requirements, Design, Coding, Configuration, Environment."
+            },
+            {
+              "question": "Describe the defect life cycle.",
+              "answer": "Defect Life Cycle: New → Assigned → In Progress → Fixed → Retest → Closed. Possible: Reopened, Deferred."
+            },
+            {
+              "question": "Differentiate between defect severity and priority.",
+              "answer": "Severity: Defect impact. Priority: Fix urgency. Critical severity but low priority = fix later. High severity high priority = fix immediately."
+            }
+          ]
+        }
+      ]
     }
   ]
 };
