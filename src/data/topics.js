@@ -8190,7 +8190,7 @@ export const units = {
               ]
             },
             {
-              "type": "points",
+              "type": "definition",
               "title": "Prevention Costs",
               "body": "Prevention Costs defects prevent karne ke costs hain. Metrics: Quality planning costs, Quality training costs, Quality documentation costs, Quality audit costs, Design review costs, Process improvement costs. Prevention costs quality improve karte hain. High prevention = Low failure costs.",
         "body2": "Prevention costs defects prevent karne ke costs hain. Quality planning (quality plans develop), training (employees quality train), documentation (quality procedures document), audits (quality systems audit), design reviews (designs review), process improvement (processes improve). Yeh defects rokne ke liye invest kiye jaate hain.",
@@ -8232,7 +8232,7 @@ export const units = {
               ]
             },
             {
-              "type": "points",
+              "type": "definition",
               "title": "Appraisal Costs",
               "body": "Appraisal Costs quality measure karne ke costs hain. Metrics: Inspection costs, Testing costs, Measurement costs, Calibration costs, Testing equipment costs. Appraisal costs quality measure karte hain. High appraisal = Good quality measurement.",
         "body2": "Appraisal costs quality measure karne ke costs hain. Inspection (products inspect), testing (products test), measurement (quality characteristics measure), calibration (equipment calibrate), testing equipment (equipment purchase). Yeh quality check karne ke liye invest kiye jaate hain.",
@@ -8272,7 +8272,7 @@ export const units = {
               ]
             },
             {
-              "type": "points",
+              "type": "definition",
               "title": "Internal Failure Costs",
               "body": "Internal Failure Costs internal defects fix karne ke costs hain. Metrics: Scrap costs, Rework costs, Retest costs, Downtime costs, Failure analysis costs, Yield loss costs, Corrective action costs. Internal failure costs quality issues indicate karte hain. High internal failure = Poor quality.",
         "body2": "Internal failure costs internal defects fix karne ke costs hain. Scrap (defective products discard), rework (defective products repair), retest (repaired products test), downtime (equipment downtime), failure analysis (causes analyze), yield loss (quality yield loss), corrective actions (actions implement). Yeh defects fix karne ke costs hain.",
@@ -8318,7 +8318,7 @@ export const units = {
               ]
             },
             {
-              "type": "points",
+              "type": "definition",
               "title": "External Failure Costs",
               "body": "External Failure Costs external defects fix karne ke costs hain. Metrics: Warranty costs, Returns costs, Customer complaint costs, Lost sales costs, Lost customers costs, Liability costs, Reputation damage costs. External failure costs internal failure se zyada expensive hote hain. High external failure = Very poor quality.",
         "body2": "External failure costs external defects fix karne ke costs hain. Warranty (warranty claims), returns (defective products return), complaints (customer complaints), lost sales (sales lose), lost customers (customers lose), liability (product liability), reputation damage (brand reputation damage). Yeh external defects se hone wale costs hain.",
