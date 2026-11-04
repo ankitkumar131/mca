@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { subjects, units } from './data/topics';
 import TopicPage from './components/TopicPage';
 import ImportantExamQuestions from './components/ImportantExamQuestions';
+import Sidebar from './components/Sidebar';
 import { Icon } from './components/Icons';
 import { getCompletedTopics } from './utils/progress';
 import './App.css';
@@ -21,13 +22,6 @@ function parseRoute() {
     return { level: 'units', subjectId: parts[1] };
   }
   return { level: 'home' };
-}
-
-function buildRoute(level, extra = {}) {
-  if (level === 'home') return '#/';
-  if (level === 'units') return `#/subject/${extra.subjectId}`;
-  if (level === 'topic') return `#/subject/${extra.subjectId}/topic/${extra.topicId}`;
-  return '#/';
 }
 
 // ---------- Subject card ----------
@@ -76,18 +70,10 @@ function SubjectCard({ subject }) {
 // ---------- Unit page ----------
 function UnitPage({ subject, onBack }) {
   const subjectUnits = units[subject.id] || [];
-  const subjectTopics = subjectUnits[0]?.topics || [];
   const completed = getCompletedTopics();
-  const [selectedUnit, setSelectedUnit] = useState(subjectUnits[0]?.id || '');
-  const [showDropdown, setShowDropdown] = useState(false);
-  
   const openTopic = (topicId) => {
     window.location.hash = `#/subject/${subject.id}/topic/${topicId}`;
   };
-
-  const currentUnit = subjectUnits.find((u) => u.id === selectedUnit) || subjectUnits[0];
-  const unitTopics = currentUnit?.topics || [];
-
   return (
     <>
       <header className="page-hero">
@@ -103,78 +89,13 @@ function UnitPage({ subject, onBack }) {
           <h1 className="topic-hero-title">Units & Topics</h1>
           <p className="topic-hero-sub">{subject.description}</p>
           <div className="topic-hero-stats">
-            <span>📊 {completed.filter((id) => subjectTopics.some((t) => t.id === id)).length} of {subjectTopics.length} completed</span>
+            <span>📊 {completed.filter((id) => subjectUnits.flatMap((u) => u.topics).some((t) => t.id === id)).length} of {subjectUnits.flatMap((u) => u.topics).length} completed</span>
           </div>
         </div>
       </header>
 
       <main className="container">
-        {/* Unit Dropdown */}
-        <div className="unit-dropdown-wrapper" style={{ marginBottom: '32px' }}>
-          <div className="unit-dropdown-header" onClick={() => setShowDropdown(!showDropdown)}>
-            <Icon name="layers" size={20} color="#c4ff00" />
-            <span className="unit-dropdown-label">Select Unit:</span>
-            <select
-              className="unit-dropdown-select"
-              value={selectedUnit}
-              onChange={(e) => setSelectedUnit(e.target.value)}
-              onClick={(e) => e.stopPropagation()}
-            >
-              {subjectUnits.map((unit) => (
-                <option key={unit.id} value={unit.id}>
-                  Unit {unit.number} · {unit.name} ({unit.topics.length} topics)
-                </option>
-              ))}
-            </select>
-          </div>
-          {showDropdown && (
-            <div className="unit-dropdown-menu">
-              {subjectUnits.map((unit) => (
-                <button
-                  key={unit.id}
-                  className={`unit-dropdown-item ${unit.id === selectedUnit ? 'active' : ''}`}
-                  onClick={() => {
-                    setSelectedUnit(unit.id);
-                    setShowDropdown(false);
-                  }}
-                >
-                  <span className="unit-dropdown-num">Unit {unit.number}</span>
-                  <span className="unit-dropdown-name">{unit.name}</span>
-                  <span className="unit-dropdown-count">{unit.topics.length} topics</span>
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Current Unit Topics */}
-        <div className="unit-card full-width" style={{ '--i': currentUnit?.number }}>
-          <div className="unit-card-head">
-            <span className="unit-card-num">Unit {currentUnit?.number}</span>
-            <span className="unit-card-icon"><Icon name="book" size={26} /></span>
-          </div>
-          <h2 className="unit-card-title">{currentUnit?.name}</h2>
-          <p className="unit-card-count">{unitTopics.length} topics</p>
-          <div className="unit-topics-preview">
-            {unitTopics.map((t) => {
-              const isDone = completed.includes(t.id);
-              return (
-                <button
-                  key={t.id}
-                  className={`unit-topic-mini ${isDone ? 'done' : ''}`}
-                  onClick={() => openTopic(t.id)}
-                >
-                  <span className="utm-num">{t.number}</span>
-                  <span className="utm-title">{t.title}</span>
-                  {isDone && <span className="utm-check">✓</span>}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* All Units List */}
-        <div className="units-grid" style={{ marginTop: '32px' }}>
+        <div className="units-grid">
           {subjectUnits.map((unit) => (
             <article key={unit.id} className="unit-card" style={{ '--i': unit.number }}>
               <div className="unit-card-head">
@@ -184,7 +105,7 @@ function UnitPage({ subject, onBack }) {
               <h2 className="unit-card-title">{unit.name}</h2>
               <p className="unit-card-count">{unit.topics.length} topics</p>
               <div className="unit-topics-preview">
-                {unit.topics.slice(0, 5).map((t) => {
+                {unit.topics.map((t) => {
                   const isDone = completed.includes(t.id);
                   return (
                     <button
@@ -198,18 +119,7 @@ function UnitPage({ subject, onBack }) {
                     </button>
                   );
                 })}
-                {unit.topics.length > 5 && (
-                  <div className="unit-topics-more">
-                    + {unit.topics.length - 5} more topics...
-                  </div>
-                )}
               </div>
-              <button
-                className="btn primary unit-card-cta"
-                onClick={() => setSelectedUnit(unit.id)}
-              >
-                View All Topics
-              </button>
             </article>
           ))}
         </div>
@@ -276,8 +186,10 @@ function Home() {
   );
 }
 
+// ---------- Main App ----------
 export default function App() {
   const [route, setRoute] = useState(parseRoute);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Listen for hash changes
   useEffect(() => {
@@ -291,47 +203,96 @@ export default function App() {
 
   const goHome = () => {
     window.location.hash = '#/';
+    setSidebarOpen(false);
   };
 
   const openSubject = (subjectId) => {
     window.location.hash = `#/subject/${subjectId}`;
+    setSidebarOpen(false);
   };
 
   const openTopic = (topicId) => {
     const subjectId = route.subjectId || 'business-intelligence';
     window.location.hash = `#/subject/${subjectId}/topic/${topicId}`;
+    setSidebarOpen(false);
+  };
+
+  const navigate = (level, extra) => {
+    if (level === 'home') {
+      goHome();
+    } else if (level === 'units') {
+      openSubject(extra.subjectId);
+    } else if (level === 'topic') {
+      openTopic(extra.topicId);
+    } else if (level === 'exam') {
+      window.location.hash = `#/subject/${extra.subjectId}/exam`;
+      setSidebarOpen(false);
+    }
   };
 
   const subject = route.level === 'units' ? subjects.find((s) => s.id === route.subjectId) : null;
 
-  return (
-    <div className="app">
-      <nav className="topnav">
-        <div className="container nav-inner">
-          <span className="brand" onClick={goHome} style={{ cursor: 'pointer' }}>
-            <span className="brand-dot" /> BI · Hinglish Study
-          </span>
-          <button className="nav-home" onClick={goHome}>Home</button>
-        </div>
-      </nav>
-
-      {route.level === 'exam' ? (
+  const renderContent = () => {
+    if (route.level === 'exam') {
+      return (
         <ImportantExamQuestions
           subjectId={route.subjectId}
           onBack={() => openSubject(route.subjectId || 'business-intelligence')}
         />
-      ) : route.level === 'topic' ? (
+      );
+    } else if (route.level === 'topic') {
+      return (
         <TopicPage
           topicId={route.topicId}
           subjectId={route.subjectId}
           onBack={() => openSubject(route.subjectId || 'business-intelligence')}
           onOpenTopic={openTopic}
         />
-      ) : route.level === 'units' && subject ? (
-        <UnitPage subject={subject} onBack={goHome} />
-      ) : (
-        <Home />
+      );
+    } else if (route.level === 'units' && subject) {
+      return <UnitPage subject={subject} onBack={goHome} />;
+    } else {
+      return <Home />;
+    }
+  };
+
+  return (
+    <div className="app-with-sidebar">
+      {/* Mobile menu button */}
+      <button
+        className="mobile-menu-btn"
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+      >
+        {sidebarOpen ? '✕' : '☰'}
+      </button>
+
+      {/* Sidebar - Common across ALL pages */}
+      <Sidebar
+        currentSubjectId={route.subjectId || 'business-intelligence'}
+        currentUnitId={route.unitId}
+        currentTopicId={route.topicId}
+        onNavigate={navigate}
+        onClose={() => setSidebarOpen(false)}
+      />
+
+      {/* Sidebar overlay for mobile */}
+      {sidebarOpen && (
+        <div className="sidebar-overlay active" onClick={() => setSidebarOpen(false)} />
       )}
+
+      {/* Main content */}
+      <div className="app-content">
+        <nav className="topnav">
+          <div className="container nav-inner">
+            <span className="brand" onClick={goHome} style={{ cursor: 'pointer', marginLeft: '32px' }}>
+              <span className="brand-dot" /> BI · Hinglish Study
+            </span>
+            <button className="nav-home" onClick={goHome}>Home</button>
+          </div>
+        </nav>
+
+        {renderContent()}
+      </div>
     </div>
   );
 }
