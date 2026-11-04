@@ -57,6 +57,15 @@ import {
   QCToolsOverviewDiagram,
   QAModelsOverviewDiagram,
   SQATrendsOverviewDiagram,
+  SecurityTestingOverviewDiagram,
+  ComplexityMetricsOverviewDiagram,
+  QualityMetricsOverviewDiagram,
+  AvailabilityMetricsOverviewDiagram,
+  DREOverviewDiagram,
+  FMEAOverviewDiagram,
+  QFDOverviewDiagram,
+  TaguchiLossOverviewDiagram,
+  COQOverviewDiagram,
 } from './SoftwareTestingDiagrams';
 
 // ============================================================
@@ -670,6 +679,24 @@ export function Diagram({ type }) {
       return <QAModelsOverviewDiagram />;
     case 'sqa-trends-overview':
       return <SQATrendsOverviewDiagram />;
+    case 'security-testing-overview':
+      return <SecurityTestingOverviewDiagram />;
+    case 'complexity-metrics-overview':
+      return <ComplexityMetricsOverviewDiagram />;
+    case 'quality-metrics-overview':
+      return <QualityMetricsOverviewDiagram />;
+    case 'availability-metrics-overview':
+      return <AvailabilityMetricsOverviewDiagram />;
+    case 'dre-overview':
+      return <DREOverviewDiagram />;
+    case 'fmea-overview':
+      return <FMEAOverviewDiagram />;
+    case 'qfd-overview':
+      return <QFDOverviewDiagram />;
+    case 'taguchi-loss-overview':
+      return <TaguchiLossOverviewDiagram />;
+    case 'coq-overview':
+      return <COQOverviewDiagram />;
     default:
       return null;
   }

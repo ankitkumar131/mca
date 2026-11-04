@@ -522,3 +522,821 @@ export function SQATrendsOverviewDiagram() {
     </svg>
   );
 }
+
+// ============================================================
+// TOPIC 1.10 — Testing Software System Security
+// ============================================================
+
+export function SecurityTestingOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#00ff88', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#00aa66', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#00ff88" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        Testing Software System Security
+      </text>
+      
+      {/* Six-Sigma */}
+      <g transform="translate(50, 70)">
+        <rect width="200" height="120" rx="8" fill="url(#secGrad)" stroke="#00ff88" strokeWidth="2" />
+        <text x="100" y="30" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Six-Sigma</text>
+        <text x="100" y="50" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">DMAIC Process</text>
+        <text x="100" y="65" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Define → Measure</text>
+        <text x="100" y="80" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">→ Analyze → Improve</text>
+        <text x="100" y="95" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">→ Control</text>
+        <text x="100" y="110" textAnchor="middle" fill="#666" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">3.4 defects/million</text>
+      </g>
+      
+      {/* TQM */}
+      <g transform="translate(300, 70)">
+        <rect width="200" height="120" rx="8" fill="url(#secGrad)" stroke="#00ff88" strokeWidth="2" />
+        <text x="100" y="30" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">TQM</text>
+        <text x="100" y="50" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Total Quality Mgmt</text>
+        <text x="100" y="65" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Customer Focus</text>
+        <text x="100" y="80" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Total Involvement</text>
+        <text x="100" y="95" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Continuous Improvement</text>
+        <text x="100" y="110" textAnchor="middle" fill="#666" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Organization-wide</text>
+      </g>
+      
+      {/* Security Testing */}
+      <g transform="translate(550, 70)">
+        <rect width="300" height="120" rx="8" fill="url(#secGrad)" stroke="#00ff88" strokeWidth="2" />
+        <text x="150" y="30" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Security Testing Techniques</text>
+        <text x="150" y="50" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Vulnerability Assessment</text>
+        <text x="150" y="65" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Penetration Testing</text>
+        <text x="150" y="80" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Code Review</text>
+        <text x="150" y="95" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Security Audits</text>
+        <text x="150" y="110" textAnchor="middle" fill="#666" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Static & Dynamic Analysis</text>
+      </g>
+      
+      {/* CIA Triad */}
+      <g transform="translate(50, 230)">
+        <text x="150" y="20" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">CIA Triad</text>
+        <circle cx="50" cy="70" r="35" fill="none" stroke="#00ff88" strokeWidth="2" />
+        <text x="50" y="75" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">C</text>
+        <text x="50" y="90" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Confidentiality</text>
+        
+        <circle cx="150" cy="70" r="35" fill="none" stroke="#00ff88" strokeWidth="2" />
+        <text x="150" y="75" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">I</text>
+        <text x="150" y="90" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Integrity</text>
+        
+        <circle cx="250" cy="70" r="35" fill="none" stroke="#00ff88" strokeWidth="2" />
+        <text x="250" y="75" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">A</text>
+        <text x="250" y="90" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Availability</text>
+      </g>
+      
+      {/* Sigma Levels */}
+      <g transform="translate(500, 230)">
+        <text x="200" y="20" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Sigma Levels</text>
+        <rect x="20" y="35" width="360" height="25" rx="3" fill="#1a1a2e" stroke="#444" strokeWidth="1" />
+        <text x="30" y="52" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">1σ:</text>
+        <text x="60" y="52" fill="#ff4444" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">69% defects</text>
+        <rect x="20" y="65" width="360" height="25" rx="3" fill="#1a1a2e" stroke="#444" strokeWidth="1" />
+        <text x="30" y="82" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">3σ:</text>
+        <text x="60" y="82" fill="#ffaa00" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">66,807 defects</text>
+        <rect x="20" y="95" width="360" height="25" rx="3" fill="#2a2a3e" stroke="#666" strokeWidth="1" />
+        <text x="30" y="112" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">6σ:</text>
+        <text x="60" y="112" fill="#00ff88" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">3.4 defects/million</text>
+      </g>
+      
+      {/* Security Testing Process */}
+      <g transform="translate(50, 380)">
+        <text x="300" y="20" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Security Testing Process</text>
+        <rect x="10" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00ff88" strokeWidth="1" />
+        <text x="70" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Assess</text>
+        <rect x="140" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00ff88" strokeWidth="1" />
+        <text x="200" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Scan</text>
+        <rect x="270" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00ff88" strokeWidth="1" />
+        <text x="330" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Test</text>
+        <rect x="400" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00ff88" strokeWidth="1" />
+        <text x="460" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Report</text>
+        <rect x="530" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00ff88" strokeWidth="1" />
+        <text x="590" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Remediate</text>
+        
+        <line x1="130" y1="47" x2="140" y2="47" stroke="#00ff88" strokeWidth="1" opacity="0.5" />
+        <line x1="260" y1="47" x2="270" y2="47" stroke="#00ff88" strokeWidth="1" opacity="0.5" />
+        <line x1="390" y1="47" x2="400" y2="47" stroke="#00ff88" strokeWidth="1" opacity="0.5" />
+        <line x1="520" y1="47" x2="530" y2="47" stroke="#00ff88" strokeWidth="1" opacity="0.5" />
+      </g>
+      
+      <g transform="translate(50, 500)">
+        <text x="300" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Six-Sigma aur TQM quality improvement methodologies hain jo security testing ko systematic approach dete hain</text>
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// TOPIC 1.11 — Complexity Metrics and Models
+// ============================================================
+
+export function ComplexityMetricsOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="complexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#00aaff', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#0066cc', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#00aaff" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        Complexity Metrics and Models
+      </text>
+      
+      {/* Cyclomatic Complexity */}
+      <g transform="translate(50, 70)">
+        <rect width="250" height="120" rx="8" fill="url(#complexGrad)" stroke="#00aaff" strokeWidth="2" />
+        <text x="125" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Cyclomatic Complexity</text>
+        <text x="125" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">M = E - N + 2P</text>
+        <text x="125" y="62" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Control flow analysis</text>
+        <text x="125" y="77" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">1-5: Simple</text>
+        <text x="125" y="92" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">6-10: Moderate</text>
+        <text x="125" y="107" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">11+: Complex</text>
+      </g>
+      
+      {/* Halstead Metrics */}
+      <g transform="translate(325, 70)">
+        <rect width="250" height="120" rx="8" fill="url(#complexGrad)" stroke="#00aaff" strokeWidth="2" />
+        <text x="125" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Halstead Metrics</text>
+        <text x="125" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Operators + Operands</text>
+        <text x="125" y="62" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Vocabulary (n)</text>
+        <text x="125" y="77" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Length (N)</text>
+        <text x="125" y="92" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Volume (V)</text>
+        <text x="125" y="107" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Difficulty (D), Effort (E)</text>
+      </g>
+      
+      {/* McCabe Complexity */}
+      <g transform="translate(600, 70)">
+        <rect width="250" height="120" rx="8" fill="url(#complexGrad)" stroke="#00aaff" strokeWidth="2" />
+        <text x="125" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">McCabe Complexity</text>
+        <text x="125" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Decision Points</text>
+        <text x="125" y="62" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">If, else, for, while</text>
+        <text x="125" y="77" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Target: less than 10</text>
+        <text x="125" y="92" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Refactoring needed</text>
+        <text x="125" y="107" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Above 10 = high risk</text>
+      </g>
+      
+      {/* OO Complexity */}
+      <g transform="translate(50, 220)">
+        <rect width="250" height="120" rx="8" fill="url(#complexGrad)" stroke="#00aaff" strokeWidth="2" />
+        <text x="125" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Object-Oriented</text>
+        <text x="125" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Inheritance Depth</text>
+        <text x="125" y="62" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Coupling</text>
+        <text x="125" y="77" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Cohesion</text>
+        <text x="125" y="92" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Method Count</text>
+        <text x="125" y="107" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Attribute Count</text>
+      </g>
+      
+      {/* Complexity Visualization */}
+      <g transform="translate(325, 220)">
+        <text x="125" y="20" textAnchor="middle" fill="#00aaff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Complexity Scale</text>
+        <rect x="20" y="30" width="210" height="25" rx="4" fill="#1a1a2e" stroke="#00ff88" strokeWidth="1" />
+        <text x="30" y="47" fill="#00ff88" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">1-5: Simple (Green)</text>
+        <rect x="20" y="60" width="210" height="25" rx="4" fill="#1a1a2e" stroke="#ffaa00" strokeWidth="1" />
+        <text x="30" y="77" fill="#ffaa00" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">6-10: Moderate (Yellow)</text>
+        <rect x="20" y="90" width="210" height="25" rx="4" fill="#2a1a1a" stroke="#ff4444" strokeWidth="1" />
+        <text x="30" y="107" fill="#ff4444" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">11+: Complex (Red)</text>
+      </g>
+      
+      {/* Benefits */}
+      <g transform="translate(600, 220)">
+        <text x="125" y="20" textAnchor="middle" fill="#00aaff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Benefits</text>
+        <text x="125" y="40" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Maintainability assess</text>
+        <text x="125" y="55" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Testability evaluate</text>
+        <text x="125" y="70" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Defect probability predict</text>
+        <text x="125" y="85" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Refactoring priority</text>
+        <text x="125" y="100" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Quality improvement</text>
+      </g>
+      
+      {/* Key Formulas */}
+      <g transform="translate(50, 400)">
+        <text x="350" y="20" textAnchor="middle" fill="#00aaff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Key Formulas</text>
+        <text x="350" y="45" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Cyclomatic: M = E - N + 2P</text>
+        <text x="350" y="65" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Halstead Volume: V = N × log₂(n)</text>
+        <text x="350" y="85" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Halstead Effort: E = D × V</text>
+      </g>
+      
+      <g transform="translate(50, 520)">
+        <text x="350" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">High complexity = high maintenance cost, high defect probability, difficult testing</text>
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// TOPIC 1.12 — Quality Management Metrics
+// ============================================================
+
+export function QualityMetricsOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="qmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#ff8800', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#cc6600', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#ff8800" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        Quality Management Metrics
+      </text>
+      
+      {/* Defect Metrics */}
+      <g transform="translate(50, 70)">
+        <rect width="200" height="130" rx="8" fill="url(#qmGrad)" stroke="#ff8800" strokeWidth="2" />
+        <text x="100" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Defect Metrics</text>
+        <text x="100" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Defect Density</text>
+        <text x="100" y="63" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(Defects/KLOC)</text>
+        <text x="100" y="78" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• DRE</text>
+        <text x="100" y="93" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(90%+ target)</text>
+        <text x="100" y="108" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Reopen Rate</text>
+        <text x="100" y="123" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(less than 5% target)</text>
+      </g>
+      
+      {/* Testing Metrics */}
+      <g transform="translate(275, 70)">
+        <rect width="200" height="130" rx="8" fill="url(#qmGrad)" stroke="#ff8800" strokeWidth="2" />
+        <text x="100" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Testing Metrics</text>
+        <text x="100" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Test Coverage</text>
+        <text x="100" y="63" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(Code %)</text>
+        <text x="100" y="78" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Test Execution</text>
+        <text x="100" y="93" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(Run vs Planned)</text>
+        <text x="100" y="108" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Automation %</text>
+        <text x="100" y="123" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(Automated tests)</text>
+      </g>
+      
+      {/* Code Quality Metrics */}
+      <g transform="translate(500, 70)">
+        <rect width="200" height="130" rx="8" fill="url(#qmGrad)" stroke="#ff8800" strokeWidth="2" />
+        <text x="100" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Code Quality</text>
+        <text x="100" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Complexity</text>
+        <text x="100" y="63" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(Cyclomatic)</text>
+        <text x="100" y="78" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Duplication %</text>
+        <text x="100" y="93" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(Duplicate code)</text>
+        <text x="100" y="108" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Review Coverage</text>
+        <text x="100" y="123" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">(Code reviewed %)</text>
+      </g>
+      
+      {/* Process Metrics */}
+      <g transform="translate(725, 70)">
+        <rect width="150" height="130" rx="8" fill="url(#qmGrad)" stroke="#ff8800" strokeWidth="2" />
+        <text x="75" y="28" textAnchor="middle" fill="#fff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Process</text>
+        <text x="75" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Schedule</text>
+        <text x="75" y="63" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Variance</text>
+        <text x="75" y="78" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Cost</text>
+        <text x="75" y="93" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Variance</text>
+        <text x="75" y="108" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Effort</text>
+        <text x="75" y="123" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Variance</text>
+      </g>
+      
+      {/* Metric Flow */}
+      <g transform="translate(50, 250)">
+        <text x="350" y="20" textAnchor="middle" fill="#ff8800" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Metric Implementation Flow</text>
+        <rect x="10" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff8800" strokeWidth="1" />
+        <text x="70" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Define Goals</text>
+        <rect x="140" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff8800" strokeWidth="1" />
+        <text x="200" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Collect Data</text>
+        <rect x="270" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff8800" strokeWidth="1" />
+        <text x="330" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Track Trends</text>
+        <rect x="400" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff8800" strokeWidth="1" />
+        <text x="460" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Report</text>
+        <rect x="530" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff8800" strokeWidth="1" />
+        <text x="590" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Improve</text>
+        
+        <line x1="130" y1="47" x2="140" y2="47" stroke="#ff8800" strokeWidth="1" opacity="0.5" />
+        <line x1="260" y1="47" x2="270" y2="47" stroke="#ff8800" strokeWidth="1" opacity="0.5" />
+        <line x1="390" y1="47" x2="400" y2="47" stroke="#ff8800" strokeWidth="1" opacity="0.5" />
+        <line x1="520" y1="47" x2="530" y2="47" stroke="#ff8800" strokeWidth="1" opacity="0.5" />
+      </g>
+      
+      {/* Key Formulas */}
+      <g transform="translate(50, 380)">
+        <text x="350" y="20" textAnchor="middle" fill="#ff8800" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Key Formulas</text>
+        <text x="350" y="45" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Defect Density = Defects / KLOC</text>
+        <text x="350" y="65" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">DRE = (Pre-Release Defects / Total Defects) × 100</text>
+        <text x="350" y="85" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Test Coverage = Tested Code / Total Code × 100</text>
+      </g>
+      
+      <g transform="translate(50, 520)">
+        <text x="350" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Quality metrics help measure, track, and improve software quality throughout the lifecycle</text>
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// TOPIC 1.13 — Availability Metrics
+// ============================================================
+
+export function AvailabilityMetricsOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="availGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#00ff88', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#00aa66', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#00ff88" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        Availability Metrics
+      </text>
+      
+      {/* Availability Tiers */}
+      <g transform="translate(50, 70)">
+        <text x="350" y="20" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Availability Tiers</text>
+        <rect x="10" y="30" width="160" height="60" rx="4" fill="#1a1a2e" stroke="#ff4444" strokeWidth="1" />
+        <text x="90" y="50" textAnchor="middle" fill="#ff4444" fontSize="14" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">99%</text>
+        <text x="90" y="70" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">7.3 hrs downtime/mo</text>
+        
+        <rect x="180" y="30" width="160" height="60" rx="4" fill="#1a1a2e" stroke="#ffaa00" strokeWidth="1" />
+        <text x="260" y="50" textAnchor="middle" fill="#ffaa00" fontSize="14" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">99.9%</text>
+        <text x="260" y="70" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">43.8 min downtime/mo</text>
+        
+        <rect x="350" y="30" width="160" height="60" rx="4" fill="#2a2a3e" stroke="#00ff88" strokeWidth="1" />
+        <text x="430" y="50" textAnchor="middle" fill="#00ff88" fontSize="14" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">99.99%</text>
+        <text x="430" y="70" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">4.38 min downtime/mo</text>
+        
+        <rect x="520" y="30" width="160" height="60" rx="4" fill="#2a3a2a" stroke="#00ff88" strokeWidth="2" />
+        <text x="600" y="50" textAnchor="middle" fill="#00ff88" fontSize="14" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">99.999%</text>
+        <text x="600" y="70" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">26.3 sec downtime/mo</text>
+      </g>
+      
+      {/* Reliability Metrics */}
+      <g transform="translate(50, 180)">
+        <rect width="200" height="110" rx="8" fill="url(#availGrad)" stroke="#00ff88" strokeWidth="2" />
+        <text x="100" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Reliability Metrics</text>
+        <text x="100" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• MTBF</text>
+        <text x="100" y="63" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Mean Time Between</text>
+        <text x="100" y="75" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Failures</text>
+        <text x="100" y="90" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• MTTR</text>
+        <text x="100" y="105" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Mean Time To Repair</text>
+      </g>
+      
+      {/* Performance Metrics */}
+      <g transform="translate(275, 180)">
+        <rect width="200" height="110" rx="8" fill="url(#availGrad)" stroke="#00ff88" strokeWidth="2" />
+        <text x="100" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Performance Metrics</text>
+        <text x="100" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Response Time</text>
+        <text x="100" y="63" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">System response speed</text>
+        <text x="100" y="80" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• Throughput</text>
+        <text x="100" y="95" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Operations per second</text>
+      </g>
+      
+      {/* Recovery Metrics */}
+      <g transform="translate(500, 180)">
+        <rect width="200" height="110" rx="8" fill="url(#availGrad)" stroke="#00ff88" strokeWidth="2" />
+        <text x="100" y="28" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Recovery Metrics</text>
+        <text x="100" y="48" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• RTO</text>
+        <text x="100" y="63" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Recovery Time Objective</text>
+        <text x="100" y="80" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">• RPO</text>
+        <text x="100" y="95" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Recovery Point Objective</text>
+      </g>
+      
+      {/* Availability Formula */}
+      <g transform="translate(50, 330)">
+        <text x="350" y="20" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Availability Formula</text>
+        <rect x="50" y="35" width="600" height="50" rx="8" fill="#1a1a2e" stroke="#00ff88" strokeWidth="2" />
+        <text x="350" y="65" textAnchor="middle" fill="#fff" fontSize="16" fontFamily="'Segoe UI', system-ui, sans-serif">Availability = (Uptime / Total Time) × 100</text>
+      </g>
+      
+      {/* Improvement Strategies */}
+      <g transform="translate(50, 430)">
+        <text x="350" y="20" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Availability Improvement Strategies</text>
+        <text x="350" y="45" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Redundancy — Eliminate single point of failure</text>
+        <text x="350" y="65" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Failover — Automated failover implementation</text>
+        <text x="350" y="85" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Monitoring — Real-time monitoring setup</text>
+        <text x="350" y="105" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Preventive Maintenance — Regular maintenance schedule</text>
+      </g>
+      
+      <g transform="translate(50, 560)">
+        <text x="350" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Availability metrics measure system operational time and help improve reliability</text>
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// TOPIC 1.14 — Defect Removal Effectiveness
+// ============================================================
+
+export function DREOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="dreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#aa00ff', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#6600cc', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#aa00ff" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        Defect Removal Effectiveness (DRE)
+      </text>
+      
+      {/* DRE Formula */}
+      <g transform="translate(50, 70)">
+        <text x="350" y="20" textAnchor="middle" fill="#aa00ff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">DRE Formula</text>
+        <rect x="50" y="35" width="600" height="50" rx="8" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="2" />
+        <text x="350" y="65" textAnchor="middle" fill="#fff" fontSize="16" fontFamily="'Segoe UI', system-ui, sans-serif">DRE = (Defects Found Pre-Release / Total Defects) × 100</text>
+      </g>
+      
+      {/* DRE Benchmarks */}
+      <g transform="translate(50, 160)">
+        <text x="350" y="20" textAnchor="middle" fill="#aa00ff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">DRE Benchmarks</text>
+        <rect x="20" y="30" width="200" height="50" rx="4" fill="#2a1a3e" stroke="#aa00ff" strokeWidth="2" />
+        <text x="120" y="50" textAnchor="middle" fill="#aa00ff" fontSize="16" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">90%+</text>
+        <text x="120" y="68" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Excellent</text>
+        
+        <rect x="240" y="30" width="200" height="50" rx="4" fill="#1a1a2e" stroke="#666" strokeWidth="1" />
+        <text x="340" y="50" textAnchor="middle" fill="#aaa" fontSize="16" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">80-89%</text>
+        <text x="340" y="68" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Good</text>
+        
+        <rect x="460" y="30" width="200" height="50" rx="4" fill="#1a1a2e" stroke="#666" strokeWidth="1" />
+        <text x="560" y="50" textAnchor="middle" fill="#888" fontSize="16" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">70-79%</text>
+        <text x="560" y="68" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Fair</text>
+        
+        <rect x="680" y="30" width="170" height="50" rx="4" fill="#2a1a1a" stroke="#ff4444" strokeWidth="1" />
+        <text x="765" y="50" textAnchor="middle" fill="#ff4444" fontSize="16" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">less than 70%</text>
+        <text x="765" y="68" textAnchor="middle" fill="#888" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Poor</text>
+      </g>
+      
+      {/* Improvement Strategies */}
+      <g transform="translate(50, 250)">
+        <text x="350" y="20" textAnchor="middle" fill="#aa00ff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">DRE Improvement Strategies</text>
+        <rect x="20" y="30" width="200" height="40" rx="4" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="120" y="55" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Comprehensive Testing</text>
+        <rect x="240" y="30" width="200" height="40" rx="4" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="340" y="55" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Early Testing</text>
+        <rect x="460" y="30" width="200" height="40" rx="4" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="560" y="55" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Code Reviews</text>
+        <rect x="680" y="30" width="170" height="40" rx="4" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="765" y="55" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Static Analysis</text>
+        
+        <rect x="20" y="80" width="200" height="40" rx="4" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="120" y="105" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Test Automation</text>
+        <rect x="240" y="80" width="200" height="40" rx="4" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="340" y="105" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Quality Gates</text>
+        <rect x="460" y="80" width="200" height="40" rx="4" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="560" y="105" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Training</text>
+        <rect x="680" y="80" width="170" height="40" rx="4" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="765" y="105" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Process Improvement</text>
+      </g>
+      
+      {/* Example */}
+      <g transform="translate(50, 380)">
+        <text x="350" y="20" textAnchor="middle" fill="#aa00ff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Example</text>
+        <rect x="50" y="35" width="600" height="60" rx="8" fill="#1a1a2e" stroke="#aa00ff" strokeWidth="1" />
+        <text x="350" y="55" textAnchor="middle" fill="#ccc" fontSize="12" fontFamily="'Segoe UI', system-ui, sans-serif">Total Defects: 100</text>
+        <text x="350" y="75" textAnchor="middle" fill="#ccc" fontSize="12" fontFamily="'Segoe UI', system-ui, sans-serif">Pre-Release: 90 | Post-Release: 10</text>
+        <text x="350" y="95" textAnchor="middle" fill="#00ff88" fontSize="14" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">DRE = (90 / 100) × 100 = 90%</text>
+      </g>
+      
+      <g transform="translate(50, 500)">
+        <text x="350" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">High DRE = good testing process. Low DRE = many defects escaping to production</text>
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// TOPIC 1.15 — FMEA
+// ============================================================
+
+export function FMEAOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="fmeaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#ff0080', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#cc0066', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#ff0080" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        FMEA — Failure Mode and Effects Analysis
+      </text>
+      
+      {/* RPN Formula */}
+      <g transform="translate(50, 70)">
+        <text x="350" y="20" textAnchor="middle" fill="#ff0080" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">RPN Formula</text>
+        <rect x="50" y="35" width="600" height="50" rx="8" fill="#1a1a2e" stroke="#ff0080" strokeWidth="2" />
+        <text x="350" y="65" textAnchor="middle" fill="#fff" fontSize="16" fontFamily="'Segoe UI', system-ui, sans-serif">RPN = Severity × Occurrence × Detection</text>
+      </g>
+      
+      {/* Scoring */}
+      <g transform="translate(50, 160)">
+        <text x="115" y="20" textAnchor="middle" fill="#ff0080" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Severity</text>
+        <rect x="20" y="30" width="190" height="80" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="115" y="45" textAnchor="middle" fill="#ff4444" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">10 = Catastrophic</text>
+        <text x="115" y="60" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">7-9 = Major</text>
+        <text x="115" y="75" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">4-6 = Moderate</text>
+        <text x="115" y="90" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">1-3 = Minor</text>
+        
+        <text x="355" y="20" textAnchor="middle" fill="#ff0080" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Occurrence</text>
+        <rect x="260" y="30" width="190" height="80" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="355" y="45" textAnchor="middle" fill="#ff4444" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">10 = Very likely</text>
+        <text x="355" y="60" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">7-9 = Likely</text>
+        <text x="355" y="75" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">4-6 = Occasional</text>
+        <text x="355" y="90" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">1-3 = Rare</text>
+        
+        <text x="595" y="20" textAnchor="middle" fill="#ff0080" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Detection</text>
+        <rect x="500" y="30" width="190" height="80" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="595" y="45" textAnchor="middle" fill="#ff4444" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">10 = Very hard</text>
+        <text x="595" y="60" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">7-9 = Difficult</text>
+        <text x="595" y="75" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">4-6 = Moderate</text>
+        <text x="595" y="90" textAnchor="middle" fill="#aaa" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">1-3 = Easy</text>
+      </g>
+      
+      {/* RPN Interpretation */}
+      <g transform="translate(50, 280)">
+        <text x="350" y="20" textAnchor="middle" fill="#ff0080" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">RPN Interpretation</text>
+        <rect x="20" y="30" width="200" height="40" rx="4" fill="#2a1a1a" stroke="#00ff88" strokeWidth="2" />
+        <text x="120" y="55" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">1-100: Low Risk</text>
+        <rect x="240" y="30" width="200" height="40" rx="4" fill="#1a1a2e" stroke="#ffaa00" strokeWidth="1" />
+        <text x="340" y="55" textAnchor="middle" fill="#ffaa00" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">101-500: Medium</text>
+        <rect x="460" y="30" width="200" height="40" rx="4" fill="#2a1a1a" stroke="#ff4444" strokeWidth="2" />
+        <text x="560" y="55" textAnchor="middle" fill="#ff4444" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">501-1000: High Risk</text>
+      </g>
+      
+      {/* FMEA Process */}
+      <g transform="translate(50, 380)">
+        <text x="350" y="20" textAnchor="middle" fill="#ff0080" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">FMEA Process</text>
+        <rect x="10" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="70" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">1. System</text>
+        <rect x="140" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="200" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">2. Failures</text>
+        <rect x="270" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="330" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">3. Effects</text>
+        <rect x="400" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="460" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">4. Scoring</text>
+        <rect x="530" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="590" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">5. RPN</text>
+        <rect x="660" y="30" width="170" height="35" rx="4" fill="#1a1a2e" stroke="#ff0080" strokeWidth="1" />
+        <text x="745" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">6. Action</text>
+        
+        <line x1="130" y1="47" x2="140" y2="47" stroke="#ff0080" strokeWidth="1" opacity="0.5" />
+        <line x1="260" y1="47" x2="270" y2="47" stroke="#ff0080" strokeWidth="1" opacity="0.5" />
+        <line x1="390" y1="47" x2="400" y2="47" stroke="#ff0080" strokeWidth="1" opacity="0.5" />
+        <line x1="520" y1="47" x2="530" y2="47" stroke="#ff0080" strokeWidth="1" opacity="0.5" />
+        <line x1="650" y1="47" x2="660" y2="47" stroke="#ff0080" strokeWidth="1" opacity="0.5" />
+      </g>
+      
+      <g transform="translate(50, 500)">
+        <text x="350" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">FMEA proactively identifies failures before they occur and prioritizes improvement actions</text>
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// TOPIC 1.16 — Quality Function Deployment (QFD)
+// ============================================================
+
+export function QFDOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="qfdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#00aaff', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#0066cc', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#00aaff" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        Quality Function Deployment (QFD)
+      </text>
+      
+      {/* House of Quality */}
+      <g transform="translate(50, 70)">
+        <text x="350" y="20" textAnchor="middle" fill="#00aaff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">House of Quality</text>
+        
+        {/* Customer Requirements */}
+        <rect x="20" y="30" width="200" height="80" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="120" y="45" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Customer Requirements</text>
+        <text x="120" y="60" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Voice of Customer</text>
+        <text x="120" y="75" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Needs</text>
+        <text x="120" y="88" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Expectations</text>
+        <text x="120" y="101" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Priorities</text>
+        
+        {/* Technical Requirements */}
+        <rect x="400" y="30" width="200" height="80" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="500" y="45" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Technical Requirements</text>
+        <text x="500" y="60" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Engineering Specs</text>
+        <text x="500" y="75" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Parameters</text>
+        <text x="500" y="88" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Characteristics</text>
+        <text x="500" y="101" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Measures</text>
+        
+        {/* Relationship Matrix */}
+        <rect x="20" y="130" width="580" height="60" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="310" y="150" textAnchor="middle" fill="#00aaff" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Relationship Matrix</text>
+        <text x="310" y="170" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Strong ● Medium ○ Weak △ No relation</text>
+        <text x="310" y="185" textAnchor="middle" fill="#666" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Maps customer requirements to technical specs</text>
+      </g>
+      
+      {/* QFD Process */}
+      <g transform="translate(50, 250)">
+        <text x="350" y="20" textAnchor="middle" fill="#00aaff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">QFD Process</text>
+        <rect x="10" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="70" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">1. Research</text>
+        <rect x="140" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="200" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">2. Analyze</text>
+        <rect x="270" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="330" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">3. Translate</text>
+        <rect x="400" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="460" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">4. Build Matrix</text>
+        <rect x="530" y="30" width="120" height="35" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="590" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">5. Set Targets</text>
+        <rect x="660" y="30" width="170" height="35" rx="4" fill="#1a1a2e" stroke="#00aaff" strokeWidth="1" />
+        <text x="745" y="52" textAnchor="middle" fill="#ccc" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">6. Deploy</text>
+        
+        <line x1="130" y1="47" x2="140" y2="47" stroke="#00aaff" strokeWidth="1" opacity="0.5" />
+        <line x1="260" y1="47" x2="270" y2="47" stroke="#00aaff" strokeWidth="1" opacity="0.5" />
+        <line x1="390" y1="47" x2="400" y2="47" stroke="#00aaff" strokeWidth="1" opacity="0.5" />
+        <line x1="520" y1="47" x2="530" y2="47" stroke="#00aaff" strokeWidth="1" opacity="0.5" />
+        <line x1="650" y1="47" x2="660" y2="47" stroke="#00aaff" strokeWidth="1" opacity="0.5" />
+      </g>
+      
+      {/* Benefits */}
+      <g transform="translate(50, 380)">
+        <text x="350" y="20" textAnchor="middle" fill="#00aaff" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">QFD Benefits</text>
+        <text x="350" y="45" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Customer Focus — Requirements consistently meet</text>
+        <text x="350" y="65" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Early Quality — Quality integrated in design</text>
+        <text x="350" y="85" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Communication — Cross-functional collaboration</text>
+        <text x="350" y="105" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Cost Reduction — Rework costs decrease</text>
+        <text x="350" y="125" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Decision Making — Quality priorities clarify</text>
+      </g>
+      
+      <g transform="translate(50, 520)">
+        <text x="350" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">QFD translates customer requirements into technical specifications systematically</text>
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// TOPIC 1.17 — Taguchi Quality Loss Function
+// ============================================================
+
+export function TaguchiLossOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="tagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#ff8800', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#cc6600', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#ff8800" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        Taguchi Quality Loss Function
+      </text>
+      
+      {/* Formula */}
+      <g transform="translate(50, 70)">
+        <text x="350" y="20" textAnchor="middle" fill="#ff8800" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Loss Function Formula</text>
+        <rect x="100" y="35" width="600" height="50" rx="8" fill="#1a1a2e" stroke="#ff8800" strokeWidth="2" />
+        <text x="400" y="65" textAnchor="middle" fill="#fff" fontSize="18" fontFamily="'Segoe UI', system-ui, sans-serif">L = k × (y - m)²</text>
+      </g>
+      
+      {/* Loss Types */}
+      <g transform="translate(50, 160)">
+        <text x="115" y="20" textAnchor="middle" fill="#ff8800" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Smaller-the-Better</text>
+        <rect x="20" y="30" width="190" height="80" rx="4" fill="#1a1a2e" stroke="#ff8800" strokeWidth="1" />
+        <text x="115" y="50" textAnchor="middle" fill="#00ff88" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Target = 0</text>
+        <text x="115" y="65" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">L = k × y²</text>
+        <text x="115" y="80" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Examples: Defects,</text>
+        <text x="115" y="93" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Failures, Noise</text>
+        
+        <text x="355" y="20" textAnchor="middle" fill="#ff8800" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Larger-the-Better</text>
+        <rect x="260" y="30" width="190" height="80" rx="4" fill="#1a1a2e" stroke="#ff8800" strokeWidth="1" />
+        <text x="355" y="50" textAnchor="middle" fill="#00ff88" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Target = ∞</text>
+        <text x="355" y="65" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">L = k × (1/y)²</text>
+        <text x="355" y="80" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Examples: Strength,</text>
+        <text x="355" y="93" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Efficiency, Life</text>
+        
+        <text x="595" y="20" textAnchor="middle" fill="#ff8800" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Nominal-the-Best</text>
+        <rect x="500" y="30" width="190" height="80" rx="4" fill="#1a1a2e" stroke="#ff8800" strokeWidth="1" />
+        <text x="595" y="50" textAnchor="middle" fill="#00ff88" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Target = m</text>
+        <text x="595" y="65" textAnchor="middle" fill="#888" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">L = k × (y - m)²</text>
+        <text x="595" y="80" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Examples: Dimensions,</text>
+        <text x="595" y="93" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Temperature, Speed</text>
+      </g>
+      
+      {/* Loss Curve Visualization */}
+      <g transform="translate(50, 280)">
+        <text x="350" y="20" textAnchor="middle" fill="#ff8800" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Loss vs Deviation Curve</text>
+        {/* Parabola */}
+        <path d="M 100,120 Q 350,20 600,120" fill="none" stroke="#ff8800" strokeWidth="3" />
+        <text x="350" y="45" textAnchor="middle" fill="#fff" fontSize="14" fontFamily="'Segoe UI', system-ui, sans-serif">Target (m)</text>
+        <line x1="350" y1="50" x2="350" y2="120" stroke="#ff8800" strokeWidth="1" strokeDasharray="3,3" />
+        
+        <text x="100" y="140" fill="#ff4444" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">High Loss</text>
+        <text x="600" y="140" fill="#ff4444" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">High Loss</text>
+        <text x="350" y="140" fill="#00ff88" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Zero Loss (Target)</text>
+        
+        <text x="100" y="160" fill="#666" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Deviation →</text>
+        <text x="350" y="175" textAnchor="middle" fill="#666" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">Quality Loss increases with deviation from target</text>
+      </g>
+      
+      {/* Taguchi Philosophy */}
+      <g transform="translate(50, 380)">
+        <text x="350" y="20" textAnchor="middle" fill="#ff8800" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Taguchi's Philosophy</text>
+        <text x="350" y="45" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Quality = Minimal deviation from target</text>
+        <text x="350" y="65" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Loss increases with deviation</text>
+        <text x="350" y="85" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Specification limits andar bhi loss hota hai</text>
+        <text x="350" y="105" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Quality loss customer satisfaction affect karta hai</text>
+        <text x="350" y="125" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">• Preventive approach — defects prevent karna</text>
+      </g>
+      
+      <g transform="translate(50, 520)">
+        <text x="350" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">Taguchi emphasizes continuous loss measurement even within specification limits</text>
+      </g>
+    </svg>
+  );
+}
+
+// ============================================================
+// TOPIC 1.18 — Cost of Quality (COQ)
+// ============================================================
+
+export function COQOverviewDiagram() {
+  return (
+    <svg viewBox="0 0 900 650" style={{ width: '100%', height: 'auto' }}>
+      <defs>
+        <linearGradient id="coqGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#00ff88', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#00aa66', stopOpacity: 0.1 }} />
+        </linearGradient>
+      </defs>
+      <rect width="900" height="650" fill="#0a0a0f" />
+      <text x="450" y="35" textAnchor="middle" fill="#00ff88" fontSize="20" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">
+        Cost of Quality (COQ)
+      </text>
+      
+      {/* COQ Formula */}
+      <g transform="translate(50, 70)">
+        <text x="350" y="20" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">COQ Formula</text>
+        <rect x="80" y="35" width="640" height="50" rx="8" fill="#1a1a2e" stroke="#00ff88" strokeWidth="2" />
+        <text x="400" y="65" textAnchor="middle" fill="#fff" fontSize="14" fontFamily="'Segoe UI', system-ui, sans-serif">COQ = Prevention + Appraisal + Internal Failure + External Failure</text>
+      </g>
+      
+      {/* Four Quadrants */}
+      <g transform="translate(50, 160)">
+        <text x="200" y="20" textAnchor="middle" fill="#00ff88" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Prevention</text>
+        <rect x="20" y="30" width="360" height="80" rx="4" fill="#1a2a1a" stroke="#00ff88" strokeWidth="2" />
+        <text x="200" y="48" textAnchor="middle" fill="#00ff88" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Defects prevent karne ke costs</text>
+        <text x="200" y="65" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Quality Planning</text>
+        <text x="200" y="78" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Training</text>
+        <text x="200" y="91" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Documentation</text>
+        <text x="200" y="104" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Audits</text>
+        
+        <text x="620" y="20" textAnchor="middle" fill="#ffaa00" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Appraisal</text>
+        <rect x="440" y="30" width="360" height="80" rx="4" fill="#2a2a1a" stroke="#ffaa00" strokeWidth="2" />
+        <text x="620" y="48" textAnchor="middle" fill="#ffaa00" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Quality measure karne ke costs</text>
+        <text x="620" y="65" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Inspection</text>
+        <text x="620" y="78" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Testing</text>
+        <text x="620" y="91" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Measurement</text>
+        <text x="620" y="104" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Calibration</text>
+      </g>
+      
+      <g transform="translate(50, 270)">
+        <text x="200" y="20" textAnchor="middle" fill="#ff4444" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Internal Failure</text>
+        <rect x="20" y="30" width="360" height="80" rx="4" fill="#2a1a1a" stroke="#ff4444" strokeWidth="1" />
+        <text x="200" y="48" textAnchor="middle" fill="#ff4444" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Internal defects fix karne ke costs</text>
+        <text x="200" y="65" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Scrap</text>
+        <text x="200" y="78" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Rework</text>
+        <text x="200" y="91" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Retest</text>
+        <text x="200" y="104" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Downtime</text>
+        
+        <text x="620" y="20" textAnchor="middle" fill="#ff0080" fontSize="11" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">External Failure</text>
+        <rect x="440" y="30" width="360" height="80" rx="4" fill="#2a1a2a" stroke="#ff0080" strokeWidth="2" />
+        <text x="620" y="48" textAnchor="middle" fill="#ff0080" fontSize="10" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">External defects fix karne ke costs</text>
+        <text x="620" y="65" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Warranty</text>
+        <text x="620" y="78" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Returns</text>
+        <text x="620" y="91" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Lost Sales</text>
+        <text x="620" y="104" textAnchor="middle" fill="#ccc" fontSize="9" fontFamily="'Segoe UI', system-ui, sans-serif">• Reputation Damage</text>
+      </g>
+      
+      {/* Balance Visualization */}
+      <g transform="translate(50, 380)">
+        <text x="350" y="20" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Cost Balance Strategy</text>
+        <rect x="50" y="35" width="600" height="40" rx="8" fill="#1a1a2e" stroke="#00ff88" strokeWidth="1" />
+        <text x="350" y="60" textAnchor="middle" fill="#00ff88" fontSize="12" fontWeight="bold" fontFamily="'Segoe UI', system-ui, sans-serif">Invest in Prevention → Reduce Failures → Lower Total Cost</text>
+        
+        <text x="350" y="110" textAnchor="middle" fill="#ccc" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">High prevention costs = lower failure costs</text>
+        <text x="350" y="130" textAnchor="middle" fill="#888" fontSize="11" fontFamily="'Segoe UI', system-ui, sans-serif">Low prevention costs = high failure costs</text>
+      </g>
+      
+      <g transform="translate(50, 520)">
+        <text x="350" y="25" textAnchor="middle" fill="#666" fontSize="10" fontFamily="'Segoe UI', system-ui, sans-serif">COQ helps quantify quality costs and make informed investment decisions</text>
+      </g>
+    </svg>
+  );
+}
