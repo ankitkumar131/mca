@@ -6609,988 +6609,918 @@ export const units = {
         },
         {
           "id": "qa-models",
-        "number": "1.8",
-        "title": "Quality Assurance Models",
-        "subtitle": "ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM",
-        "icon": "check",
-        "accent": "#aa00ff",
-        "englishDefinition": "Quality Assurance Models are frameworks that provide structured approaches to implementing and improving software quality processes. ISO-9000 is an international standard for quality management. CMM (Capability Maturity Model) and CMMI (Capability Maturity Model Integration) are frameworks for process improvement. TMM (Test Maturity Model) focuses on testing processes. SPICE (Software Process Improvement and Capability Determination) is an international standard. Malcolm Baldrige Model is a performance excellence framework. P-CMM (People-Capability Maturity Model) focuses on human resources.",
-        "intro": "Quality Assurance Models different frameworks hain jo software quality processes implement aur improve karne ka structured approach provide karte hain. Is topic mein hum dekhenge ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige aur P-CMM models. Har model ka different focus hota hai — kuch processes par focus karte hain, kuch people par, kuch overall quality management par.",
-        "sections": [
-          {
-            "type": "definition",
-            "title": "Quality Assurance Models kya hain?",
-            "body": "Quality Assurance Models frameworks hain jo quality processes structured approach se implement aur improve karte hain. Different models alag alag focus par focus karte hain:\n\n1. ISO-9000 — International standard for quality management\n2. CMM/CMMI — Process maturity aur improvement\n3. TMM — Testing process maturity\n4. SPICE — Software process improvement\n5. Malcolm Baldrige — Performance excellence\n6. P-CMM — People capability maturity",
-            "chips": [
-              "ISO-9000",
-              "CMM",
-              "CMMI",
-              "TMM",
-              "SPICE"
-            ]
-          },
-          {
-            "type": "cards",
-            "title": "ISO-9000 Series",
-            "cards": [
-              {
-                "icon": "check",
-                "title": "ISO-9000",
-                "body": "Quality management standard. Quality systems ka requirements define karta hai. International level par recognized hai."
-              },
-              {
-                "icon": "check",
-                "title": "ISO-9001",
-                "body": "Quality management system requirements. Organizations ko certify karta hai. Compliance demonstrate karta hai."
-              },
-              {
-                "icon": "check",
-                "title": "Benefits",
-                "body": "International recognition milta hai. Customer satisfaction improve hota hai. Quality culture develop hota hai."
-              }
-            ]
-          },
-          {
-            "type": "points",
-            "title": "CMM 5 Levels",
-            "points": [
-              "Level 1 — Initial: Processes ad hoc hain. Chaotic hain.",
-              "Level 2 — Repeatable: Basic project management processes established hain.",
-              "Level 3 — Defined: Software process documented, standardized aur integrated hain.",
-              "Level 4 — Managed: Quantitative process control. Detailed measures collect karte hain.",
-              "Level 5 — Optimizing: Continuous process improvement. Innovations deploy karte hain."
-            ]
-          },
-          {
-            "type": "diagram",
-            "title": "QA Models Overview",
-            "diagram": "qa-models-overview",
-            "caption": "QA Models — ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM"
-          },
-          {
-            "type": "points",
-            "title": "Model Selection",
-            "points": [
-              "ISO-9000 — Quality management standard ke liye.",
-              "CMM/CMMI — Process maturity improve karne ke liye.",
-              "TMM — Testing process improve karne ke liye.",
-              "SPICE — Process assessment ke liye.",
-              "Malcolm Baldrige — Organizational excellence ke liye.",
-              "P-CMM — People capability improve karne ke liye."
-            ]
-          },
-          {
-            "type": "recap",
-            "title": "Recap",
-            "content": "QA Models: ISO-9000 (quality management standard), CMM (5 maturity levels), CMMI (CMM integration), TMM (testing maturity), SPICE (process assessment), Malcolm Baldrige (performance excellence), P-CMM (people capability). Har model alag focus par focus karta hai."
-          }
-        ],
-        "examQuestions": [
-          {
-            "question": "Explain ISO-9000 series of quality standards.",
-            "answer": "ISO-9000 series: ISO-9000 (quality management standard), ISO-9001 (quality management system requirements), ISO-9002 (production/installation requirements), ISO-9003 (final inspection requirements). International recognition milta hai. Quality management principles follow karte hain."
-          },
-          {
-            "question": "Describe the 5 levels of CMM.",
-            "answer": "CMM 5 levels: Level 1 — Initial (ad hoc processes), Level 2 — Repeatable (basic project management), Level 3 — Defined (documented, standardized processes), Level 4 — Managed (quantitative process control), Level 5 — Optimizing (continuous process improvement)."
-          },
-          {
-            "question": "What is CMMI and how is it different from CMM?",
-            "answer": "CMMI (Capability Maturity Model Integration) — CMM ka updated version. Multiple disciplines (software, systems, people) integrate karta hai. 22 process areas cover karta hai. 5 levels same hain. Better improvement guidance provide karta hai."
-          }
-        ]
-       },
-       {
-        "id": "sqa-trends",
-        "number": "1.9",
-        "title": "Software Quality Assurance Trends",
-        "subtitle": "PSP/TSP, OO Methodology, Clean-room SE, Defect Injection, Auditing, Inspections, CASE Tools",
-        "icon": "trends",
-        "accent": "#ff0080",
-        "englishDefinition": "Software Quality Assurance Trends include modern approaches and methodologies that enhance software quality. PSP (Personal Software Process) and TSP (Team Software Process) are structured approaches for individual and team software development. Object-Oriented Methodology focuses on objects and classes. Clean-room software engineering emphasizes defect prevention through formal methods. Defect Injection and prevention techniques help identify and prevent defects. Internal Auditing and Assessments ensure process compliance. Inspections and Walkthroughs are peer review techniques. CASE tools automate software engineering tasks and improve quality.",
-        "intro": "Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Is topic mein hum dekhenge PSP/TSP, Object-Oriented Methodology, Clean-room software engineering, Defect Injection aur prevention, Internal Auditing aur Assessments, Inspections aur Walkthroughs, aur CASE tools. Modern trends quality improve karte hain, efficiency increase karte hain, aur defects kam karte hain.",
-        "sections": [
-          {
-            "type": "definition",
-            "title": "SQA Trends kya hain?",
-            "body": "Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Trends include:\n\n1. PSP/TSP — Personal aur Team Software Process\n2. OO Methodology — Object-Oriented approach\n3. Clean-room SE — Defect prevention through formal methods\n4. Defect Injection — Defects intentionally inject karna\n5. Internal Auditing — Process compliance verify karna\n6. Inspections & Walkthroughs — Peer review techniques\n7. CASE Tools — Computer-Aided Software Engineering tools",
-            "chips": [
-              "PSP",
-              "TSP",
-              "OO",
-              "Clean-room",
-              "CASE"
-            ]
-          },
-          {
-            "type": "cards",
-            "title": "PSP vs TSP",
-            "cards": [
-              {
-                "icon": "user",
-                "title": "PSP (Personal)",
-                "body": "Individual developers ka structured process. Planning, Design, Code, Test, Postmortem. Personal quality improve karta hai."
-              },
-              {
-                "icon": "users",
-                "title": "TSP (Team)",
-                "body": "Team-based development. Team roles aur processes structured hain. Team performance improve karta hai."
-              },
-              {
-                "icon": "trends",
-                "title": "Benefits",
-                "body": "Quality improve karta hai. Defect rates reduce karta hai. Efficiency increase karta hai. Team collaboration better karta hai."
-              }
-            ]
-          },
-          {
-            "type": "points",
-            "title": "OO Methodology Concepts",
-            "points": [
-              "Encapsulation — Data aur methods ek class mein combine karta hai. Data protection provide karta hai.",
-              "Inheritance — Existing classes se new classes create karta hai. Code reuse enable karta hai.",
-              "Polymorphism — Different classes ek hi interface respond karte hain. Flexible code write karta hai.",
-              "Benefits — Code reuse increase karta hai. Maintainability improve karta hai. Quality increase karta hai."
-            ]
-          },
-          {
-            "type": "diagram",
-            "title": "SQA Trends Overview",
-            "diagram": "sqa-trends-overview",
-            "caption": "SQA Trends — PSP/TSP, OO, Clean-room, Defect Injection, Auditing, Inspections, CASE Tools"
-          },
-          {
-            "type": "points",
-            "title": "Trend Selection",
-            "points": [
-              "PSP — Individual developers ke liye.",
-              "TSP — Team-based development ke liye.",
-              "OO Methodology — Complex software design ke liye.",
-              "Clean-room SE — High-reliability systems ke liye.",
-              "Defect Injection — Testing effectiveness validate karne ke liye.",
-              "Internal Auditing — Process compliance verify karne ke liye.",
-              "Inspections/Walkthroughs — Peer review ke liye.",
-              "CASE Tools — Development efficiency increase karne ke liye."
-            ]
-          },
-          {
-            "type": "recap",
-            "title": "Recap",
-            "content": "SQA Trends: PSP (personal process), TSP (team process), OO Methodology (object-oriented), Clean-room SE (defect prevention), Defect Injection (testing effectiveness), Internal Auditing (compliance), Inspections/Walkthroughs (peer review), CASE tools (automation). Modern trends quality improve karte hain."
-          }
-        ],
-        "examQuestions": [
-          {
-            "question": "Explain PSP and TSP with their benefits.",
-            "answer": "PSP (Personal Software Process): Individual developers ka structured process. Planning, Design, Code, Test, Postmortem phases hain. Personal quality improve karta hai. TSP (Team Software Process): Team-based development. Team roles aur processes structured hain. Team performance improve karta hai."
-          },
-          {
-            "question": "What is Object-Oriented Methodology? Explain its key concepts.",
-            "answer": "Object-Oriented Methodology: Software design objects par based hai. Key concepts: Encapsulation (data aur methods combine), Inheritance (code reuse), Polymorphism (flexible interfaces). Benefits: Code reuse increase karta hai. Maintainability improve karta hai."
-          },
-          {
-            "question": "What are CASE tools? List their types and benefits.",
-            "answer": "CASE Tools: Computer-Aided Software Engineering. Software development tasks automate karte hain. Types: Upper CASE (requirements, analysis, design), Lower CASE (implementation, testing, maintenance), Integrated CASE (full lifecycle). Benefits: Productivity increase karta hai. Quality improve karta hai."
-          }
+          "number": "1.8",
+          "title": "Quality Assurance Models",
+          "subtitle": "ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM",
+          "icon": "check",
+          "accent": "#aa00ff",
+          "englishDefinition": "Quality Assurance Models are frameworks that provide structured approaches to implementing and improving software quality processes. ISO-9000 is an international standard for quality management. CMM (Capability Maturity Model) and CMMI (Capability Maturity Model Integration) are frameworks for process improvement. TMM (Test Maturity Model) focuses on testing processes. SPICE (Software Process Improvement and Capability Determination) is an international standard. Malcolm Baldrige Model is a performance excellence framework. P-CMM (People-Capability Maturity Model) focuses on human resources.",
+          "intro": "Quality Assurance Models different frameworks hain jo software quality processes implement aur improve karne ka structured approach provide karte hain. Is topic mein hum dekhenge ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige aur P-CMM models. Har model ka different focus hota hai — kuch processes par focus karte hain, kuch people par, kuch overall quality management par.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Quality Assurance Models kya hain?",
+              "body": "Quality Assurance Models frameworks hain jo quality processes structured approach se implement aur improve karte hain. Different models alag alag focus par focus karte hain:\n\n1. ISO-9000 — International standard for quality management\n2. CMM/CMMI — Process maturity aur improvement\n3. TMM — Testing process maturity\n4. SPICE — Software process improvement\n5. Malcolm Baldrige — Performance excellence\n6. P-CMM — People capability maturity",
+              "chips": [
+                "ISO-9000",
+                "CMM",
+                "CMMI",
+                "TMM",
+                "SPICE"
               ]
+            },
+            {
+              "type": "cards",
+              "title": "ISO-9000 Series",
+              "cards": [
+                {
+                  "icon": "check",
+                  "title": "ISO-9000",
+                  "body": "Quality management standard. Quality systems ka requirements define karta hai. International level par recognized hai."
+                },
+                {
+                  "icon": "check",
+                  "title": "ISO-9001",
+                  "body": "Quality management system requirements. Organizations ko certify karta hai. Compliance demonstrate karta hai."
+                },
+                {
+                  "icon": "check",
+                  "title": "Benefits",
+                  "body": "International recognition milta hai. Customer satisfaction improve hota hai. Quality culture develop hota hai."
+                }
+              ]
+            },
+            {
+              "type": "points",
+              "title": "CMM 5 Levels",
+              "points": [
+                "Level 1 — Initial: Processes ad hoc hain. Chaotic hain.",
+                "Level 2 — Repeatable: Basic project management processes established hain.",
+                "Level 3 — Defined: Software process documented, standardized aur integrated hain.",
+                "Level 4 — Managed: Quantitative process control. Detailed measures collect karte hain.",
+                "Level 5 — Optimizing: Continuous process improvement. Innovations deploy karte hain."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "QA Models Overview",
+              "diagram": "qa-models-overview",
+              "caption": "QA Models — ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM"
+            },
+            {
+              "type": "points",
+              "title": "Model Selection",
+              "points": [
+                "ISO-9000 — Quality management standard ke liye.",
+                "CMM/CMMI — Process maturity improve karne ke liye.",
+                "TMM — Testing process improve karne ke liye.",
+                "SPICE — Process assessment ke liye.",
+                "Malcolm Baldrige — Organizational excellence ke liye.",
+                "P-CMM — People capability improve karne ke liye."
+              ]
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "QA Models: ISO-9000 (quality management standard), CMM (5 maturity levels), CMMI (CMM integration), TMM (testing maturity), SPICE (process assessment), Malcolm Baldrige (performance excellence), P-CMM (people capability). Har model alag focus par focus karta hai."
             }
-,
-[
-  {
-    "id": "software-security-testing",
-    "number": "1.10",
-    "title": "Testing Software System Security",
-    "subtitle": "Six-Sigma, TQM aur software security testing",
-    "icon": "shield",
-    "accent": "#00ff88",
-    "englishDefinition": "Testing Software System Security involves validating that software systems are secure against unauthorized access, attacks, and vulnerabilities. Six-Sigma is a methodology for minimizing defects. TQM is a comprehensive approach to quality improvement. Security testing includes vulnerability assessment, penetration testing, code review, and security audits.",
-    "intro": "Software system security testing alag alag techniques hain jo software ke vulnerabilities detect aur prevent karne mein help karte hain.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "Software Security Testing kya hai?",
-        "body": "Software Security Testing ek process hai jo software ke security vulnerabilities detect, verify, aur validate karta hai. Objectives: Confidentiality, Integrity, Availability, Authentication, Authorization.",
-        "chips": [
-          "Confidentiality",
-          "Integrity",
-          "Availability"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Six-Sigma",
-        "points": [
-          "Six-Sigma — Quality improvement methodology. Defects 3.4 per million tak reduce karta hai.",
-          "DMAIC — Define, Measure, Analyze, Improve, Control.",
-          "DMADV — Define, Measure, Analyze, Design, Verify.",
-          "Sigma Levels — 1 sigma: 69% defects. 6 sigma: 3.4 defects per million.",
-          "Benefits — Quality improve karta hai. Cost reduce karta hai."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "TQM (Total Quality Management)",
-        "points": [
-          "TQM — Organization-wide quality improvement approach.",
-          "Principles — Customer focus, total involvement, fact-based decisions, continuous improvement.",
-          "Implementation — Quality planning, control, improvement.",
-          "Tools — Statistical process control, quality circles, benchmarking.",
-          "Benefits — Quality improve karta hai. Productivity increase karta hai."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Security Testing Techniques",
-        "points": [
-          "Vulnerability Assessment — Security vulnerabilities identify karta hai.",
-          "Penetration Testing — Attacks simulate karta hai.",
-          "Code Review — Source code security audit karta hai.",
-          "Security Audits — Compliance verify karta hai.",
-          "Static Analysis — Code ka static analysis karta hai.",
-          "Dynamic Analysis — Runtime behavior analyze karta hai."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "Security Testing Overview",
-        "diagram": "security-testing-overview",
-        "caption": "Security Testing — Six-Sigma, TQM, Vulnerability Assessment, Penetration Testing"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "Software Security Testing: Six-Sigma (quality improvement, DMAIC), TQM (organization-wide quality), Vulnerability Assessment, Penetration Testing, Code Review, Security Audits."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain Six-Sigma methodology and its benefits.",
-        "answer": "Six-Sigma: Quality improvement methodology. DMAIC framework. Defects 3.4 per million tak reduce karta hai. Benefits: Quality improve karta hai. Cost reduce karta hai. Customer satisfaction increase karta hai."
-      },
-      {
-        "question": "What is TQM? Explain its principles.",
-        "answer": "TQM: Organization-wide quality improvement approach. Principles: Customer focus, total involvement, fact-based decisions, continuous improvement."
-      },
-      {
-        "question": "Describe different security testing techniques.",
-        "answer": "Security Testing Techniques: Vulnerability Assessment, Penetration Testing, Code Review, Security Audits, Static Analysis, Dynamic Analysis."
-      }
-    ]
-  },
-  {
-    "id": "complexity-metrics-models",
-    "number": "1.11",
-    "title": "Complexity Metrics and Models",
-    "subtitle": "Software complexity measurement aur models",
-    "icon": "chart",
-    "accent": "#00aaff",
-    "englishDefinition": "Complexity Metrics measure software complexity through various approaches. Common metrics include cyclomatic complexity, Halstead metrics, McCabe complexity, and object-oriented complexity metrics.",
-    "intro": "Software complexity metrics software code ke complexity measure karne ka tools provide karte hain.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "Complexity Metrics kya hain?",
-        "body": "Software Complexity Metrics quantitative measures hain jo software complexity assess karte hain.",
-        "chips": [
-          "Cyclomatic",
-          "Halstead",
-          "McCabe",
-          "OO Metrics"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Cyclomatic Complexity",
-        "points": [
-          "Cyclomatic Complexity — Control flow complexity measure.",
-          "Calculation — M = E - N + 2P.",
-          "Interpretation — 1-5: Simple. 6-10: Moderate. 11-20: Complex. 21+: Very complex.",
-          "Usage — Test case count determine karta hai.",
-          "Limitations — Data complexity ignore karta hai."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Halstead Metrics",
-        "points": [
-          "Halstead Metrics — Code complexity measure. Operators aur operands analysis.",
-          "Vocabulary (n) — Operators aur operands ka total count.",
-          "Length (N) — Total operators aur operands ka sum.",
-          "Volume (V) — Code ka information content.",
-          "Difficulty (D) — Complexity measure.",
-          "Effort (E) — Programming effort.",
-          "Bugs (B) — Estimated bugs."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "McCabe Complexity",
-        "points": [
-          "McCabe Complexity — Cyclomatic complexity based.",
-          "Decision Points — If, else, for, while, case statements.",
-          "Complexity Range — 10 tak acceptable. Above 10 high complexity.",
-          "Refactoring — High complexity areas identify karta hai."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Object-Oriented Complexity",
-        "points": [
-          "Class Design Metrics — Class complexity measure.",
-          "Inheritance Depth — Class hierarchy depth.",
-          "Coupling — Class dependencies.",
-          "Cohesion — Class member relatedness.",
-          "Method Count — Class methods count.",
-          "Attribute Count — Class attributes count."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "Complexity Metrics Overview",
-        "diagram": "complexity-metrics-overview",
-        "caption": "Complexity Metrics — Cyclomatic, Halstead, McCabe, Object-Oriented"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "Complexity Metrics: Cyclomatic Complexity (control flow), Halstead Metrics (operators/operands), McCabe Complexity (decision points), Object-Oriented Complexity (inheritance, coupling, cohesion). High complexity = high maintenance cost."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain Cyclomatic Complexity with an example.",
-        "answer": "Cyclomatic Complexity: Control flow complexity measure. Formula: M = E - N + 2P. Interpretation: 1-5 simple, 6-10 moderate, 11-20 complex. Test case count determine karta hai."
-      },
-      {
-        "question": "Describe Halstead Metrics.",
-        "answer": "Halstead Metrics: Operators aur operands analysis. Vocabulary, Length, Volume, Difficulty, Effort, Bugs. Code complexity measure karta hai."
-      },
-      {
-        "question": "What are Object-Oriented Complexity Metrics?",
-        "answer": "Object-Oriented Complexity: Class design metrics. Inheritance depth, coupling, cohesion, method count, attribute count. OO design complexity assess karta hai."
-      }
-    ]
-  }
-]
-,
-[
-  {
-    "id": "quality-management-metrics",
-    "number": "1.12",
-    "title": "Quality Management Metrics",
-    "subtitle": "Software quality measurement aur metrics",
-    "icon": "metrics",
-    "accent": "#ff8800",
-    "englishDefinition": "Quality Management Metrics are quantitative measures used to assess and track software quality. Common metrics include defect density, test coverage, code quality, customer satisfaction, and process maturity indicators.",
-    "intro": "Quality Management Metrics software quality ko measure aur track karne ka quantitative tools provide karte hain.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "Quality Metrics kya hain?",
-        "body": "Quality Management Metrics quantitative measures hain jo software quality assess aur track karte hain.",
-        "chips": [
-          "Defect",
-          "Testing",
-          "Code Quality",
-          "Process"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Defect Metrics",
-        "points": [
-          "Defect Density — Lines of code per defect. Typical: 1-10 defects per KLOC.",
-          "Defect Removal Efficiency (DRE) — Bugs caught before release. Target: 90%+.",
-          "Defect Reopen Rate — Fixed defects reopened. Target: < 5%.",
-          "Mean Time to Repair (MTTR) — Average time to fix defects.",
-          "Mean Time Between Failures (MTBF) — Average time between failures."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Testing Metrics",
-        "points": [
-          "Test Coverage — Code coverage percentage.",
-          "Test Execution — Tests run vs planned.",
-          "Test Effectiveness — Bugs found per test.",
-          "Automation Coverage — Automated tests percentage.",
-          "Defect Escape Rate — Bugs found post-release."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Code Quality Metrics",
-        "points": [
-          "Code Review Coverage — Code reviewed percentage.",
-          "Code Complexity — Cyclomatic, Halstead complexity.",
-          "Code Duplication — Duplicate code percentage.",
-          "Documentation Coverage — Code documented percentage.",
-          "Coding Standards Compliance — Standards adherence percentage."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Process Metrics",
-        "points": [
-          "Schedule Variance — Planned vs actual schedule.",
-          "Cost Variance — Budgeted vs actual cost.",
-          "Effort Variance — Estimated vs actual effort.",
-          "Requirements Volatility — Requirements changes frequency.",
-          "Process Compliance — Process adherence percentage."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "Quality Metrics Overview",
-        "diagram": "quality-metrics-overview",
-        "caption": "Quality Metrics — Defect, Testing, Code Quality, Process"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "Quality Management Metrics: Defect Metrics, Testing Metrics, Code Quality Metrics, Process Metrics. Metrics quality measure karte hain, improvement guide karte hain."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain Defect Density and its importance.",
-        "answer": "Defect Density: Defects per lines of code. Typical: 1-10 per KLOC. Code quality measure karta hai. High density = quality issues."
-      },
-      {
-        "question": "What is Defect Removal Efficiency (DRE)?",
-        "answer": "DRE: Bugs caught before release percentage. Target: 90%+. Testing effectiveness measure karta hai."
-      },
-      {
-        "question": "List different categories of quality metrics.",
-        "answer": "Quality Metrics Categories: Defect Metrics, Testing Metrics, Code Quality Metrics, Process Metrics."
-      }
-    ]
-  },
-  {
-    "id": "availability-metrics",
-    "number": "1.13",
-    "title": "Availability Metrics",
-    "subtitle": "System reliability aur availability measures",
-    "icon": "clock",
-    "accent": "#00ff88",
-    "englishDefinition": "Availability Metrics measure the degree to which a system is operational and accessible when required. Common metrics include uptime percentage, MTBF, MTTR, and SLAs.",
-    "intro": "Availability Metrics system ki operational availability measure karte hain.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "Availability kya hai?",
-        "body": "Availability system operational hone ki degree ko measure karta hai. Availability = (Uptime / Total Time) * 100. Tiers: 99% (7.3 hours downtime/month), 99.9% (43.8 minutes/month), 99.99% (4.38 minutes/month), 99.999% (26.3 seconds/month).",
-        "chips": [
-          "99%",
-          "99.9%",
-          "99.99%",
-          "99.999%"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Uptime Metrics",
-        "points": [
-          "Uptime Percentage — System operational time.",
-          "Downtime — System non-operational time.",
-          "SLA Compliance — Service Level Agreement adherence.",
-          "Monthly Uptime — Monthly availability percentage."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Reliability Metrics",
-        "points": [
-          "MTBF — Mean Time Between Failures. Average time between failures.",
-          "MTTR — Mean Time To Repair. Average time to repair.",
-          "MTTF — Mean Time To Failure. Average time to first failure.",
-          "Failure Rate — Failures per unit time.",
-          "Bathtub Curve — Failure pattern over time."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Performance Metrics",
-        "points": [
-          "Response Time — System response speed.",
-          "Throughput — Operations per second.",
-          "Error Rate — Errors per transaction.",
-          "Concurrent Users — Simultaneous users supported."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Recovery Metrics",
-        "points": [
-          "RTO — Recovery Time Objective. Maximum acceptable downtime.",
-          "RPO — Recovery Point Objective. Maximum acceptable data loss.",
-          "Recovery Success Rate — Successful recovery attempts.",
-          "Backup Success Rate — Successful backup completions."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "Availability Metrics Overview",
-        "diagram": "availability-metrics-overview",
-        "caption": "Availability Metrics — Uptime, Reliability, Performance, Recovery"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "Availability Metrics: Uptime, Reliability (MTBF, MTTR), Performance (response time, throughput), Recovery (RTO, RPO). Tiers: 99% to 99.999%."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain Availability and its calculation.",
-        "answer": "Availability: System operational time percentage. Formula: (Uptime / Total Time) * 100. Tiers: 99% (7.3 hours downtime/month), 99.9% (43.8 minutes), 99.99% (4.38 minutes), 99.999% (26.3 seconds)."
-      },
-      {
-        "question": "What is MTBF and MTTR?",
-        "answer": "MTBF: Mean Time Between Failures. Reliability measure karta hai. MTTR: Mean Time To Repair. Recovery speed measure karta hai."
-      },
-      {
-        "question": "Explain RTO and RPO with examples.",
-        "answer": "RTO: Recovery Time Objective. Maximum acceptable downtime. Example: 2 hours RTO. RPO: Recovery Point Objective. Maximum acceptable data loss. Example: 15 minutes RPO."
-      }
-    ]
-  }
-]
-,
-[
-  {
-    "id": "defect-removal-effectiveness",
-    "number": "1.14",
-    "title": "Defect Removal Effectiveness",
-    "subtitle": "Quality assurance aur defect removal efficiency",
-    "icon": "bug",
-    "accent": "#aa00ff",
-    "englishDefinition": "Defect Removal Effectiveness (DRE) is a metric that measures the percentage of defects eliminated before the software is released. A high DRE means most defects are caught during development.",
-    "intro": "DRE software quality ko measure karne ka important metric hai. High DRE achi testing process indicate karta hai.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "DRE kya hai?",
-        "body": "DRE = (Defects Found Pre-Release / Total Defects) * 100. Target: 90% or above. Example: 90 pre-release defects, 10 post-release defects = 90% DRE.",
-        "chips": [
-          "90%+",
-          "Target",
-          "Testing"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "DRE Calculation",
-        "points": [
-          "Pre-Release Defects — Defects found during development.",
-          "Post-Release Defects — Defects found after release.",
-          "Total Defects — Pre-release + post-release defects.",
-          "DRE Calculation — (Pre-Release / Total) * 100.",
-          "Benchmark — 90%+ excellent. 80-89% good. 70-79% fair. Below 70% poor."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "DRE Improvement Strategies",
-        "points": [
-          "Comprehensive Testing — Testing approaches improve karo. Coverage increase karo.",
-          "Early Testing — Testing lifecycle mein early start karo.",
-          "Code Reviews — Peer reviews implement karo.",
-          "Static Analysis — Automated static analysis tools use karo.",
-          "Test Automation — Automated testing implement karo.",
-          "Quality Gates — Quality gates define karo.",
-          "Training — Testers train karo."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "DRE Challenges",
-        "points": [
-          "Defect Detection — Some defects hard detect karte hain.",
-          "Environment Differences — Test environment production se different.",
-          "User Expectations — Users unexpected scenarios create kar sakte hain.",
-          "Complexity — Complex systems mein defects difficult detect.",
-          "Documentation — Requirements aur documentation gaps.",
-          "Resources — Limited testing resources."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "DRE Overview",
-        "diagram": "dre-overview",
-        "caption": "DRE — Defect Removal Effectiveness, Quality Assurance, Testing"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "DRE: Defects caught before release percentage. Target: 90%+. High DRE = good testing process. Improvement: comprehensive testing, early testing, code reviews, static analysis, test automation."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Define Defect Removal Efficiency (DRE) with formula.",
-        "answer": "DRE: Defects caught before release percentage. Formula: (Pre-Release Defects / Total Defects) * 100. Target: 90%+."
-      },
-      {
-        "question": "How can DRE be improved?",
-        "answer": "DRE Improvement: Comprehensive testing, early testing, code reviews, static analysis, test automation, quality gates, training."
-      },
-      {
-        "question": "What are the challenges in achieving high DRE?",
-        "answer": "DRE Challenges: Defect detection, environment differences, user expectations, complexity, documentation gaps, resources."
-      }
-    ]
-  },
-  {
-    "id": "fmea",
-    "number": "1.15",
-    "title": "FMEA (Failure Mode and Effects Analysis)",
-    "subtitle": "Failure analysis aur risk management tool",
-    "icon": "alert",
-    "accent": "#ff0080",
-    "englishDefinition": "FMEA is a systematic approach for identifying and analyzing potential failure modes. It helps prioritize risks and implement preventive measures.",
-    "intro": "FMEA systematic approach hai jo potential failure modes identify aur analyze karta hai. Yeh risk management tool hai.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "FMEA kya hai?",
-        "body": "FMEA systematic failure analysis approach hai. Yeh potential failures identify karta hai, unka effects analyze karta hai.",
-        "chips": [
-          "Risk",
-          "Failure",
-          "Analysis"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "FMEA Process",
-        "points": [
-          "Step 1: System Analysis — System aur components analyze karo.",
-          "Step 2: Failure Identification — Potential failures list karo.",
-          "Step 3: Effects Analysis — Each failure ka effects analyze karo.",
-          "Step 4: Severity Assessment — Severity score assign karo. 1 se 10 tak.",
-          "Step 5: Occurrence Assessment — Occurrence probability estimate karo. 1 se 10 tak.",
-          "Step 6: Detection Assessment — Detection difficulty score karo. 1 se 10 tak.",
-          "Step 7: RPN Calculation — RPN = Severity * Occurrence * Detection.",
-          "Step 8: Action Plan — High RPN failures prioritize karo."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "FMEA Scoring",
-        "points": [
-          "Severity (S) — Failure ka impact. 1-10 scale. 1 = No effect, 10 = Catastrophic.",
-          "Occurrence (O) — Failure probability. 1-10 scale. 1 = Very unlikely, 10 = Very likely.",
-          "Detection (D) — Detection difficulty. 1-10 scale. 1 = Very easy, 10 = Very difficult.",
-          "RPN — Risk Priority Number. S * O * D. Maximum: 1000. Minimum: 1.",
-          "RPN Interpretation — 1-100: Low risk. 101-500: Medium risk. 501-1000: High risk."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "FMEA Benefits",
-        "points": [
-          "Proactive Risk Management — Failures se pehle identify karta hai.",
-          "Quality Improvement — Quality aur reliability improve karta hai.",
-          "Cost Reduction — Failure-related costs reduce karta hai.",
-          "Safety Improvement — Safety risks identify karta hai.",
-          "Documentation — Failure analysis documentation provide karta hai.",
-          "Team Collaboration — Cross-functional collaboration encourage karta hai."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "FMEA Overview",
-        "diagram": "fmea-overview",
-        "caption": "FMEA — Failure Mode and Effects Analysis, Risk Priority Number"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "FMEA: Systematic failure analysis. RPN = S * O * D. High RPN = high risk = immediate action. Benefits: proactive risk management, quality improvement, cost reduction."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain FMEA with its process.",
-        "answer": "FMEA: Systematic failure analysis. Process: System analysis, failure identification, effects analysis, severity/occurrence/detection scoring, RPN calculation, action planning. RPN = S * O * D."
-      },
-      {
-        "question": "Describe the scoring in FMEA.",
-        "answer": "FMEA Scoring: Severity (S): 1-10. Occurrence (O): 1-10. Detection (D): 1-10. RPN = S * O * D. High RPN = high risk."
-      },
-      {
-        "question": "What are the benefits of FMEA?",
-        "answer": "FMEA Benefits: Proactive risk management, quality improvement, cost reduction, safety improvement, documentation, team collaboration."
-      }
-    ]
-  }
-]
-,
-[
-  {
-    "id": "quality-function-deployment",
-    "number": "1.16",
-    "title": "Quality Function Deployment (QFD)",
-    "subtitle": "Customer requirements aur quality deployment",
-    "icon": "target",
-    "accent": "#00aaff",
-    "englishDefinition": "Quality Function Deployment (QFD) is a systematic approach to translate customer requirements into technical specifications. It ensures that customer needs are consistently met throughout the product development lifecycle.",
-    "intro": "QFD customer requirements ko technical specifications mein translate karne ka systematic approach hai.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "QFD kya hai?",
-        "body": "QFD customer requirements ko technical specifications mein translate karta hai. Objectives: Customer requirements identify karna, Technical specifications develop karna, Customer satisfaction ensure karna.",
-        "chips": [
-          "Customer",
-          "Quality",
-          "Deployment"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "House of Quality",
-        "points": [
-          "Customer Requirements — Voice of customer. Customer needs aur expectations.",
-          "Technical Requirements — Engineering specifications.",
-          "Relationship Matrix — Customer aur technical ka relationship.",
-          "Competitive Assessment — Competitor products compare karta hai.",
-          "Target Values — Technical targets define karta hai."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "QFD Process",
-        "points": [
-          "Step 1: Customer Research — Customer requirements research karo.",
-          "Step 2: Requirements Analysis — Customer requirements organize karo.",
-          "Step 3: Technical Translation — Customer requirements technical specifications mein translate karo.",
-          "Step 4: Relationship Matrix — House of Quality build karo.",
-          "Step 5: Competitive Analysis — Competitor products analyze karo.",
-          "Step 6: Target Setting — Technical targets set karo.",
-          "Step 7: Deployment — Quality deployment karo."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "QFD Benefits",
-        "points": [
-          "Customer Focus — Customer requirements focus karta hai.",
-          "Early Quality — Quality early design mein integrate karta hai.",
-          "Communication — Cross-functional communication improve karta hai.",
-          "Cost Reduction — Rework costs reduce karta hai.",
-          "Documentation — Requirements documentation provide karta hai."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "QFD Overview",
-        "diagram": "qfd-overview",
-        "caption": "QFD — Quality Function Deployment, House of Quality, Customer Requirements"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "QFD: Customer requirements ko technical specifications mein translate karta hai. House of Quality: customer requirements, technical requirements, relationship matrix, competitive assessment. Benefits: customer focus, early quality, communication."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain QFD and its importance.",
-        "answer": "QFD: Customer requirements ko technical specifications mein translate karta hai. Importance: Customer focus, early quality, communication, cost reduction."
-      },
-      {
-        "question": "Describe the House of Quality in QFD.",
-        "answer": "House of Quality: QFD ka central tool. Components: Customer requirements, technical requirements, relationship matrix, competitive assessment, target values."
-      },
-      {
-        "question": "What are the benefits of QFD?",
-        "answer": "QFD Benefits: Customer focus, early quality, communication, cost reduction, documentation."
-      }
-    ]
-  },
-  {
-    "id": "taguchi-quality-loss-function",
-    "number": "1.17",
-    "title": "Taguchi Quality Loss Function",
-    "subtitle": "Quality loss measurement aur Taguchi approach",
-    "icon": "chart",
-    "accent": "#ff8800",
-    "englishDefinition": "Taguchi Quality Loss Function is a quantitative measure of quality loss when product performance deviates from target. Any deviation from ideal target results in quality loss.",
-    "intro": "Taguchi Quality Loss Function quality loss ko measure karne ka quantitative approach hai.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "Taguchi Loss Function kya hai?",
-        "body": "Loss Function Formula: L = k * (y - m)^2. Where: L = Loss, k = Cost coefficient, y = Actual value, m = Target value. Taguchi Philosophy: Quality = Minimal deviation from target.",
-        "chips": [
-          "L = k(y-m)²",
-          "Quality",
-          "Loss"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Loss Function Types",
-        "points": [
-          "Smaller-the-Better — Target = 0. Example: Defects, failures, noise.",
-          "Larger-the-Better — Target = infinity. Example: Strength, durability, efficiency.",
-          "Nominal-the-Best — Target = specific value. Example: Dimensions, temperature.",
-          "One-Sided Specification — Only upper ya lower limit.",
-          "Two-Sided Specification — Upper aur lower limits."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Taguchi's Approach",
-        "points": [
-          "Target-Oriented — Target values pe focus karta hai.",
-          "Continuous Loss — Quality loss continuous measure karta hai.",
-          "Customer Focus — Customer impact measure karta hai.",
-          "Preventive Approach — Defects prevent karta hai.",
-          "Design for Quality — Quality design mein integrate karta hai.",
-          "Cost of Quality — Quality loss costs quantify karta hai."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Taguchi's Robust Design",
-        "points": [
-          "Robust Design — Design variation resistant banata hai.",
-          "Control Factors — Design parameters optimize karta hai.",
-          "Noise Factors — Environmental factors identify karta hai.",
-          "Parameter Design — Parameters optimize karta hai.",
-          "Tolerance Design — Tolerances specify karta hai.",
-          "Taguchi Methods — Orthogonal arrays use karta hai.",
-          "DOE — Experiments design karta hai."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "Taguchi Loss Function Overview",
-        "diagram": "taguchi-loss-overview",
-        "caption": "Taguchi Loss Function — Quality Loss, Robust Design, Loss Types"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "Taguchi Quality Loss Function: L = k * (y - m)^2. Types: Smaller-the-Better (target=0), Larger-the-Better (target=infinity), Nominal-the-Best (target=m). Taguchi approach: target-oriented, continuous loss, customer focus."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain Taguchi Quality Loss Function with formula.",
-        "answer": "Taguchi Loss Function: L = k * (y - m)^2. L = Loss, k = Cost coefficient, y = Actual value, m = Target value. Types: Smaller-the-Better, Larger-the-Better, Nominal-the-Best."
-      },
-      {
-        "question": "Describe the different types of loss functions.",
-        "answer": "Loss Function Types: Smaller-the-Better (defects, failures - target=0), Larger-the-Better (strength, efficiency - target=infinity), Nominal-the-Best (dimensions, temperature - target=specific value)."
-      },
-      {
-        "question": "What is Taguchi's Robust Design?",
-        "answer": "Robust Design: Design variation resistant banata hai. Control factors optimize karta hai. Noise factors minimize karta hai. Parameter design, tolerance design, Taguchi methods include karta hai."
-      }
-    ]
-  },
-  {
-    "id": "cost-of-quality",
-    "number": "1.18",
-    "title": "Cost of Quality (COQ)",
-    "subtitle": "Quality costs aur quality economics",
-    "icon": "dollar",
-    "accent": "#00ff88",
-    "englishDefinition": "Cost of Quality (COQ) is a framework that quantifies the total costs associated with quality, including costs of conformance and non-conformance.",
-    "intro": "COQ quality-related costs ko quantify karne ka framework hai.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "COQ kya hai?",
-        "body": "COQ = Prevention Costs + Appraisal Costs + Internal Failure Costs + External Failure Costs. Objectives: Quality costs quantify karna, Quality investment decisions lena, Cost-benefit analysis karna.",
-        "chips": [
-          "Prevention",
-          "Appraisal",
-          "Internal",
-          "External"
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Prevention Costs",
-        "points": [
-          "Quality Planning — Quality plans develop karna.",
-          "Quality Training — Employees quality train karna.",
-          "Quality Documentation — Quality procedures document karna.",
-          "Quality Audits — Quality systems audit karna.",
-          "Design Reviews — Designs review karna.",
-          "Process Improvement — Processes improve karna."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Appraisal Costs",
-        "points": [
-          "Inspection — Products inspect karna.",
-          "Testing — Products test karna.",
-          "Measurement — Quality characteristics measure karna.",
-          "Calibration — Equipment calibrate karna.",
-          "Testing Equipment — Testing equipment purchase karna."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "Internal Failure Costs",
-        "points": [
-          "Scrap — Defective products discard karna.",
-          "Rework — Defective products repair karna.",
-          "Retest — Repaired products test karna.",
-          "Downtime — Equipment downtime due to quality issues.",
-          "Failure Analysis — Failure causes analyze karna.",
-          "Yield Loss — Quality yield loss.",
-          "Corrective Actions — Corrective actions implement karna."
-        ]
-      },
-      {
-        "type": "points",
-        "title": "External Failure Costs",
-        "points": [
-          "Warranty Costs — Warranty claims handle karna.",
-          "Returns — Defective products return karna.",
-          "Customer Complaints — Customer complaints handle karna.",
-          "Lost Sales — Quality issues se sales lose karna.",
-          "Lost Customers — Quality issues se customers lose karna.",
-          "Liability — Product liability costs.",
-          "Reputation Damage — Brand reputation damage karna."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "Cost of Quality Overview",
-        "diagram": "coq-overview",
-        "caption": "COQ — Cost of Quality, Prevention, Appraisal, Internal/External Failure"
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "COQ: Quality-related costs ka total. Categories: Prevention (defects prevent), Appraisal (quality measure), Internal Failure (internal defects fix), External Failure (external defects fix). External failure costs internal se zyada expensive hote hain."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Define Cost of Quality (COQ) and its categories.",
-        "answer": "COQ: Quality-related costs ka total. Categories: Prevention, Appraisal, Internal Failure, External Failure."
-      },
-      {
-        "question": "Explain Prevention vs Appraisal costs.",
-        "answer": "Prevention Costs: Defects prevent karne ke costs. Appraisal Costs: Quality measure karne ke costs."
-      },
-      {
-        "question": "Describe Internal vs External failure costs.",
-        "answer": "Internal Failure: Internal defects fix karne ke costs. Before delivery. External Failure: External defects fix karne ke costs. After delivery. External failure costs internal se zyada expensive."
-      }
-    ]
-  }
-]
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain ISO-9000 series of quality standards.",
+              "answer": "ISO-9000 series: ISO-9000 (quality management standard), ISO-9001 (quality management system requirements), ISO-9002 (production/installation requirements), ISO-9003 (final inspection requirements). International recognition milta hai. Quality management principles follow karte hain."
+            },
+            {
+              "question": "Describe the 5 levels of CMM.",
+              "answer": "CMM 5 levels: Level 1 — Initial (ad hoc processes), Level 2 — Repeatable (basic project management), Level 3 — Defined (documented, standardized processes), Level 4 — Managed (quantitative process control), Level 5 — Optimizing (continuous process improvement)."
+            },
+            {
+              "question": "What is CMMI and how is it different from CMM?",
+              "answer": "CMMI (Capability Maturity Model Integration) — CMM ka updated version. Multiple disciplines (software, systems, people) integrate karta hai. 22 process areas cover karta hai. 5 levels same hain. Better improvement guidance provide karta hai."
+            }
+          ]
+        },
+        {
+          "id": "sqa-trends",
+          "number": "1.9",
+          "title": "Software Quality Assurance Trends",
+          "subtitle": "PSP/TSP, OO Methodology, Clean-room SE, Defect Injection, Auditing, Inspections, CASE Tools",
+          "icon": "trends",
+          "accent": "#ff0080",
+          "englishDefinition": "Software Quality Assurance Trends include modern approaches and methodologies that enhance software quality. PSP (Personal Software Process) and TSP (Team Software Process) are structured approaches for individual and team software development. Object-Oriented Methodology focuses on objects and classes. Clean-room software engineering emphasizes defect prevention through formal methods. Defect Injection and prevention techniques help identify and prevent defects. Internal Auditing and Assessments ensure process compliance. Inspections and Walkthroughs are peer review techniques. CASE tools automate software engineering tasks and improve quality.",
+          "intro": "Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Is topic mein hum dekhenge PSP/TSP, Object-Oriented Methodology, Clean-room software engineering, Defect Injection aur prevention, Internal Auditing aur Assessments, Inspections aur Walkthroughs, aur CASE tools. Modern trends quality improve karte hain, efficiency increase karte hain, aur defects kam karte hain.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "SQA Trends kya hain?",
+              "body": "Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Trends include:\n\n1. PSP/TSP — Personal aur Team Software Process\n2. OO Methodology — Object-Oriented approach\n3. Clean-room SE — Defect prevention through formal methods\n4. Defect Injection — Defects intentionally inject karna\n5. Internal Auditing — Process compliance verify karna\n6. Inspections & Walkthroughs — Peer review techniques\n7. CASE Tools — Computer-Aided Software Engineering tools",
+              "chips": [
+                "PSP",
+                "TSP",
+                "OO",
+                "Clean-room",
+                "CASE"
+              ]
+            },
+            {
+              "type": "cards",
+              "title": "PSP vs TSP",
+              "cards": [
+                {
+                  "icon": "user",
+                  "title": "PSP (Personal)",
+                  "body": "Individual developers ka structured process. Planning, Design, Code, Test, Postmortem. Personal quality improve karta hai."
+                },
+                {
+                  "icon": "users",
+                  "title": "TSP (Team)",
+                  "body": "Team-based development. Team roles aur processes structured hain. Team performance improve karta hai."
+                },
+                {
+                  "icon": "trends",
+                  "title": "Benefits",
+                  "body": "Quality improve karta hai. Defect rates reduce karta hai. Efficiency increase karta hai. Team collaboration better karta hai."
+                }
+              ]
+            },
+            {
+              "type": "points",
+              "title": "OO Methodology Concepts",
+              "points": [
+                "Encapsulation — Data aur methods ek class mein combine karta hai. Data protection provide karta hai.",
+                "Inheritance — Existing classes se new classes create karta hai. Code reuse enable karta hai.",
+                "Polymorphism — Different classes ek hi interface respond karte hain. Flexible code write karta hai.",
+                "Benefits — Code reuse increase karta hai. Maintainability improve karta hai. Quality increase karta hai."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "SQA Trends Overview",
+              "diagram": "sqa-trends-overview",
+              "caption": "SQA Trends — PSP/TSP, OO, Clean-room, Defect Injection, Auditing, Inspections, CASE Tools"
+            },
+            {
+              "type": "points",
+              "title": "Trend Selection",
+              "points": [
+                "PSP — Individual developers ke liye.",
+                "TSP — Team-based development ke liye.",
+                "OO Methodology — Complex software design ke liye.",
+                "Clean-room SE — High-reliability systems ke liye.",
+                "Defect Injection — Testing effectiveness validate karne ke liye.",
+                "Internal Auditing — Process compliance verify karne ke liye.",
+                "Inspections/Walkthroughs — Peer review ke liye.",
+                "CASE Tools — Development efficiency increase karne ke liye."
+              ]
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "SQA Trends: PSP (personal process), TSP (team process), OO Methodology (object-oriented), Clean-room SE (defect prevention), Defect Injection (testing effectiveness), Internal Auditing (compliance), Inspections/Walkthroughs (peer review), CASE tools (automation). Modern trends quality improve karte hain."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain PSP and TSP with their benefits.",
+              "answer": "PSP (Personal Software Process): Individual developers ka structured process. Planning, Design, Code, Test, Postmortem phases hain. Personal quality improve karta hai. TSP (Team Software Process): Team-based development. Team roles aur processes structured hain. Team performance improve karta hai."
+            },
+            {
+              "question": "What is Object-Oriented Methodology? Explain its key concepts.",
+              "answer": "Object-Oriented Methodology: Software design objects par based hai. Key concepts: Encapsulation (data aur methods combine), Inheritance (code reuse), Polymorphism (flexible interfaces). Benefits: Code reuse increase karta hai. Maintainability improve karta hai."
+            },
+            {
+              "question": "What are CASE tools? List their types and benefits.",
+              "answer": "CASE Tools: Computer-Aided Software Engineering. Software development tasks automate karte hain. Types: Upper CASE (requirements, analysis, design), Lower CASE (implementation, testing, maintenance), Integrated CASE (full lifecycle). Benefits: Productivity increase karta hai. Quality improve karta hai."
+            }
+          ]
+        },
+        {
+          "id": "software-security-testing",
+          "number": "1.10",
+          "title": "Testing Software System Security",
+          "subtitle": "Six-Sigma, TQM aur software security testing",
+          "icon": "shield",
+          "accent": "#00ff88",
+          "englishDefinition": "Testing Software System Security involves validating that software systems are secure against unauthorized access, attacks, and vulnerabilities.",
+          "intro": "Software system security testing alag alag techniques hain jo software ke vulnerabilities detect aur prevent karne mein help karte hain.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Software Security Testing",
+              "body": "Security testing includes vulnerability assessment, penetration testing, code review, and security audits. Objectives: Confidentiality, Integrity, Availability, Authentication, Authorization.",
+              "chips": [
+                "Confidentiality",
+                "Integrity",
+                "Availability"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Six-Sigma",
+              "points": [
+                "Quality improvement methodology.",
+                "DMAIC: Define, Measure, Analyze, Improve, Control.",
+                "DMADV: Define, Measure, Analyze, Design, Verify.",
+                "Defects 3.4 per million opportunities.",
+                "Benefits: Quality improve, cost reduce."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "TQM",
+              "points": [
+                "Organization-wide quality improvement.",
+                "Customer focus, total involvement.",
+                "Continuous improvement.",
+                "Tools: SPC, quality circles, benchmarking.",
+                "Benefits: Quality improve, productivity increase."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Security Testing Overview",
+              "diagram": "security-testing-overview",
+              "caption": "Security Testing — Six-Sigma, TQM, Vulnerability Assessment"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "Software Security Testing: Six-Sigma, TQM, Vulnerability Assessment, Penetration Testing, Code Review, Security Audits."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain Six-Sigma methodology.",
+              "answer": "Six-Sigma: Quality improvement methodology. DMAIC framework. Defects 3.4 per million tak reduce karta hai. Benefits: Quality improve, cost reduce."
+            },
+            {
+              "question": "What is TQM?",
+              "answer": "TQM: Organization-wide quality improvement approach. Principles: Customer focus, total involvement, continuous improvement."
+            }
+          ]
+        },
+        {
+          "id": "complexity-metrics-models",
+          "number": "1.11",
+          "title": "Complexity Metrics and Models",
+          "subtitle": "Software complexity measurement aur models",
+          "icon": "chart",
+          "accent": "#00aaff",
+          "englishDefinition": "Complexity Metrics measure software complexity through various approaches including cyclomatic complexity, Halstead metrics, McCabe complexity, and object-oriented complexity metrics.",
+          "intro": "Software complexity metrics software code ke complexity measure karne ka tools provide karte hain.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Complexity Metrics",
+              "body": "Software Complexity Metrics quantitative measures hain jo software complexity assess karte hain.",
+              "chips": [
+                "Cyclomatic",
+                "Halstead",
+                "McCabe",
+                "OO"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Cyclomatic Complexity",
+              "points": [
+                "Control flow complexity measure.",
+                "Formula: M = E - N + 2P.",
+                "1-5: Simple. 6-10: Moderate. 11-20: Complex.",
+                "Test case count determine karta hai."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Halstead Metrics",
+              "points": [
+                "Operators aur operands analysis.",
+                "Vocabulary (n), Length (N), Volume (V).",
+                "Difficulty (D), Effort (E), Bugs (B).",
+                "Code complexity measure karta hai."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "McCabe Complexity",
+              "points": [
+                "Decision points count karta hai.",
+                "If, else, for, while, case statements.",
+                "10 tak acceptable. Above 10 high complexity.",
+                "Refactoring needed."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Object-Oriented Complexity",
+              "points": [
+                "Inheritance depth.",
+                "Coupling (dependencies).",
+                "Cohesion (member relatedness).",
+                "Method count, attribute count."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Complexity Metrics Overview",
+              "diagram": "complexity-metrics-overview",
+              "caption": "Complexity Metrics — Cyclomatic, Halstead, McCabe, OO"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "Complexity Metrics: Cyclomatic (control flow), Halstead (operators/operands), McCabe (decision points), OO (inheritance, coupling, cohesion). High complexity = high maintenance cost."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain Cyclomatic Complexity.",
+              "answer": "Cyclomatic Complexity: Control flow complexity measure. Formula: M = E - N + 2P. 1-5 simple, 6-10 moderate, 11-20 complex."
+            },
+            {
+              "question": "Describe Halstead Metrics.",
+              "answer": "Halstead Metrics: Operators aur operands analysis. Vocabulary, Length, Volume, Difficulty, Effort, Bugs."
+            }
+          ]
+        },
+        {
+          "id": "quality-management-metrics",
+          "number": "1.12",
+          "title": "Quality Management Metrics",
+          "subtitle": "Software quality measurement aur metrics",
+          "icon": "metrics",
+          "accent": "#ff8800",
+          "englishDefinition": "Quality Management Metrics are quantitative measures used to assess and track software quality including defect density, test coverage, code quality, and process maturity.",
+          "intro": "Quality Management Metrics software quality ko measure aur track karne ka tools provide karte hain.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Quality Metrics",
+              "body": "Quality Management Metrics quantitative measures hain jo software quality assess karte hain.",
+              "chips": [
+                "Defect",
+                "Testing",
+                "Code Quality",
+                "Process"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Defect Metrics",
+              "points": [
+                "Defect Density: 1-10 per KLOC.",
+                "DRE: 90%+ target.",
+                "Reopen Rate: less than 5%.",
+                "MTTR, MTBF."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Testing Metrics",
+              "points": [
+                "Test Coverage.",
+                "Test Execution.",
+                "Test Effectiveness.",
+                "Automation Coverage."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Code Quality Metrics",
+              "points": [
+                "Code Review Coverage.",
+                "Code Complexity.",
+                "Code Duplication.",
+                "Documentation Coverage."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Process Metrics",
+              "points": [
+                "Schedule Variance.",
+                "Cost Variance.",
+                "Effort Variance.",
+                "Requirements Volatility."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Quality Metrics Overview",
+              "diagram": "quality-metrics-overview",
+              "caption": "Quality Metrics — Defect, Testing, Code Quality, Process"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "Quality Metrics: Defect Metrics, Testing Metrics, Code Quality Metrics, Process Metrics. Metrics quality measure karte hain."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain Defect Density.",
+              "answer": "Defect Density: Defects per lines of code. Typical: 1-10 per KLOC. Code quality measure karta hai."
+            },
+            {
+              "question": "What is DRE?",
+              "answer": "DRE: Bugs caught before release percentage. Target: 90%+."
+            }
+          ]
+        },
+        {
+          "id": "availability-metrics",
+          "number": "1.13",
+          "title": "Availability Metrics",
+          "subtitle": "System reliability aur availability measures",
+          "icon": "clock",
+          "accent": "#00ff88",
+          "englishDefinition": "Availability Metrics measure the degree to which a system is operational and accessible. Common metrics include uptime percentage, MTBF, MTTR, and SLAs.",
+          "intro": "Availability Metrics system ki operational availability measure karte hain.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Availability",
+              "body": "Availability = (Uptime / Total Time) * 100. Tiers: 99% (7.3 hrs/mo), 99.9% (43.8 min/mo), 99.99% (4.38 min/mo), 99.999% (26.3 sec/mo).",
+              "chips": [
+                "99%",
+                "99.9%",
+                "99.99%",
+                "99.999%"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Uptime Metrics",
+              "points": [
+                "Uptime Percentage.",
+                "Downtime.",
+                "SLA Compliance.",
+                "Monthly Uptime."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Reliability Metrics",
+              "points": [
+                "MTBF (Mean Time Between Failures).",
+                "MTTR (Mean Time To Repair).",
+                "MTTF (Mean Time To Failure).",
+                "Failure Rate.",
+                "Bathtub Curve."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Performance Metrics",
+              "points": [
+                "Response Time.",
+                "Throughput.",
+                "Error Rate.",
+                "Concurrent Users."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Recovery Metrics",
+              "points": [
+                "RTO (Recovery Time Objective).",
+                "RPO (Recovery Point Objective).",
+                "Recovery Success Rate.",
+                "Backup Success Rate."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Availability Metrics Overview",
+              "diagram": "availability-metrics-overview",
+              "caption": "Availability Metrics — Uptime, Reliability, Performance, Recovery"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "Availability Metrics: Uptime, Reliability (MTBF, MTTR), Performance (response time, throughput), Recovery (RTO, RPO)."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain Availability and its calculation.",
+              "answer": "Availability: (Uptime / Total Time) * 100. Tiers: 99% to 99.999%."
+            },
+            {
+              "question": "What is MTBF and MTTR?",
+              "answer": "MTBF: Mean Time Between Failures. MTTR: Mean Time To Repair."
+            }
+          ]
+        },
+        {
+          "id": "defect-removal-effectiveness",
+          "number": "1.14",
+          "title": "Defect Removal Effectiveness",
+          "subtitle": "Quality assurance aur defect removal efficiency",
+          "icon": "bug",
+          "accent": "#aa00ff",
+          "englishDefinition": "Defect Removal Effectiveness (DRE) measures the percentage of defects eliminated before release. High DRE means most defects are caught during development.",
+          "intro": "DRE software quality ko measure karne ka important metric hai.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "DRE",
+              "body": "DRE = (Defects Found Pre-Release / Total Defects) * 100. Target: 90%+.",
+              "chips": [
+                "90%+",
+                "Target"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "DRE Calculation",
+              "points": [
+                "Pre-Release Defects.",
+                "Post-Release Defects.",
+                "Total Defects.",
+                "DRE = (Pre-Release / Total) * 100.",
+                "90%+ excellent, 80-89% good."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "DRE Improvement",
+              "points": [
+                "Comprehensive Testing.",
+                "Early Testing.",
+                "Code Reviews.",
+                "Static Analysis.",
+                "Test Automation.",
+                "Quality Gates.",
+                "Training."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "DRE Challenges",
+              "points": [
+                "Defect Detection.",
+                "Environment Differences.",
+                "User Expectations.",
+                "Complexity.",
+                "Documentation.",
+                "Resources."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "DRE Overview",
+              "diagram": "dre-overview",
+              "caption": "DRE — Defect Removal Effectiveness"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "DRE: Defects caught before release percentage. Target: 90%+. High DRE = good testing process."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Define DRE with formula.",
+              "answer": "DRE = (Pre-Release Defects / Total Defects) * 100. Target: 90%+."
+            },
+            {
+              "question": "How can DRE be improved?",
+              "answer": "DRE Improvement: Comprehensive testing, early testing, code reviews, static analysis, test automation."
+            }
+          ]
+        },
+        {
+          "id": "fmea",
+          "number": "1.15",
+          "title": "FMEA (Failure Mode and Effects Analysis)",
+          "subtitle": "Failure analysis aur risk management tool",
+          "icon": "alert",
+          "accent": "#ff0080",
+          "englishDefinition": "FMEA is a systematic approach for identifying and analyzing potential failure modes to prioritize risks and implement preventive measures.",
+          "intro": "FMEA systematic approach hai jo potential failure modes identify aur analyze karta hai.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "FMEA",
+              "body": "FMEA systematic failure analysis approach hai.",
+              "chips": [
+                "Risk",
+                "Failure",
+                "Analysis"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "FMEA Process",
+              "points": [
+                "System Analysis.",
+                "Failure Identification.",
+                "Effects Analysis.",
+                "Severity (1-10).",
+                "Occurrence (1-10).",
+                "Detection (1-10).",
+                "RPN = S * O * D.",
+                "Action Plan."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "FMEA Scoring",
+              "points": [
+                "Severity (S): 1-10.",
+                "Occurrence (O): 1-10.",
+                "Detection (D): 1-10.",
+                "RPN: Maximum 1000.",
+                "1-100: Low risk. 501-1000: High risk."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "FMEA Benefits",
+              "points": [
+                "Proactive Risk Management.",
+                "Quality Improvement.",
+                "Cost Reduction.",
+                "Safety Improvement.",
+                "Documentation.",
+                "Team Collaboration."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "FMEA Overview",
+              "diagram": "fmea-overview",
+              "caption": "FMEA — Failure Mode and Effects Analysis"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "FMEA: Systematic failure analysis. RPN = S * O * D. High RPN = high risk."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain FMEA with its process.",
+              "answer": "FMEA: Systematic failure analysis. RPN = S * O * D. High RPN = high risk."
+            },
+            {
+              "question": "Describe FMEA scoring.",
+              "answer": "Severity (1-10), Occurrence (1-10), Detection (1-10). RPN = S * O * D."
+            }
+          ]
+        },
+        {
+          "id": "quality-function-deployment",
+          "number": "1.16",
+          "title": "Quality Function Deployment (QFD)",
+          "subtitle": "Customer requirements aur quality deployment",
+          "icon": "target",
+          "accent": "#00aaff",
+          "englishDefinition": "QFD is a systematic approach to translate customer requirements into technical specifications ensuring customer needs are consistently met.",
+          "intro": "QFD customer requirements ko technical specifications mein translate karne ka approach hai.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "QFD",
+              "body": "QFD customer requirements ko technical specifications mein translate karta hai.",
+              "chips": [
+                "Customer",
+                "Quality"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "House of Quality",
+              "points": [
+                "Customer Requirements.",
+                "Technical Requirements.",
+                "Relationship Matrix.",
+                "Competitive Assessment.",
+                "Target Values."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "QFD Process",
+              "points": [
+                "Customer Research.",
+                "Requirements Analysis.",
+                "Technical Translation.",
+                "Relationship Matrix.",
+                "Competitive Analysis.",
+                "Target Setting.",
+                "Deployment."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "QFD Benefits",
+              "points": [
+                "Customer Focus.",
+                "Early Quality.",
+                "Communication.",
+                "Cost Reduction.",
+                "Documentation."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "QFD Overview",
+              "diagram": "qfd-overview",
+              "caption": "QFD — Quality Function Deployment"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "QFD: Customer requirements ko technical specifications mein translate karta hai. House of Quality."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain QFD and its importance.",
+              "answer": "QFD: Customer requirements ko technical specifications mein translate karta hai. Benefits: Customer focus, early quality, communication."
+            },
+            {
+              "question": "Describe House of Quality.",
+              "answer": "House of Quality: Customer requirements, technical requirements, relationship matrix, competitive assessment."
+            }
+          ]
+        },
+        {
+          "id": "taguchi-quality-loss-function",
+          "number": "1.17",
+          "title": "Taguchi Quality Loss Function",
+          "subtitle": "Quality loss measurement aur Taguchi approach",
+          "icon": "chart",
+          "accent": "#ff8800",
+          "englishDefinition": "Taguchi Quality Loss Function measures quality loss when product performance deviates from target. Any deviation results in quality loss.",
+          "intro": "Taguchi Quality Loss Function quality loss ko measure karne ka approach hai.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "Taguchi Loss Function",
+              "body": "L = k * (y - m)^2. L = Loss, k = Cost coefficient, y = Actual value, m = Target value.",
+              "chips": [
+                "L = k(y-m)²"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Loss Function Types",
+              "points": [
+                "Smaller-the-Better: Target = 0.",
+                "Larger-the-Better: Target = infinity.",
+                "Nominal-the-Best: Target = specific value.",
+                "One-Sided Specification.",
+                "Two-Sided Specification."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Taguchi's Approach",
+              "points": [
+                "Target-Oriented.",
+                "Continuous Loss.",
+                "Customer Focus.",
+                "Preventive Approach.",
+                "Design for Quality.",
+                "Cost of Quality."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Taguchi's Robust Design",
+              "points": [
+                "Robust Design.",
+                "Control Factors.",
+                "Noise Factors.",
+                "Parameter Design.",
+                "Tolerance Design.",
+                "Taguchi Methods.",
+                "DOE."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Taguchi Loss Function Overview",
+              "diagram": "taguchi-loss-overview",
+              "caption": "Taguchi Loss Function — Quality Loss"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "Taguchi Loss Function: L = k * (y - m)^2. Types: Smaller-the-Better, Larger-the-Better, Nominal-the-Best."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Explain Taguchi Loss Function with formula.",
+              "answer": "L = k * (y - m)^2. Types: Smaller-the-Better, Larger-the-Better, Nominal-the-Best."
+            },
+            {
+              "question": "Describe loss function types.",
+              "answer": "Smaller-the-Better (target=0), Larger-the-Better (target=infinity), Nominal-the-Best (target=m)."
+            }
+          ]
+        },
+        {
+          "id": "cost-of-quality",
+          "number": "1.18",
+          "title": "Cost of Quality (COQ)",
+          "subtitle": "Quality costs aur quality economics",
+          "icon": "dollar",
+          "accent": "#00ff88",
+          "englishDefinition": "COQ quantifies total costs associated with quality including costs of conformance and non-conformance.",
+          "intro": "COQ quality-related costs ko quantify karne ka framework hai.",
+          "sections": [
+            {
+              "type": "definition",
+              "title": "COQ",
+              "body": "COQ = Prevention + Appraisal + Internal Failure + External Failure.",
+              "chips": [
+                "Prevention",
+                "Appraisal",
+                "Internal",
+                "External"
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Prevention Costs",
+              "points": [
+                "Quality Planning.",
+                "Quality Training.",
+                "Quality Documentation.",
+                "Quality Audits.",
+                "Design Reviews.",
+                "Process Improvement."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Appraisal Costs",
+              "points": [
+                "Inspection.",
+                "Testing.",
+                "Measurement.",
+                "Calibration.",
+                "Testing Equipment."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "Internal Failure Costs",
+              "points": [
+                "Scrap.",
+                "Rework.",
+                "Retest.",
+                "Downtime.",
+                "Failure Analysis.",
+                "Yield Loss.",
+                "Corrective Actions."
+              ]
+            },
+            {
+              "type": "points",
+              "title": "External Failure Costs",
+              "points": [
+                "Warranty Costs.",
+                "Returns.",
+                "Customer Complaints.",
+                "Lost Sales.",
+                "Lost Customers.",
+                "Liability.",
+                "Reputation Damage."
+              ]
+            },
+            {
+              "type": "diagram",
+              "title": "Cost of Quality Overview",
+              "diagram": "coq-overview",
+              "caption": "COQ — Cost of Quality"
+            },
+            {
+              "type": "recap",
+              "title": "Recap",
+              "content": "COQ: Prevention, Appraisal, Internal Failure, External Failure. External failure costs internal se zyada expensive."
+            }
+          ],
+          "examQuestions": [
+            {
+              "question": "Define COQ and its categories.",
+              "answer": "COQ: Prevention, Appraisal, Internal Failure, External Failure."
+            },
+            {
+              "question": "Explain Prevention vs Appraisal costs.",
+              "answer": "Prevention: Defects prevent karne ke costs. Appraisal: Quality measure karne ke costs."
+            },
+            {
+              "question": "Describe Internal vs External failure costs.",
+              "answer": "Internal: Before delivery. External: After delivery. External failure costs internal se zyada expensive."
+            }
+          ]
+        }
       ]
     }
   ]
