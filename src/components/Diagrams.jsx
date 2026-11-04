@@ -55,6 +55,8 @@ import {
   ProductProcessQualityDiagram,
   ProcessModelsComparisonDiagram,
   QCToolsOverviewDiagram,
+  QAModelsOverviewDiagram,
+  SQATrendsOverviewDiagram,
 } from './SoftwareTestingDiagrams';
 
 // ============================================================
@@ -664,6 +666,10 @@ export function Diagram({ type }) {
       return <ProcessModelsComparisonDiagram />;
     case 'qc-tools-overview':
       return <QCToolsOverviewDiagram />;
+    case 'qa-models-overview':
+      return <QAModelsOverviewDiagram />;
+    case 'sqa-trends-overview':
+      return <SQATrendsOverviewDiagram />;
     default:
       return null;
   }

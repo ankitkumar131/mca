@@ -606,6 +606,334 @@ Yeh tools problems identify aur solve karne mein help karte hain.`,
           },
         ],
       },
+      {
+        id: 'qa-models',
+        number: '1.8',
+        title: 'Quality Assurance Models',
+        subtitle: 'ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM',
+        icon: 'check',
+        accent: '#aa00ff',
+        englishDefinition: 'Quality Assurance Models are frameworks that provide structured approaches to implementing and improving software quality processes. ISO-9000 is an international standard for quality management. CMM (Capability Maturity Model) and CMMI (Capability Maturity Model Integration) are frameworks for process improvement. TMM (Test Maturity Model) focuses on testing processes. SPICE (Software Process Improvement and Capability Determination) is an international standard. Malcolm Baldrige Model is a performance excellence framework. P-CMM (People-Capability Maturity Model) focuses on human resources.',
+        intro: 'Quality Assurance Models different frameworks hain jo software quality processes implement aur improve karne ka structured approach provide karte hain. Is topic mein hum dekhenge ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige aur P-CMM models. Har model ka different focus hota hai — kuch processes par focus karte hain, kuch people par, kuch overall quality management par.',
+        sections: [
+          {
+            type: 'definition',
+            title: 'Quality Assurance Models kya hain?',
+            body: `Quality Assurance Models frameworks hain jo quality processes structured approach se implement aur improve karte hain. Different models alag alag focus par focus karte hain:
+
+1. **ISO-9000** — International standard for quality management
+2. **CMM/CMMI** — Process maturity aur improvement
+3. **TMM** — Testing process maturity
+4. **SPICE** — Software process improvement
+5. **Malcolm Baldrige** — Performance excellence
+6. **P-CMM** — People capability maturity`,
+          },
+          {
+            type: 'points',
+            title: 'ISO-9000 Series',
+            points: [
+              '**ISO-9000** — Quality management standard. Quality systems ka requirements define karta hai. International level par recognized hai. Quality management principles par based hai.',
+              '**ISO-9001** — Quality management system requirements. Organizations ko certify karta hai. Compliance demonstrate karta hai. Continuous improvement encourage karta hai.',
+              '**ISO-9002** — Production, installation aur servicing ka requirements. ISO-9001 ka subset hai. Quality assurance ka requirements define karta hai.',
+              '**ISO-9003** — Final inspection aur testing ka requirements. Delivery quality ensure karta hai. Testing requirements define karta hai.',
+              '**Benefits** — International recognition milta hai. Customer satisfaction improve hota hai. Quality culture develop hota hai. Continuous improvement aata hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'CMM (Capability Maturity Model)',
+            points: [
+              '**CMM** — Software process maturity framework. 5 maturity levels define karta hai. Process improvement guidance provide karta hai. Software development processes improve karta hai.',
+              '**Level 1** — Initial. Processes ad hoc hain. Chaotic hain. Successful projects dependent hain. Individual effort important hai.',
+              '**Level 2** — Repeatable. Basic project management processes established hain. Track record consistent hai. Cost, schedule aur quality controlled hain.',
+              '**Level 3** — Defined. Software process documented, standardized aur integrated hain. Organization-wide standard process hai. Training program exist hai.',
+              '**Level 4** — Managed. Quantitative process control. Detailed measures collect karte hain. Quality aur productivity quantitatively managed hain.',
+              '**Level 5** — Optimizing. Continuous process improvement. Innovations deploy karte hain. Processes optimized hain. Defect prevention focus hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'CMMI (Capability Maturity Model Integration)',
+            points: [
+              '**CMMI** — CMM ka updated version. Multiple disciplines integrate karta hai. Software, systems aur people integrate karta hai. Better improvement guidance provide karta hai.',
+              '**22 Process Areas** — Requirements management, project planning, quality assurance, risk management, etc. High maturity level organizations all process areas mature aur effective karte hain.',
+              '**5 Levels** — Initial, Managed, Defined, Quantitatively Managed, Optimizing. Level 1: Initial. Level 2: Managed. Level 3: Defined. Level 4: Quantitatively Managed. Level 5: Optimizing.',
+              '**Benefits** — Process efficiency improve hota hai. Quality consistent rehta hai. Project success rate increase hota hai. Organization maturity improve hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'TMM (Test Maturity Model)',
+            points: [
+              '**TMM** — Testing process maturity framework. Testing processes improve karta hai. 5 maturity levels define karta hai. Software testing discipline enhance karta hai.',
+              '**Level 1** — Initial. Testing ad hoc hai. No formal testing. Testing last phase mein hota hai.',
+              '**Level 2** — Repeatable. Basic testing practices exist hain. Testing planned aur tracked hai. Testing organization established hai.',
+              '**Level 3** — Defined. Testing process documented aur standardized hai. Testing integrated development process mein hai. Testing training program exist hai.',
+              '**Level 4** — Managed. Testing quantitatively managed hai. Testing metrics collect karte hain. Testing effectiveness measured karta hai.',
+              '**Level 5** — Optimizing. Testing process continuous improvement hai. Testing innovations deploy karte hain. Testing optimized hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'SPICE (Software Process Improvement)',
+            points: [
+              '**SPICE** — Software Process Improvement and Capability Determination. International standard hai. Process assessment framework provide karta hai. Process improvement guidance provide karta hai.',
+              '**Assessment** — Software process capability assess karta hai. Processes evaluate karta hai. Strengths aur weaknesses identify karta hai. Improvement areas identify karta hai.',
+              '**Capability Levels** — 0: Incomplete. 1: Performed. 2: Managed. 3: Established. 4: Predictable. 5: Optimizing. Har level process capability ko represent karta hai.',
+              '**Benefits** — Process understanding improve hota hai. Improvement planning better hota hai. International comparison possible hai. Continuous improvement encourage karta hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'Malcolm Baldrige Model',
+            points: [
+              '**Malcolm Baldrige Model** — Performance excellence framework. Organizational performance improve karta hai. Quality aur excellence recognize karta hai. Management practices improve karta hai.',
+              '**Categories** — Leadership, Strategic Planning, Customer Focus, Measurement/Analysis, Human Resources, Operational Focus, Results. Har category organizational excellence ko evaluate karta hai.',
+              '**Focus Areas** — Customer satisfaction, Operational performance, Financial performance, Human resource development, Leadership effectiveness.',
+              '**Benefits** — Management practices improve hote hain. Customer satisfaction increase hota hai. Organizational performance improve hota hai. Excellence culture develop hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'P-CMM (People-Capability Maturity Model)',
+            points: [
+              '**P-CMM** — People-Capability Maturity Model. Human resources practices improve karta hai. Workforce capability develop karta hai. 5 maturity levels define karta hai.',
+              '**Level 1** — Initial. Workforce practices ad hoc hain. No focus on people development. Individual initiative important hai.',
+              '**Level 2** — Managed. Basic workforce practices exist hain. Performance management establish hai. Training programs exist hain.',
+              '**Level 3** — Defined. Workforce practices documented aur standardized hain. Career development integrated hai. Workforce capabilities defined hain.',
+              '**Level 4** — Quantitatively Managed. Workforce capabilities quantitatively managed hain. Training effectiveness measured hai. Skills tracking systematic hai.',
+              '**Level 5** — Optimizing. Workforce capability continuously improved hai. People development optimized hai. Innovation encouraged hai.',
+            ],
+          },
+          {
+            type: 'comparison',
+            title: 'Model Comparison',
+            comparison: [
+              { feature: 'Focus', iso9000: 'Quality Management', cmm: 'Process Maturity', cmmi: 'Process Integration', tmm: 'Testing Maturity', spice: 'Process Assessment', baldrige: 'Performance Excellence', pcmm: 'People Capability' },
+              { feature: 'Main Goal', iso9000: 'Standardization', cmm: 'Process Improvement', cmmi: 'Process Integration', tmm: 'Testing Improvement', spice: 'Process Assessment', baldrige: 'Organizational Excellence', pcmm: 'Workforce Development' },
+              { feature: 'Levels', iso9000: 'Certification', cmm: '5 Levels', cmmi: '5 Levels', tmm: '5 Levels', spice: '6 Levels', baldrige: 'Award Criteria', pcmm: '5 Levels' },
+            ],
+          },
+          {
+            type: 'diagram',
+            title: 'QA Models Overview',
+            diagram: 'qa-models-overview',
+            caption: 'QA Models — ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM',
+          },
+          {
+            type: 'points',
+            title: 'Model Selection',
+            points: [
+              '**ISO-9000** — Quality management standard ke liye.',
+              '**CMM/CMMI** — Process maturity improve karne ke liye.',
+              '**TMM** — Testing process improve karne ke liye.',
+              '**SPICE** — Process assessment ke liye.',
+              '**Malcolm Baldrige** — Organizational excellence ke liye.',
+              '**P-CMM** — People capability improve karne ke liye.',
+              '**Selection** — Organizational needs par based hai. Multiple models combine bhi kar sakte hain.',
+            ],
+          },
+          {
+            type: 'recap',
+            title: 'Recap',
+            content: 'QA Models: ISO-9000 (quality management standard), CMM (5 maturity levels), CMMI (CMM integration), TMM (testing maturity), SPICE (process assessment), Malcolm Baldrige (performance excellence), P-CMM (people capability). Har model alag focus par focus karta hai. Model selection organizational needs par based hai.',
+          },
+        ],
+        examQuestions: [
+          {
+            question: 'Explain ISO-9000 series of quality standards.',
+            answer: 'ISO-9000 series: ISO-9000 (quality management standard), ISO-9001 (quality management system requirements), ISO-9002 (production/installation requirements), ISO-9003 (final inspection requirements). International recognition milta hai. Quality management principles follow karte hain. Continuous improvement encourage karte hain.',
+          },
+          {
+            question: 'Describe the 5 levels of CMM.',
+            answer: 'CMM 5 levels: Level 1 — Initial (ad hoc processes), Level 2 — Repeatable (basic project management), Level 3 — Defined (documented, standardized processes), Level 4 — Managed (quantitative process control), Level 5 — Optimizing (continuous process improvement). Levels progressively process maturity increase karte hain.',
+          },
+          {
+            question: 'What is CMMI and how is it different from CMM?',
+            answer: 'CMMI (Capability Maturity Model Integration) — CMM ka updated version. Multiple disciplines (software, systems, people) integrate karta hai. 22 process areas cover karta hai. 5 levels same hain. Better improvement guidance provide karta hai. CMM se more comprehensive hai.',
+          },
+          {
+            question: 'Explain TMM and its importance.',
+            answer: 'TMM (Test Maturity Model) — Testing process maturity framework. 5 levels: Initial (ad hoc testing), Repeatable (basic testing practices), Defined (documented testing process), Managed (quantitative testing), Optimizing (continuous testing improvement). Testing discipline enhance karta hai. Testing effectiveness improve karta hai.',
+          },
+          {
+            question: 'What is SPICE and what are its benefits?',
+            answer: 'SPICE (Software Process Improvement and Capability Determination) — International standard for process assessment. Software process capability assess karta hai. 6 capability levels (0-5). Strengths aur weaknesses identify karta hai. Process improvement guidance provide karta hai. International comparison possible hai.',
+          },
+        ],
+      },
+      {
+        id: 'sqa-trends',
+        number: '1.9',
+        title: 'Software Quality Assurance Trends',
+        subtitle: 'PSP/TSP, OO Methodology, Clean-room SE, Defect Injection, Auditing, Inspections, CASE Tools',
+        icon: 'trends',
+        accent: '#ff0080',
+        englishDefinition: 'Software Quality Assurance Trends include modern approaches and methodologies that enhance software quality. PSP (Personal Software Process) and TSP (Team Software Process) are structured approaches for individual and team software development. Object-Oriented Methodology focuses on objects and classes. Clean-room software engineering emphasizes defect prevention through formal methods. Defect Injection and prevention techniques help identify and prevent defects. Internal Auditing and Assessments ensure process compliance. Inspections and Walkthroughs are peer review techniques. CASE tools automate software engineering tasks and improve quality.',
+        intro: 'Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Is topic mein hum dekhenge PSP/TSP, Object-Oriented Methodology, Clean-room software engineering, Defect Injection aur prevention, Internal Auditing aur Assessments, Inspections aur Walkthroughs, aur CASE tools. Modern trends quality improve karte hain, efficiency increase karte hain, aur defects kam karte hain.',
+        sections: [
+          {
+            type: 'definition',
+            title: 'SQA Trends kya hain?',
+            body: `Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Trends include:
+
+1. **PSP/TSP** — Personal aur Team Software Process
+2. **OO Methodology** — Object-Oriented approach
+3. **Clean-room SE** — Defect prevention through formal methods
+4. **Defect Injection** — Defects intentionally inject karna
+5. **Internal Auditing** — Process compliance verify karna
+6. **Inspections & Walkthroughs** — Peer review techniques
+7. **CASE Tools** — Computer-Aided Software Engineering tools`,
+          },
+          {
+            type: 'points',
+            title: 'PSP (Personal Software Process)',
+            points: [
+              '**PSP** — Personal Software Process. Individual developers ka structured process hai. Software engineering practices personal level par teach karta hai. Personal process improvement provide karta hai.',
+              '**Phases** — Planning, Design, Requirements, Design, Code, Compile, Test, Postmortem. Har phase ka specific tasks hain. Personal data collect karte hain. Self-improvement plan develop karte hain.',
+              '**Components** — Scripts, forms, standard practices, measurement database. Individual metrics collect karte hain. Defects track karte hain. Time management improve karte hain.',
+              '**Benefits** — Personal quality improve hota hai. Defect rates reduce hote hain. Effort estimation improve hota hai. Professional discipline develop hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'TSP (Team Software Process)',
+            points: [
+              '**TSP** — Team Software Process. Team-based software development ka structured approach hai. Team aur project management practices provide karta hai. Team performance improve karta hai.',
+              '**Team Roles** — Team Leader, Development Manager, Design Manager, Test Manager, Quality Manager, Build Manager, Configuration Manager. Har role ka specific responsibilities hain.',
+              '**Phases** — Launch, Planning, Requirements, Design, Implementation, Test, Postmortem. Team processes structured hain. Team metrics collect karte hain. Project success rate improve karta hai.',
+              '**Benefits** — Team performance improve hota hai. Project quality increase hota hai. Defects kam hote hain. Team collaboration better hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'Object-Oriented Methodology',
+            points: [
+              '**OO Methodology** — Object-Oriented approach. Software design aur development objects par based hai. Classes, objects, inheritance, polymorphism concepts use karta hai. Quality improve karta hai.',
+              '**Encapsulation** — Data aur methods ek class mein combine karta hai. Data protection provide karta hai. Implementation details hidden karta hai. Interface expose karta hai.',
+              '**Inheritance** — Existing classes se new classes create karta hai. Code reuse enable karta hai. Hierarchical relationships define karta hai. Software maintainability improve karta hai.',
+              '**Polymorphism** — Different classes ek hi interface respond karte hain. Flexible code write karta hai. Extensibility provide karta hai. Complex systems manage karta hai.',
+              '**OO Benefits** — Code reuse increase hota hai. Maintainability improve hota hai. Development time reduce hota hai. Quality increase hota hai. Testing easier hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'Clean-room Software Engineering',
+            points: [
+              '**Clean-room SE** — Defect prevention approach. Formal methods use karta hai. Specification-based development karta hai. Verification aur validation rigorous hai.',
+              '**Approach** — Requirements formal specification. Design formal specification. Implementation formal methods. Verification rigorous testing. Statistical usage testing.',
+              '**Formal Methods** — Mathematical specification. Design correctness verify karta hai. Defects early detect karta hai. Quality mathematically proven hota hai.',
+              '**Statistical Usage Testing** — Operational profiles use karta hai. Random testing statistically based hai. Reliability measurement accurate hai. Defects early detect karta hai.',
+              '**Benefits** — Defect rates kam hote hain. Reliability high rehta hai. Maintenance costs kam hote hain. Quality mathematically proven hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'Defect Injection and Prevention',
+            points: [
+              '**Defect Injection** — Defects intentionally inject karte hain. Testing effectiveness improve karta hai. Quality assurance techniques validate karte hain. Defects detect karne ka ability test karta hai.',
+              '**Injection Techniques** — Mutation testing, fault injection, chaos engineering. Test cases validate karte hain. Detection mechanisms verify karte hain. Quality tools effectiveness test karte hain.',
+              '**Defect Prevention** — Defects identify aur prevent karte hain. Root cause analysis karte hain. Process improvements implement karte hain. Similar defects future mein prevent karte hain.',
+              '**Techniques** — Fault tree analysis, failure mode analysis, cause-effect analysis. Defects classify karte hain. Patterns identify karte hain. Prevention strategies develop karte hain.',
+              '**Benefits** — Testing effectiveness improve hota hai. Defect rates reduce hote hain. Quality increase hota hai. Process maturity improve hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'Internal Auditing and Assessments',
+            points: [
+              '**Internal Auditing** — Process compliance verify karta hai. Quality system audit karta hai. Standards compliance check karta hai. Continuous improvement encourage karta hai.',
+              '**Audit Types** — Process audit (process compliance), Product audit (product quality), System audit (quality system). Independent auditors audit karte hain. Findings report karte hain.',
+              '**Assessment** — Process maturity assess karta hai. Quality practices evaluate karta hai. Strengths aur weaknesses identify karta hai. Improvement areas identify karta hai.',
+              '**Assessment Methods** — Questionnaires, interviews, observations, document review. Data collect karte hain. Analysis karte hain. Findings report karte hain.',
+              '**Benefits** — Compliance ensure hota hai. Improvement areas identify hote hain. Quality culture develop hota hai. Continuous improvement encourage hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'Inspections and Walkthroughs',
+            points: [
+              '**Inspections** — Structured peer review. Formal process hai. Defects early detect karta hai. Quality improve karta hai.',
+              '**Inspection Process** — Overview, Preparation, Inspection Meeting, Rework, Follow-up. Roles: Moderator, Author, Reviewers, Inspector. Defects document karte hain. Severity classify karte hain.',
+              '**Walkthroughs** — Author-led review. Informal process hai. Design aur code explain karta hai. Feedback collect karta hai. Issues identify karta hai.',
+              '**Walkthrough Process** — Preparation, Walkthrough Meeting, Note-taking, Follow-up. Author presents karta hai. Reviewers question karte hain. Issues identify karte hain.',
+              '**Benefits** — Defects early detect hote hain. Fix costs kam hote hain. Quality improve hota hai. Team knowledge share hota hai.',
+            ],
+          },
+          {
+            type: 'points',
+            title: 'CASE Tools',
+            points: [
+              '**CASE Tools** — Computer-Aided Software Engineering tools. Software development tasks automate karte hain. Quality improve karte hain. Efficiency increase karte hain.',
+              '**Upper CASE** — Requirements, analysis, design tools. System planning aur design support karte hain. Requirements capture karte hain. Analysis karwate hain. Design create karte hain.',
+              '**Lower CASE** — Implementation, testing, maintenance tools. Coding, testing, maintenance support karte hain. Code generation karte hain. Testing automate karte hain. Maintenance support karte hain.',
+              '**Integrated CASE** — Full lifecycle support. Upper aur lower CASE combine karta hai. Tool integration provide karta hai. Seamless workflow enable karta hai.',
+              '**Examples** — Requirements: DOORS, Rational Rose. Design: Visio, Enterprise Architect. Implementation: IDEs, code generators. Testing: Selenium, JUnit. Maintenance: Version control, defect tracking.',
+              '**Benefits** — Productivity increase hota hai. Quality improve hota hai. Consistency maintain hota hai. Documentation automatic hota hai. Reusability encourage hota hai.',
+            ],
+          },
+          {
+            type: 'comparison',
+            title: 'Trend Comparison',
+            comparison: [
+              { feature: 'Focus', psp: 'Individual Process', tsp: 'Team Process', oo: 'Object-Oriented', cleanroom: 'Defect Prevention', injection: 'Defect Testing', auditing: 'Compliance', inspection: 'Peer Review', case: 'Automation' },
+              { feature: 'Type', psp: 'Personal', tsp: 'Team', oo: 'Methodology', cleanroom: 'Methodology', injection: 'Technique', auditing: 'Process', inspection: 'Process', case: 'Tools' },
+              { feature: 'Main Goal', psp: 'Self Improvement', tsp: 'Team Performance', oo: 'Code Reuse', cleanroom: 'Zero Defects', injection: 'Testing Effectiveness', auditing: 'Compliance', inspection: 'Early Detection', case: 'Efficiency' },
+            ],
+          },
+          {
+            type: 'diagram',
+            title: 'SQA Trends Overview',
+            diagram: 'sqa-trends-overview',
+            caption: 'SQA Trends — PSP/TSP, OO, Clean-room, Defect Injection, Auditing, Inspections, CASE Tools',
+          },
+          {
+            type: 'points',
+            title: 'Trend Selection',
+            points: [
+              '**PSP** — Individual developers ke liye.',
+              '**TSP** — Team-based development ke liye.',
+              '**OO Methodology** — Complex software design ke liye.',
+              '**Clean-room SE** — High-reliability systems ke liye.',
+              '**Defect Injection** — Testing effectiveness validate karne ke liye.',
+              '**Internal Auditing** — Process compliance verify karne ke liye.',
+              '**Inspections/Walkthroughs** — Peer review ke liye.',
+              '**CASE Tools** — Development efficiency increase karne ke liye.',
+            ],
+          },
+          {
+            type: 'recap',
+            title: 'Recap',
+            content: 'SQA Trends: PSP (personal process), TSP (team process), OO Methodology (object-oriented), Clean-room SE (defect prevention), Defect Injection (testing effectiveness), Internal Auditing (compliance), Inspections/Walkthroughs (peer review), CASE tools (automation). Modern trends quality improve karte hain, efficiency increase karte hain, aur defects kam karte hain.',
+          },
+        ],
+        examQuestions: [
+          {
+            question: 'Explain PSP and TSP with their benefits.',
+            answer: 'PSP (Personal Software Process): Individual developers ka structured process. Planning, Design, Code, Test, Postmortem phases hain. Personal quality improve karta hai. Defect rates reduce karta hai. TSP (Team Software Process): Team-based development. Team roles aur processes structured hain. Team performance improve karta hai. Project success rate increase karta hai.',
+          },
+          {
+            question: 'What is Object-Oriented Methodology? Explain its key concepts.',
+            answer: 'Object-Oriented Methodology: Software design objects par based hai. Key concepts: Encapsulation (data aur methods combine), Inheritance (code reuse), Polymorphism (flexible interfaces). Benefits: Code reuse increase karta hai. Maintainability improve karta hai. Development time reduce karta hai. Quality increase karta hai.',
+          },
+          {
+            question: 'Describe Clean-room Software Engineering.',
+            answer: 'Clean-room SE: Defect prevention approach. Formal methods use karta hai. Requirements formal specification. Design formal specification. Implementation formal methods. Verification rigorous testing. Statistical usage testing. Benefits: Defect rates kam hote hain. Reliability high rehta hai. Maintenance costs kam hote hain.',
+          },
+          {
+            question: 'What is Defect Injection and how does it help?',
+            answer: 'Defect Injection: Defects intentionally inject karte hain. Testing effectiveness improve karta hai. Detection mechanisms validate karta hai. Mutation testing, fault injection techniques hain. Benefits: Testing effectiveness improve hota hai. Defects detect karne ka ability test hota hai. Quality tools validate hote hain.',
+          },
+          {
+            question: 'Explain Inspections and Walkthroughs with their differences.',
+            answer: 'Inspections: Structured peer review. Formal process. Moderator lead karta hai. Defects document karte hain. Early detection hai. Walkthroughs: Author-led review. Informal process. Author presents karta hai. Feedback collect karta hai. Inspections formal hain, walkthroughs informal hain. Dono defects early detect karte hain.',
+          },
+          {
+            question: 'What are CASE tools? List their types and benefits.',
+            answer: 'CASE Tools: Computer-Aided Software Engineering. Software development tasks automate karte hain. Types: Upper CASE (requirements, analysis, design), Lower CASE (implementation, testing, maintenance), Integrated CASE (full lifecycle). Benefits: Productivity increase karta hai. Quality improve karta hai. Consistency maintain karta hai. Documentation automatic hota hai.',
+          },
+        ],
+      },
     ],
   },
 ];
