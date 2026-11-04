@@ -273,6 +273,7 @@ export default function App() {
         currentTopicId={route.topicId}
         onNavigate={navigate}
         onClose={() => setSidebarOpen(false)}
+        mobileOpen={sidebarOpen}
       />
 
       {/* Sidebar overlay for mobile */}

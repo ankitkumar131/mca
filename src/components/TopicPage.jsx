@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { units } from '../data/topics';
+import { units, subjects } from '../data/topics';
 import { AppSidebar } from './Sidebar';
 import { Diagram } from './Diagrams';
 import { Icon } from './Icons';
@@ -212,6 +212,10 @@ export default function TopicPage({ topicId, subjectId, onBack, onOpenTopic }) {
   const prevTopic = idx > 0 ? allTopics[idx - 1] : null;
   const nextTopic = idx < allTopics.length - 1 ? allTopics[idx + 1] : null;
 
+  // Find which unit this topic belongs to
+  const currentUnit = subjectUnits.find((u) => u.topics.some((t) => t.id === topicId)) || subjectUnits[0];
+  const subjectName = subjects.find((s) => s.id === subjectId)?.name || 'Business Intelligence';
+
   const isCompleted = completed.has(topicId);
 
   const handleComplete = () => {
@@ -280,7 +284,7 @@ export default function TopicPage({ topicId, subjectId, onBack, onOpenTopic }) {
           <div className="container">
             <div className="topic-hero-badge">
               <span className="topic-hero-num">{topic.number}</span>
-              <span>Business Intelligence · Unit 1</span>
+              <span>{subjectName} · Unit {currentUnit?.number}</span>
             </div>
             <h1 className="topic-hero-title">{topic.title}</h1>
             <p className="topic-hero-sub">{topic.subtitle}</p>
@@ -345,8 +349,8 @@ export default function TopicPage({ topicId, subjectId, onBack, onOpenTopic }) {
             <div className="important-exam-link-card">
               <div className="iel-icon"><Icon name="quiz" size={32} /></div>
               <div className="iel-text">
-                <h3>⭐ Important 6-Mark Exam Questions — Unit 1</h3>
-                <p>Unit 1 ke sabhi important topics ke 10 most-important 6-mark questions ek jagah par — ek dusre topic mein nahi dhundhna padega.</p>
+                <h3>⭐ Important 6-Mark Exam Questions — Unit {currentUnit?.number}</h3>
+                <p>Unit {currentUnit?.number} ke sabhi important topics ke 10 most-important 6-mark questions ek jagah par — ek dusre topic mein nahi dhundhna padega.</p>
               </div>
               <button
                 className="btn primary"

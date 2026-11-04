@@ -9,7 +9,7 @@ export function AppSidebar({ currentTopicId, onOpenTopic, completed, mobileOpen 
   return null;
 }
 
-export default function Sidebar({ currentSubjectId, currentUnitId, currentTopicId, onNavigate, onClose }) {
+export default function Sidebar({ currentSubjectId, currentUnitId, currentTopicId, onNavigate, onClose, mobileOpen }) {
   const [expandedSubjects, setExpandedSubjects] = useState({
     [currentSubjectId]: true,
   });
@@ -34,7 +34,7 @@ export default function Sidebar({ currentSubjectId, currentUnitId, currentTopicI
   };
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${mobileOpen ? 'active' : ''}`}>
       <div className="sidebar-header">
         <span className="brand">
           <span className="brand-dot" /> MCA · Hinglish
