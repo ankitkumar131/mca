@@ -158,9 +158,10 @@ function ExamAnswer({ text }) {
 export default function TopicPage({ topicId, subjectId, onBack, onOpenTopic }) {
   // Search the correct subject's topics, fallback to searching all units
   const subjectUnits = units[subjectId] || units['business-intelligence'];
-  const subjectTopics = subjectUnits[0]?.topics || [];
-  const topic = subjectTopics.find((t) => t.id === topicId)
-    || units['business-intelligence'][0].topics.find((t) => t.id === topicId);
+  // Search ALL units of the subject, not just the first one
+  const allSubjectTopics = subjectUnits.flatMap((unit) => unit.topics || []);
+  const topic = allSubjectTopics.find((t) => t.id === topicId)
+    || units['business-intelligence'].flatMap((unit) => unit.topics || []).find((t) => t.id === topicId);
   const [completed, setCompleted] = useState(() => new Set(getCompletedTopics()));
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -190,7 +191,7 @@ export default function TopicPage({ topicId, subjectId, onBack, onOpenTopic }) {
   }
 
   // Prev/next topic — use the subject's own topics
-  const allTopics = subjectTopics;
+  const allTopics = allSubjectTopics;
   const idx = allTopics.findIndex((t) => t.id === topicId);
   const prevTopic = idx > 0 ? allTopics[idx - 1] : null;
   const nextTopic = idx < allTopics.length - 1 ? allTopics[idx + 1] : null;
