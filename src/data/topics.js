@@ -8308,7 +8308,7 @@ export const units = {
       "number": "2",
       "name": "Essentials of Software Testing",
       "topics": [
-        {
+{
           "id": "software-testing-basics",
           "number": "2.1",
           "title": "Software Testing Basics",
@@ -8318,203 +8318,109 @@ export const units = {
           "englishDefinition": "Software Testing is the process of evaluating and verifying that a software system meets its intended requirements and works as expected. It involves executing a system to identify bugs, errors, or defects. The testing life cycle follows a structured approach from planning through closure. Testing principles guide testers in effective testing. The tester plays a critical role in quality assurance within software development organizations.",
           "intro": "Software testing software system ke quality aur correctness check karne ka process hai. Testing life cycle test planning se lekar test closure tak ke steps include karta hai. Testing principles effective testing ke guidelines provide karte hain. Tester software development organization mein quality assurance ka critical role play karta hai. Is chapter mein hum testing basics, life cycle, principles, aur tester role ko detailed mein dekhenge.",
           "sections": [
-            {
-              "type": "definition",
-              "title": "Software Testing Definition",
-              "body": "Software testing process hai jisme software systems evaluate aur verify karte hain ki woh intended requirements meet karta hai aur expected tarike se kaam karta hai. Testing kya hai: 1. Defects identify karna — Bugs, errors, aur issues find karna. 2. Requirements verify karna — All requirements met hain ya nahi. 3. Quality ensure karna — Software quality standards meet karta hai. 4. Risks reduce karna — Software risks identify aur mitigate karna. Testing types: Manual testing, Automated testing, White-box testing, Black-box testing, Grey-box testing.",
-              "chips": [
-                "Testing",
-                "Quality",
-                "Defects",
-                "Risks"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Testing Objectives",
-              "points": [
-                "Defects Detection — Bugs identify karna. Software mein defects find karna.",
-                "Requirements Verification — Requirements check karna. All requirements met hain ya nahi.",
-                "Quality Assurance — Quality ensure karna. Software quality standards meet karta hai.",
-                "Risk Mitigation — Risks reduce karna. Software risks identify aur mitigate karna.",
-                "Reliability Improvement — Reliability improve karna. Software reliability increase karna.",
-                "Performance Verification — Performance check karna. Software performance verify karna.",
-                "User Satisfaction — User satisfaction ensure karna. Software user-friendly hai.",
-                "Safety Assurance — Safety ensure karna. Software safe hai."
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Testing Objectives Details",
-              "points": [
-                "Defects Detection: Bugs identify karna.",
-                "Defects software mein find karna.",
-                "Defects categories: Functional, performance, security.",
-                "Requirements Verification: Requirements check karna.",
-                "Functional requirements verify karna.",
-                "Non-functional requirements verify karna.",
-                "Quality Assurance: Quality ensure karna.",
-                "Quality standards follow karna.",
-                "Quality metrics track karna.",
-                "Risk Mitigation: Risks identify karna.",
-                "Risks assess karna.",
-                "Risks mitigate karna.",
-                "Risks monitor karna.",
-                "Reliability Improvement: Software reliability increase karna.",
-                "Defects reduce karna.",
-                "Stability improve karna.",
-                "Performance Verification: Software performance verify karna.",
-                "Response time check karna.",
-                "Throughput check karna.",
-                "User Satisfaction: Software user-friendly hai.",
-                "User expectations meet karta hai.",
-                "Customer satisfaction ensure karna."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Testing Life Cycle",
-              "body": "Testing Life Cycle structured approach hai testing ke liye. Steps: 1. Test Planning — Strategy, scope, resources, schedule plan karna. 2. Test Analysis — Requirements analyze karna, Test conditions identify karna. 3. Test Design — Test cases design karna, Test data prepare karna. 4. Test Environment Setup — Environment configure karna, Tools setup karna. 5. Test Execution — Test cases execute karna, Results record karna. 6. Test Evaluation — Results analyze karna, Coverage assess karna. 7. Test Closure — Activities close karna, Lessons learn karna.",
-              "chips": [
-                "Planning",
-                "Analysis",
-                "Design",
-                "Execution",
-                "Closure"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Testing Life Cycle Steps",
-              "points": [
-                "Test Planning: Strategy define karna. Scope define karna. Resources plan karna. Schedule plan karna. Risks assess karna.",
-                "Test Analysis: Requirements analyze karna. Test conditions identify karna. Test requirements define karna. Traceability matrix create karna.",
-                "Test Design: Test cases design karna. Test data prepare karna. Test scenarios create karna. Test procedures document karna.",
-                "Test Environment Setup: Environment configure karna. Hardware setup karna. Software install karna. Tools setup karna. Data prepare karna.",
-                "Test Execution: Test cases execute karna. Results record karna. Defects log karna. Progress track karna.",
-                "Test Evaluation: Results analyze karna. Coverage assess karna. Quality evaluate karna. Reports prepare karna.",
-                "Test Closure: Activities close karna. Deliverables handover karna. Lessons learn karna. Resources release karna."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Testing Principles",
-              "body": "Testing principles effective testing ke guidelines provide karte hain. Principles: 1. Testing shows presence of defects, not absence — Testing defects detect karta hai, perfect software nahi prove karta hai. 2. Exhaustive testing is impossible — Har possible input test nahi kiya ja sakta, risk-based testing use karna. 3. Early testing saves time and cost — Testing start early karna, defects early catch karna. 4. Defect clustering — Few modules mein most defects hote hain, Pareto principle apply hota hai. 5. Testing is context-dependent — Testing approach context pe depend karta hai. 6. Absence-of-errors fallacy — Bug-free software useful nahi hai agar woh user needs meet nahi karta hai. 7. Test cases must be traceable — Test cases requirements se traceable hone chahiye.",
-              "chips": [
-                "Presence",
-                "Exhaustive",
-                "Early",
-                "Clustering",
-                "Context"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Testing Principles Details",
-              "points": [
-                "Testing shows presence of defects: Testing defects detect karta hai.",
-                "Perfect software nahi prove karta hai.",
-                "Defects find karna goal hai.",
-                "Exhaustive testing is impossible: Har possible input test nahi kiya ja sakta.",
-                "Risk-based testing use karna.",
-                "Priority-based testing use karna.",
-                "Early testing saves time and cost: Testing early start karna.",
-                "Defects early catch karna.",
-                "Defects fix karne ke cost reduce karta hai.",
-                "Defect clustering: Few modules mein most defects hote hain.",
-                "Pareto principle apply hota hai.",
-                "80% defects 20% modules mein hote hain.",
-                "Testing focus high-defect modules pe karna.",
-                "Testing is context-dependent: Testing approach context pe depend karta hai.",
-                "Different contexts different testing approaches.",
-                "Application type pe depend karta hai.",
-                "Absence-of-errors fallacy: Bug-free software useful nahi hai.",
-                "User needs meet nahi karta hai.",
-                "User expectations meet nahi karta hai.",
-                "Test cases must be traceable: Test cases requirements se traceable hone chahiye.",
-                "Requirements traceability matrix use karna.",
-                "All requirements covered hain ya nahi verify karna."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Tester Role",
-              "body": "Tester software development organization mein quality assurance ka critical role play karta hai. Roles: 1. Quality Advocate — Quality focus rakhna. 2. Test Lead — Testing team lead karna. 3. Tester — Test cases design aur execute karna. 4. Reviewer — Code, design, documentation review karna. 5. Quality Engineer — Quality processes implement karna. 6. Team Collaborator — Development team saath collaborate karna. 7. Risk Analyst — Quality risks identify karna. Tester skills: Analytical thinking, attention to detail, communication, technical knowledge, testing tools knowledge.",
-              "chips": [
-                "Advocate",
-                "Lead",
-                "Tester",
-                "Reviewer",
-                "Engineer"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Tester Role Details",
-              "points": [
-                "Quality Advocate: Quality focus rakhna.",
-                "Quality standards promote karna.",
-                "Quality culture build karna.",
-                "Test Lead: Testing team lead karna.",
-                "Test strategy plan karna.",
-                "Test schedule manage karna.",
-                "Test resources manage karna.",
-                "Tester: Test cases design karna.",
-                "Test cases execute karna.",
-                "Defects report karna.",
-                "Test results document karna.",
-                "Reviewer: Code review karna.",
-                "Design review karna.",
-                "Documentation review karna.",
-                "Quality Engineer: Quality processes implement karna.",
-                "Quality standards define karna.",
-                "Quality metrics track karna.",
-                "Team Collaborator: Development team saath collaborate karna.",
-                "Communication karna.",
-                "Coordination karna.",
-                "Teamwork show karna.",
-                "Risk Analyst: Quality risks identify karna.",
-                "Risks assess karna.",
-                "Risk mitigation plan karna.",
-                "Tester Skills: Analytical thinking.",
-                "Attention to detail.",
-                "Communication skills.",
-                "Technical knowledge.",
-                "Testing tools knowledge."
-              ]
-            },
-            {
-              "type": "diagram",
-              "title": "Software Testing Basics Overview",
-              "diagram": "software-testing-basics-overview",
-              "caption": "Software Testing Basics — Definitions, Objectives, Life Cycle, Principles, Tester Role"
-            },
-            {
-              "type": "recap",
-              "title": "Recap",
-              "content": "Software Testing: Process jisme software evaluate karke defects identify karte hain. Objectives: Defects detect, requirements verify, quality ensure, risks reduce. Life Cycle: Test Planning → Test Analysis → Test Design → Environment Setup → Test Execution → Test Evaluation → Test Closure. Principles: Testing shows defects, Exhaustive testing impossible, Early testing, Defect clustering, Context-dependent, Absence-of-errors fallacy, Traceability. Tester Role: Quality Advocate, Test Lead, Tester, Reviewer, Quality Engineer, Team Collaborator, Risk Analyst."
-            }
-          ],
+                {
+                  "type": "definition",
+                  "title": "Software Testing Definition",
+                  "kicker": "Definition",
+                  "body": "Software testing process hai jisme software systems evaluate aur verify karte hain ki woh intended requirements meet karta hai aur expected tarike se kaam karta hai. Testing kya hai: 1. Defects identify karna — Bugs, errors, aur issues find karna. 2. Requirements verify karna — All requirements met hain ya nahi. 3. Quality ensure karna — Software quality standards meet karta hai. 4. Risks reduce karna — Software risks identify aur mitigate karna.",
+                  "body2": "Simple words mein: Testing ka matlab hai software ko thoroughly check karna taaki usme koi problem na rahe. Ek tester software ko aise use karta hai jaise ek user use karega, aur dekhta hai ki kya woh expected tarike se kaam karta hai. Agar koi problem hai, toh woh defect banata hai.",
+                  "chips": ["Testing", "Quality", "Defects", "Risks"],
+                },
+                {
+                  "type": "definition",
+                  "title": "Testing Types",
+                  "kicker": "Testing Types",
+                  "body": "Software testing different approaches mein kari ja sakti hai: 1. Manual Testing — Tester khud software use karta hai, keyboard aur mouse se. 2. Automated Testing — Tools ka use karke test cases automatic execute karte hain. 3. White-box Testing — Tester code ke internal structure jaanta hai, internal logic test karta hai. 4. Black-box Testing — Tester sirf input aur output dekhta hai, internal structure nahi jaanta. 5. Grey-box Testing — White-box aur black-box ka mix. Partial internal knowledge hota hai.",
+                  "chips": ["Manual", "Automated", "White-box", "Black-box", "Grey-box"],
+                },
+                {
+                  "type": "points",
+                  "title": "Testing Objectives",
+                  "kicker": "Key Objectives",
+                  "points": ["Defects Detection — Bugs identify karna. Software mein defects find karna.", "Requirements Verification — Requirements check karna. All requirements met hain ya nahi.", "Quality Assurance — Quality ensure karna. Software quality standards meet karta hai.", "Risk Mitigation — Risks reduce karna. Software risks identify aur mitigate karna.", "Reliability Improvement — Reliability improve karna. Software reliability increase karna.", "Performance Verification — Performance check karna. Software performance verify karna.", "User Satisfaction — User satisfaction ensure karna. Software user-friendly hai.", "Safety Assurance — Safety ensure karna. Software safe hai."],
+                },
+                {
+                  "type": "points",
+                  "title": "Testing Objectives Details",
+                  "kicker": "Detailed Objectives",
+                  "points": ["Defects Detection: Bugs identify karna. Defects software mein find karna. Defects categories: Functional, performance, security.", "Requirements Verification: Requirements check karna. Functional requirements verify karna. Non-functional requirements verify karna.", "Quality Assurance: Quality ensure karna. Quality standards follow karna. Quality metrics track karna.", "Risk Mitigation: Risks identify karna. Risks assess karna. Risks mitigate karna. Risks monitor karna.", "Reliability Improvement: Software reliability increase karna. Defects reduce karna. Stability improve karna.", "Performance Verification: Software performance verify karna. Response time check karna. Throughput check karna.", "User Satisfaction: Software user-friendly hai. User expectations meet karta hai. Customer satisfaction ensure karna.", "Safety Assurance: Safety ensure karna. Critical systems safe hain. Safety standards meet karte hain."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Testing Life Cycle",
+                  "kicker": "Test Life Cycle",
+                  "body": "Testing Life Cycle (STLC) structured approach hai testing ke liye. Ye 7 phases pe based hai: 1. Test Planning — Strategy, scope, resources, schedule plan karna. 2. Test Analysis — Requirements analyze karna, Test conditions identify karna. 3. Test Design — Test cases design karna, Test data prepare karna. 4. Test Environment Setup — Environment configure karna, Tools setup karna. 5. Test Execution — Test cases execute karna, Results record karna. 6. Test Evaluation — Results analyze karna, Coverage assess karna. 7. Test Closure — Activities close karna, Lessons learn karna.",
+                  "body2": "STLC ko aise samjho — ek building banane se pehle plan karna, drawing banana, material lena, construction karna, check karna, aur final handover dena. Testing mein bhi wahi process hai — plan karna, design karna, execute karna, aur close karna.",
+                  "chips": ["Planning", "Analysis", "Design", "Execution", "Closure"],
+                },
+                {
+                  "type": "points",
+                  "title": "Testing Life Cycle Steps",
+                  "kicker": "STLC Phases",
+                  "points": ["Test Planning: Strategy define karna. Scope define karna. Resources plan karna. Schedule plan karna. Risks assess karna.", "Test Analysis: Requirements analyze karna. Test conditions identify karna. Test requirements define karna. Traceability matrix create karna.", "Test Design: Test cases design karna. Test data prepare karna. Test scenarios create karna. Test procedures document karna.", "Test Environment Setup: Environment configure karna. Hardware setup karna. Software install karna. Tools setup karna. Data prepare karna.", "Test Execution: Test cases execute karna. Results record karna. Defects log karna. Progress track karna.", "Test Evaluation: Results analyze karna. Coverage assess karna. Quality evaluate karna. Reports prepare karna.", "Test Closure: Activities close karna. Deliverables handover karna. Lessons learn karna. Resources release karna."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Testing Principles",
+                  "kicker": "Testing Principles",
+                  "body": "Testing principles effective testing ke guidelines provide karte hain. 7 key principles hain: 1. Testing shows presence of defects, not absence — Testing defects detect karta hai, perfect software nahi prove karta hai. 2. Exhaustive testing is impossible — Har possible input test nahi kiya ja sakta, risk-based testing use karna. 3. Early testing saves time and cost — Testing start early karna, defects early catch karna. 4. Defect clustering — Few modules mein most defects hote hain, Pareto principle apply hota hai. 5. Testing is context-dependent — Testing approach context pe depend karta hai. 6. Absence-of-errors fallacy — Bug-free software useful nahi hai agar woh user needs meet nahi karta hai. 7. Test cases must be traceable — Test cases requirements se traceable hone chahiye.",
+                  "body2": "Ye principles testers ko guide karte hain ki testing ka best approach kya hai. Ye basic rules hain jo har tester ko follow karna chahiye.",
+                  "chips": ["Presence", "Exhaustive", "Early", "Clustering", "Context"],
+                },
+                {
+                  "type": "points",
+                  "title": "Testing Principles Details",
+                  "kicker": "Principle Details",
+                  "points": ["Testing shows presence of defects: Testing defects detect karta hai. Perfect software nahi prove karta hai. Defects find karna goal hai.", "Exhaustive testing is impossible: Har possible input test nahi kiya ja sakta. Risk-based testing use karna. Priority-based testing use karna.", "Early testing saves time and cost: Testing early start karna. Defects early catch karna. Defects fix karne ke cost reduce karta hai.", "Defect clustering: Few modules mein most defects hote hain. Pareto principle apply hota hai. 80% defects 20% modules mein hote hain.", "Testing is context-dependent: Testing approach context pe depend karta hai. Different contexts different testing approaches. Application type pe depend karta hai.", "Absence-of-errors fallacy: Bug-free software useful nahi hai. User needs meet nahi karta hai. User expectations meet nahi karta hai.", "Test cases must be traceable: Test cases requirements se traceable hone chahiye. Requirements traceability matrix use karna. All requirements covered hain ya nahi verify karna."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Tester Role",
+                  "kicker": "Tester Role",
+                  "body": "Tester software development organization mein quality assurance ka critical role play karta hai. Roles: 1. Quality Advocate — Quality focus rakhna. 2. Test Lead — Testing team lead karna. 3. Tester — Test cases design aur execute karna. 4. Reviewer — Code, design, documentation review karna. 5. Quality Engineer — Quality processes implement karna. 6. Team Collaborator — Development team saath collaborate karna. 7. Risk Analyst — Quality risks identify karna. Tester skills: Analytical thinking, attention to detail, communication, technical knowledge, testing tools knowledge.",
+                  "body2": "Tester ka kaam sirf bugs find karna nahi hai — woh quality ka advocate bhi hai. Woh development team ke saath collaborate karta hai, quality processes implement karta hai, aur risks analyze karta hai.",
+                  "chips": ["Advocate", "Lead", "Tester", "Reviewer", "Engineer"],
+                },
+                {
+                  "type": "points",
+                  "title": "Tester Role Details",
+                  "kicker": "Role Details",
+                  "points": ["Quality Advocate: Quality focus rakhna. Quality standards promote karna. Quality culture build karna.", "Test Lead: Testing team lead karna. Test strategy plan karna. Test schedule manage karna. Test resources manage karna.", "Tester: Test cases design karna. Test cases execute karna. Defects report karna. Test results document karna.", "Reviewer: Code review karna. Design review karna. Documentation review karna.", "Quality Engineer: Quality processes implement karna. Quality standards define karna. Quality metrics track karna.", "Team Collaborator: Development team saath collaborate karna. Communication karna. Coordination karna. Teamwork show karna.", "Risk Analyst: Quality risks identify karna. Risks assess karna. Risk mitigation plan karna.", "Tester Skills: Analytical thinking. Attention to detail. Communication skills. Technical knowledge. Testing tools knowledge."],
+                },
+                {
+                  "type": "diagram",
+                  "title": "Software Testing Basics Overview",
+                  "kicker": "Diagram",
+                  "diagram": "software-testing-basics-overview",
+                  "caption": "Software Testing Basics — Definitions, Objectives, Life Cycle, Principles, Tester Role",
+                },
+                {
+                  "type": "recap",
+                  "title": "Recap",
+                  "kicker": "5 Seconds Mein Yaad Karo",
+                  "points": ["Software Testing: Software ke quality aur correctness check karne ka process.", "Types: Manual, Automated, White-box, Black-box, Grey-box.", "Objectives: Defects detect, requirements verify, quality ensure, risks reduce.", "STLC: Test Planning → Test Analysis → Test Design → Environment Setup → Test Execution → Test Evaluation → Test Closure.", "7 Principles: Presence of defects, Exhaustive impossible, Early testing, Defect clustering, Context-dependent, Absence-of-errors fallacy, Traceability.", "Tester Roles: Quality Advocate, Test Lead, Tester, Reviewer, Quality Engineer, Team Collaborator, Risk Analyst."],
+                }
+  ],
           "examQuestions": [
-            {
-              "question": "Define software testing and its objectives.",
-              "answer": "Software Testing: Process jisme software systems evaluate aur verify karte hain ki woh intended requirements meet karta hai. Objectives: Defects detection (bugs identify), Requirements verification (all requirements meet), Quality assurance (quality ensure), Risk mitigation (risks reduce), Reliability improvement, Performance verification, User satisfaction."
-            },
-            {
-              "question": "Explain the testing life cycle with all phases.",
-              "answer": "Testing Life Cycle: 7 phases. 1. Test Planning (strategy, scope, resources, schedule), 2. Test Analysis (requirements analyze, test conditions identify), 3. Test Design (test cases design, test data prepare), 4. Test Environment Setup (environment configure, tools setup), 5. Test Execution (test cases execute, results record), 6. Test Evaluation (results analyze, coverage assess), 7. Test Closure (activities close, lessons learn)."
-            },
-            {
-              "question": "List and explain the key testing principles.",
-              "answer": "Testing Principles: 1. Testing shows presence of defects, not absence. 2. Exhaustive testing is impossible. 3. Early testing saves time and cost. 4. Defect clustering (Pareto principle). 5. Testing is context-dependent. 6. Absence-of-errors fallacy. 7. Test cases must be traceable."
-            },
-            {
-              "question": "Describe the tester role in a software development organization.",
-              "answer": "Tester Roles: Quality Advocate (quality focus), Test Lead (team lead, strategy plan), Tester (test cases design/execute, defects report), Reviewer (code/design/documentation review), Quality Engineer (quality processes implement), Team Collaborator (teamwork), Risk Analyst (quality risks identify). Skills: Analytical thinking, attention to detail, communication, technical knowledge."
-            }
-          ]
+                {
+                  "question": "Define software testing and its objectives.",
+                  "answer": "**Software Testing:** Software testing software system ke quality aur correctness check karne ka process hai. Yeh defects identify karta hai, requirements verify karta hai, quality ensure karta hai, aur risks reduce karta hai.\n\n**Objectives:**\n1. **Defects Detection** — Bugs identify karna. Software mein defects find karna.\n2. **Requirements Verification** — All requirements met hain ya nahi check karna.\n3. **Quality Assurance** — Quality ensure karna, quality standards follow karna.\n4. **Risk Mitigation** — Software risks identify aur mitigate karna.\n5. **Reliability Improvement** — Software reliability increase karna.\n6. **Performance Verification** — Software performance verify karna, response time check karna.\n7. **User Satisfaction** — Software user-friendly hai, user expectations meet karta hai.\n8. **Safety Assurance** — Safety ensure karna, critical systems safe hain.\n\n**Testing Types:** Manual, Automated, White-box, Black-box, Grey-box.\n\n**Diagram:** Refer to Software Testing Basics Overview diagram."
+                },
+                {
+                  "question": "Explain the testing life cycle with all phases.",
+                  "answer": "**Testing Life Cycle (STLC) — 7 Phases:**\n\n1. **Test Planning** — Test strategy define karna. Scope define karna. Resources plan karna. Schedule plan karna. Risks assess karna. Yeh phase mein overall test plan banaya jata hai.\n\n2. **Test Analysis** — Requirements analyze karna. Test conditions identify karna. Test requirements define karna. Traceability matrix create karna. Yeh phase mein requirements ko breakdown kiya jata hai.\n\n3. **Test Design** — Test cases design karna. Test data prepare karna. Test scenarios create karna. Test procedures document karna. Yeh phase mein test cases banaye jaate hain.\n\n4. **Test Environment Setup** — Environment configure karna. Hardware setup karna. Software install karna. Tools setup karna. Data prepare karna. Yeh phase mein testing ke liye environment taiyar kiya jata hai.\n\n5. **Test Execution** — Test cases execute karna. Results record karna. Defects log karna. Progress track karna. Yeh phase mein actual testing kiya jata hai.\n\n6. **Test Evaluation** — Results analyze karna. Coverage assess karna. Quality evaluate karna. Reports prepare karna. Yeh phase mein results ka analysis kiya jata hai.\n\n7. **Test Closure** — Activities close karna. Deliverables handover karna. Lessons learn karna. Resources release karna. Yeh phase mein testing activities close kiye jaate hain.\n\n**Diagram:** Refer to Software Testing Basics Overview diagram."
+                },
+                {
+                  "question": "List and explain the key testing principles.",
+                  "answer": "**7 Key Testing Principles:**\n\n1. **Testing shows presence of defects, not absence** — Testing defects detect karta hai, perfect software nahi prove karta hai. Har testing se defects find hote hain, par yeh prove nahi karta ki software mein koi defect nahi hai.\n\n2. **Exhaustive testing is impossible** — Har possible input test nahi kiya ja sakta. Risk-based testing use karna. Priority-based testing use karna. Sabhi inputs ko test karna practically impossible hai.\n\n3. **Early testing saves time and cost** — Testing early start karna. Defects early catch karna. Defects jaldi fix karne se cost bahut kam ho jati hai. Early testing defect fix ka cost significantly reduce karta hai.\n\n4. **Defect clustering** — Few modules mein most defects hote hain. Pareto principle apply hota hai — 80% defects 20% modules mein hote hain. Testing focus high-defect modules pe karna chahiye.\n\n5. **Testing is context-dependent** — Testing approach context pe depend karta hai. Different contexts different testing approaches require karte hain. Application type pe depend karta hai.\n\n6. **Absence-of-errors fallacy** — Bug-free software useful nahi hai agar woh user needs meet nahi karta hai. Bug-free hone ke baad bhi software useful nahi hai agar woh user expectations meet nahi karta hai.\n\n7. **Test cases must be traceable** — Test cases requirements se traceable hone chahiye. Requirements traceability matrix use karna. All requirements covered hain ya nahi verify karna.\n\n**Diagram:** Refer to Software Testing Basics Overview diagram."
+                },
+                {
+                  "question": "Describe the tester role in a software development organization.",
+                  "answer": "**Tester Roles in Software Development Organization:**\n\n1. **Quality Advocate** — Quality focus rakhna. Quality standards promote karna. Quality culture build karna. Tester sirf bugs find nahi karta — woh quality ka champion bhi hai.\n\n2. **Test Lead** — Testing team lead karna. Test strategy plan karna. Test schedule manage karna. Test resources manage karna. Senior tester ya manager yeh role play karta hai.\n\n3. **Tester** — Test cases design karna. Test cases execute karna. Defects report karna. Test results document karna. Yeh primary role hai — test cases banana, execute karna, aur defects report karna.\n\n4. **Reviewer** — Code review karna. Design review karna. Documentation review karna. Yeh role mein tester code, design, aur documentation ko review karta hai.\n\n5. **Quality Engineer** — Quality processes implement karna. Quality standards define karna. Quality metrics track karna. Yeh role quality processes aur standards ka implementation karta hai.\n\n6. **Team Collaborator** — Development team saath collaborate karna. Communication karna. Coordination karna. Teamwork show karna. Tester development team ke saath mil kar kaam karta hai.\n\n7. **Risk Analyst** — Quality risks identify karna. Risks assess karna. Risk mitigation plan karna. Yeh role mein tester quality risks identify aur mitigate karta hai.\n\n**Tester Skills:** Analytical thinking, attention to detail, communication skills, technical knowledge, testing tools knowledge.\n\n**Diagram:** Refer to Software Testing Basics Overview diagram."
+                }
+  ]
         },
-        {
+{
           "id": "test-plan-and-test-cases",
           "number": "2.2",
           "title": "Test Plan and Test Cases",
@@ -8524,229 +8430,103 @@ export const units = {
           "englishDefinition": "A Test Plan is a formal document describing the test strategy, scope, approach, resources, schedule and risks. Test cases are specific test scenarios with expected and actual results. Test case design uses techniques like equivalence partitioning, boundary value analysis, decision tables, and state transition testing. Test reports document progress, defects, and coverage.",
           "intro": "Test Plan testing process ka formal document hai jo strategy, scope, approach, resources, schedule, aur risks describe karta hai. Test cases specific test scenarios hain with expected aur actual results. Test case design techniques equivalence partitioning, boundary value analysis, decision tables, state transition testing use karta hai. Test reports progress, defects, aur coverage document karte hain.",
           "sections": [
-            {
-              "type": "definition",
-              "title": "Test Plan",
-              "body": "Test Plan formal document hai jo test strategy, scope, approach, resources, schedule, risks describe karta hai. Objectives: Testing approach document karna, Testing scope define karna, Testing resources plan karna, Testing schedule plan karna, Testing risks identify karna. Test Plan types: Master Test Plan, Specific Test Plan. Test Plan contents: Scope, Approach, Resources, Schedule, Risks, Test Items, Test Environment, Entry/Exit Criteria.",
-              "chips": [
-                "Strategy",
-                "Scope",
-                "Approach",
-                "Schedule",
-                "Risks"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Test Plan Elements",
-              "points": [
-                "Scope: Testing scope define karna. In-scope items. Out-scope items. Test items identify karna.",
-                "Approach: Testing approach define karna. Testing strategy select karna. Testing techniques select karna. Testing levels plan karna.",
-                "Resources: Testing resources plan karna. Human resources. Testing tools. Testing environment. Budget.",
-                "Schedule: Testing schedule plan karna. Test activities schedule. Milestones define karna. Deadlines set karna.",
-                "Risks: Testing risks identify karna. Risk assessment karna. Risk mitigation plan karna. Contingency plan.",
-                "Test Items: Test items identify karna. Test items list karna. Test item features.",
-                "Test Environment: Test environment requirements. Hardware requirements. Software requirements. Network requirements.",
-                "Entry/Exit Criteria: Entry criteria define karna. Exit criteria define karna. Suspension criteria define karna."
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Test Plan Elements Details",
-              "points": [
-                "Scope: In-scope items define karna.",
-                "Out-scope items define karna.",
-                "Test items identify karna.",
-                "Features identify karna.",
-                "Approach: Testing strategy select karna.",
-                "Testing techniques select karna.",
-                "Testing levels plan karna.",
-                "Unit, integration, system, UAT.",
-                "Resources: Human resources plan karna.",
-                "Test lead, testers, developers.",
-                "Testing tools select karna.",
-                "Selenium, JIRA, TestRail.",
-                "Testing environment setup karna.",
-                "Budget plan karna.",
-                "Schedule: Test activities schedule karna.",
-                "Milestones define karna.",
-                "Deadlines set karna.",
-                "Timeline create karna.",
-                "Risks: Testing risks identify karna.",
-                "Risk assessment karna.",
-                "Risk mitigation plan karna.",
-                "Contingency plan karna.",
-                "Test Items: Test items identify karna.",
-                "Test items list karna.",
-                "Test item features document karna.",
-                "Test Environment: Hardware requirements.",
-                "Software requirements.",
-                "Network requirements.",
-                "Entry/Exit Criteria: Entry criteria define karna.",
-                "Exit criteria define karna.",
-                "Suspension criteria define karna."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Test Case Design",
-              "body": "Test Case Design test cases create karne ka process hai. Test Case Definition: A test case ek specific scenario hai with input, expected result, actual result, status. Test Case Components: Test Case ID, Test Title, Description, Prerequisites, Test Steps, Test Data, Expected Result, Actual Result, Status (Pass/Fail), Tester Name, Date. Test Case Design Process: 1. Requirements analyze karna. 2. Test conditions identify karna. 3. Test cases design karna. 4. Test data prepare karna. 5. Test cases review karna.",
-              "chips": [
-                "Test Case",
-                "Steps",
-                "Expected",
-                "Actual",
-                "Status"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Test Case Design Details",
-              "points": [
-                "Test Case ID: Unique test case ID.",
-                "Naming convention follow karna.",
-                "Test Case Title: Test case title.",
-                "Brief description.",
-                "Description: Test case description.",
-                "Detailed explanation.",
-                "Prerequisites: Test prerequisites.",
-                "Requirements for testing.",
-                "Test Steps: Test steps sequence.",
-                "Step 1, Step 2, Step 3...",
-                "Test Data: Test input data.",
-                "Test values prepare karna.",
-                "Expected Result: Expected output.",
-                "What should happen.",
-                "Actual Result: Actual output.",
-                "What actually happened.",
-                "Status: Pass/Fail status.",
-                "Pass = Expected match.",
-                "Fail = Expected mismatch.",
-                "Tester Name: Tester name.",
-                "Who executed.",
-                "Date: Execution date.",
-                "When executed.",
-                "Test Case Design Process: Requirements analyze karna.",
-                "Test conditions identify karna.",
-                "Test cases design karna.",
-                "Test data prepare karna.",
-                "Test cases review karna."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Test Case Design Techniques",
-              "body": "Test Case Design Techniques test cases effective tarike se design karne ke liye use hote hain. Techniques: 1. Equivalence Partitioning — Input values partitions mein divide karna, ek value per partition test karna. 2. Boundary Value Analysis — Boundary values test karna (min, min-1, max, max+1). 3. Decision Table Testing — Decision tables use karna complex business logic ke liye. 4. State Transition Testing — State transitions test karna. 5. Use Case Testing — Use cases use karna. 6. Cause-Effect Graphing — Cause-effect relationships map karna. 7. Error Guessing — Experience based testing, errors guess karna.",
-              "chips": [
-                "Equivalence",
-                "Boundary",
-                "Decision",
-                "State",
-                "Use Case"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Test Case Design Techniques Details",
-              "points": [
-                "Equivalence Partitioning: Input values partitions mein divide karna.",
-                "Valid partitions, invalid partitions.",
-                "Ek value per partition test karna.",
-                "Example: 1-100 age range, partitions: 1-100 (valid), less than 1 (invalid), greater than 100 (invalid).",
-                "Boundary Value Analysis: Boundary values test karna.",
-                "Min, min-1, max, max+1.",
-                "Example: 1-100, test 0, 1, 2, 99, 100, 101.",
-                "Decision Table Testing: Decision tables use karna.",
-                "Complex business logic ke liye.",
-                "Conditions aur actions map karna.",
-                "State Transition Testing: State transitions test karna.",
-                "State diagrams use karna.",
-                "Valid aur invalid transitions test karna.",
-                "Use Case Testing: Use cases use karna.",
-                "User interactions test karna.",
-                "Actor aur system interactions.",
-                "Cause-Effect Graphing: Cause-effect relationships map karna.",
-                "Causes, effects, conditions.",
-                "Decision tables create karna.",
-                "Error Guessing: Experience based testing.",
-                "Errors guess karna.",
-                "Previous defects knowledge use karna."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Test Reporting",
-              "body": "Test Reporting test progress aur results communicate karne ka process hai. Reports: Progress Report (daily/weekly status), Defect Report (defects list aur details), Coverage Report (test coverage), Summary Report (overall summary), Quality Report (quality assessment), Metrics Report (quantitative metrics). Test Report Contents: Test progress, Defects found, Defects fixed, Test coverage, Test results, Quality assessment, Risks aur issues.",
-              "chips": [
-                "Progress",
-                "Defects",
-                "Coverage",
-                "Quality",
-                "Metrics"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Test Reporting Details",
-              "points": [
-                "Progress Report: Daily status report.",
-                "Weekly status report.",
-                "Test progress update.",
-                "Completed, pending items.",
-                "Defect Report: Defects list.",
-                "Defect details.",
-                "Severity, priority, status.",
-                "Defect trends.",
-                "Coverage Report: Test coverage.",
-                "Code coverage.",
-                "Requirements coverage.",
-                "Design coverage.",
-                "Summary Report: Overall summary.",
-                "Test summary.",
-                "Quality summary.",
-                "Risks aur issues.",
-                "Quality Report: Quality assessment.",
-                "Quality evaluation.",
-                "Quality metrics.",
-                "Quality trends.",
-                "Metrics Report: Quantitative metrics.",
-                "Defect density.",
-                "Test pass rate.",
-                "Test execution rate."
-              ]
-            },
-            {
-              "type": "diagram",
-              "title": "Test Plan and Test Cases Overview",
-              "diagram": "test-plan-test-cases-overview",
-              "caption": "Test Plan and Test Cases — Planning, Design, Techniques, Reporting"
-            },
-            {
-              "type": "recap",
-              "title": "Recap",
-              "content": "Test Plan: Formal document with strategy, scope, approach, resources, schedule, risks, test items, environment, entry/exit criteria. Test Case Design: Test case components (ID, title, description, prerequisites, steps, data, expected, actual, status). Techniques: Equivalence partitioning, Boundary value analysis, Decision tables, State transition, Use case, Cause-effect graphing, Error guessing. Test Reporting: Progress, defects, coverage, summary, quality, metrics reports."
-            }
-          ],
+                {
+                  "type": "definition",
+                  "title": "Test Plan",
+                  "kicker": "Definition",
+                  "body": "Test Plan formal document hai jo test strategy, scope, approach, resources, schedule, risks describe karta hai. Objectives: Testing approach document karna, Testing scope define karna, Testing resources plan karna, Testing schedule plan karna, Testing risks identify karna. Test Plan types: Master Test Plan (complete project ka plan), Specific Test Plan (ek specific area ka plan). Test Plan contents: Scope, Approach, Resources, Schedule, Risks, Test Items, Test Environment, Entry/Exit Criteria.",
+                  "body2": "Aise samjho — test plan ek building ka blueprint hai. Blueprint mein building ka design, materials, timeline, aur budget hota hai. Test plan mein test ka strategy, scope, resources, schedule, aur risks hota hai.",
+                  "chips": ["Strategy", "Scope", "Approach", "Schedule", "Risks"],
+                },
+                {
+                  "type": "definition",
+                  "title": "Test Plan Elements",
+                  "kicker": "Key Elements",
+                  "body": "Test Plan ke 8 important elements hain: 1. Scope — Testing ka scope define karna. In-scope items aur out-scope items. 2. Approach — Testing approach define karna. Testing strategy select karna. 3. Resources — Testing resources plan karna. Human resources, testing tools, environment, budget. 4. Schedule — Testing schedule plan karna. Test activities schedule, milestones, deadlines. 5. Risks — Testing risks identify karna. Risk assessment aur mitigation plan. 6. Test Items — Test items identify karna. Test item features. 7. Test Environment — Hardware, software, network requirements. 8. Entry/Exit Criteria — Entry criteria, exit criteria, suspension criteria.",
+                  "chips": ["Scope", "Approach", "Resources", "Schedule", "Risks", "Test Items", "Environment", "Criteria"],
+                },
+                {
+                  "type": "points",
+                  "title": "Test Plan Elements Details",
+                  "kicker": "Element Details",
+                  "points": ["Scope: In-scope items define karna. Out-scope items define karna. Test items identify karna. Features identify karna.", "Approach: Testing strategy select karna. Testing techniques select karna. Testing levels plan karna — Unit, integration, system, UAT.", "Resources: Human resources plan karna — test lead, testers, developers. Testing tools select karna — Selenium, JIRA, TestRail. Testing environment setup karna. Budget plan karna.", "Schedule: Test activities schedule karna. Milestones define karna. Deadlines set karna. Timeline create karna.", "Risks: Testing risks identify karna. Risk assessment karna. Risk mitigation plan karna. Contingency plan karna.", "Test Items: Test items identify karna. Test items list karna. Test item features document karna.", "Test Environment: Hardware requirements. Software requirements. Network requirements.", "Entry/Exit Criteria: Entry criteria define karna — testing start ka condition. Exit criteria define karna — testing complete ka condition. Suspension criteria define karna — testing pause ka condition."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Test Case Design",
+                  "kicker": "Test Case Design",
+                  "body": "Test Case Design test cases create karne ka process hai. Test Case Definition: A test case ek specific scenario hai with input, expected result, actual result, status. Test Case Components: Test Case ID, Test Title, Description, Prerequisites, Test Steps, Test Data, Expected Result, Actual Result, Status (Pass/Fail), Tester Name, Date. Test Case Design Process: 1. Requirements analyze karna. 2. Test conditions identify karna. 3. Test cases design karna. 4. Test data prepare karna. 5. Test cases review karna.",
+                  "body2": "Test case aise samjho — ek recipe hai. Recipe mein ingredients (test data), steps (test steps), expected result (expected outcome) hota hai. Test case mein input, expected output, aur steps hote hain.",
+                  "chips": ["Test Case", "Steps", "Expected", "Actual", "Status"],
+                },
+                {
+                  "type": "points",
+                  "title": "Test Case Design Details",
+                  "kicker": "Component Details",
+                  "points": ["Test Case ID: Unique test case ID. Naming convention follow karna. Example: TC_LOGIN_001.", "Test Case Title: Test case title. Brief description of what is being tested.", "Description: Test case description. Detailed explanation of the test scenario.", "Prerequisites: Test prerequisites. Requirements for testing — e.g., user account created, database ready.", "Test Steps: Test steps sequence. Step 1, Step 2, Step 3... Each step clear aur specific hona chahiye.", "Test Data: Test input data. Test values prepare karna. Input values, test data.", "Expected Result: Expected output. What should happen. Clear expected outcome.", "Actual Result: Actual output. What actually happened. Tester fill karta hai execution ke baad.", "Status: Pass/Fail status. Pass = Expected match. Fail = Expected mismatch.", "Tester Name: Tester name. Who executed. Tester ka naam.", "Date: Execution date. When executed. Date of execution.", "Test Case Design Process: Requirements analyze karna. Test conditions identify karna. Test cases design karna. Test data prepare karna. Test cases review karna."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Test Case Design Techniques",
+                  "kicker": "Design Techniques",
+                  "body": "Test Case Design Techniques test cases effective tarike se design karne ke liye use hote hain. 7 main techniques hain: 1. Equivalence Partitioning — Input values partitions mein divide karna, ek value per partition test karna. 2. Boundary Value Analysis — Boundary values test karna (min, min-1, max, max+1). 3. Decision Table Testing — Decision tables use karna complex business logic ke liye. 4. State Transition Testing — State transitions test karna. 5. Use Case Testing — Use cases use karna. 6. Cause-Effect Graphing — Cause-effect relationships map karna. 7. Error Guessing — Experience based testing, errors guess karna.",
+                  "body2": "Ye techniques test cases design karne ke liye systematic approach provide karte hain. Har technique ka apna approach hai input values ko select karne ka.",
+                  "chips": ["Equivalence", "Boundary", "Decision", "State", "Use Case"],
+                },
+                {
+                  "type": "points",
+                  "title": "Test Case Design Techniques Details",
+                  "kicker": "Technique Details",
+                  "points": ["Equivalence Partitioning: Input values partitions mein divide karna. Valid partitions, invalid partitions. Ek value per partition test karna. Example: 1-100 age range, partitions: 1-100 (valid), less than 1 (invalid), greater than 100 (invalid). Test 50 (valid), 0 (invalid), 150 (invalid).", "Boundary Value Analysis: Boundary values test karna. Min, min-1, max, max+1. Example: 1-100 range, test 0, 1, 2, 99, 100, 101. Boundary cases most error-prone hote hain.", "Decision Table Testing: Decision tables use karna. Complex business logic ke liye. Conditions aur actions map karna. Example: If credit > 500 AND income > 50000, approve loan.", "State Transition Testing: State transitions test karna. State diagrams use karna. Valid aur invalid transitions test karna. Example: ATM card — active, inactive, blocked states.", "Use Case Testing: Use cases use karna. User interactions test karna. Actor aur system interactions. Example: User login, search, cart, checkout.", "Cause-Effect Graphing: Cause-effect relationships map karna. Causes, effects, conditions. Decision tables create karna. Cause-effect graph se decision table banate hain.", "Error Guessing: Experience based testing. Errors guess karna. Previous defects knowledge use karna. Experienced tester errors guess karta hai."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Test Reporting",
+                  "kicker": "Test Reporting",
+                  "body": "Test Reporting test progress aur results communicate karne ka process hai. Reports types: 1. Progress Report — daily/weekly status. 2. Defect Report — defects list aur details. 3. Coverage Report — test coverage. 4. Summary Report — overall summary. 5. Quality Report — quality assessment. 6. Metrics Report — quantitative metrics. Test Report Contents: Test progress, Defects found, Defects fixed, Test coverage, Test results, Quality assessment, Risks aur issues.",
+                  "body2": "Test report aise samjho — ek project report hai. Weekly progress report, defect report, aur summary report. Yeh reports stakeholders ko testing status batate hain.",
+                  "chips": ["Progress", "Defects", "Coverage", "Quality", "Metrics"],
+                },
+                {
+                  "type": "points",
+                  "title": "Test Reporting Details",
+                  "kicker": "Report Types",
+                  "points": ["Progress Report: Daily status report. Weekly status report. Test progress update. Completed, pending items.", "Defect Report: Defects list. Defect details. Severity, priority, status. Defect trends. Defect report mein sabhi defects ka details hota hai.", "Coverage Report: Test coverage. Code coverage. Requirements coverage. Design coverage. Yeh batata hai ki testing kitni coverage hai.", "Summary Report: Overall summary. Test summary. Quality summary. Risks aur issues. Yeh overall testing ka summary hai.", "Quality Report: Quality assessment. Quality evaluation. Quality metrics. Quality trends. Yeh quality ka assessment hai.", "Metrics Report: Quantitative metrics. Defect density. Test pass rate. Test execution rate. Yeh quantitative metrics report hai."],
+                },
+                {
+                  "type": "diagram",
+                  "title": "Test Plan and Test Cases Overview",
+                  "kicker": "Diagram",
+                  "diagram": "test-plan-test-cases-overview",
+                  "caption": "Test Plan and Test Cases — Planning, Design, Techniques, Reporting",
+                },
+                {
+                  "type": "recap",
+                  "title": "Recap",
+                  "kicker": "5 Seconds Mein Yaad Karo",
+                  "points": ["Test Plan: Formal document with strategy, scope, approach, resources, schedule, risks, test items, environment, entry/exit criteria.", "Test Plan Types: Master Test Plan (complete project), Specific Test Plan (specific area).", "Test Case Components: ID, title, description, prerequisites, steps, data, expected, actual, status, tester, date.", "Test Case Design Techniques: Equivalence partitioning, Boundary value analysis, Decision tables, State transition, Use case, Cause-effect graphing, Error guessing.", "Test Reporting: Progress, defects, coverage, summary, quality, metrics reports.", "Test Report Contents: Test progress, defects found/fixed, coverage, results, quality assessment, risks."],
+                }
+  ],
           "examQuestions": [
-            {
-              "question": "What is a Test Plan? Explain its key elements.",
-              "answer": "Test Plan: Formal document with test strategy, scope, approach, resources, schedule, risks. Elements: Scope (in/out-scope items), Approach (strategy, techniques, levels), Resources (human, tools, environment, budget), Schedule (activities, milestones), Risks (identification, assessment, mitigation), Test Items, Test Environment, Entry/Exit Criteria."
-            },
-            {
-              "question": "Explain Test Case design with its components.",
-              "answer": "Test Case Design: Process jisme test cases create karte hain. Components: Test Case ID, Title, Description, Prerequisites, Test Steps, Test Data, Expected Result, Actual Result, Status (Pass/Fail), Tester Name, Date. Process: Requirements analyze, test conditions identify, test cases design, test data prepare, test cases review."
-            },
-            {
-              "question": "Describe the different test case design techniques.",
-              "answer": "Test Case Design Techniques: 1. Equivalence Partitioning (input partitions, one value per partition), 2. Boundary Value Analysis (boundary values: min, min-1, max, max+1), 3. Decision Table Testing (complex business logic), 4. State Transition Testing (state transitions), 5. Use Case Testing (user interactions), 6. Cause-Effect Graphing (cause-effect relationships), 7. Error Guessing (experience-based)."
-            },
-            {
-              "question": "Explain test reporting and its types.",
-              "answer": "Test Reporting: Test progress aur results communicate karne ka process. Types: Progress Report (daily/weekly status), Defect Report (defects list aur details), Coverage Report (code, requirements, design coverage), Summary Report (overall summary), Quality Report (quality assessment), Metrics Report (quantitative metrics: defect density, pass rate, execution rate)."
-            }
-          ]
+                {
+                  "question": "What is a Test Plan? Explain its key elements.",
+                  "answer": "**Test Plan:** Test Plan ek formal document hai jo test strategy, scope, approach, resources, schedule, aur risks describe karta hai.\n\n**Test Plan Types:**\n1. **Master Test Plan** — Complete project ka test plan.\n2. **Specific Test Plan** — Ek specific area ka test plan.\n\n**Key Elements (8 Elements):**\n\n1. **Scope** — Testing ka scope define karna. In-scope items aur out-scope items. Test items identify karna.\n\n2. **Approach** — Testing approach define karna. Testing strategy select karna. Testing techniques select karna. Testing levels plan karna (Unit, integration, system, UAT).\n\n3. **Resources** — Human resources plan karna (test lead, testers, developers). Testing tools select karna (Selenium, JIRA, TestRail). Testing environment setup karna. Budget plan karna.\n\n4. **Schedule** — Test activities schedule karna. Milestones define karna. Deadlines set karna. Timeline create karna.\n\n5. **Risks** — Testing risks identify karna. Risk assessment karna. Risk mitigation plan karna. Contingency plan karna.\n\n6. **Test Items** — Test items identify karna. Test items list karna. Test item features document karna.\n\n7. **Test Environment** — Hardware requirements. Software requirements. Network requirements.\n\n8. **Entry/Exit Criteria** — Entry criteria (testing start ka condition), exit criteria (testing complete ka condition), suspension criteria (testing pause ka condition).\n\n**Diagram:** Refer to Test Plan and Test Cases Overview diagram."
+                },
+                {
+                  "question": "Explain Test Case design with its components.",
+                  "answer": "**Test Case Design:** Test cases create karne ka process. A test case ek specific scenario hai with input, expected result, actual result, status.\n\n**Test Case Components (11 Components):**\n\n1. **Test Case ID** — Unique test case ID. Naming convention follow karna. Example: TC_LOGIN_001.\n2. **Test Title** — Brief description of what is being tested.\n3. **Description** — Detailed explanation of the test scenario.\n4. **Prerequisites** — Requirements for testing — e.g., user account created, database ready.\n5. **Test Steps** — Test steps sequence. Step 1, Step 2, Step 3...\n6. **Test Data** — Test input data. Test values prepare karna.\n7. **Expected Result** — Expected output. What should happen.\n8. **Actual Result** — Actual output. What actually happened.\n9. **Status** — Pass/Fail status. Pass = Expected match. Fail = Expected mismatch.\n10. **Tester Name** — Who executed.\n11. **Date** — Execution date.\n\n**Test Case Design Process:**\n1. Requirements analyze karna\n2. Test conditions identify karna\n3. Test cases design karna\n4. Test data prepare karna\n5. Test cases review karna\n\n**Diagram:** Refer to Test Plan and Test Cases Overview diagram."
+                },
+                {
+                  "question": "Describe the different test case design techniques.",
+                  "answer": "**7 Test Case Design Techniques:**\n\n1. **Equivalence Partitioning** — Input values partitions mein divide karna. Valid partitions aur invalid partitions. Ek value per partition test karna. Example: 1-100 age range — partitions: 1-100 (valid), less than 1 (invalid), greater than 100 (invalid). Test 50, 0, 150.\n\n2. **Boundary Value Analysis** — Boundary values test karna. Min, min-1, max, max+1. Example: 1-100 range, test 0, 1, 2, 99, 100, 101. Boundary cases most error-prone hote hain.\n\n3. **Decision Table Testing** — Decision tables use karna complex business logic ke liye. Conditions aur actions map karna. Example: If credit > 500 AND income > 50000, approve loan.\n\n4. **State Transition Testing** — State transitions test karna. State diagrams use karna. Valid aur invalid transitions test karna. Example: ATM card states — active, inactive, blocked.\n\n5. **Use Case Testing** — Use cases use karna. User interactions test karna. Actor aur system interactions. Example: User login, search, cart, checkout.\n\n6. **Cause-Effect Graphing** — Cause-effect relationships map karna. Causes, effects, conditions. Decision tables create karna. Cause-effect graph se decision table banate hain.\n\n7. **Error Guessing** — Experience based testing. Errors guess karna. Previous defects knowledge use karna. Experienced tester errors guess karta hai.\n\n**Diagram:** Refer to Test Plan and Test Cases Overview diagram."
+                },
+                {
+                  "question": "Explain test reporting and its types.",
+                  "answer": "**Test Reporting:** Test progress aur results communicate karne ka process. Yeh reports stakeholders ko testing status batate hain.\n\n**6 Types of Test Reports:**\n\n1. **Progress Report** — Daily/weekly status. Test progress update. Completed, pending items. Yeh daily ya weekly status batata hai.\n\n2. **Defect Report** — Defects list aur details. Severity, priority, status. Defect trends. Yeh sabhi defects ka details document karta hai.\n\n3. **Coverage Report** — Test coverage. Code coverage. Requirements coverage. Design coverage. Yeh batata hai ki testing kitni coverage hai.\n\n4. **Summary Report** — Overall summary. Test summary. Quality summary. Risks aur issues. Yeh overall testing ka summary hai.\n\n5. **Quality Report** — Quality assessment. Quality evaluation. Quality metrics. Quality trends. Yeh quality ka assessment karta hai.\n\n6. **Metrics Report** — Quantitative metrics. Defect density. Test pass rate. Test execution rate. Yeh quantitative metrics report karta hai.\n\n**Test Report Contents:** Test progress, defects found, defects fixed, test coverage, test results, quality assessment, risks aur issues.\n\n**Diagram:** Refer to Test Plan and Test Cases Overview diagram."
+                }
+  ]
         },
-        {
+{
           "id": "defect-management",
           "number": "2.3",
           "title": "Defect Management",
@@ -8756,302 +8536,122 @@ export const units = {
           "englishDefinition": "Defect Management is the process of identifying, tracking, and resolving defects in software. Defect origins include requirements, design, coding, configuration, and environment issues. Defect classes categorize defects by type: functional, performance, security, usability, and compatibility. The defect repository tracks all defects through their life cycle. Severity and priority determine fix urgency.",
           "intro": "Defect Management defects ko identify, track, aur resolve karne ka process hai. Defect origins requirements, design, coding, configuration, environment issues se aate hain. Defect classes defects ko type ke basis pe categorize karte hain: functional, performance, security, usability, compatibility. Defect repository sabhi defects ko track karta hai through their life cycle. Severity aur priority fix urgency determine karte hain.",
           "sections": [
-            {
-              "type": "definition",
-              "title": "Defect Management",
-              "body": "Defect Management defects ko identify, track, aur resolve karne ka process hai. Objectives: Defects identify karna, Defects track karna, Defects resolve karna, Quality improve karna, Customer satisfaction improve karna. Process: Defect identification, Defect logging, Defect triage, Defect assignment, Defect fixing, Defect verification, Defect closure. Defect Management Benefits: Quality improve karta hai, Cost reduce karta hai, Customer satisfaction improve karta hai, Process improvement karta hai.",
-              "chips": [
-                "Defects",
-                "Track",
-                "Resolve",
-                "Quality",
-                "Cost"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Defect Management Process",
-              "points": [
-                "Defect Identification: Defects find karna.",
-                "Testing, reviews, feedback se.",
-                "Defect Logging: Defects log karna.",
-                "Defect tracker mein log karna.",
-                "Defect details document karna.",
-                "Defect Triage: Defects prioritize karna.",
-                "Severity aur priority assign karna.",
-                "Defect Assignment: Defects assign karna.",
-                "Developer ko assign karna.",
-                "Defect Fixing: Developer defects fix karta hai.",
-                "Root cause analyze karna.",
-                "Fix implement karna.",
-                "Defect Verification: Tester fix verify karta hai.",
-                "Retest karna.",
-                "Fix confirmed karna.",
-                "Defect Closure: Defect close karna.",
-                "Status update karna.",
-                "Lessons learn karna."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Defect Origins",
-              "body": "Defect Origins defects ka source hai. Origins: 1. Requirements Defects — Ambiguous, incomplete, inconsistent requirements. 2. Design Defects — Design errors, logic errors, interface errors. 3. Coding Defects — Implementation errors, syntax errors, logic errors. 4. Configuration Defects — Configuration errors, environment issues. 5. Environment Defects — Hardware, software, network issues. 6. Integration Defects — Interface errors, data issues. Understanding origins helps prevent defects.",
-              "chips": [
-                "Requirements",
-                "Design",
-                "Coding",
-                "Config",
-                "Environment"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Defect Origins Details",
-              "points": [
-                "Requirements Defects: Ambiguous requirements.",
-                "Incomplete requirements.",
-                "Inconsistent requirements.",
-                "Changing requirements.",
-                "Unclear requirements.",
-                "Design Defects: Design errors.",
-                "Logic errors in design.",
-                "Interface design errors.",
-                "Architecture errors.",
-                "Design not meeting requirements.",
-                "Coding Defects: Implementation errors.",
-                "Syntax errors.",
-                "Logic errors in code.",
-                "Coding mistakes.",
-                "Incorrect implementation.",
-                "Configuration Defects: Configuration errors.",
-                "Wrong settings.",
-                "Missing configuration.",
-                "Environment mismatches.",
-                "Environment Defects: Hardware issues.",
-                "Software issues.",
-                "Network issues.",
-                "Compatibility issues.",
-                "Integration Defects: Interface errors.",
-                "Data issues.",
-                "API errors.",
-                "Communication errors."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Defect Classes",
-              "body": "Defect Classes defects ko type ke basis pe categorize karte hain. Classes: 1. Functional Defects — Functionality doesn't work as expected. 2. Performance Defects — Performance issues: slow, resource-heavy. 3. Security Defects — Security vulnerabilities, breaches. 4. Usability Defects — Hard to use, confusing. 5. Compatibility Defects — Not compatible with platforms. 6. Documentation Defects — Incorrect or missing documentation. 7. Usability Defects — User interface issues. Understanding classes helps prioritize fixes.",
-              "chips": [
-                "Functional",
-                "Performance",
-                "Security",
-                "Usability",
-                "Compatibility"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Defect Classes Details",
-              "points": [
-                "Functional Defects: Functionality doesn't work.",
-                "Features not working.",
-                "Incorrect output.",
-                "Wrong behavior.",
-                "Performance Defects: Performance issues.",
-                "Slow response time.",
-                "High resource usage.",
-                "Scalability issues.",
-                "Security Defects: Security vulnerabilities.",
-                "Security breaches.",
-                "Authentication issues.",
-                "Authorization issues.",
-                "Usability Defects: Hard to use.",
-                "Confusing interface.",
-                "Poor user experience.",
-                "Navigation issues.",
-                "Compatibility Defects: Platform incompatibility.",
-                "Browser incompatibility.",
-                "Device incompatibility.",
-                "OS incompatibility.",
-                "Documentation Defects: Incorrect documentation.",
-                "Missing documentation.",
-                "Outdated documentation.",
-                "Usability Defects: User interface issues.",
-                "UI design problems.",
-                "Accessibility issues."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Defect Repository",
-              "body": "Defect Repository defects ko track karne ka central system hai. Components: Defect ID, Defect Title, Defect Description, Defect Severity, Defect Priority, Defect Status, Defect Assignee, Defect Reporter, Defect Dates, Defect Steps. Defect Repository Benefits: Central tracking, Historical data, Analysis aur trends, Knowledge base, Process improvement. Defect Repository Tools: JIRA, Bugzilla, Trello, Asana, Azure DevOps.",
-              "chips": [
-                "Repository",
-                "Tracking",
-                "History",
-                "Analysis",
-                "Tools"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Defect Repository Details",
-              "points": [
-                "Defect ID: Unique defect identifier.",
-                "Naming convention follow karna.",
-                "Defect Title: Brief defect title.",
-                "Summary of defect.",
-                "Defect Description: Detailed description.",
-                "Steps to reproduce.",
-                "Expected aur actual results.",
-                "Defect Severity: Impact level.",
-                "Critical, high, medium, low.",
-                "Defect Priority: Fix urgency.",
-                "P1, P2, P3, P4.",
-                "Defect Status: Current status.",
-                "New, assigned, in progress, fixed, retest, closed.",
-                "Defect Assignee: Assigned person.",
-                "Developer assigned.",
-                "Defect Reporter: Who reported.",
-                "Tester reported.",
-                "Defect Dates: Report date, fix date, close date.",
-                "Defect Steps: Steps to reproduce.",
-                "Reproduction steps.",
-                "Test data.",
-                "Repository Benefits: Central tracking.",
-                "Historical data maintain karna.",
-                "Analysis aur trends.",
-                "Knowledge base build karna.",
-                "Process improvement.",
-                "Repository Tools: JIRA.",
-                "Bugzilla.",
-                "Trello.",
-                "Asana.",
-                "Azure DevOps."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Defect Life Cycle",
-              "body": "Defect Life Cycle defects ka lifecycle hai from creation to closure. States: 1. New — Defect reported. 2. Assigned — Defect assigned to developer. 3. In Progress — Developer working on fix. 4. Fixed — Developer fixed defect. 5. Retest — Tester verifying fix. 6. Closed — Fix confirmed, defect closed. 7. Reopened — Fix failed, defect reopened. 8. Deferred — Defect deferred for later fix. 9. Rejected — Defect not valid, rejected. Life cycle ensures proper tracking.",
-              "chips": [
-                "New",
-                "Assigned",
-                "Fixed",
-                "Retest",
-                "Closed"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Defect Life Cycle Details",
-              "points": [
-                "New: Defect reported.",
-                "Tester reports defect.",
-                "Defect logged in repository.",
-                "Assigned: Defect assigned.",
-                "Developer assigned.",
-                "Priority aur severity review.",
-                "In Progress: Developer working.",
-                "Root cause analysis.",
-                "Fix development.",
-                "Fixed: Developer fixed.",
-                "Fix implemented.",
-                "Fix ready for testing.",
-                "Retest: Tester verifying.",
-                "Tester retests.",
-                "Fix verified.",
-                "Closed: Fix confirmed.",
-                "Defect closed.",
-                "No further action.",
-                "Reopened: Fix failed.",
-                "Fix didn't work.",
-                "Defect reopened.",
-                "Developer fix again.",
-                "Deferred: Defect deferred.",
-                "Fix later.",
-                "Low priority defects.",
-                "Rejected: Defect not valid.",
-                "Duplicate defect.",
-                "Working as designed.",
-                "Not a defect."
-              ]
-            },
-            {
-              "type": "definition",
-              "title": "Defect Severity and Priority",
-              "body": "Defect Severity aur Priority defects ko classify karne ke liye use hote hain. Severity: Defect impact hai. Critical (system crash, data loss), High (major feature not working), Medium (moderate impact), Low (minor issue). Priority: Fix urgency hai. P1 (fix immediately), P2 (fix soon), P3 (fix when possible), P4 (optional). Severity vs Priority: High severity low priority (rare but critical), Low severity high priority (common but minor).",
-              "chips": [
-                "Severity",
-                "Priority",
-                "Critical",
-                "High",
-                "Medium",
-                "Low"
-              ]
-            },
-            {
-              "type": "points",
-              "title": "Defect Severity and Priority Details",
-              "points": [
-                "Severity: Defect impact.",
-                "Critical: System crash, data loss, security breach.",
-                "High: Major feature not working.",
-                "Medium: Moderate impact.",
-                "Low: Minor issue.",
-                "Priority: Fix urgency.",
-                "P1: Fix immediately.",
-                "Critical business impact.",
-                "P2: Fix soon.",
-                "High business impact.",
-                "P3: Fix when possible.",
-                "Moderate business impact.",
-                "P4: Optional.",
-                "Low business impact.",
-                "Severity vs Priority: High severity low priority.",
-                "Rare but critical.",
-                "Example: Security vulnerability.",
-                "Low severity high priority.",
-                "Common but minor.",
-                "Example: UI typo.",
-                "High severity high priority.",
-                "Critical and urgent.",
-                "Example: System crash.",
-                "Low severity low priority.",
-                "Minor aur optional.",
-                "Example: Color issue."
-              ]
-            },
-            {
-              "type": "diagram",
-              "title": "Defect Management Overview",
-              "diagram": "defect-management-overview",
-              "caption": "Defect Management — Origins, Classes, Repository, Life Cycle, Severity/Priority"
-            },
-            {
-              "type": "recap",
-              "title": "Recap",
-              "content": "Defect Management: Defects identify, track, resolve process. Origins: Requirements (ambiguous, incomplete), Design (errors, logic), Coding (implementation, syntax), Configuration (errors, settings), Environment (hardware, software), Integration (interface, data). Classes: Functional, Performance, Security, Usability, Compatibility, Documentation. Repository: Central tracking system with JIRA, Bugzilla. Life Cycle: New → Assigned → In Progress → Fixed → Retest → Closed (or Reopened, Deferred, Rejected). Severity: Impact level. Priority: Fix urgency."
-            }
-          ],
+                {
+                  "type": "definition",
+                  "title": "Defect Management",
+                  "kicker": "Definition",
+                  "body": "Defect Management defects ko identify, track, aur resolve karne ka process hai. Objectives: Defects identify karna, Defects track karna, Defects resolve karna, Quality improve karna, Customer satisfaction improve karna. Process: Defect identification, Defect logging, Defect triage, Defect assignment, Defect fixing, Defect verification, Defect closure. Defect Management Benefits: Quality improve karta hai, Cost reduce karta hai, Customer satisfaction improve karta hai, Process improvement karta hai.",
+                  "body2": "Defect management aise samjho — ek hospital ka patient treatment system hai. Patient (defect) aata hai, admit hota hai (logging), doctor (developer) treatment karta hai, nurse (tester) check karta hai, patient discharge hota hai (closure). Har defect ka lifecycle manage kiya jata hai.",
+                  "chips": ["Defects", "Track", "Resolve", "Quality", "Cost"],
+                },
+                {
+                  "type": "points",
+                  "title": "Defect Management Process",
+                  "kicker": "Process Steps",
+                  "points": ["Defect Identification: Defects find karna. Testing, reviews, feedback se.", "Defect Logging: Defects log karna. Defect tracker mein log karna. Defect details document karna.", "Defect Triage: Defects prioritize karna. Severity aur priority assign karna.", "Defect Assignment: Defects assign karna. Developer ko assign karna.", "Defect Fixing: Developer defects fix karta hai. Root cause analyze karna. Fix implement karna.", "Defect Verification: Tester fix verify karta hai. Retest karna. Fix confirmed karna.", "Defect Closure: Defect close karna. Status update karna. Lessons learn karna."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Defect Origins",
+                  "kicker": "Defect Origins",
+                  "body": "Defect Origins defects ka source hai — ye batata hai ki defect kahan se aaya. 6 main origins hain: 1. Requirements Defects — Ambiguous, incomplete, inconsistent requirements. 2. Design Defects — Design errors, logic errors, interface errors. 3. Coding Defects — Implementation errors, syntax errors, logic errors. 4. Configuration Defects — Configuration errors, environment issues. 5. Environment Defects — Hardware, software, network issues. 6. Integration Defects — Interface errors, data issues. Understanding origins helps prevent defects.",
+                  "body2": "Defect origins aise samjho — ek bimaari ka source dhundna. Agar defect ka source pata hai, toh uske prevent karne ka tarika bhi dhund sakte hain. Requirements defects se requirements phase mein hi prevention possible hai.",
+                  "chips": ["Requirements", "Design", "Coding", "Config", "Environment"],
+                },
+                {
+                  "type": "points",
+                  "title": "Defect Origins Details",
+                  "kicker": "Origin Details",
+                  "points": ["Requirements Defects: Ambiguous requirements — requirement clearly nahi hai. Incomplete requirements — kuch requirements missing hain. Inconsistent requirements — requirements contradict each other. Changing requirements — requirements badalte rehte hain. Unclear requirements — requirement samajh nahi aata.", "Design Defects: Design errors — architecture ya design mein errors. Logic errors in design — design logic galat hai. Interface design errors — interface design issues. Architecture errors — overall architecture problems. Design not meeting requirements — design requirements ko follow nahi karta.", "Coding Dehids: Implementation errors — code galat implement hua hai. Syntax errors — code syntax galat hai. Logic errors in code — code logic galat hai. Coding mistakes — simple coding errors. Incorrect implementation — requirement kaa pura implementation nahi hua.", "Configuration Defects: Configuration errors — settings galat hain. Wrong settings — incorrect configuration values. Missing configuration — required config missing hai. Environment mismatches — environment differences se issues.", "Environment Defects: Hardware issues — hardware problems. Software issues — software compatibility issues. Network issues — network connectivity problems. Compatibility issues — different platform issues.", "Integration Defects: Interface errors — API ya interface errors. Data issues — data integration problems. API errors — API calls failing. Communication errors — inter-module communication issues."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Defect Classes",
+                  "kicker": "Defect Classes",
+                  "body": "Defect Classes defects ko type ke basis pe categorize karte hain. 7 main classes hain: 1. Functional Defects — Functionality doesn't work as expected. 2. Performance Defects — Performance issues: slow, resource-heavy. 3. Security Defects — Security vulnerabilities, breaches. 4. Usability Defects — Hard to use, confusing. 5. Compatibility Defects — Not compatible with platforms. 6. Documentation Defects — Incorrect or missing documentation. 7. Usability/UI Defects — User interface issues. Understanding classes helps prioritize fixes.",
+                  "body2": "Defect classes aise samjho — hospitals mein different wards hote hain (cardiology, neurology, etc.). Har defect class ka apna type hai, aur har class ka different approach hota hai fix karne ka.",
+                  "chips": ["Functional", "Performance", "Security", "Usability", "Compatibility"],
+                },
+                {
+                  "type": "points",
+                  "title": "Defect Classes Details",
+                  "kicker": "Class Details",
+                  "points": ["Functional Defects: Functionality doesn't work. Features not working. Incorrect output. Wrong behavior. Example: Login button click nahi karta.", "Performance Defects: Performance issues. Slow response time. High resource usage. Scalability issues. Example: Page load time 10 seconds hai.", "Security Defects: Security vulnerabilities. Security breaches. Authentication issues. Authorization issues. Example: Password without encryption store hota hai.", "Usability Defects: Hard to use. Confusing interface. Poor user experience. Navigation issues. Example: Menu items confusing hain.", "Compatibility Defects: Platform incompatibility. Browser incompatibility. Device incompatibility. OS incompatibility. Example: App iOS par work nahi karta.", "Documentation Defects: Incorrect documentation. Missing documentation. Outdated documentation. Example: User manual wrong information contain karta hai.", "Usability/UI Defects: User interface issues. UI design problems. Accessibility issues. Example: Text small hai, read nahi ho pa raha."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Defect Repository",
+                  "kicker": "Defect Repository",
+                  "body": "Defect Repository defects ko track karne ka central system hai. Components: Defect ID, Defect Title, Defect Description, Defect Severity, Defect Priority, Defect Status, Defect Assignee, Defect Reporter, Defect Dates, Defect Steps. Defect Repository Benefits: Central tracking, Historical data, Analysis aur trends, Knowledge base, Process improvement. Defect Repository Tools: JIRA, Bugzilla, Trello, Asana, Azure DevOps.",
+                  "body2": "Defect repository aise samjho — ek library hai. Har book (defect) ka record hai. Library mein book ka ID, title, author, category sab hota hai. Defect repository mein defect ka ID, title, description, severity sab hota hai.",
+                  "chips": ["Repository", "Tracking", "History", "Analysis", "Tools"],
+                },
+                {
+                  "type": "points",
+                  "title": "Defect Repository Details",
+                  "kicker": "Repository Details",
+                  "points": ["Defect ID: Unique defect identifier. Naming convention follow karna. Example: BUG-12345.", "Defect Title: Brief defect title. Summary of defect. Ek line mein describe karna.", "Defect Description: Detailed description. Steps to reproduce. Expected aur actual results. Screenshots.", "Defect Severity: Impact level. Critical, high, medium, low. Defect ka impact kitna hai.", "Defect Priority: Fix urgency. P1, P2, P3, P4. Defect fix ka urgency kitna hai.", "Defect Status: Current status. New, assigned, in progress, fixed, retest, closed.", "Defect Assignee: Assigned person. Developer assigned. Kaun fix karega.", "Defect Reporter: Who reported. Tester reported. Kaun defect report kiya.", "Defect Dates: Report date, fix date, close date. Timeline.", "Defect Steps: Steps to reproduce. Reproduction steps. Test data.", "Repository Benefits: Central tracking — sabhi defects ek jagah. Historical data maintain karna. Analysis aur trends — defect patterns. Knowledge base build karna. Process improvement.", "Repository Tools: JIRA (popular), Bugzilla (old), Trello (simple), Asana (project management), Azure DevOps (Microsoft)."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Defect Life Cycle",
+                  "kicker": "Defect Life Cycle",
+                  "body": "Defect Life Cycle defects ka lifecycle hai from creation to closure. States: 1. New — Defect reported. 2. Assigned — Defect assigned to developer. 3. In Progress — Developer working on fix. 4. Fixed — Developer fixed defect. 5. Retest — Tester verifying fix. 6. Closed — Fix confirmed, defect closed. 7. Reopened — Fix failed, defect reopened. 8. Deferred — Defect deferred for later fix. 9. Rejected — Defect not valid, rejected. Life cycle ensures proper tracking.",
+                  "body2": "Defect lifecycle aise samjho — ek student ka education lifecycle. Admission (New), class assignment (Assigned), study (In Progress), exam pass (Fixed), result verification (Retest), pass (Closed). Agar exam fail (Reopened). Agar admission cancel (Rejected).",
+                  "chips": ["New", "Assigned", "Fixed", "Retest", "Closed"],
+                },
+                {
+                  "type": "points",
+                  "title": "Defect Life Cycle Details",
+                  "kicker": "Lifecycle States",
+                  "points": ["New: Defect reported. Tester reports defect. Defect logged in repository. Yeh state mein defect sirf report hua hai.", "Assigned: Defect assigned. Developer assigned. Priority aur severity review. Triage team assign karte hain.", "In Progress: Developer working. Root cause analysis. Fix development. Developer defect fix kar raha hai.", "Fixed: Developer fixed. Fix implemented. Fix ready for testing. Developer fix kar chuka hai.", "Retest: Tester verifying. Tester retests. Fix verified. Tester fix check kar raha hai.", "Closed: Fix confirmed. Defect closed. No further action. Tester fix confirm kar chuka hai.", "Reopened: Fix failed. Fix didn't work. Defect reopened. Developer fix again. Tester fix verify karta hai toh fix fail ho jata hai.", "Deferred: Defect deferred. Fix later. Low priority defects. Kuch defects aise hain jo abhi fix nahi karna chahiye.", "Rejected: Defect not valid. Duplicate defect. Working as designed. Not a defect. Defect valid nahi hai."],
+                },
+                {
+                  "type": "definition",
+                  "title": "Defect Severity and Priority",
+                  "kicker": "Severity vs Priority",
+                  "body": "Defect Severity aur Priority defects ko classify karne ke liye use hote hain. Severity: Defect impact hai — kitna affected hai. Critical (system crash, data loss), High (major feature not working), Medium (moderate impact), Low (minor issue). Priority: Fix urgency hai — kitni jaldi fix karna hai. P1 (fix immediately), P2 (fix soon), P3 (fix when possible), P4 (optional). Severity vs Priority: High severity low priority (rare but critical), Low severity high priority (common but minor).",
+                  "body2": "Severity aur priority aise samjho — ek bimaari ki seriousness (severity) aur treatment urgency (priority). Cancer ek rare bimaari hai (low priority) par bahut serious hai (high severity). Pregnancy common hai (high priority) par less serious hai (low severity).",
+                  "chips": ["Severity", "Priority", "Critical", "High", "Medium", "Low"],
+                },
+                {
+                  "type": "points",
+                  "title": "Defect Severity and Priority Details",
+                  "kicker": "Severity/Priority Details",
+                  "points": ["Severity Levels: Critical — System crash, data loss, security breach. High — Major feature not working. Medium — Moderate impact. Low — Minor issue.", "Priority Levels: P1 — Fix immediately. Critical business impact. P2 — Fix soon. High business impact. P3 — Fix when possible. Moderate business impact. P4 — Optional. Low business impact.", "Severity vs Priority Combinations: High severity low priority — Rare but critical. Example: Security vulnerability (rare but critical). Low severity high priority — Common but minor. Example: UI typo (common but minor). High severity high priority — Critical and urgent. Example: System crash. Low severity low priority — Minor aur optional. Example: Color issue.", "Key Point: Severity ka matlab hai kitna affected hai. Priority ka matlab hai kitni jaldi fix karna hai. Dono alag concepts hain."],
+                },
+                {
+                  "type": "diagram",
+                  "title": "Defect Management Overview",
+                  "kicker": "Diagram",
+                  "diagram": "defect-management-overview",
+                  "caption": "Defect Management — Origins, Classes, Repository, Life Cycle, Severity/Priority",
+                },
+                {
+                  "type": "recap",
+                  "title": "Recap",
+                  "kicker": "5 Seconds Mein Yaad Karo",
+                  "points": ["Defect Management: Defects identify, track, resolve process.", "Process: Identification → Logging → Triage → Assignment → Fixing → Verification → Closure.", "Defect Origins: Requirements (ambiguous, incomplete), Design (errors, logic), Coding (implementation, syntax), Configuration (errors, settings), Environment (hardware, software), Integration (interface, data).", "Defect Classes: Functional, Performance, Security, Usability, Compatibility, Documentation, UI.", "Defect Repository: Central tracking system with JIRA, Bugzilla. Components: ID, title, description, severity, priority, status, assignee, reporter, dates, steps.", "Defect Life Cycle: New → Assigned → In Progress → Fixed → Retest → Closed (or Reopened, Deferred, Rejected).", "Severity: Impact level (Critical, High, Medium, Low). Priority: Fix urgency (P1, P2, P3, P4)."],
+                }
+  ],
           "examQuestions": [
-            {
-              "question": "What is defect management? Explain its process.",
-              "answer": "Defect Management: Defects identify, track, resolve process. Process: Defect identification (find defects), Defect logging (log in tracker), Defect triage (prioritize), Defect assignment (assign developer), Defect fixing (developer fixes), Defect verification (tester retests), Defect closure (close defect). Benefits: Quality improve, cost reduce, customer satisfaction improve."
-            },
-            {
-              "question": "Describe defect origins with examples.",
-              "answer": "Defect Origins: Requirements (ambiguous, incomplete, inconsistent), Design (design errors, logic errors, interface errors), Coding (implementation errors, syntax errors, logic errors), Configuration (configuration errors, wrong settings), Environment (hardware, software, network issues), Integration (interface errors, data issues, API errors). Understanding origins helps prevent defects."
-            },
-            {
-              "question": "Explain the defect life cycle with all states.",
-              "answer": "Defect Life Cycle: New (reported) → Assigned (developer assigned) → In Progress (developer working) → Fixed (fix implemented) → Retest (tester verifying) → Closed (fix confirmed). Possible: Reopened (fix failed), Deferred (fix later), Rejected (not valid). Life cycle ensures proper tracking."
-            },
-            {
-              "question": "Differentiate between defect severity and priority with examples.",
-              "answer": "Severity: Defect impact. Critical (system crash, data loss), High (major feature not working), Medium (moderate impact), Low (minor issue). Priority: Fix urgency. P1 (fix immediately), P2 (fix soon), P3 (fix when possible), P4 (optional). Example: High severity low priority = Security vulnerability (rare but critical). Low severity high priority = UI typo (common but minor)."
-            }
-          ]
+                {
+                  "question": "What is defect management? Explain its process.",
+                  "answer": "**Defect Management:** Defects ko identify, track, aur resolve karne ka process. Yeh process ensure karta hai ki har defect properly handle ho.\n\n**Objectives:** Defects identify karna, Defects track karna, Defects resolve karna, Quality improve karna, Customer satisfaction improve karna.\n\n**Defect Management Process (7 Steps):**\n\n1. **Defect Identification** — Defects find karna. Testing, reviews, feedback se. Tester testing karte waqt defects find karta hai.\n2. **Defect Logging** — Defects log karna. Defect tracker mein log karna. Defect details document karna. Defect ka pura details (severity, priority, steps) log kiya jata hai.\n3. **Defect Triage** — Defects prioritize karna. Severity aur priority assign karna. Triage team defects ka assessment karke priority assign karte hain.\n4. **Defect Assignment** — Defects assign karna. Developer ko assign karna. Defects respective developers ko assign kiye jaate hain.\n5. **Defect Fixing** — Developer defects fix karta hai. Root cause analyze karna. Fix implement karna. Developer root cause find karke fix karta hai.\n6. **Defect Verification** — Tester fix verify karta hai. Retest karna. Fix confirmed karna. Tester fix retest karke verify karta hai.\n7. **Defect Closure** — Defect close karna. Status update karna. Lessons learn karna. Fix confirmed hone par defect close kiya jata hai.\n\n**Benefits:** Quality improve karta hai, Cost reduce karta hai, Customer satisfaction improve karta hai, Process improvement karta hai.\n\n**Diagram:** Refer to Defect Management Overview diagram."
+                },
+                {
+                  "question": "Describe defect origins with examples.",
+                  "answer": "**Defect Origins — 6 Sources:**\n\n1. **Requirements Defects** — Ambiguous requirements (clearly nahi hai), Incomplete requirements (kuch missing hain), Inconsistent requirements (contradict each other), Changing requirements (badalte rehte hain), Unclear requirements (samajh nahi aata).\n   - *Example:* Requirements mein likha hai 'user fast login kar sake' — 'fast' clearly define nahi hai.\n\n2. **Design Defects** — Design errors, Logic errors in design, Interface design errors, Architecture errors, Design not meeting requirements.\n   - *Example:* Architecture mein scalability ka consideration nahi hua.\n\n3. **Coding Defects** — Implementation errors, Syntax errors, Logic errors in code, Coding mistakes, Incorrect implementation.\n   - *Example:* If condition mein '>' galat use hua hai, '<' hona chahiye.\n\n4. **Configuration Defects** — Configuration errors, Wrong settings, Missing configuration, Environment mismatches.\n   - *Example:* Database connection string galat hai.\n\n5. **Environment Defects** — Hardware issues, Software issues, Network issues, Compatibility issues.\n   - *Example:* Server hardware capacity kam hai, system slow ho raha hai.\n\n6. **Integration Defects** — Interface errors, Data issues, API errors, Communication errors.\n   - *Example:* Two modules ke beech data format mismatch hai.\n\n**Understanding origins helps prevent defects** — jaise requirements defects ko requirements phase mein hi fix kar sakte hain.\n\n**Diagram:** Refer to Defect Management Overview diagram."
+                },
+                {
+                  "question": "Explain the defect life cycle with all states.",
+                  "answer": "**Defect Life Cycle — 9 States:**\n\n1. **New** — Defect reported. Tester reports defect. Defect logged in repository. Yeh pehla state hai — defect sirf report hua hai.\n\n2. **Assigned** — Defect assigned. Developer assigned. Priority aur severity review. Triage team assign karte hain.\n\n3. **In Progress** — Developer working. Root cause analysis. Fix development. Developer defect fix kar raha hai.\n\n4. **Fixed** — Developer fixed. Fix implemented. Fix ready for testing. Developer fix kar chuka hai.\n\n5. **Retest** — Tester verifying. Tester retests. Fix verified. Tester fix check kar raha hai.\n\n6. **Closed** — Fix confirmed. Defect closed. No further action. Tester fix confirm kar chuka hai.\n\n7. **Reopened** — Fix failed. Fix didn't work. Defect reopened. Developer fix again. Fix fail hone par defect reopened kiya jata hai.\n\n8. **Deferred** — Defect deferred. Fix later. Low priority defects. Kuch defects aise hain jo abhi fix nahi karna chahiye.\n\n9. **Rejected** — Defect not valid. Duplicate defect. Working as designed. Not a defect. Defect valid nahi hai — reject kiya jata hai.\n\n**Normal Flow:** New → Assigned → In Progress → Fixed → Retest → Closed\n\n**Alternative Flows:**\n- New → Assigned → In Progress → Fixed → Retest → Reopened → In Progress → Fixed → Retest → Closed\n- New → Deferred\n- New → Rejected\n\n**Diagram:** Refer to Defect Management Overview diagram."
+                },
+                {
+                  "question": "Differentiate between defect severity and priority with examples.",
+                  "answer": "**Defect Severity vs Priority:**\n\n**Severity** — Defect impact kitna hai. Kitne users affected hain. Kitna damage hai.\n\n- **Critical:** System crash, data loss, security breach. Example: Login system crash, bank transaction fail.\n- **High:** Major feature not working. Example: Payment gateway not working.\n- **Medium:** Moderate impact. Example: Some fields not validating correctly.\n- **Low:** Minor issue. Example: Typo in error message.\n\n**Priority** — Fix urgency kitna hai. Kitni jaldi fix karna hai.\n\n- **P1:** Fix immediately. Critical business impact. Example: System down, users access nahi kar paa rahe.\n- **P2:** Fix soon. High business impact. Example: Major feature broken.\n- **P3:** Fix when possible. Moderate business impact. Example: Minor feature issue.\n- **P4:** Optional. Low business impact. Example: Cosmetic issue.\n\n**Severity vs Priority Combinations:**\n\n| Combination | Meaning | Example |\n|---|---|---|\n| High severity, Low priority | Rare but critical | Security vulnerability (rare but dangerous) |\n| Low severity, High priority | Common but minor | UI typo (common, quickly fix) |\n| High severity, High priority | Critical and urgent | System crash (must fix immediately) |\n| Low severity, Low priority | Minor and optional | Color issue (cosmetic) |\n\n**Key Point:** Severity ka matlab hai kitna affected hai. Priority ka matlab hai kitni jaldi fix karna hai. Dono alag concepts hain — high severity defect low priority bhi ho sakta hai.\n\n**Diagram:** Refer to Defect Management Overview diagram."
+                }
+  ]
         }
       ]
     }
