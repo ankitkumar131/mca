@@ -47,6 +47,16 @@ import {
   EthicalHackingDiagram,
 } from './CyberDiagrams';
 
+import {
+  QAQCComparisonDiagram,
+  SQAComponentsDiagram,
+  QualityBusinessImpactDiagram,
+  SQAPlanningProcessDiagram,
+  ProductProcessQualityDiagram,
+  ProcessModelsComparisonDiagram,
+  QCToolsOverviewDiagram,
+} from './SoftwareTestingDiagrams';
+
 // ============================================================
 // Improved, properly-labelled SVG diagrams
 // All labels in English (exam style) with Hinglish captions in UI
@@ -640,6 +650,20 @@ export function Diagram({ type }) {
       return <EthicalIssuesDiagram />;
     case 'ethical-hacking':
       return <EthicalHackingDiagram />;
+    case 'qa-qc-comparison':
+      return <QAQCComparisonDiagram />;
+    case 'sqa-components':
+      return <SQAComponentsDiagram />;
+    case 'quality-business-impact':
+      return <QualityBusinessImpactDiagram />;
+    case 'sqa-planning-process':
+      return <SQAPlanningProcessDiagram />;
+    case 'product-process-quality':
+      return <ProductProcessQualityDiagram />;
+    case 'process-models-comparison':
+      return <ProcessModelsComparisonDiagram />;
+    case 'qc-tools-overview':
+      return <QCToolsOverviewDiagram />;
     default:
       return null;
   }

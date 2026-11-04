@@ -913,4 +913,490 @@ Cyber laws wo laws hain jo cyberspace, internet, aur digital technology se relat
     image: null,
     importance: '⭐⭐⭐',
   },
+// ========================================================
+  // Software Testing Unit 1 — Fundamentals of Software Quality Assurance
+  // ========================================================
+  {
+    id: 'stq1',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Define software quality. What are the key characteristics of quality software?',
+    answer: '**Software Quality Definition:**\nSoftware quality is the degree to which a software system meets its requirements, is reliable, maintainable, and performs efficiently.\n\n**Key Characteristics:**\n1. **Reliability** — Software kabhi na kabhi crash nahi karta. Stable chalta hai.\n2. **Maintainability** — Aasani se modify kiya ja sakta hai. Code readable hai.\n3. **Efficiency** — Fast chalta hai. Resources ka accha use karta hai.\n4. **Usability** — Aasani se use kiya ja sakta hai. User-friendly hai.\n5. **Security** — Secure hai. Vulnerabilities kam hain.\n\nQuality ek subjective term hai — ek user ke liye accha hai woh dusre ke liye accha nahi hai. Isliye quality ko measure karne ke liye metrics use hote hain.',
+    diagram: null,
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq2',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Differentiate between QA, QC, and SQA.',
+    answer: '**QA (Quality Assurance):**\n- Process-oriented\n- Defects prevent karta hai\n- Whole team ka responsibility hai\n- Systematic approach hai\n\n**QC (Quality Control):**\n- Product-oriented\n- Defects find karta hai\n- QA team ka responsibility hai\n- Deliverables verify karta hai\n\n**SQA (Software Quality Assurance):**\n- QA + QC combined\n- Full lifecycle coverage\n- Standards aur processes apply karta hai\n- Systematic approach hai\n\n**Main Difference:**\nQA = Prevention (Process)\nQC = Detection (Product)\nSQA = QA + QC (Combined approach)',
+    diagram: 'qa-qc-comparison',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq3',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Explain the components of an SQA system.',
+    answer: '**SQA System Components:**\n\n1. **Quality Standards**\n- ISO 9001, CMMI, Six Sigma\n- Standards define karte hain ki quality kya hai\n- Organizations follow karte hain\n\n2. **Quality Metrics**\n- Defect density, test coverage, code complexity\n- Quality measure karte hain\n- Trends track karte hain\n\n3. **Quality Reviews**\n- Code review, design review, walkthroughs\n- Defects early detect karte hain\n- Peer review important hai\n\n4. **Testing Processes**\n- Unit, integration, system, acceptance testing\n- Defects detect karte hain\n- Quality ensure karte hain\n\n5. **Training Programs**\n- Team ko quality train karte hain\n- New tools aur processes sikhaate hain\n- Skills improve karte hain\n\n6. **Audit Mechanisms**\n- Process audit, product audit\n- Independent review hota hai\n- Compliance check karta hai\n\n**All components milte hain SQA system banane ke liye.**',
+    diagram: 'sqa-components',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq4',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'How does software quality impact business success?',
+    answer: '**Business Impact of Quality:**\n\n1. **Lower Costs**\n- Accha software maintain karne mein less cost hota hai\n- Less bugs = less support\n\n2. **Customer Satisfaction**\n- Accha software user ko pasand aata hai\n- Better UX = happier users\n\n3. **Reputation**\n- Accha software company ki image acchi banata hai\n- Positive reviews aate hain\n\n4. **Competitive Advantage**\n- Accha quality competitive advantage provide karta hai\n- Market mein alag bante hain\n\n5. **Reduced Risks**\n- Accha software risks kam karta hai\n- Fewer failures\n\n**Quality-Cost Relationship:**\nInvestment in quality returns karata hai.\nHigh quality = low failure costs.\n\n**Business Benefits:**\n- Maintenance costs kam\n- Customer satisfaction increase\n- Reputation improve\n- Competitive advantage milta hai\n- Revenue increase hota hai',
+    diagram: 'quality-business-impact',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq5',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Explain SQA planning and its best practices.',
+    answer: '**SQA Planning:**\n\nSQA planning involve karta hai:\n1. Quality goals define karna\n2. Standards establish karna\n3. Resources allocate karna\n4. Schedules create karna\n5. Processes define karna\n\n**Best Practices:**\n\n1. **Early Planning**\n- Project start mein goals define karo\n- Accha plan quality built karta hai\n\n2. **Clear Goals**\n- Measurable objectives define karo\n- Defect density target, coverage target\n\n3. **Established Standards**\n- Coding standards, review procedures\n- Testing procedures define karo\n\n4. **Allocated Resources**\n- Budget, time, people allocate karo\n- Quality activities ka timeline create karo\n\n5. **Defined Processes**\n- How quality ensure hogi\n- Roles aur responsibilities clear karo\n\n6. **Maintained Documentation**\n- Plan document maintain karo\n- Standards documents document karo\n\n**Important:**\nQuality built-in karo — not tested-in.\nAccha plan quality early ensure karta hai.',
+    diagram: 'sqa-planning-process',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq6',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Differentiate between product quality and process quality.',
+    answer: '**Product Quality:**\n- Final software product ki quality\n- Outcome (what we get)\n- Aspects: Reliability, Usability, Performance, Maintainability, Scalability, Security\n\n**Process Quality:**\n- Development process ki quality\n- Approach (how we work)\n- Aspects: Planning, Design, Coding, Testing, Standards, Metrics\n\n**Relationship:**\n- Good process → Good product\n- Good product indicates good process\n- Bad process → Bad product\n- Bad product may indicate bad process\n\n**Key Difference:**\nProduct quality = outcome\nProcess quality = approach\n\n**Importance:**\nDono important hain.\nProcess improvement → product improvement\nFocus on both — ek ek karke nahi, dono saath.',
+    diagram: 'product-process-quality',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq7',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Describe the Waterfall and Agile process models with their advantages and disadvantages.',
+    answer: '**Waterfall Model:**\n\n**Approach:** Linear, sequential\n**Phases:** Requirements → Design → Coding → Testing → Deployment\n\n**Advantages:**\n- Simple hai\n- Easy to understand\n- Well-documented hai\n- Good planning hai\n\n**Disadvantages:**\n- Rigid hai\n- Changes difficult hain\n- Testing late hota hai\n- Customer feedback late milta hai\n\n**When to Use:**\n- Small projects\n- Well-defined requirements\n- Fixed budget aur timeline\n\n---\n\n**Agile Model:**\n\n**Approach:** Iterative, incremental\n**Process:** Short cycles (sprints)\n\n**Advantages:**\n- Flexible hai\n- Customer involvement accha hai\n- Early delivery hoti hai\n- Quality accha hai\n\n**Disadvantages:**\n- Costly hai\n- Documentation less hota hai\n- Team ka experience important hai\n- Scalability issues ho sakte hain\n\n**When to Use:**\n- Large projects\n- Changing requirements\n- Customer collaboration zaroori hai',
+    diagram: 'process-models-comparison',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq8',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'List and explain the 7 QC tools with their uses.',
+    answer: '**7 QC Tools:**\n\n1. **Check Sheet**\n- Data collect karta hai\n- Frequency count karta hai\n- Simple tool hai\n\n2. **Flow Chart**\n- Process flow dikhata hai\n- Steps aur decisions dikhata hai\n- Complex processes simplify karta hai\n\n3. **Histogram**\n- Data distribution dikhata hai\n- Bar chart hota hai\n- Patterns dikhata hai\n\n4. **Pareto Chart**\n- Problems prioritize karta hai\n- 80/20 rule follow karta hai\n- Important problems identify karta hai\n\n5. **Fishbone Diagram (Cause and Effect)**\n- Root cause analysis karta hai\n- Causes identify karta hai\n- Problem solve karta hai\n\n6. **Scatter Diagram**\n- Relationship dikhata hai\n- Correlation check karta hai\n- Relationship measure karta hai\n\n7. **Control Chart**\n- Process control karta hai\n- Variation measure karta hai\n- Quality maintain karta hai\n\n**Use:**\nSab tools problems identify aur solve karne mein help karte hain.',
+    diagram: 'qc-tools-overview',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+
+  // ========================================================
+  // Software Testing Unit 1 — Fundamentals of Software Quality Assurance
+  // ========================================================
+  {
+    id: 'stq1',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Define software quality. What are the key characteristics of quality software?',
+    answer: '**Software Quality Definition:**\nSoftware quality is the degree to which a software system meets its requirements, is reliable, maintainable, and performs efficiently.\n\n**Key Characteristics:**\n1. **Reliability** — Software kabhi na kabhi crash nahi karta. Stable chalta hai.\n2. **Maintainability** — Aasani se modify kiya ja sakta hai. Code readable hai.\n3. **Efficiency** — Fast chalta hai. Resources ka accha use karta hai.\n4. **Usability** — Aasani se use kiya ja sakta hai. User-friendly hai.\n5. **Security** — Secure hai. Vulnerabilities kam hain.\n\nQuality ek subjective term hai — ek user ke liye accha hai woh dusre ke liye accha nahi hai. Isliye quality ko measure karne ke liye metrics use hote hain.',
+    diagram: null,
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq2',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Differentiate between QA, QC, and SQA.',
+    answer: '**QA (Quality Assurance):**\n- Process-oriented\n- Defects prevent karta hai\n- Whole team ka responsibility hai\n- Systematic approach hai\n\n**QC (Quality Control):**\n- Product-oriented\n- Defects find karta hai\n- QA team ka responsibility hai\n- Deliverables verify karta hai\n\n**SQA (Software Quality Assurance):**\n- QA + QC combined\n- Full lifecycle coverage\n- Standards aur processes apply karta hai\n- Systematic approach hai\n\n**Main Difference:**\nQA = Prevention (Process)\nQC = Detection (Product)\nSQA = QA + QC (Combined approach)',
+    diagram: 'qa-qc-comparison',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq3',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Explain the components of an SQA system.',
+    answer: '**SQA System Components:**\n\n1. **Quality Standards**\n- ISO 9001, CMMI, Six Sigma\n- Standards define karte hain ki quality kya hai\n- Organizations follow karte hain\n\n2. **Quality Metrics**\n- Defect density, test coverage, code complexity\n- Quality measure karte hain\n- Trends track karte hain\n\n3. **Quality Reviews**\n- Code review, design review, walkthroughs\n- Defects early detect karte hain\n- Peer review important hai\n\n4. **Testing Processes**\n- Unit, integration, system, acceptance testing\n- Defects detect karte hain\n- Quality ensure karte hain\n\n5. **Training Programs**\n- Team ko quality train karte hain\n- New tools aur processes sikhaate hain\n- Skills improve karte hain\n\n6. **Audit Mechanisms**\n- Process audit, product audit\n- Independent review hota hai\n- Compliance check karta hai\n\n**All components milte hain SQA system banane ke liye.**',
+    diagram: 'sqa-components',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq4',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'How does software quality impact business success?',
+    answer: '**Business Impact of Quality:**\n\n1. **Lower Costs**\n- Accha software maintain karne mein less cost hota hai\n- Less bugs = less support\n\n2. **Customer Satisfaction**\n- Accha software user ko pasand aata hai\n- Better UX = happier users\n\n3. **Reputation**\n- Accha software company ki image acchi banata hai\n- Positive reviews aate hain\n\n4. **Competitive Advantage**\n- Accha quality competitive advantage provide karta hai\n- Market mein alag bante hain\n\n5. **Reduced Risks**\n- Accha software risks kam karta hai\n- Fewer failures\n\n**Quality-Cost Relationship:**\nInvestment in quality returns karata hai.\nHigh quality = low failure costs.\n\n**Business Benefits:**\n- Maintenance costs kam\n- Customer satisfaction increase\n- Reputation improve\n- Competitive advantage milta hai\n- Revenue increase hota hai',
+    diagram: 'quality-business-impact',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq5',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Explain SQA planning and its best practices.',
+    answer: '**SQA Planning:**\n\nSQA planning involve karta hai:\n1. Quality goals define karna\n2. Standards establish karna\n3. Resources allocate karna\n4. Schedules create karna\n5. Processes define karna\n\n**Best Practices:**\n\n1. **Early Planning**\n- Project start mein goals define karo\n- Accha plan quality built karta hai\n\n2. **Clear Goals**\n- Measurable objectives define karo\n- Defect density target, coverage target\n\n3. **Established Standards**\n- Coding standards, review procedures\n- Testing procedures define karo\n\n4. **Allocated Resources**\n- Budget, time, people allocate karo\n- Quality activities ka timeline create karo\n\n5. **Defined Processes**\n- How quality ensure hogi\n- Roles aur responsibilities clear karo\n\n6. **Maintained Documentation**\n- Plan document maintain karo\n- Standards documents document karo\n\n**Important:**\nQuality built-in karo — not tested-in.\nAccha plan quality early ensure karta hai.',
+    diagram: 'sqa-planning-process',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq6',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Differentiate between product quality and process quality.',
+    answer: '**Product Quality:**\n- Final software product ki quality\n- Outcome (what we get)\n- Aspects: Reliability, Usability, Performance, Maintainability, Scalability, Security\n\n**Process Quality:**\n- Development process ki quality\n- Approach (how we work)\n- Aspects: Planning, Design, Coding, Testing, Standards, Metrics\n\n**Relationship:**\n- Good process → Good product\n- Good product indicates good process\n- Bad process → Bad product\n- Bad product may indicate bad process\n\n**Key Difference:**\nProduct quality = outcome\nProcess quality = approach\n\n**Importance:**\nDono important hain.\nProcess improvement → product improvement\nFocus on both — ek ek karke nahi, dono saath.',
+    diagram: 'product-process-quality',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq7',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Describe the Waterfall and Agile process models with their advantages and disadvantages.',
+    answer: '**Waterfall Model:**\n\n**Approach:** Linear, sequential\n**Phases:** Requirements → Design → Coding → Testing → Deployment\n\n**Advantages:**\n- Simple hai\n- Easy to understand\n- Well-documented hai\n- Good planning hai\n\n**Disadvantages:**\n- Rigid hai\n- Changes difficult hain\n- Testing late hota hai\n- Customer feedback late milta hai\n\n**When to Use:**\n- Small projects\n- Well-defined requirements\n- Fixed budget aur timeline\n\n---\n\n**Agile Model:**\n\n**Approach:** Iterative, incremental\n**Process:** Short cycles (sprints)\n\n**Advantages:**\n- Flexible hai\n- Customer involvement accha hai\n- Early delivery hoti hai\n- Quality accha hai\n\n**Disadvantages:**\n- Costly hai\n- Documentation less hota hai\n- Team ka experience important hai\n- Scalability issues ho sakte hain\n\n**When to Use:**\n- Large projects\n- Changing requirements\n- Customer collaboration zaroori hai',
+    diagram: 'process-models-comparison',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq8',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'List and explain the 7 QC tools with their uses.',
+    answer: '**7 QC Tools:**\n\n1. **Check Sheet**\n- Data collect karta hai\n- Frequency count karta hai\n- Simple tool hai\n\n2. **Flow Chart**\n- Process flow dikhata hai\n- Steps aur decisions dikhata hai\n- Complex processes simplify karta hai\n\n3. **Histogram**\n- Data distribution dikhata hai\n- Bar chart hota hai\n- Patterns dikhata hai\n\n4. **Pareto Chart**\n- Problems prioritize karta hai\n- 80/20 rule follow karta hai\n- Important problems identify karta hai\n\n5. **Fishbone Diagram (Cause and Effect)**\n- Root cause analysis karta hai\n- Causes identify karta hai\n- Problem solve karta hai\n\n6. **Scatter Diagram**\n- Relationship dikhata hai\n- Correlation check karta hai\n- Relationship measure karta hai\n\n7. **Control Chart**\n- Process control karta hai\n- Variation measure karta hai\n- Quality maintain karta hai\n\n**Use:**\nSab tools problems identify aur solve karne mein help karte hain.',
+    diagram: 'qc-tools-overview',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  // ========================================================
+  // Software Testing Unit 1 — Fundamentals of Software Quality Assurance
+  // ========================================================
+  {
+    id: 'stq1',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Define software quality. What are the key characteristics of quality software?',
+    answer: `**Software Quality Definition:**
+Software quality is the degree to which a software system meets its requirements, is reliable, maintainable, and performs efficiently.
+
+**Key Characteristics:**
+1. **Reliability** — Software kabhi na kabhi crash nahi karta. Stable chalta hai.
+2. **Maintainability** — Aasani se modify kiya ja sakta hai. Code readable hai.
+3. **Efficiency** — Fast chalta hai. Resources ka accha use karta hai.
+4. **Usability** — Aasani se use kiya ja sakta hai. User-friendly hai.
+5. **Security** — Secure hai. Vulnerabilities kam hain.
+
+Quality ek subjective term hai — ek user ke liye accha hai woh dusre ke liye accha nahi hai. Isliye quality ko measure karne ke liye metrics use hote hain.`,
+    diagram: null,
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq2',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Differentiate between QA, QC, and SQA.',
+    answer: `**QA (Quality Assurance):**
+- Process-oriented
+- Defects prevent karta hai
+- Whole team ka responsibility hai
+- Systematic approach hai
+
+**QC (Quality Control):**
+- Product-oriented
+- Defects find karta hai
+- QA team ka responsibility hai
+- Deliverables verify karta hai
+
+**SQA (Software Quality Assurance):**
+- QA + QC combined
+- Full lifecycle coverage
+- Standards aur processes apply karta hai
+- Systematic approach hai
+
+**Main Difference:**
+QA = Prevention (Process)
+QC = Detection (Product)
+SQA = QA + QC (Combined approach)`,
+    diagram: 'qa-qc-comparison',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq3',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Explain the components of an SQA system.',
+    answer: `**SQA System Components:**
+
+1. **Quality Standards**
+- ISO 9001, CMMI, Six Sigma
+- Standards define karte hain ki quality kya hai
+- Organizations follow karte hain
+
+2. **Quality Metrics**
+- Defect density, test coverage, code complexity
+- Quality measure karte hain
+- Trends track karte hain
+
+3. **Quality Reviews**
+- Code review, design review, walkthroughs
+- Defects early detect karte hain
+- Peer review important hai
+
+4. **Testing Processes**
+- Unit, integration, system, acceptance testing
+- Defects detect karte hain
+- Quality ensure karte hain
+
+5. **Training Programs**
+- Team ko quality train karte hain
+- New tools aur processes sikhaate hain
+- Skills improve karte hain
+
+6. **Audit Mechanisms**
+- Process audit, product audit
+- Independent review hota hai
+- Compliance check karta hai
+
+**All components milte hain SQA system banane ke liye.**`,
+    diagram: 'sqa-components',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq4',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'How does software quality impact business success?',
+    answer: `**Business Impact of Quality:**
+
+1. **Lower Costs**
+- Accha software maintain karne mein less cost hota hai
+- Less bugs = less support
+
+2. **Customer Satisfaction**
+- Accha software user ko pasand aata hai
+- Better UX = happier users
+
+3. **Reputation**
+- Accha software company ki image acchi banata hai
+- Positive reviews aate hain
+
+4. **Competitive Advantage**
+- Accha quality competitive advantage provide karta hai
+- Market mein alag bante hain
+
+5. **Reduced Risks**
+- Accha software risks kam karta hai
+- Fewer failures
+
+**Quality-Cost Relationship:**
+Investment in quality returns karata hai.
+High quality = low failure costs.
+
+**Business Benefits:**
+- Maintenance costs kam
+- Customer satisfaction increase
+- Reputation improve
+- Competitive advantage milta hai
+- Revenue increase hota hai`,
+    diagram: 'quality-business-impact',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq5',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Explain SQA planning and its best practices.',
+    answer: `**SQA Planning:**
+
+SQA planning involve karta hai:
+1. Quality goals define karna
+2. Standards establish karna
+3. Resources allocate karna
+4. Schedules create karna
+5. Processes define karna
+
+**Best Practices:**
+
+1. **Early Planning**
+- Project start mein goals define karo
+- Accha plan quality built karta hai
+
+2. **Clear Goals**
+- Measurable objectives define karo
+- Defect density target, coverage target
+
+3. **Established Standards**
+- Coding standards, review procedures
+- Testing procedures define karo
+
+4. **Allocated Resources**
+- Budget, time, people allocate karo
+- Quality activities ka timeline create karo
+
+5. **Defined Processes**
+- How quality ensure hogi
+- Roles aur responsibilities clear karo
+
+6. **Maintained Documentation**
+- Plan document maintain karo
+- Standards documents document karo
+
+**Important:**
+Quality built-in karo — not tested-in.
+Accha plan quality early ensure karta hai.`,
+    diagram: 'sqa-planning-process',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq6',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Differentiate between product quality and process quality.',
+    answer: `**Product Quality:**
+- Final software product ki quality
+- Outcome (what we get)
+- Aspects: Reliability, Usability, Performance, Maintainability, Scalability, Security
+
+**Process Quality:**
+- Development process ki quality
+- Approach (how we work)
+- Aspects: Planning, Design, Coding, Testing, Standards, Metrics
+
+**Relationship:**
+- Good process → Good product
+- Good product indicates good process
+- Bad process → Bad product
+- Bad product may indicate bad process
+
+**Key Difference:**
+Product quality = outcome
+Process quality = approach
+
+**Importance:**
+Dono important hain.
+Process improvement → product improvement
+Focus on both — ek ek karke nahi, dono saath.`,
+    diagram: 'product-process-quality',
+    image: null,
+    importance: '⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq7',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'Describe the Waterfall and Agile process models with their advantages and disadvantages.',
+    answer: `**Waterfall Model:**
+
+**Approach:** Linear, sequential
+**Phases:** Requirements → Design → Coding → Testing → Deployment
+
+**Advantages:**
+- Simple hai
+- Easy to understand
+- Well-documented hai
+- Good planning hai
+
+**Disadvantages:**
+- Rigid hai
+- Changes difficult hain
+- Testing late hota hai
+- Customer feedback late milta hai
+
+**When to Use:**
+- Small projects
+- Well-defined requirements
+- Fixed budget aur timeline
+
+---
+
+**Agile Model:**
+
+**Approach:** Iterative, incremental
+**Process:** Short cycles (sprints)
+
+**Advantages:**
+- Flexible hai
+- Customer involvement accha hai
+- Early delivery hoti hai
+- Quality accha hai
+
+**Disadvantages:**
+- Costly hai
+- Documentation less hota hai
+- Team ka experience important hai
+- Scalability issues ho sakte hain
+
+**When to Use:**
+- Large projects
+- Changing requirements
+- Customer collaboration zaroori hai`,
+    diagram: 'process-models-comparison',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
+  {
+    id: 'stq8',
+    unit: '1',
+    subjectId: 'software-testing',
+    question: 'List and explain the 7 QC tools with their uses.',
+    answer: `**7 QC Tools:**
+
+1. **Check Sheet**
+- Data collect karta hai
+- Frequency count karta hai
+- Simple tool hai
+
+2. **Flow Chart**
+- Process flow dikhata hai
+- Steps aur decisions dikhata hai
+- Complex processes simplify karta hai
+
+3. **Histogram**
+- Data distribution dikhata hai
+- Bar chart hota hai
+- Patterns dikhata hai
+
+4. **Pareto Chart**
+- Problems prioritize karta hai
+- 80/20 rule follow karta hai
+- Important problems identify karta hai
+
+5. **Fishbone Diagram (Cause and Effect)**
+- Root cause analysis karta hai
+- Causes identify karta hai
+- Problem solve karta hai
+
+6. **Scatter Diagram**
+- Relationship dikhata hai
+- Correlation check karta hai
+- Relationship measure karta hai
+
+7. **Control Chart**
+- Process control karta hai
+- Variation measure karta hai
+- Quality maintain karta hai
+
+**Use:**
+Sab tools problems identify aur solve karne mein help karte hain.`,
+    diagram: 'qc-tools-overview',
+    image: null,
+    importance: '⭐⭐⭐⭐⭐',
+  },
 ];
