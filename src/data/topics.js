@@ -6606,197 +6606,194 @@ export const units = {
               "answer": "Modern tools: Automated testing (Selenium, JUnit), Code analysis (SonarQube, ESLint), Quality management (JIRA, TestRail), CI/CD tools (Jenkins, GitLab CI), Performance testing (JMeter, LoadRunner), Security testing (OWASP ZAP, Burp Suite). Modern tools automated aur efficient hain. Quality ensure karte hain."
             }
           ]
-        }
-,
-[
-  {
-    "id": "qa-models",
-    "number": "1.8",
-    "title": "Quality Assurance Models",
-    "subtitle": "ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM",
-    "icon": "check",
-    "accent": "#aa00ff",
-    "englishDefinition": "Quality Assurance Models are frameworks that provide structured approaches to implementing and improving software quality processes. ISO-9000 is an international standard for quality management. CMM (Capability Maturity Model) and CMMI (Capability Maturity Model Integration) are frameworks for process improvement. TMM (Test Maturity Model) focuses on testing processes. SPICE (Software Process Improvement and Capability Determination) is an international standard. Malcolm Baldrige Model is a performance excellence framework. P-CMM (People-Capability Maturity Model) focuses on human resources.",
-    "intro": "Quality Assurance Models different frameworks hain jo software quality processes implement aur improve karne ka structured approach provide karte hain. Is topic mein hum dekhenge ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige aur P-CMM models. Har model ka different focus hota hai — kuch processes par focus karte hain, kuch people par, kuch overall quality management par.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "Quality Assurance Models kya hain?",
-        "body": "Quality Assurance Models frameworks hain jo quality processes structured approach se implement aur improve karte hain. Different models alag alag focus par focus karte hain:\n\n1. ISO-9000 — International standard for quality management\n2. CMM/CMMI — Process maturity aur improvement\n3. TMM — Testing process maturity\n4. SPICE — Software process improvement\n5. Malcolm Baldrige — Performance excellence\n6. P-CMM — People capability maturity",
-        "chips": [
-          "ISO-9000",
-          "CMM",
-          "CMMI",
-          "TMM",
-          "SPICE"
-        ]
-      },
-      {
-        "type": "cards",
-        "title": "ISO-9000 Series",
-        "cards": [
+        },
+        {
+          "id": "qa-models",
+        "number": "1.8",
+        "title": "Quality Assurance Models",
+        "subtitle": "ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM",
+        "icon": "check",
+        "accent": "#aa00ff",
+        "englishDefinition": "Quality Assurance Models are frameworks that provide structured approaches to implementing and improving software quality processes. ISO-9000 is an international standard for quality management. CMM (Capability Maturity Model) and CMMI (Capability Maturity Model Integration) are frameworks for process improvement. TMM (Test Maturity Model) focuses on testing processes. SPICE (Software Process Improvement and Capability Determination) is an international standard. Malcolm Baldrige Model is a performance excellence framework. P-CMM (People-Capability Maturity Model) focuses on human resources.",
+        "intro": "Quality Assurance Models different frameworks hain jo software quality processes implement aur improve karne ka structured approach provide karte hain. Is topic mein hum dekhenge ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige aur P-CMM models. Har model ka different focus hota hai — kuch processes par focus karte hain, kuch people par, kuch overall quality management par.",
+        "sections": [
           {
-            "icon": "check",
-            "title": "ISO-9000",
-            "body": "Quality management standard. Quality systems ka requirements define karta hai. International level par recognized hai."
+            "type": "definition",
+            "title": "Quality Assurance Models kya hain?",
+            "body": "Quality Assurance Models frameworks hain jo quality processes structured approach se implement aur improve karte hain. Different models alag alag focus par focus karte hain:\n\n1. ISO-9000 — International standard for quality management\n2. CMM/CMMI — Process maturity aur improvement\n3. TMM — Testing process maturity\n4. SPICE — Software process improvement\n5. Malcolm Baldrige — Performance excellence\n6. P-CMM — People capability maturity",
+            "chips": [
+              "ISO-9000",
+              "CMM",
+              "CMMI",
+              "TMM",
+              "SPICE"
+            ]
           },
           {
-            "icon": "check",
-            "title": "ISO-9001",
-            "body": "Quality management system requirements. Organizations ko certify karta hai. Compliance demonstrate karta hai."
+            "type": "cards",
+            "title": "ISO-9000 Series",
+            "cards": [
+              {
+                "icon": "check",
+                "title": "ISO-9000",
+                "body": "Quality management standard. Quality systems ka requirements define karta hai. International level par recognized hai."
+              },
+              {
+                "icon": "check",
+                "title": "ISO-9001",
+                "body": "Quality management system requirements. Organizations ko certify karta hai. Compliance demonstrate karta hai."
+              },
+              {
+                "icon": "check",
+                "title": "Benefits",
+                "body": "International recognition milta hai. Customer satisfaction improve hota hai. Quality culture develop hota hai."
+              }
+            ]
           },
           {
-            "icon": "check",
-            "title": "Benefits",
-            "body": "International recognition milta hai. Customer satisfaction improve hota hai. Quality culture develop hota hai."
+            "type": "points",
+            "title": "CMM 5 Levels",
+            "points": [
+              "Level 1 — Initial: Processes ad hoc hain. Chaotic hain.",
+              "Level 2 — Repeatable: Basic project management processes established hain.",
+              "Level 3 — Defined: Software process documented, standardized aur integrated hain.",
+              "Level 4 — Managed: Quantitative process control. Detailed measures collect karte hain.",
+              "Level 5 — Optimizing: Continuous process improvement. Innovations deploy karte hain."
+            ]
+          },
+          {
+            "type": "diagram",
+            "title": "QA Models Overview",
+            "diagram": "qa-models-overview",
+            "caption": "QA Models — ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM"
+          },
+          {
+            "type": "points",
+            "title": "Model Selection",
+            "points": [
+              "ISO-9000 — Quality management standard ke liye.",
+              "CMM/CMMI — Process maturity improve karne ke liye.",
+              "TMM — Testing process improve karne ke liye.",
+              "SPICE — Process assessment ke liye.",
+              "Malcolm Baldrige — Organizational excellence ke liye.",
+              "P-CMM — People capability improve karne ke liye."
+            ]
+          },
+          {
+            "type": "recap",
+            "title": "Recap",
+            "content": "QA Models: ISO-9000 (quality management standard), CMM (5 maturity levels), CMMI (CMM integration), TMM (testing maturity), SPICE (process assessment), Malcolm Baldrige (performance excellence), P-CMM (people capability). Har model alag focus par focus karta hai."
+          }
+        ],
+        "examQuestions": [
+          {
+            "question": "Explain ISO-9000 series of quality standards.",
+            "answer": "ISO-9000 series: ISO-9000 (quality management standard), ISO-9001 (quality management system requirements), ISO-9002 (production/installation requirements), ISO-9003 (final inspection requirements). International recognition milta hai. Quality management principles follow karte hain."
+          },
+          {
+            "question": "Describe the 5 levels of CMM.",
+            "answer": "CMM 5 levels: Level 1 — Initial (ad hoc processes), Level 2 — Repeatable (basic project management), Level 3 — Defined (documented, standardized processes), Level 4 — Managed (quantitative process control), Level 5 — Optimizing (continuous process improvement)."
+          },
+          {
+            "question": "What is CMMI and how is it different from CMM?",
+            "answer": "CMMI (Capability Maturity Model Integration) — CMM ka updated version. Multiple disciplines (software, systems, people) integrate karta hai. 22 process areas cover karta hai. 5 levels same hain. Better improvement guidance provide karta hai."
           }
         ]
-      },
-      {
-        "type": "points",
-        "title": "CMM 5 Levels",
-        "points": [
-          "Level 1 — Initial: Processes ad hoc hain. Chaotic hain.",
-          "Level 2 — Repeatable: Basic project management processes established hain.",
-          "Level 3 — Defined: Software process documented, standardized aur integrated hain.",
-          "Level 4 — Managed: Quantitative process control. Detailed measures collect karte hain.",
-          "Level 5 — Optimizing: Continuous process improvement. Innovations deploy karte hain."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "QA Models Overview",
-        "diagram": "qa-models-overview",
-        "caption": "QA Models — ISO-9000, CMM, CMMI, TMM, SPICE, Malcolm Baldrige, P-CMM"
-      },
-      {
-        "type": "points",
-        "title": "Model Selection",
-        "points": [
-          "ISO-9000 — Quality management standard ke liye.",
-          "CMM/CMMI — Process maturity improve karne ke liye.",
-          "TMM — Testing process improve karne ke liye.",
-          "SPICE — Process assessment ke liye.",
-          "Malcolm Baldrige — Organizational excellence ke liye.",
-          "P-CMM — People capability improve karne ke liye."
-        ]
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "QA Models: ISO-9000 (quality management standard), CMM (5 maturity levels), CMMI (CMM integration), TMM (testing maturity), SPICE (process assessment), Malcolm Baldrige (performance excellence), P-CMM (people capability). Har model alag focus par focus karta hai."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain ISO-9000 series of quality standards.",
-        "answer": "ISO-9000 series: ISO-9000 (quality management standard), ISO-9001 (quality management system requirements), ISO-9002 (production/installation requirements), ISO-9003 (final inspection requirements). International recognition milta hai. Quality management principles follow karte hain."
-      },
-      {
-        "question": "Describe the 5 levels of CMM.",
-        "answer": "CMM 5 levels: Level 1 — Initial (ad hoc processes), Level 2 — Repeatable (basic project management), Level 3 — Defined (documented, standardized processes), Level 4 — Managed (quantitative process control), Level 5 — Optimizing (continuous process improvement)."
-      },
-      {
-        "question": "What is CMMI and how is it different from CMM?",
-        "answer": "CMMI (Capability Maturity Model Integration) — CMM ka updated version. Multiple disciplines (software, systems, people) integrate karta hai. 22 process areas cover karta hai. 5 levels same hain. Better improvement guidance provide karta hai."
-      }
-    ]
-  },
-  {
-    "id": "sqa-trends",
-    "number": "1.9",
-    "title": "Software Quality Assurance Trends",
-    "subtitle": "PSP/TSP, OO Methodology, Clean-room SE, Defect Injection, Auditing, Inspections, CASE Tools",
-    "icon": "trends",
-    "accent": "#ff0080",
-    "englishDefinition": "Software Quality Assurance Trends include modern approaches and methodologies that enhance software quality. PSP (Personal Software Process) and TSP (Team Software Process) are structured approaches for individual and team software development. Object-Oriented Methodology focuses on objects and classes. Clean-room software engineering emphasizes defect prevention through formal methods. Defect Injection and prevention techniques help identify and prevent defects. Internal Auditing and Assessments ensure process compliance. Inspections and Walkthroughs are peer review techniques. CASE tools automate software engineering tasks and improve quality.",
-    "intro": "Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Is topic mein hum dekhenge PSP/TSP, Object-Oriented Methodology, Clean-room software engineering, Defect Injection aur prevention, Internal Auditing aur Assessments, Inspections aur Walkthroughs, aur CASE tools. Modern trends quality improve karte hain, efficiency increase karte hain, aur defects kam karte hain.",
-    "sections": [
-      {
-        "type": "definition",
-        "title": "SQA Trends kya hain?",
-        "body": "Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Trends include:\n\n1. PSP/TSP — Personal aur Team Software Process\n2. OO Methodology — Object-Oriented approach\n3. Clean-room SE — Defect prevention through formal methods\n4. Defect Injection — Defects intentionally inject karna\n5. Internal Auditing — Process compliance verify karna\n6. Inspections & Walkthroughs — Peer review techniques\n7. CASE Tools — Computer-Aided Software Engineering tools",
-        "chips": [
-          "PSP",
-          "TSP",
-          "OO",
-          "Clean-room",
-          "CASE"
-        ]
-      },
-      {
-        "type": "cards",
-        "title": "PSP vs TSP",
-        "cards": [
+       },
+       {
+        "id": "sqa-trends",
+        "number": "1.9",
+        "title": "Software Quality Assurance Trends",
+        "subtitle": "PSP/TSP, OO Methodology, Clean-room SE, Defect Injection, Auditing, Inspections, CASE Tools",
+        "icon": "trends",
+        "accent": "#ff0080",
+        "englishDefinition": "Software Quality Assurance Trends include modern approaches and methodologies that enhance software quality. PSP (Personal Software Process) and TSP (Team Software Process) are structured approaches for individual and team software development. Object-Oriented Methodology focuses on objects and classes. Clean-room software engineering emphasizes defect prevention through formal methods. Defect Injection and prevention techniques help identify and prevent defects. Internal Auditing and Assessments ensure process compliance. Inspections and Walkthroughs are peer review techniques. CASE tools automate software engineering tasks and improve quality.",
+        "intro": "Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Is topic mein hum dekhenge PSP/TSP, Object-Oriented Methodology, Clean-room software engineering, Defect Injection aur prevention, Internal Auditing aur Assessments, Inspections aur Walkthroughs, aur CASE tools. Modern trends quality improve karte hain, efficiency increase karte hain, aur defects kam karte hain.",
+        "sections": [
           {
-            "icon": "user",
-            "title": "PSP (Personal)",
-            "body": "Individual developers ka structured process. Planning, Design, Code, Test, Postmortem. Personal quality improve karta hai."
+            "type": "definition",
+            "title": "SQA Trends kya hain?",
+            "body": "Software Quality Assurance Trends modern approaches hain jo software quality enhance karte hain. Trends include:\n\n1. PSP/TSP — Personal aur Team Software Process\n2. OO Methodology — Object-Oriented approach\n3. Clean-room SE — Defect prevention through formal methods\n4. Defect Injection — Defects intentionally inject karna\n5. Internal Auditing — Process compliance verify karna\n6. Inspections & Walkthroughs — Peer review techniques\n7. CASE Tools — Computer-Aided Software Engineering tools",
+            "chips": [
+              "PSP",
+              "TSP",
+              "OO",
+              "Clean-room",
+              "CASE"
+            ]
           },
           {
-            "icon": "users",
-            "title": "TSP (Team)",
-            "body": "Team-based development. Team roles aur processes structured hain. Team performance improve karta hai."
+            "type": "cards",
+            "title": "PSP vs TSP",
+            "cards": [
+              {
+                "icon": "user",
+                "title": "PSP (Personal)",
+                "body": "Individual developers ka structured process. Planning, Design, Code, Test, Postmortem. Personal quality improve karta hai."
+              },
+              {
+                "icon": "users",
+                "title": "TSP (Team)",
+                "body": "Team-based development. Team roles aur processes structured hain. Team performance improve karta hai."
+              },
+              {
+                "icon": "trends",
+                "title": "Benefits",
+                "body": "Quality improve karta hai. Defect rates reduce karta hai. Efficiency increase karta hai. Team collaboration better karta hai."
+              }
+            ]
           },
           {
-            "icon": "trends",
-            "title": "Benefits",
-            "body": "Quality improve karta hai. Defect rates reduce karta hai. Efficiency increase karta hai. Team collaboration better karta hai."
+            "type": "points",
+            "title": "OO Methodology Concepts",
+            "points": [
+              "Encapsulation — Data aur methods ek class mein combine karta hai. Data protection provide karta hai.",
+              "Inheritance — Existing classes se new classes create karta hai. Code reuse enable karta hai.",
+              "Polymorphism — Different classes ek hi interface respond karte hain. Flexible code write karta hai.",
+              "Benefits — Code reuse increase karta hai. Maintainability improve karta hai. Quality increase karta hai."
+            ]
+          },
+          {
+            "type": "diagram",
+            "title": "SQA Trends Overview",
+            "diagram": "sqa-trends-overview",
+            "caption": "SQA Trends — PSP/TSP, OO, Clean-room, Defect Injection, Auditing, Inspections, CASE Tools"
+          },
+          {
+            "type": "points",
+            "title": "Trend Selection",
+            "points": [
+              "PSP — Individual developers ke liye.",
+              "TSP — Team-based development ke liye.",
+              "OO Methodology — Complex software design ke liye.",
+              "Clean-room SE — High-reliability systems ke liye.",
+              "Defect Injection — Testing effectiveness validate karne ke liye.",
+              "Internal Auditing — Process compliance verify karne ke liye.",
+              "Inspections/Walkthroughs — Peer review ke liye.",
+              "CASE Tools — Development efficiency increase karne ke liye."
+            ]
+          },
+          {
+            "type": "recap",
+            "title": "Recap",
+            "content": "SQA Trends: PSP (personal process), TSP (team process), OO Methodology (object-oriented), Clean-room SE (defect prevention), Defect Injection (testing effectiveness), Internal Auditing (compliance), Inspections/Walkthroughs (peer review), CASE tools (automation). Modern trends quality improve karte hain."
           }
-        ]
-      },
-      {
-        "type": "points",
-        "title": "OO Methodology Concepts",
-        "points": [
-          "Encapsulation — Data aur methods ek class mein combine karta hai. Data protection provide karta hai.",
-          "Inheritance — Existing classes se new classes create karta hai. Code reuse enable karta hai.",
-          "Polymorphism — Different classes ek hi interface respond karte hain. Flexible code write karta hai.",
-          "Benefits — Code reuse increase karta hai. Maintainability improve karta hai. Quality increase karta hai."
-        ]
-      },
-      {
-        "type": "diagram",
-        "title": "SQA Trends Overview",
-        "diagram": "sqa-trends-overview",
-        "caption": "SQA Trends — PSP/TSP, OO, Clean-room, Defect Injection, Auditing, Inspections, CASE Tools"
-      },
-      {
-        "type": "points",
-        "title": "Trend Selection",
-        "points": [
-          "PSP — Individual developers ke liye.",
-          "TSP — Team-based development ke liye.",
-          "OO Methodology — Complex software design ke liye.",
-          "Clean-room SE — High-reliability systems ke liye.",
-          "Defect Injection — Testing effectiveness validate karne ke liye.",
-          "Internal Auditing — Process compliance verify karne ke liye.",
-          "Inspections/Walkthroughs — Peer review ke liye.",
-          "CASE Tools — Development efficiency increase karne ke liye."
-        ]
-      },
-      {
-        "type": "recap",
-        "title": "Recap",
-        "content": "SQA Trends: PSP (personal process), TSP (team process), OO Methodology (object-oriented), Clean-room SE (defect prevention), Defect Injection (testing effectiveness), Internal Auditing (compliance), Inspections/Walkthroughs (peer review), CASE tools (automation). Modern trends quality improve karte hain."
-      }
-    ],
-    "examQuestions": [
-      {
-        "question": "Explain PSP and TSP with their benefits.",
-        "answer": "PSP (Personal Software Process): Individual developers ka structured process. Planning, Design, Code, Test, Postmortem phases hain. Personal quality improve karta hai. TSP (Team Software Process): Team-based development. Team roles aur processes structured hain. Team performance improve karta hai."
-      },
-      {
-        "question": "What is Object-Oriented Methodology? Explain its key concepts.",
-        "answer": "Object-Oriented Methodology: Software design objects par based hai. Key concepts: Encapsulation (data aur methods combine), Inheritance (code reuse), Polymorphism (flexible interfaces). Benefits: Code reuse increase karta hai. Maintainability improve karta hai."
-      },
-      {
-        "question": "What are CASE tools? List their types and benefits.",
-        "answer": "CASE Tools: Computer-Aided Software Engineering. Software development tasks automate karte hain. Types: Upper CASE (requirements, analysis, design), Lower CASE (implementation, testing, maintenance), Integrated CASE (full lifecycle). Benefits: Productivity increase karta hai. Quality improve karta hai."
-      }
-    ]
-  }
-]
+        ],
+        "examQuestions": [
+          {
+            "question": "Explain PSP and TSP with their benefits.",
+            "answer": "PSP (Personal Software Process): Individual developers ka structured process. Planning, Design, Code, Test, Postmortem phases hain. Personal quality improve karta hai. TSP (Team Software Process): Team-based development. Team roles aur processes structured hain. Team performance improve karta hai."
+          },
+          {
+            "question": "What is Object-Oriented Methodology? Explain its key concepts.",
+            "answer": "Object-Oriented Methodology: Software design objects par based hai. Key concepts: Encapsulation (data aur methods combine), Inheritance (code reuse), Polymorphism (flexible interfaces). Benefits: Code reuse increase karta hai. Maintainability improve karta hai."
+          },
+          {
+            "question": "What are CASE tools? List their types and benefits.",
+            "answer": "CASE Tools: Computer-Aided Software Engineering. Software development tasks automate karte hain. Types: Upper CASE (requirements, analysis, design), Lower CASE (implementation, testing, maintenance), Integrated CASE (full lifecycle). Benefits: Productivity increase karta hai. Quality improve karta hai."
+          }
+              ]
+            }
       ]
     }
   ]
