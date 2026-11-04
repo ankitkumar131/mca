@@ -124,12 +124,16 @@ function SectionRenderer({ section, index }) {
         <div className="section-kicker"><Icon name={kickerIcon} size={16} /> {section.kicker}</div>
         <h3>{section.title}</h3>
         <div className="recap-card">
-          {section.points.map((p, i) => (
-            <div key={i} className="recap-item" style={{ '--d': `${i * 90}ms` }}>
-              <span className="recap-bullet">{i + 1}</span>
-              <span>{p}</span>
-            </div>
-          ))}
+          {section.points ? (
+            section.points.map((p, i) => (
+              <div key={i} className="recap-item" style={{ '--d': `${i * 90}ms` }}>
+                <span className="recap-bullet">{i + 1}</span>
+                <span>{p}</span>
+              </div>
+            ))
+          ) : (
+            <p>{section.content}</p>
+          )}
         </div>
       </section>
     );
