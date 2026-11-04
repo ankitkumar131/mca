@@ -27,7 +27,7 @@ function SectionRenderer({ section, index }) {
           <p>{section.body}</p>
           {section.body2 && <p className="definition-extra">{section.body2}</p>}
         </div>
-        {section.chips && (
+        {section.chips && section.chips.length > 0 && (
           <div className="chips">
             {section.chips.map((c) => (
               <span key={c} className="chip">{c}</span>
@@ -44,15 +44,19 @@ function SectionRenderer({ section, index }) {
         <div className="section-kicker"><Icon name={kickerIcon} size={16} /> {section.kicker}</div>
         <h3>{section.title}</h3>
         <div className="card-grid">
-          {section.cards.map((card, i) => (
-            <div key={card.title} className="card" style={{ '--d': `${i * 80}ms` }}>
-              <div className="card-icon">
-                <Icon name={card.icon} size={26} />
+          {section.cards && section.cards.length > 0 ? (
+            section.cards.map((card, i) => (
+              <div key={card.title} className="card" style={{ '--d': `${i * 80}ms` }}>
+                <div className="card-icon">
+                  <Icon name={card.icon} size={26} />
+                </div>
+                <h4>{card.title}</h4>
+                <p>{card.body}</p>
               </div>
-              <h4>{card.title}</h4>
-              <p>{card.body}</p>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>{section.content}</p>
+          )}
         </div>
       </section>
     );
@@ -77,12 +81,16 @@ function SectionRenderer({ section, index }) {
         <div className="section-kicker"><Icon name={kickerIcon} size={16} /> {section.kicker}</div>
         <h3>{section.title}</h3>
         <div className="image-card">
-          {section.images.map((img, i) => (
-            <figure key={i} className="image-figure" style={{ '--d': `${i * 100}ms` }}>
-              <img src={img.src} alt={img.caption} loading="lazy" />
-              <figcaption>{img.caption}</figcaption>
-            </figure>
-          ))}
+          {section.images && section.images.length > 0 ? (
+            section.images.map((img, i) => (
+              <figure key={i} className="image-figure" style={{ '--d': `${i * 100}ms` }}>
+                <img src={img.src} alt={img.caption} loading="lazy" />
+                <figcaption>{img.caption}</figcaption>
+              </figure>
+            ))
+          ) : (
+            <p>{section.content}</p>
+          )}
         </div>
       </section>
     );
@@ -107,12 +115,16 @@ function SectionRenderer({ section, index }) {
         <div className="section-kicker"><Icon name={kickerIcon} size={16} /> {section.kicker}</div>
         <h3>{section.title}</h3>
         <ul className="points-list">
-          {section.points.map((p, i) => (
-            <li key={i} style={{ '--d': `${i * 60}ms` }}>
-              <span className="point-bullet">✓</span>
-              <span>{p}</span>
-            </li>
-          ))}
+          {section.points ? (
+            section.points.map((p, i) => (
+              <li key={i} style={{ '--d': `${i * 60}ms` }}>
+                <span className="point-bullet">✓</span>
+                <span>{p}</span>
+              </li>
+            ))
+          ) : (
+            <li>{section.content}</li>
+          )}
         </ul>
       </section>
     );
